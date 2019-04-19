@@ -15,10 +15,11 @@ public class GameLoop{
         //"-d" allows us to tell vs code where the thing is and where to put it once we finish compiling it
         // "bin" is the folder that we are putting the code in once it is compiled
         //"src/TextGameByQuinn/GameLoop.java" is where the thing is
-    //after doing that, type "java -cp C:/users/CHSRobotics/git/TextGame/bin GameLoop" into the terminal
+    //after doing that, type "java -cp C:/users/chrobotics/git/TextGame/bin GameLoop" into the terminal
         //"java" tells vscode we want to use java commands
         //"-cp" tells vscode to tell java that we are going give it a class path to run
         //"C:/users/CHSRobotics/git/TextGame/bin GameLoop" is where the cass path for java to run is located
+        //daddy says hi
     public static void main(String[] args) {
         Scanner scannyBoi = new Scanner(System.in);
         //"Scanner scannyBoi" brings a scanner into existence and names it scannyBoi
