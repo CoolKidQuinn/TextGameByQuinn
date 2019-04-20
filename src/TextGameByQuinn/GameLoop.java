@@ -15,19 +15,20 @@ public class GameLoop{
         //"-d" allows us to tell vs code where the thing is and where to put it once we finish compiling it
         // "bin" is the folder that we are putting the code in once it is compiled
         //"src/TextGameByQuinn/GameLoop.java" is where the thing is
-    //after doing that, type "java -cp C:/users/chrobotics/git/TextGame/bin GameLoop" into the terminal
+    //after doing that, type "java -cp C:/users/chsrobotics/git/TextGame/bin GameLoop" into the terminal
         //"java" tells vscode we want to use java commands
         //"-cp" tells vscode to tell java that we are going give it a class path to run
         //"C:/users/CHSRobotics/git/TextGame/bin GameLoop" is where the cass path for java to run is located
-        //daddy says hi
     public static void main(String[] args) {
         Scanner scannyBoi = new Scanner(System.in);
         //"Scanner scannyBoi" brings a scanner into existence and names it scannyBoi
             //scanners can take input from the keyboard (or other places, but for our purposes keyboards)
         //"= new Scanner(System.in)" tells that scanner to get input from the place inside the parenthesis
             //in this case, we are getting it from "System.in" which is just what the keyboard is in java
-        
-        String stringyBoi = scannyBoi.nextLine();
+        System.out.print("Type start to begin ");
+        //This will print the thing in the parentheis
+
+        String stringyBoi0 = scannyBoi.nextLine();
         //on the next line when the user is using it, it will take what that user types on the next line and save it as stringyboi
         //"String" tells us what data type we are using (ie: string, double, boolean)
         //"stringBoi" is just what we are calling our new String
@@ -35,14 +36,25 @@ public class GameLoop{
             //unlike with out Scanner, we didn't need to put new because "String" is a data type while "Scanner" is a class
         //".nextLine()" tells the scanner we mentioned before to get the value the user inputs on the next line
             //this is a command from the import we imported earlier
+        if (stringyBoi0.equals("start")) {
+        //this will run the thing in it if stringyBoi0 was typed in as start
+            printOutClass();
+            //this will run the method printOutClass()
+        }
+        //System.out.print(stringyBoi);
+            //"System.out." is how we find our desired command
+                //"System." tell us we are finding a command hardcoded into java
+                //"out." tells we are going to be using a command that has to do with output
+            //"print(stringyBoi)" tells us to print whatever is in the parenthesis
+                //in this case it is the stringyBoi that the user inputed earlier
         
-        System.out.print(stringyBoi);
-        //"System.out." is how we find our desired command
-            //"System." tell us we are finding a command hardcoded into java
-            //"out." tells we are going to be using a command that has to do with output
-        //"print(stringyBoi)" tells us to print whatever is in the parenthesis
-            //in this case it is the stringyBoi that the user inputed earlier
-
         //System.out.print("tictac time");
+    }
+    
+    public static void printOutClass(){
+        System.out.print("game has begun ");
+        System.out.println("Choose Name ");
+        String stringyBoi1 = scannyBoi.nextLine();
+        System.out.print("Your name is " + stringyBoi1);
     }
 }
