@@ -38,7 +38,7 @@ public class GameLoop{
             //this is a command from the import we imported earlier
         if (stringyBoi0.equals("start")) {
         //this will run the thing in it if stringyBoi0 was typed in as start
-            printOutClass();
+            PrintOutClass();
             //this will run the method printOutClass()
         }
         //System.out.print(stringyBoi);
@@ -51,10 +51,23 @@ public class GameLoop{
         //System.out.print("tictac time");
     }
     
-    public static void printOutClass(){
+    public static void PrintOutClass(){
         System.out.print("game has begun ");
-        System.out.println("Choose Name ");
+        System.out.print("Choose Name ");
         String stringyBoi1 = scannyBoi.nextLine();
         System.out.print("Your name is " + stringyBoi1);
+        String stringyBoi2 = scannyBoi.nextLine();
+        if (stringyBoi2.equals("commit sudoku"){
+            Sudoku();
+        }
+    }
+
+    public static void Sudoku(){
+        System.out.print("You stab yourself");
+        GameOver();
+    }
+
+    public static void GameOver(){
+        System.out.print("The game is over.")
     }
 }
