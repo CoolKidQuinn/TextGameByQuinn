@@ -266,8 +266,8 @@ public class GameLoop{
             //once the player reaches different experience thresholds, the level will be moved up
             int health = 100;
             //the player starts with 100 health, they can lose it and gain it back by doing various actions
-            PrintOutClass();
-            //this will run the method printOutClass()
+            MapMovement();
+            //this will run the method MapMovement()
         }
         //System.out.print(stringyBoi);
             //"System.out." is how we find our desired command
@@ -279,7 +279,7 @@ public class GameLoop{
         //System.out.print("tictac time");
     }
     
-    public static void PrintOutClass(){
+    public static void MapMovement(){
         System.out.print("The game has begun. ");
         System.out.print("Choose Name. ");
         String stringyBoi1 = scannyBoi.nextLine();
@@ -305,7 +305,7 @@ public class GameLoop{
             CheckPosition();
         } else{
             System.out.print(stringyBoi2 + " is not a recognized command.");
-            PrintOutClass();
+            MapMovement();
         }
     }
 
@@ -1616,10 +1616,10 @@ public class GameLoop{
     //it will be an encounter you can have multiple times
     //the items here will be cheap
     public static void Shop1(){
-        System.out.print("You see a rickety building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be in perfect condition. There is a sword with a price tag of 100 gold, a shield with a price tag of 75, a bow with a price tag of 100 gold, arrows with a price tag of 1 gold each, armor with a price tag of 100 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
+        System.out.print("You see a rickety building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be in relatively good condition, although they aren't very high quality. There is a sword with a price tag of 100 gold, a shield with a price tag of 75, a bow with a price tag of 100 gold, arrows with a price tag of 1 gold each, armor with a price tag of 100 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
         System.out.println("You have " + gold + " gold.");
-        String shoppyBoi = scannyBoi.nextLine();
-        if (shoppyBoi.equals("buy sword")){
+        String shoppyBoi1 = scannyBoi.nextLine();
+        if (shoppyBoi1.equals("buy sword")){
             if (gold >= 100){
                 if (sword < 1){
                     gold = gold - 100;
@@ -1631,7 +1631,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
-        } else if (shoppyBoi.equals("buy shield")){
+        } else if (shoppyBoi1.equals("buy shield")){
             if (gold >= 75){
                 if (shield < 1){
                     gold = gold - 75;
@@ -1643,7 +1643,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
-        } else if (shoppyBoi.equals("buy bow")){
+        } else if (shoppyBoi1.equals("buy bow")){
             if (gold >= 100){
                 if (bow < 1){
                     gold = gold - 100;
@@ -1655,7 +1655,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
-        } else if (shoppyBoi.equals("buy arrows" || "buy arrow")){
+        } else if (shoppyBoi1.equals("buy arrows" || "buy arrow")){
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = scannyBoi.nextLine();
             if (gold >= arrowsPurchased){
@@ -1665,7 +1665,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
-        } else if (shoppyBoi.equals("buy armor")){
+        } else if (shoppyBoi1.equals("buy armor")){
             if(gold >= 100){
                 if (armor < 1){
                     gold = gold - 100;
@@ -1677,7 +1677,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
-        } else if (shoppyBoi.equals("buy potions" || "buy potion")){
+        } else if (shoppyBoi1.equals("buy potions" || "buy potion")){
             System.out.print("How many would you like to buy?");
             int potionsPurchased = scannyBoi.nextLine();
             int goldSpentOnPotions = potionsPurchased * 10;
@@ -1687,33 +1687,445 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
-        } else if (shoppyBoi.equals("steal sword")){
+        } else if (shoppyBoi1.equals("steal sword")){
             System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
-        } else if (shoppyBoi.equals("steal shield")){
+        } else if (shoppyBoi1.equals("steal shield")){
             System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
-        } else if (shoppyBoi.equals("steal bow")){
+        } else if (shoppyBoi1.equals("steal bow")){
             System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
-        } else if (shoppyBoi.equals("steal arrows" || "steal arrow")){
+        } else if (shoppyBoi1.equals("steal arrows" || "steal arrow")){
             System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
-        } else if (shoppyBoi.equals("steal armor")){
+        } else if (shoppyBoi1.equals("steal armor")){
             System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
-        } else if (shoppyBoi.equals("steal potions" || "steal potion")){
+        } else if (shoppyBoi1.equals("steal potions" || "steal potion")){
             System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
+        } else if (shoppyBoi2.equals("leave shop")){
+            MapMovement();
         } else {
             System.out.print("This is not a recognized command");
             Shop1();
         }
     }
 
+    public static void Shop2(){
+        System.out.print("You see an old building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be brand new and of decent quality. There is a sword with a price tag of 200 gold, a shield with a price tag of 150, a bow with a price tag of 200 gold, arrows with a price tag of 1 gold each, armor with a price tag of 200 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
+        System.out.println("You have " + gold + " gold.");
+        String shoppyBoi2 = scannyBoi.nextLine();
+        if (shoppyBoi2.equals("buy sword")){
+            if (gold >= 200){
+                if (sword < 2){
+                    gold = gold - 200;
+                    sword = 2;
+                    System.out.print("You now have a decent sword. You have " + gold + " gold left.");
+                } else {
+                    System.out.print("Your current sword is already better than this. There is no need to buy it.");
+                }
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+        } else if (shoppyBoi2.equals("buy shield")){
+            if (gold >= 150){
+                if (shield < 2){
+                    gold = gold - 150;
+                    shield = 2;
+                    System.out.print("You now have a decent shield. You have " + gold + " gold left.");
+                } else {
+                    System.out.print("Your current shield is already better than this. There is no need to buy it.");
+                }
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+        } else if (shoppyBoi2.equals("buy bow")){
+            if (gold >= 200){
+                if (bow < 2){
+                    gold = gold - 200;
+                    bow = 2;
+                    System.out.print("You now have a decent bow. You have " + gold + " gold left.");
+                } else {
+                    System.out.print("Your current bow is already better than this. There is no need to buy it.");
+                }
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+        } else if (shoppyBoi2.equals("buy arrows" || "buy arrow")){
+            System.out.print("How many would you like to buy?");
+            int arrowsPurchased = scannyBoi.nextLine();
+            if (gold >= arrowsPurchased){
+                gold = gold - arrowsPurchased;
+                numberOfArrows = numberOfArrows + arrowsPurchased;
+                System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+        } else if (shoppyBoi2.equals("buy armor")){
+            if(gold >= 200){
+                if (armor < 2){
+                    gold = gold - 200;
+                    armor = 2;
+                    System.out.print("You now have decent armor. You have " + gold + " gold left.");
+                } else {
+                    System.out.print("Your current armor is already better than this. There is no need to buy it.");
+                }
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+        } else if (shoppyBoi2.equals("buy potions" || "buy potion")){
+            System.out.print("How many would you like to buy?");
+            int potionsPurchased = scannyBoi.nextLine();
+            int goldSpentOnPotions = potionsPurchased * 10;
+            if (gold >= goldSpentOnPotions){
+                gold = gold - goldSpentOnPotions;
+                System.out.print("You have " + gold + " gold left.");
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+        } else if (shoppyBoi2.equals("steal sword")){
+            System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi2.equals("steal shield")){
+            System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi2.equals("steal bow")){
+            System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi2.equals("steal arrows" || "steal arrow")){
+            System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi2.equals("steal armor")){
+            System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi2.equals("steal potions" || "steal potion")){
+            System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi2.equals("leave shop")){
+            MapMovement();
+        } else {
+            System.out.print("This is not a recognized command");
+            Shop2();
+        }
+    }
+
+    public static void Shop3(){
+        System.out.print("You see a building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items seem to be good quality and in perfect condition. There is a sword with a price tag of 400 gold, a shield with a price tag of 300, a bow with a price tag of 400 gold, arrows with a price tag of 1 gold each, armor with a price tag of 400 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
+        System.out.println("You have " + gold + " gold.");
+        String shoppyBoi3 = scannyBoi.nextLine();
+        if (shoppyBoi3.equals("buy sword")){
+            if (gold >= 400){
+                if (sword < 3){
+                    gold = gold - 400;
+                    sword = 3;
+                    System.out.print("You now have a good sword. You have " + gold + " gold left.");
+                } else {
+                    System.out.print("Your current sword is already better than this. There is no need to buy it.");
+                }
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop3();
+        } else if (shoppyBoi3.equals("buy shield")){
+            if (gold >= 300){
+                if (shield < 3){
+                    gold = gold - 300;
+                    shield = 3;
+                    System.out.print("You now have a good shield. You have " + gold + " gold left.");
+                } else {
+                    System.out.print("Your current shield is already better than this. There is no need to buy it.");
+                }
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop3();
+        } else if (shoppyBoi3.equals("buy bow")){
+            if (gold >= 400){
+                if (bow < 3){
+                    gold = gold - 400;
+                    bow = 3;
+                    System.out.print("You now have a good bow. You have " + gold + " gold left.");
+                } else {
+                    System.out.print("Your current bow is already better than this. There is no need to buy it.");
+                }
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop3();
+        } else if (shoppyBoi3.equals("buy arrows" || "buy arrow")){
+            System.out.print("How many would you like to buy?");
+            int arrowsPurchased = scannyBoi.nextLine();
+            if (gold >= arrowsPurchased){
+                gold = gold - arrowsPurchased;
+                numberOfArrows = numberOfArrows + arrowsPurchased;
+                System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop3();
+        } else if (shoppyBoi3.equals("buy armor")){
+            if(gold >= 400){
+                if (armor < 3){
+                    gold = gold - 400;
+                    armor = 3;
+                    System.out.print("You now have good armor. You have " + gold + " gold left.");
+                } else {
+                    System.out.print("Your current armor is already better than this. There is no need to buy it.");
+                }
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop3();
+        } else if (shoppyBoi3.equals("buy potions" || "buy potion")){
+            System.out.print("How many would you like to buy?");
+            int potionsPurchased = scannyBoi.nextLine();
+            int goldSpentOnPotions = potionsPurchased * 10;
+            if (gold >= goldSpentOnPotions){
+                gold = gold - goldSpentOnPotions;
+                System.out.print("You have " + gold + " gold left.");
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop3();
+        } else if (shoppyBoi3.equals("steal sword")){
+            System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi3.equals("steal shield")){
+            System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi3.equals("steal bow")){
+            System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi3.equals("steal arrows" || "steal arrow")){
+            System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi3.equals("steal armor")){
+            System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi3.equals("steal potions" || "steal potion")){
+            System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi3.equals("leave shop")){
+            MapMovement();
+        } else {
+            System.out.print("This is not a recognized command");
+            Shop3();
+        }
+    }
+
+    public static void Shop4(){
+        System.out.print("You see a nice building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items seem to be amazing quality and in mint condition. There is a sword with a price tag of 800 gold, a shield with a price tag of 600, a bow with a price tag of 800 gold, arrows with a price tag of 1 gold each, armor with a price tag of 800 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
+        System.out.println("You have " + gold + " gold.");
+        String shoppyBoi4 = scannyBoi.nextLine();
+        if (shoppyBoi4.equals("buy sword")){
+            if (gold >= 800){
+                if (sword < 4){
+                    gold = gold - 800;
+                    sword = 4;
+                    System.out.print("You now have an amazing sword. You have " + gold + " gold left.");
+                } else {
+                    System.out.print("Your current sword is already better than this. There is no need to buy it.");
+                }
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop4();
+        } else if (shoppyBoi4.equals("buy shield")){
+            if (gold >= 600){
+                if (shield < 4){
+                    gold = gold - 600;
+                    shield = 4;
+                    System.out.print("You now have an amazing shield. You have " + gold + " gold left.");
+                } else {
+                    System.out.print("Your current shield is already better than this. There is no need to buy it.");
+                }
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop4();
+        } else if (shoppyBoi4.equals("buy bow")){
+            if (gold >= 800){
+                if (bow < 4){
+                    gold = gold - 800;
+                    bow = 4;
+                    System.out.print("You now have an amazing bow. You have " + gold + " gold left.");
+                } else {
+                    System.out.print("Your current bow is already better than this. There is no need to buy it.");
+                }
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop4();
+        } else if (shoppyBoi4.equals("buy arrows" || "buy arrow")){
+            System.out.print("How many would you like to buy?");
+            int arrowsPurchased = scannyBoi.nextLine();
+            if (gold >= arrowsPurchased){
+                gold = gold - arrowsPurchased;
+                numberOfArrows = numberOfArrows + arrowsPurchased;
+                System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop4();
+        } else if (shoppyBoi4.equals("buy armor")){
+            if(gold >= 800){
+                if (armor < 4){
+                    gold = gold - 800;
+                    armor = 4;
+                    System.out.print("You now have amazing armor. You have " + gold + " gold left.");
+                } else {
+                    System.out.print("Your current armor is already better than this. There is no need to buy it.");
+                }
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop4();
+        } else if (shoppyBoi4.equals("buy potions" || "buy potion")){
+            System.out.print("How many would you like to buy?");
+            int potionsPurchased = scannyBoi.nextLine();
+            int goldSpentOnPotions = potionsPurchased * 10;
+            if (gold >= goldSpentOnPotions){
+                gold = gold - goldSpentOnPotions;
+                System.out.print("You have " + gold + " gold left.");
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop4();
+        } else if (shoppyBoi4.equals("steal sword")){
+            System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi4.equals("steal shield")){
+            System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi4.equals("steal bow")){
+            System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi4.equals("steal arrows" || "steal arrow")){
+            System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi4.equals("steal armor")){
+            System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi4.equals("steal potions" || "steal potion")){
+            System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi4.equals("leave shop")){
+            MapMovement();
+        } else {
+            System.out.print("This is not a recognized command");
+            Shop4();
+        }
+    }
+
+    public static void Shop5(){
+        System.out.print("You see a magnificent building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items are the best quality you have ever seen. You can practically feel the energy radiating off of them. There is a sword with a price tag of 1600 gold, a shield with a price tag of 1200, a bow with a price tag of 1600 gold, arrows with a price tag of 1 gold each, armor with a price tag of 1600 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
+        System.out.println("You have " + gold + " gold.");
+        String shoppyBoi5 = scannyBoi.nextLine();
+        if (shoppyBoi5.equals("buy sword")){
+            if (gold >= 1600){
+                if (sword < 5){
+                    gold = gold - 1600;
+                    sword = 5;
+                    System.out.print("You now have a good sword. You have " + gold + " gold left.");
+                } else {
+                    System.out.print("Your current sword is already better than this. There is no need to buy it.");
+                }
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop5();
+        } else if (shoppyBoi5.equals("buy shield")){
+            if (gold >= 1200){
+                if (shield < 5){
+                    gold = gold - 1200;
+                    shield = 5;
+                    System.out.print("You now have a good shield. You have " + gold + " gold left.");
+                } else {
+                    System.out.print("Your current shield is already better than this. There is no need to buy it.");
+                }
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop5();
+        } else if (shoppyBoi5.equals("buy bow")){
+            if (gold >= 1600){
+                if (bow < 5){
+                    gold = gold - 1600;
+                    bow = 5;
+                    System.out.print("You now have a good bow. You have " + gold + " gold left.");
+                } else {
+                    System.out.print("Your current bow is already better than this. There is no need to buy it.");
+                }
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop5();
+        } else if (shoppyBoi5.equals("buy arrows" || "buy arrow")){
+            System.out.print("How many would you like to buy?");
+            int arrowsPurchased = scannyBoi.nextLine();
+            if (gold >= arrowsPurchased){
+                gold = gold - arrowsPurchased;
+                numberOfArrows = numberOfArrows + arrowsPurchased;
+                System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop5();
+        } else if (shoppyBoi5.equals("buy armor")){
+            if(gold >= 1600){
+                if (armor < 5){
+                    gold = gold - 1600;
+                    armor = 5;
+                    System.out.print("You now have good armor. You have " + gold + " gold left.");
+                } else {
+                    System.out.print("Your current armor is already better than this. There is no need to buy it.");
+                }
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop5();
+        } else if (shoppyBoi5.equals("buy potions" || "buy potion")){
+            System.out.print("How many would you like to buy?");
+            int potionsPurchased = scannyBoi.nextLine();
+            int goldSpentOnPotions = potionsPurchased * 10;
+            if (gold >= goldSpentOnPotions){
+                gold = gold - goldSpentOnPotions;
+                System.out.print("You have " + gold + " gold left.");
+            } else {
+                System.out.print("You do not have enough gold to buy this.");
+            }
+            Shop5();
+        } else if (shoppyBoi5.equals("steal sword")){
+            System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi5.equals("steal shield")){
+            System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi5.equals("steal bow")){
+            System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi5.equals("steal arrows" || "steal arrow")){
+            System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi5.equals("steal armor")){
+            System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi5.equals("steal potions" || "steal potion")){
+            System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+            GameOver();
+        } else if (shoppyBoi5.equals("leave shop")){
+            MapMovement();
+        } else {
+            System.out.print("This is not a recognized command");
+            Shop5();
+        }
+    }
+
     public static void RepeatedArea(){
         System.out.print("You recognize this area. There isn't anything left to do here.");
-        PrintOutClass();
+        MapMovement();
     }
 
     public static void GameOver(){
