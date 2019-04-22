@@ -1709,7 +1709,7 @@ public class GameLoop{
 
     }
 
-    public static void Potion(){
+    /*public static void Potion(){
         System.out.print("You find a bottle with a mysterious liquid in it.");
         String stringyBoi5 = scannyBoi.nextLine();
         if (strinyBoi5.equals("pick up bottle" || "get bottle")){
@@ -1721,7 +1721,7 @@ public class GameLoop{
             System.out.print("That is not a recognized command.");
             Potion();
         }
-    }
+    }*/
 
     //this is the first shop
     //it will be the closest to spawn
