@@ -58,7 +58,7 @@ public class GameLoop{
             boolean beenHere1x8 = false;
             boolean beenHere1x9 = false;
             boolean beenHere1x10 = false;
-            boolean beenHere1x1 = false;
+            boolean beenHere1x11 = false;
             boolean beenHere1x12 = false;
             boolean beenHere1x13 = false;
             boolean beenHere1x14 = false;
@@ -72,7 +72,7 @@ public class GameLoop{
             boolean beenHere2x8 = false;
             boolean beenHere2x9 = false;
             boolean beenHere2x10 = false;
-            boolean beenHere2x1 = false;
+            boolean beenHere2x11 = false;
             boolean beenHere2x12 = false;
             boolean beenHere2x13 = false;
             boolean beenHere2x14 = false;
@@ -285,26 +285,26 @@ public class GameLoop{
         String stringyBoi1 = scannyBoi.nextLine();
         System.out.print("Our tale begins one morning as you wake up alone in a large, foggy feild. You have a dagger in your hand and the only concrete memory you have is that you must find and rescue your father.");
         String stringyBoi2 = scannyBoi.nextLine();
-        if (stringyBoi2.equals("commit sudoku"){
+        if (stringyBoi2.equals("commit sudoku")) {
             Sudoku();
             //this is just a joke that allows the character to stab themselves
-        } else if (stringyBoi2.equals("move forward" || "go forward" || "move forwards" || "go forwards")){
+        } else if (stringyBoi2.equals("move forwards")){
             xPosition = xPosition + 1;
             //this takes the integer we set to be the xPosition of our character and increases the value by one
             //this represents our character moving one space forwards
             CheckPosition();
             //this sends our code to a command that checks our position and depending on our position, does different things
-        } else if (stringyBoi2.equals("move backward" || "go backward" || "move backwards" || "go backwards")){
+        } else if (stringyBoi2.equals("move backwards")){
             xPosition = xPosition - 1;
             CheckPosition();
-        } else if (stringyBoi2.equals("move left" || "go left")){
+        } else if (stringyBoi2.equals("move left")){
             yPosition = yPosition - 1;
             CheckPosition();
-        } else if (stringyBoi2.equals("move right" || "go right")){
+        } else if (stringyBoi2.equals("move right")){
             yPosition = yPosition + 1;
             CheckPosition();
         } else{
-            System.out.print(stringyBoi2 + " is not a recognized command.")
+            System.out.print(stringyBoi2 + " is not a recognized command.");
             PrintOutClass();
         }
     }
@@ -1559,7 +1559,7 @@ public class GameLoop{
     }
 
     //we will program our various encounters to be called on from each position here
-    public static void Treasure{
+    public static void Treasure(){
         System.out.print("You see a treasure chest.");
         String stringyBoi3 = scannyBoi.nextLine();
         if (stringyBoi3.equals("open" || "open chest")){
@@ -1572,7 +1572,7 @@ public class GameLoop{
         }
     }
 
-    public static void TrappedTreasure{
+    public static void TrappedTreasure(){
         System.out.print("You see a treasure chest.");
         String stringyBoi4 = scannyBoi.nextLine();
         if (stringyBoi4.equals("open" || "open chest")){
@@ -1585,19 +1585,19 @@ public class GameLoop{
         }
     }
     
-    public static void Troll{
+    public static void Troll(){
 
     }
 
-    public static void Slime{
+    public static void Slime(){
 
     }
 
-    public static void Dragon{
+    public static void Dragon(){
 
     }
 
-    public static void Potion{
+    public static void Potion(){
         System.out.print("You find a bottle with a mysterious liquid in it.");
         String stringyBoi5 = scannyBoi.nextLine();
         if (strinyBoi5.equals("pick up bottle" || "get bottle")){
@@ -1615,7 +1615,7 @@ public class GameLoop{
     //it has power level 1 items
     //it will be an encounter you can have multiple times
     //the items here will be cheap
-    public static void Shop1{
+    public static void Shop1(){
         System.out.print("You see a rickety building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be in perfect condition. There is a sword with a price tag of 100 gold, a shield with a price tag of 75, a bow with a price tag of 100 gold, arrows with a price tag of 1 gold each, armor with a price tag of 100 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
         System.out.println("You have " + gold + " gold.");
         String shoppyBoi = scannyBoi.nextLine();
@@ -1658,12 +1658,12 @@ public class GameLoop{
         } else if (shoppyBoi.equals("buy arrows" || "buy arrow")){
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = scannyBoi.nextLine();
-            if (gold >= arrowsPurchased);{
+            if (gold >= arrowsPurchased){
                 gold = gold - arrowsPurchased;
                 numberOfArrows = numberOfArrows + arrowsPurchased;
                 System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
             } else {
-                System.out.print("You do not have enough gold to buy this.")
+                System.out.print("You do not have enough gold to buy this.");
             }
         } else if (shoppyBoi.equals("buy armor")){
             if(gold >= 100){
@@ -1706,12 +1706,12 @@ public class GameLoop{
             System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
         } else {
-            System.out.print("This is not a recognized command")
+            System.out.print("This is not a recognized command");
             Shop1();
         }
     }
 
-    public static void RepeatedArea{
+    public static void RepeatedArea(){
         System.out.print("You recognize this area. There isn't anything left to do here.");
         PrintOutClass();
     }
