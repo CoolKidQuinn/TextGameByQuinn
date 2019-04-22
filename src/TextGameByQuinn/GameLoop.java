@@ -1,6 +1,7 @@
 //This is going to be where everything happens in your game
 //By gameloop it just means that this is going to be what happens every frame
 
+import java.util.Random;
 import java.util.Scanner;
 //basically just a bunch of general utilies that java put into the language
 public class GameLoop{
@@ -262,7 +263,7 @@ public class GameLoop{
         //the player gains experience after each encounter
         int level = 1;
         //once the player reaches different experience thresholds, the level will be moved up
-        int health = 100;
+        double health = 100;
         //the player starts with 100 health, they can lose it and gain it back by doing various actions
         System.out.print("The game has begun. ");
         System.out.print("Choose Name. ");
@@ -286,31 +287,31 @@ public class GameLoop{
         if (health <= 0) {
             GameOver();
         } else {
-            if (experience > 50){
+            if (experience >= 50){
                 level = 2;
             } 
-            if (experience > 125){
+            if (experience >= 125){
                 level = 3;
             }
-            if (experience > 225){
+            if (experience >= 225){
                 level = 4;
             }
-            if (experience > 350){
+            if (experience >= 350){
                 level = 5;
             }
-            if (experience > 500){
+            if (experience >= 500){
                 level = 6;
             }
-            if (experience > 675){
+            if (experience >= 675){
                 level = 7;
             }
-            if (experience > 875){
+            if (experience >= 875){
                 level = 8;
             }
-            if (experience > 1100){
+            if (experience >= 1100){
                 level = 9;
             }
-            if (experience > 1350){
+            if (experience >= 1350){
                 level = 10;
             }
             String stringyBoi2 = scannyBoi.nextLine();
@@ -318,20 +319,27 @@ public class GameLoop{
                 Sudoku();
                 //this is just a joke that allows the character to stab themselves
             } else if (stringyBoi2.equals("move forwards")){
-                xPosition = xPosition + 1;
+                xPosition = Math(xPosition + 1);
                 //this takes the integer we set to be the xPosition of our character and increases the value by one
                 //this represents our character moving one space forwards
                 CheckPosition();
                 //this sends our code to a command that checks our position and depending on our position, does different things
             } else if (stringyBoi2.equals("move backwards")){
-                xPosition = xPosition - 1;
+                xPosition = Math(xPosition - 1);
                 CheckPosition();
             } else if (stringyBoi2.equals("move left")){
-                yPosition = yPosition - 1;
+                yPosition = Math(yPosition - 1);
                 CheckPosition();
             } else if (stringyBoi2.equals("move right")){
-                yPosition = yPosition + 1;
+                yPosition = Math(yPosition + 1);
                 CheckPosition();
+            } else if (stringyBoi2.equals("use potion")) {
+                if (numberOfPotions = 0){
+                    System.out.print("You don't have any potions.");
+                } else {
+                    health = Math(health + 25);
+                    System.out.print("You drink the potion and feel reinvigorated.");
+                }
             } else{
                 System.out.print(stringyBoi2 + " is not a recognized command.");
                 MapMovement();
@@ -979,6 +987,7 @@ public class GameLoop{
             } else if (yPosition == 13){
                 if (beenHere7x13 == false){
                     beenHere7x13 = true; 
+                    Troll1Encounter();
                 } else {
                     RepeatedArea();
                 }
@@ -1606,8 +1615,8 @@ public class GameLoop{
         String stringyBoi3 = scannyBoi.nextLine();
         if (stringyBoi3.equals("open" || "open chest")){
             System.out.print("You open up the treasure chest and find 20");
-            experience = experience + 5;
-            gold = gold + 20;
+            experience = Math(experience + 5);
+            gold = Math(gold + 20);
         } else if (stringyBoi3.equals("ignore" || "ignore chest")){
             System.out.print("You decide to ignore the chest and continue searching.");
         } else {
@@ -1622,8 +1631,8 @@ public class GameLoop{
         String stringyBoi3 = scannyBoi.nextLine();
         if (stringyBoi3.equals("open" || "open chest")){
             System.out.print("You open up the treasure chest and find 40 gold");
-            experience = experience + 10;
-            gold = gold + 40;
+            experience = Math(experience + 10);
+            gold = Math(gold + 40);
         } else if (stringyBoi3.equals("ignore" || "ignore chest")){
             System.out.print("You decide to ignore the chest and continue searching.");
         } else {
@@ -1638,8 +1647,8 @@ public class GameLoop{
         String stringyBoi3 = scannyBoi.nextLine();
         if (stringyBoi3.equals("open" || "open chest")){
             System.out.print("You open up the treasure chest and find 60 gold");
-            experience = experience + 15;
-            gold = gold + 60;
+            experience = Math(experience + 15);
+            gold = Math(gold + 60);
         } else if (stringyBoi3.equals("ignore" || "ignore chest")){
             System.out.print("You decide to ignore the chest and continue searching.");
         } else {
@@ -1654,8 +1663,8 @@ public class GameLoop{
         String stringyBoi3 = scannyBoi.nextLine();
         if (stringyBoi3.equals("open" || "open chest")){
             System.out.print("You open up the treasure chest and find 80 gold");
-            experience = experience + 20;
-            gold = gold + 80;
+            experience = Math(experience + 20);
+            gold = Math(gold + 80);
         } else if (stringyBoi3.equals("ignore" || "ignore chest")){
             System.out.print("You decide to ignore the chest and continue searching.");
         } else {
@@ -1670,8 +1679,8 @@ public class GameLoop{
         String stringyBoi3 = scannyBoi.nextLine();
         if (stringyBoi3.equals("open" || "open chest")){
             System.out.print("You open up the treasure chest and find 100 gold");
-            experience = experience + 25;
-            gold = gold + 100;
+            experience = Math(experience + 25);
+            gold = Math(gold + 100);
         } else if (stringyBoi3.equals("ignore" || "ignore chest")){
             System.out.print("You decide to ignore the chest and continue searching.");
         } else {
@@ -1686,22 +1695,165 @@ public class GameLoop{
         String stringyBoi4 = scannyBoi.nextLine();
         if (stringyBoi4.equals("open" || "open chest")){
             System.out.print("You bend down to open the chest, but as soon as you touch it, it explodes, hurting you and knocking you down.");
-            health = health - 10;
+            health = Math(health - 10);
         } else if (stringyBoi4.equals("ignore" || "ignore chest")){
             System.out.print("You decide to ignore the chest and continue searching.");
-            experience = experience + 5;
+            experience = Math(experience + 5);
         } else {
             System.out.print("That is not a recognized command.");
             TrappedTreasure();
         }
         MapMovement();
     }
-    
-    public static void Troll(){
+
+    public static void Troll1Encounter(){
+        int trollHealth = 10;
+        System.out.print("You come across a troll about your size. He is armed with a club and a wooden shield.");
+        AttackTroll1();
+    }
+
+    public static void AttackTroll1(){
+        String fightyBoi1 = scannyBoi.nextLine();
+        if (fightyBoi1.equals("use sword")) {
+            if (sword = 0){
+                System.out.print("You don't have a sword.");
+            } else {
+                int damage = Math(sword * level * 2);
+                trollHealth = Math(trollHealth - damage);
+                System.out.print("You slash the troll with your sword.");
+            }
+        } else if (fightyBoi1.equals("use dagger")) {
+            int damage = level;
+            trollHealth = Math(trollHealth - damage);
+            System.out.print("You stab the troll with your dagger.");
+        } else if (fightyBoi1.equals("use bow")) {
+            if (bow = 0){
+                System.out.print("You don't have a bow.");
+            } else if (numberOfArrows = 0) {
+                System.out.print("You don't have any arrows.");
+            } else {
+                int damage = Math(bow * level * 2);
+                numberOfArrows = Math(numberOfArrows - 1);
+                trollHealth = Math(trollHealth - damage);
+                System.out.print("Your shoot an arrow at the troll.");
+            }
+        } else if (fightyBoi1.equals("use potion")) {
+            if (numberOfPotions = 0){
+                System.out.print("You don't have any potions.");
+            } else {
+                health = Math(health + 25);
+                System.out.print("You drink the potion and feel reinvigorated.");
+                AttackTroll1();
+            }
+        } else if (fightyBoi1.equals("use shield")) {
+            if (shield = 0){
+                System.out.print("You don't have a shield.");
+            } else {
+                Random rand = new Random();
+                int shieldBlockTest = rand.nextInt(10);
+                int shieldStrength = Math(shield + 3);
+                if (shieldStrength > shieldBlockTest) {
+                    System.out.print("The troll tries to attack you with his club, but you block it with your shield and have an oppurtunity to counterattack.");
+                } else {
+                    System.out.print("You can't quite get your shield up in time.");
+                }
+            }
+        } else if (fightyBoi1.equals("punch")) {
+            System.out.print("You punch the troll. It barely even registers the attack.");
+            trollHealth = Math(trollHealth - 1);
+        } else if (fightyBoi1.equals("run")) {
+            System.out.print("You try to run away from the troll, but it is too fast and catches you.");
+        } else {
+            System.out.print("That is not a recognized command.");
+            AttackTroll1();
+        }
+        if (trollHealth <= 0) {
+            DeadTroll1();
+        } else {
+            Troll1Attacks();
+        }
+    }
+
+    public static void CritAttackTroll1(){
+        String fightyBoi1 = scannyBoi.nextLine();
+        if (fightyBoi1.equals("use sword")) {
+            if (sword = 0){
+                System.out.print("You don't have a sword.");
+            } else {
+                int damage = Math(sword * level * 4);
+                trollHealth = Math(trollHealth - damage);
+                System.out.print("You slash the troll with your sword. The troll isn't ready for the attack and it hits extra hard.");
+            }
+        } else if (fightyBoi1.equals("use dagger")) {
+            int damage = level;
+            trollHealth = Math(trollHealth - damage * 2);
+            System.out.print("You stab the troll with your dagger. The troll isn't ready for the attack and it hits extra hard.");
+        } else if (fightyBoi1.equals("use bow")) {
+            if (bow = 0){
+                System.out.print("You don't have a bow.");
+            } else if (numberOfArrows = 0) {
+                System.out.print("You don't have any arrows.");
+            } else {
+                int damage = Math(bow * level * 2);
+                numberOfArrows = Math(numberOfArrows - 1);
+                trollHealth = Math(trollHealth - damage);
+                System.out.print("Your shoot an arrow at the troll. The troll isn't ready for the attack and it hits extra hard.");
+            }
+        } else if (fightyBoi1.equals("use potion")) {
+            if (numberOfPotions = 0){
+                System.out.print("You don't have any potions.");
+            } else {
+                health = Math(health + 25);
+                System.out.print("You drink the potion and feel reinvigorated.");
+                CritAttackTroll1();
+            }
+        } else if (fightyBoi1.equals("use shield")) {
+            System.out.print("There is no point in blocking. The troll is already off guard.");
+        } else if (fightyBoi1.equals("punch")) {
+            System.out.print("You punch the troll.");
+            trollHealth = Math(trollHealth - 2);
+        } else if (fightyBoi1.equals("run")) {
+            System.out.print("Even when the troll is off guard, it is still able to chase you down when you try to run.");
+        } else {
+            System.out.print("That is not a recognized command.");
+            CritAttackTroll1();
+        }
+        if (trollHealth <= 0) {
+            DeadTroll1();
+        } else {
+            Troll1Attacks();
+        }
+    }
+
+    public static void Troll1Attacks(){
+        System.out.print("The troll swings its club at you.");
+        if (armor = 0){
+            health = Math(health - 10);
+        } else {
+            double troll1Damage = 
+            health = Math(health - troll1Damage);
+        }
+        if (health <= 0){
+            GameOver();
+        }
+    }
+
+    public static void DeadTroll1(){
+        System.out.print("And with that, the troll fell over with a resounding thud.");
+        experience = Math(experience + 50);
+        gold = Math(gold + 100);
+        System.out.println("You have gotten some gold and experience. You now have " + gold + " gold and " + experience + "experience");
+    }
+
+    public static void BigSlime(){
 
     }
 
-    public static void Slime(){
+    public static void MediumSlime(){
+
+    }
+
+    public static void SmallSlime(){
 
     }
 
@@ -1709,33 +1861,19 @@ public class GameLoop{
 
     }
 
-    /*public static void Potion(){
-        System.out.print("You find a bottle with a mysterious liquid in it.");
-        String stringyBoi5 = scannyBoi.nextLine();
-        if (strinyBoi5.equals("pick up bottle" || "get bottle")){
-            System.out.print("You pick up the bottle and put it in your bag for later use.");
-            numberOfPotions = numberOfPotions + 1;
-        } else if (stringyBoi5.equals("ignore" || "ignore bottle")){
-            System.out.print("You choose to ignore the bottle.");
-        } else {
-            System.out.print("That is not a recognized command.");
-            Potion();
-        }
-    }*/
-
     //this is the first shop
     //it will be the closest to spawn
     //it has power level 1 items
     //it will be an encounter you can have multiple times
     //the items here will be cheap
     public static void Shop1(){
-        System.out.print("You see a rickety building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be in relatively good condition, although they aren't very high quality. There is a sword with a price tag of 100 gold, a shield with a price tag of 75, a bow with a price tag of 100 gold, arrows with a price tag of 1 gold each, armor with a price tag of 100 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
+        System.out.print("You see a rickety building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be in relatively good condition, although they aren't very high quality. There is a sword with a price tag of 100 gold, a shield with a price tag of 100, a bow with a price tag of 75 gold, arrows with a price tag of 5 gold each, armor with a price tag of 100 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
         System.out.println("You have " + gold + " gold.");
         String shoppyBoi1 = scannyBoi.nextLine();
         if (shoppyBoi1.equals("buy sword")){
             if (gold >= 100){
                 if (sword < 1){
-                    gold = gold - 100;
+                    gold = Math(gold - 100);
                     sword = 1;
                     System.out.print("You now have a sword. You have " + gold + " gold left.");
                 } else {
@@ -1744,10 +1882,11 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
+            Shop1();
         } else if (shoppyBoi1.equals("buy shield")){
-            if (gold >= 75){
+            if (gold >= 100){
                 if (shield < 1){
-                    gold = gold - 75;
+                    gold = Math(gold - 100);
                     shield = 1;
                     System.out.print("You now have a shield. You have " + gold + " gold left.");
                 } else {
@@ -1756,10 +1895,11 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
+            Shop1();
         } else if (shoppyBoi1.equals("buy bow")){
-            if (gold >= 100){
+            if (gold >= 75){
                 if (bow < 1){
-                    gold = gold - 100;
+                    gold = Math(gold - 75);
                     bow = 1;
                     System.out.print("You now have a bow. You have " + gold + " gold left.");
                 } else {
@@ -1768,20 +1908,23 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
+            Shop1();
         } else if (shoppyBoi1.equals("buy arrows" || "buy arrow")){
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = scannyBoi.nextLine();
-            if (gold >= arrowsPurchased){
-                gold = gold - arrowsPurchased;
-                numberOfArrows = numberOfArrows + arrowsPurchased;
+            int goldSpentOnArrows = Math(arrowsPurchased * 5);
+            if (gold >= goldSpentOnArrows){
+                gold = Math(gold - goldSpentOnArrows);
+                numberOfArrows = Math(numberOfArrows + arrowsPurchased);
                 System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
+            Shop1();
         } else if (shoppyBoi1.equals("buy armor")){
             if(gold >= 100){
                 if (armor < 1){
-                    gold = gold - 100;
+                    gold = Math(gold - 100);
                     armor = 1;
                     System.out.print("You now have armor. You have " + gold + " gold left.");
                 } else {
@@ -1790,16 +1933,18 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
+            Shop1();
         } else if (shoppyBoi1.equals("buy potions" || "buy potion")){
             System.out.print("How many would you like to buy?");
             int potionsPurchased = scannyBoi.nextLine();
-            int goldSpentOnPotions = potionsPurchased * 10;
+            int goldSpentOnPotions = Math(potionsPurchased * 10);
             if (gold >= goldSpentOnPotions){
-                gold = gold - goldSpentOnPotions;
+                gold = Math(gold - goldSpentOnPotions);
                 System.out.print("You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
+            Shop1();
         } else if (shoppyBoi1.equals("steal sword")){
             System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
@@ -1827,13 +1972,13 @@ public class GameLoop{
     }
 
     public static void Shop2(){
-        System.out.print("You see an old building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be brand new and of decent quality. There is a sword with a price tag of 200 gold, a shield with a price tag of 150, a bow with a price tag of 200 gold, arrows with a price tag of 1 gold each, armor with a price tag of 200 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
+        System.out.print("You see an old building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be brand new and of decent quality. There is a sword with a price tag of 200 gold, a shield with a price tag of 200, a bow with a price tag of 150 gold, arrows with a price tag of 5 gold each, armor with a price tag of 200 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
         System.out.println("You have " + gold + " gold.");
         String shoppyBoi2 = scannyBoi.nextLine();
         if (shoppyBoi2.equals("buy sword")){
             if (gold >= 200){
                 if (sword < 2){
-                    gold = gold - 200;
+                    gold = Math(gold - 200);
                     sword = 2;
                     System.out.print("You now have a decent sword. You have " + gold + " gold left.");
                 } else {
@@ -1842,10 +1987,11 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
+            Shop2();
         } else if (shoppyBoi2.equals("buy shield")){
-            if (gold >= 150){
+            if (gold >= 200){
                 if (shield < 2){
-                    gold = gold - 150;
+                    gold = Math(gold - 200);
                     shield = 2;
                     System.out.print("You now have a decent shield. You have " + gold + " gold left.");
                 } else {
@@ -1854,10 +2000,11 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
+            Shop2();
         } else if (shoppyBoi2.equals("buy bow")){
-            if (gold >= 200){
+            if (gold >= 150){
                 if (bow < 2){
-                    gold = gold - 200;
+                    gold = Math(gold - 150);
                     bow = 2;
                     System.out.print("You now have a decent bow. You have " + gold + " gold left.");
                 } else {
@@ -1866,20 +2013,23 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
+            Shop2();
         } else if (shoppyBoi2.equals("buy arrows" || "buy arrow")){
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = scannyBoi.nextLine();
-            if (gold >= arrowsPurchased){
-                gold = gold - arrowsPurchased;
-                numberOfArrows = numberOfArrows + arrowsPurchased;
+            int goldSpentOnArrows = Math(arrowsPurchased * 5);
+            if (gold >= goldSpentOnArrows){
+                gold = Math(gold - goldSpentOnArrows);
+                numberOfArrows = Math(numberOfArrows + arrowsPurchased);
                 System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
+            Shop2();
         } else if (shoppyBoi2.equals("buy armor")){
             if(gold >= 200){
                 if (armor < 2){
-                    gold = gold - 200;
+                    gold = Math(gold - 200);
                     armor = 2;
                     System.out.print("You now have decent armor. You have " + gold + " gold left.");
                 } else {
@@ -1888,16 +2038,18 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
+            Shop2();
         } else if (shoppyBoi2.equals("buy potions" || "buy potion")){
             System.out.print("How many would you like to buy?");
             int potionsPurchased = scannyBoi.nextLine();
-            int goldSpentOnPotions = potionsPurchased * 10;
+            int goldSpentOnPotions = Math(potionsPurchased * 10);
             if (gold >= goldSpentOnPotions){
-                gold = gold - goldSpentOnPotions;
+                gold = Math(gold - goldSpentOnPotions);
                 System.out.print("You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
+            Shop2();
         } else if (shoppyBoi2.equals("steal sword")){
             System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
@@ -1925,13 +2077,13 @@ public class GameLoop{
     }
 
     public static void Shop3(){
-        System.out.print("You see a building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items seem to be good quality and in perfect condition. There is a sword with a price tag of 400 gold, a shield with a price tag of 300, a bow with a price tag of 400 gold, arrows with a price tag of 1 gold each, armor with a price tag of 400 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
+        System.out.print("You see a building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items seem to be good quality and in perfect condition. There is a sword with a price tag of 400 gold, a shield with a price tag of 400, a bow with a price tag of 300 gold, arrows with a price tag of 5 gold each, armor with a price tag of 400 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
         System.out.println("You have " + gold + " gold.");
         String shoppyBoi3 = scannyBoi.nextLine();
         if (shoppyBoi3.equals("buy sword")){
             if (gold >= 400){
                 if (sword < 3){
-                    gold = gold - 400;
+                    gold = Math(gold - 400);
                     sword = 3;
                     System.out.print("You now have a good sword. You have " + gold + " gold left.");
                 } else {
@@ -1942,9 +2094,9 @@ public class GameLoop{
             }
             Shop3();
         } else if (shoppyBoi3.equals("buy shield")){
-            if (gold >= 300){
+            if (gold >= 400){
                 if (shield < 3){
-                    gold = gold - 300;
+                    gold = Math(gold - 400);
                     shield = 3;
                     System.out.print("You now have a good shield. You have " + gold + " gold left.");
                 } else {
@@ -1955,9 +2107,9 @@ public class GameLoop{
             }
             Shop3();
         } else if (shoppyBoi3.equals("buy bow")){
-            if (gold >= 400){
+            if (gold >= 300){
                 if (bow < 3){
-                    gold = gold - 400;
+                    gold = Math(gold - 300);
                     bow = 3;
                     System.out.print("You now have a good bow. You have " + gold + " gold left.");
                 } else {
@@ -1970,9 +2122,10 @@ public class GameLoop{
         } else if (shoppyBoi3.equals("buy arrows" || "buy arrow")){
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = scannyBoi.nextLine();
-            if (gold >= arrowsPurchased){
-                gold = gold - arrowsPurchased;
-                numberOfArrows = numberOfArrows + arrowsPurchased;
+            int goldSpentOnArrows = Math(arrowsPurchased * 5);
+            if (gold >= goldSpentOnArrows){
+                gold = Math(gold - goldSpentOnArrows);
+                numberOfArrows = Math(numberOfArrows + arrowsPurchased);
                 System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
@@ -1981,7 +2134,7 @@ public class GameLoop{
         } else if (shoppyBoi3.equals("buy armor")){
             if(gold >= 400){
                 if (armor < 3){
-                    gold = gold - 400;
+                    gold = Math(gold - 400);
                     armor = 3;
                     System.out.print("You now have good armor. You have " + gold + " gold left.");
                 } else {
@@ -1994,9 +2147,9 @@ public class GameLoop{
         } else if (shoppyBoi3.equals("buy potions" || "buy potion")){
             System.out.print("How many would you like to buy?");
             int potionsPurchased = scannyBoi.nextLine();
-            int goldSpentOnPotions = potionsPurchased * 10;
+            int goldSpentOnPotions = Math(potionsPurchased * 10);
             if (gold >= goldSpentOnPotions){
-                gold = gold - goldSpentOnPotions;
+                gold = Math(gold - goldSpentOnPotions);
                 System.out.print("You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
@@ -2029,13 +2182,13 @@ public class GameLoop{
     }
 
     public static void Shop4(){
-        System.out.print("You see a nice building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items seem to be amazing quality and in mint condition. There is a sword with a price tag of 800 gold, a shield with a price tag of 600, a bow with a price tag of 800 gold, arrows with a price tag of 1 gold each, armor with a price tag of 800 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
+        System.out.print("You see a nice building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items seem to be amazing quality and in mint condition. There is a sword with a price tag of 800 gold, a shield with a price tag of 800, a bow with a price tag of 600 gold, arrows with a price tag of 5 gold each, armor with a price tag of 800 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
         System.out.println("You have " + gold + " gold.");
         String shoppyBoi4 = scannyBoi.nextLine();
         if (shoppyBoi4.equals("buy sword")){
             if (gold >= 800){
                 if (sword < 4){
-                    gold = gold - 800;
+                    gold = Math(gold - 800);
                     sword = 4;
                     System.out.print("You now have an amazing sword. You have " + gold + " gold left.");
                 } else {
@@ -2046,9 +2199,9 @@ public class GameLoop{
             }
             Shop4();
         } else if (shoppyBoi4.equals("buy shield")){
-            if (gold >= 600){
+            if (gold >= 800){
                 if (shield < 4){
-                    gold = gold - 600;
+                    gold = Math(gold - 800);
                     shield = 4;
                     System.out.print("You now have an amazing shield. You have " + gold + " gold left.");
                 } else {
@@ -2059,9 +2212,9 @@ public class GameLoop{
             }
             Shop4();
         } else if (shoppyBoi4.equals("buy bow")){
-            if (gold >= 800){
+            if (gold >= 600){
                 if (bow < 4){
-                    gold = gold - 800;
+                    gold = Math(gold - 600);
                     bow = 4;
                     System.out.print("You now have an amazing bow. You have " + gold + " gold left.");
                 } else {
@@ -2074,9 +2227,10 @@ public class GameLoop{
         } else if (shoppyBoi4.equals("buy arrows" || "buy arrow")){
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = scannyBoi.nextLine();
-            if (gold >= arrowsPurchased){
-                gold = gold - arrowsPurchased;
-                numberOfArrows = numberOfArrows + arrowsPurchased;
+            int goldSpentOnArrows = Math(arrowsPurchased * 5);
+            if (gold >= goldSpentOnArrows){
+                gold = Math(gold - goldSpentOnArrows);
+                numberOfArrows = Math(numberOfArrows + arrowsPurchased);
                 System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
@@ -2085,7 +2239,7 @@ public class GameLoop{
         } else if (shoppyBoi4.equals("buy armor")){
             if(gold >= 800){
                 if (armor < 4){
-                    gold = gold - 800;
+                    gold = Math(gold - 800);
                     armor = 4;
                     System.out.print("You now have amazing armor. You have " + gold + " gold left.");
                 } else {
@@ -2098,9 +2252,9 @@ public class GameLoop{
         } else if (shoppyBoi4.equals("buy potions" || "buy potion")){
             System.out.print("How many would you like to buy?");
             int potionsPurchased = scannyBoi.nextLine();
-            int goldSpentOnPotions = potionsPurchased * 10;
+            int goldSpentOnPotions = Math(potionsPurchased * 10);
             if (gold >= goldSpentOnPotions){
-                gold = gold - goldSpentOnPotions;
+                gold = Math(gold - goldSpentOnPotions);
                 System.out.print("You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
@@ -2133,13 +2287,13 @@ public class GameLoop{
     }
 
     public static void Shop5(){
-        System.out.print("You see a magnificent building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items are the best quality you have ever seen. You can practically feel the energy radiating off of them. There is a sword with a price tag of 1600 gold, a shield with a price tag of 1200, a bow with a price tag of 1600 gold, arrows with a price tag of 1 gold each, armor with a price tag of 1600 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
+        System.out.print("You see a magnificent building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items are the best quality you have ever seen. You can practically feel the power radiating off of them. There is a sword with a price tag of 1800 gold, a shield with a price tag of 1800, a bow with a price tag of 1200 gold, arrows with a price tag of 5 gold each, armor with a price tag of 1800 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
         System.out.println("You have " + gold + " gold.");
         String shoppyBoi5 = scannyBoi.nextLine();
         if (shoppyBoi5.equals("buy sword")){
-            if (gold >= 1600){
+            if (gold >= 1800){
                 if (sword < 5){
-                    gold = gold - 1600;
+                    gold = Math(gold - 1800);
                     sword = 5;
                     System.out.print("You now have a good sword. You have " + gold + " gold left.");
                 } else {
@@ -2150,9 +2304,9 @@ public class GameLoop{
             }
             Shop5();
         } else if (shoppyBoi5.equals("buy shield")){
-            if (gold >= 1200){
+            if (gold >= 1800){
                 if (shield < 5){
-                    gold = gold - 1200;
+                    gold = Math(gold - 1800);
                     shield = 5;
                     System.out.print("You now have a good shield. You have " + gold + " gold left.");
                 } else {
@@ -2163,9 +2317,9 @@ public class GameLoop{
             }
             Shop5();
         } else if (shoppyBoi5.equals("buy bow")){
-            if (gold >= 1600){
+            if (gold >= 1200){
                 if (bow < 5){
-                    gold = gold - 1600;
+                    gold = Math(gold - 1200);
                     bow = 5;
                     System.out.print("You now have a good bow. You have " + gold + " gold left.");
                 } else {
@@ -2178,18 +2332,19 @@ public class GameLoop{
         } else if (shoppyBoi5.equals("buy arrows" || "buy arrow")){
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = scannyBoi.nextLine();
-            if (gold >= arrowsPurchased){
-                gold = gold - arrowsPurchased;
-                numberOfArrows = numberOfArrows + arrowsPurchased;
+            int goldSpentOnArrows = Math(arrowsPurchased * 5);
+            if (gold >= goldSpentOnArrows){
+                gold = Math(gold - goldSpentOnArrows);
+                numberOfArrows = Math(numberOfArrows + arrowsPurchased);
                 System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
             }
             Shop5();
         } else if (shoppyBoi5.equals("buy armor")){
-            if(gold >= 1600){
+            if(gold >= 1800){
                 if (armor < 5){
-                    gold = gold - 1600;
+                    gold = Math(gold - 1800);
                     armor = 5;
                     System.out.print("You now have good armor. You have " + gold + " gold left.");
                 } else {
@@ -2202,9 +2357,9 @@ public class GameLoop{
         } else if (shoppyBoi5.equals("buy potions" || "buy potion")){
             System.out.print("How many would you like to buy?");
             int potionsPurchased = scannyBoi.nextLine();
-            int goldSpentOnPotions = potionsPurchased * 10;
+            int goldSpentOnPotions = Math(potionsPurchased * 10);
             if (gold >= goldSpentOnPotions){
-                gold = gold - goldSpentOnPotions;
+                gold = Math(gold - goldSpentOnPotions);
                 System.out.print("You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
