@@ -317,86 +317,88 @@ public class GameLoop{
                 //we can put encounters into each one of these different positions
                 if (beenHere1X1 == false){
                 //this checks to see if we have already been here
-                    
+                    beenHere1x1 = true;
+                    //this will tell the code that we have now been here
+
                     //this is where we put the encounter that happens in this location
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 2){
                 if (beenHere1x2 == false){
-
+                    beenHere1x2 = true;
                 } else {
                     RepeatedArea();
                 }   
             } else if (yPosition == 3){
                 if (beenHere1x3 == false){
-
+                    beenHere1x3 = true;
                 } else {
                     RepeatedArea();
                 }  
             } else if (yPosition == 4){
                 if (beenHere1x4 == false){
-
+                    beenHere1x4 = true;
                 } else {
                     RepeatedArea();
                 }  
             } else if (yPosition == 5){
                 if (beenHere1x5 == false){
-
+                    beenHere1x5 = true;
                 } else {
                     RepeatedArea();
                 }  
             } else if (yPosition == 6){
                 if (beenHere1x6 == false){
-
+                    beenHere1x6 = true;
                 } else {
                     RepeatedArea();
                 }  
             } else if (yPosition == 7){
                 if (beenHere1x7 == false){
-
+                    beenHere1x7 = true;
                 } else {
                     RepeatedArea();
                 }  
             } else if (yPosition == 8){
                 if (beenHere1x8 == false){
-
+                    beenHere1x8 = true;
                 } else {
                     RepeatedArea();
                 }  
             } else if (yPosition == 9){
                 if (beenHere1x9 == false){
-
+                    beenHere1x9 = true;
                 } else {
                     RepeatedArea();
                 }  
             } else if (yPosition == 10){
                 if (beenHere1x10 == false){
-
+                    beenHere1x10 = true;
                 } else {
                     RepeatedArea();
                 }  
             } else if (yPosition == 11){
                 if (beenHere1x11 == false){
-
+                    beenHere1x11 = true;
                 } else {
                     RepeatedArea();
                 }  
             } else if (yPosition == 12){
                 if (beenHere1x12 == false){
-
+                    beenHere1x12 = true;
                 } else {
                     RepeatedArea();
                 }  
             } else if (yPosition == 13){
                 if (beenHere1x13 == false){
-
+                    beenHere1x13 = true;
                 } else {
                     RepeatedArea();
                 }  
             } else if (yPosition == 14){
                 if (beenHere1x14 == false){
-
+                    beenHere1x14 = true;
                 } else {
                     RepeatedArea();
                 }  
@@ -406,85 +408,85 @@ public class GameLoop{
         } else if (xPosition == 2){
             if (yPosition == 1){
                 if (beenHere2x1 == false){
-
+                    beenHere2x1 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 2){
                 if (beenHere2x2 == false){
-                    
+                    beenHere2x2 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 3){
                 if (beenHere2x3 == false){
-                    
+                    beenHere2x3 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 4){
                 if (beenHere2x4 == false){
-                    
+                    beenHere2x4 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 5){
                 if (beenHere2x5 == false){
-                    
+                    beenHere2x5 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 6){
                 if (beenHere2x6 == false){
-                    
+                    beenHere2x6 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 7){
                 if (beenHere2x7 == false){
-                    
+                    beenHere2x7 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 8){
                 if (beenHere2x8 == false){
-                    
+                    beenHere2x8 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 9){
                 if (beenHere2x9 == false){
-                    
+                    beenHere2x9 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 10){
                 if (beenHere2x10 == false){
-                    
+                    beenHere2x10 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 11){
                 if (beenHere2x11 == false){
-                    
+                    beenHere2x11 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 12){
                 if (beenHere2x12 == false){
-                    
+                    beenHere2x12 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 13){
                 if (beenHere2x13 == false){
-                    
+                    beenHere2x13 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 14){
                 if (beenHere2x14 == false){
-                    
+                    beenHere2x14 = true;
                 } else {
                     RepeatedArea();
                 }
@@ -493,85 +495,85 @@ public class GameLoop{
         } else if (xPosition == 3){
             if (yPosition == 1){
                 if (beenHere3x1 == false){
-                    
+                    beenHere3x1 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 2){
                 if (beenHere3x2 == false){
-                    
+                    beenHere3x2 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 3){
                 if (beenHere3x3 == false){
-                    
+                    beenHere3x3 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 4){
                 if (beenHere3x4 == false){
-                    
+                    beenHere3x4 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 5){
                 if (beenHere3x5 == false){
-                    
+                    beenHere3x5 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 6){
                 if (beenHere3x6 == false){
-                    
+                    beenHere3x6 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 7){
                 if (beenHere3x7 == false){
-                    
+                    beenHere3x7 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 8){
                 if (beenHere3x8 == false){
-                    
+                    beenHere3x8 = true;  
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 9){
                 if (beenHere3x9 == false){
-                    
+                    beenHere3x9 = true;  
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 10){
                 if (beenHere3x10 == false){
-                    
+                    beenHere3x10 = true;  
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 11){
                 if (beenHere3x11 == false){
-                    
+                    beenHere3x11 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 12){
                 if (beenHere3x12 == false){
-                    
+                    beenHere3x12 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 13){
                 if (beenHere3x13 == false){
-                    
+                    beenHere3x13 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 14){
                 if (beenHere3x14 == false){
-                    
+                    beenHere3x14 = true; 
                 } else {
                     RepeatedArea();
                 }
@@ -580,85 +582,85 @@ public class GameLoop{
         } else if (xPosition == 4){
             if (yPosition == 1){
                 if (beenHere4x1 == false){
-                    
+                    beenHere4x1 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 2){
                 if (beenHere4x2 == false){
-                    
+                    beenHere4x2 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 3){
                 if (beenHere4x3 == false){
-                    
+                    beenHere4x3 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 4){
                 if (beenHere4x4 == false){
-                    
+                    beenHere4x4 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 5){
                 if (beenHere4x5 == false){
-                    
+                    beenHere4x5 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 6){
                 if (beenHere4x6 == false){
-                    
+                    beenHere4x6 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 7){
                 if (beenHere4x7 == false){
-                    
+                    beenHere4x7 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 8){
                 if (beenHere4x8 == false){
-                    
+                    beenHere4x8 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 9){
                 if (beenHere4x9 == false){
-                    
+                    beenHere4x9 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 10){
                 if (beenHere4x10 == false){
-                    
+                    beenHere4x10 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 11){
                 if (beenHere4x11 == false){
-                    
+                    beenHere4x11 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 12){
                 if (beenHere4x12 == false){
-                    
+                    beenHere4x12 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 13){
                 if (beenHere4x13 == false){
-                    
+                    beenHere4x13 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 14){
                 if (beenHere4x14 == false){
-                    
+                    beenHere4x14 = true; 
                 } else {
                     RepeatedArea();
                 }
@@ -667,85 +669,85 @@ public class GameLoop{
         } else if (xPosition == 5){
             if (yPosition == 1){
                 if (beenHere5x1 == false){
-                    
+                    beenHere5x1 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 2){
                 if (beenHere5x2 == false){
-                    
+                    beenHere5x2 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 3){
                 if (beenHere5x3 == false){
-                    
+                    beenHere5x3 = true;  
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 4){
                 if (beenHere5x4 == false){
-                    
+                    beenHere5x4 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 5){
                 if (beenHere5x5 == false){
-                    
+                    beenHere5x5 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 6){
                 if (beenHere5x6 == false){
-                    
+                    beenHere5x6 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 7){
                 if (beenHere5x7 == false){
-                    
+                    beenHere5x7 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 8){
                 if (beenHere5x8 == false){
-                    
+                    beenHere5x8 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 9){
                 if (beenHere5x9 == false){
-                    
+                    beenHere5x9 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 10){
                 if (beenHere5x10 == false){
-                    
+                    beenHere5x10 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 11){
                 if (beenHere5x11 == false){
-                    
+                    beenHere5x11 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 12){
                 if (beenHere5x12 == false){
-                    
+                    beenHere5x12 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 13){
                 if (beenHere5x13 == false){
-                    
+                    beenHere5x13 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 14){
                 if (beenHere5x14 == false){
-                    
+                    beenHere5x14 = true;
                 } else {
                     RepeatedArea();
                 }
@@ -754,85 +756,85 @@ public class GameLoop{
         } else if (xPosition == 6){
             if (yPosition == 1){
                 if (beenHere6x1 == false){
-                    
+                    beenHere6x1 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 2){
                 if (beenHere6x2 == false){
-                    
+                    beenHere6x2 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 3){
                 if (beenHere6x3 == false){
-                    
+                    beenHere6x3 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 4){
                 if (beenHere6x4 == false){
-                    
+                    beenHere6x4 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 5){
                 if (beenHere6x5 == false){
-                    
+                    beenHere6x5 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 6){
                 if (beenHere6x6 == false){
-                    
+                    beenHere6x6 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 7){
                 if (beenHere6x7 == false){
-                    
+                    beenHere6x7 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 8){
                 if (beenHere6x8 == false){
-                    
+                    beenHere6x8 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 9){
                 if (beenHere6x9 == false){
-                    
+                    beenHere6x9 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 10){
                 if (beenHere6x10 == false){
-                    
+                    beenHere6x10 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 11){
                 if (beenHere6x11 == false){
-                    
+                    beenHere6x11 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 12){
                 if (beenHere6x12 == false){
-                    
+                    beenHere6x12 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 13){
                 if (beenHere6x13 == false){
-                    
+                    beenHere6x13 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 14){
                 if (beenHere6x14 == false){
-                    
+                    beenHere6x14 = true;
                 } else {
                     RepeatedArea();
                 }
@@ -841,85 +843,85 @@ public class GameLoop{
         } else if (xPosition == 7){
             if (yPosition == 1){
                 if (beenHere7x1 == false){
-                    
+                    beenHere7x1 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 2){
                 if (beenHere7x2 == false){
-                    
+                    beenHere7x2 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 3){
                 if (beenHere7x3 == false){
-                    
+                    beenHere7x3 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 4){
                 if (beenHere7x4 == false){
-                    
+                    beenHere7x4 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 5){
                 if (beenHere7x5 == false){
-                    
+                    beenHere7x5 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 6){
                 if (beenHere7x6 == false){
-                    
+                    beenHere7x6 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 7){
                 if (beenHere7x7 == false){
-                    
+                    beenHere7x7 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 8){
                 if (beenHere7x8 == false){
-                    
+                    beenHere7x8 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 9){
                 if (beenHere7x9 == false){
-                    
+                    beenHere7x9 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 10){
                 if (beenHere7x10 == false){
-                    
+                    beenHere7x10 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 11){
                 if (beenHere7x11 == false){
-                    
+                    beenHere7x11 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 12){
                 if (beenHere7x12 == false){
-                    
+                    beenHere7x12 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 13){
                 if (beenHere7x13 == false){
-                    
+                    beenHere7x13 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 14){
                 if (beenHere7x14 == false){
-                    
+                    beenHere7x14 = true;
                 } else {
                     RepeatedArea();
                 }
@@ -928,85 +930,85 @@ public class GameLoop{
         } else if (xPosition == 8){
             if (yPosition == 1){
                 if (beenHere8x1 == false){
-                    
+                    beenHere8x1 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 2){
                 if (beenHere8x2 == false){
-                    
+                    beenHere8x2 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 3){
                 if (beenHere8x3 == false){
-                    
+                    beenHere8x3 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 4){
                 if (beenHere8x4 == false){
-                    
+                    beenHere8x4 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 5){
                 if (beenHere8x5 == false){
-                    
+                    beenHere8x5 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 6){
                 if (beenHere8x6 == false){
-                    
+                    beenHere8x6 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 7){
                 if (beenHere8x7 == false){
-                    
+                    beenHere8x7 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 8){
                 if (beenHere8x8 == false){
-                    
+                    beenHere8x8 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 9){
                 if (beenHere8x9 == false){
-                    
+                    beenHere8x9 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 10){
                 if (beenHere8x10 == false){
-                    
+                    beenHere8x10 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 11){
                 if (beenHere8x11 == false){
-                    
+                    beenHere8x11 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 12){
                 if (beenHere8x12 == false){
-                    
+                    beenHere8x12 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 13){
                 if (beenHere8x13 == false){
-                    
+                    beenHere8x13 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 14){
                 if (beenHere8x14 == false){
-                    
+                    beenHere8x14 = true;
                 } else {
                     RepeatedArea();
                 }
@@ -1015,85 +1017,85 @@ public class GameLoop{
         } else if (xPosition == 9){
             if (yPosition == 1){
                 if (beenHere9x1 == false){
-                    
+                    beenHere9x1 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 2){
                 if (beenHere9x2 == false){
-                    
+                    beenHere9x2 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 3){
                 if (beenHere9x3 == false){
-                    
+                    beenHere9x3 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 4){
                 if (beenHere9x4 == false){
-                    
+                    beenHere9x4 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 5){
                 if (beenHere9x5 == false){
-                    
+                    beenHere9x5 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 6){
                 if (beenHere9x6 == false){
-                    
+                    beenHere9x6 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 7){
                 if (beenHere9x7 == false){
-                    
+                    beenHere9x7 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 8){
                 if (beenHere9x8 == false){
-                    
+                    beenHere9x8 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 9){
                 if (beenHere9x9 == false){
-                    
+                    beenHere9x9 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 10){
                 if (beenHere9x10 == false){
-                    
+                    beenHere9x10 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 11){
                 if (beenHere9x11 == false){
-                    
+                    beenHere9x11 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 12){
                 if (beenHere9x12 == false){
-                    
+                    beenHere9x12 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 13){
                 if (beenHere9x13 == false){
-                    
+                    beenHere9x13 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 14){
                 if (beenHere9x14 == false){
-                    
+                    beenHere9x14 = true;
                 } else {
                     RepeatedArea();
                 }
@@ -1102,85 +1104,85 @@ public class GameLoop{
         } else if (xPosition == 10){
             if (yPosition == 1){
                 if (beenHere10x1 == false){
-                    
+                    beenHere10x1 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 2){
                 if (beenHere10x2 == false){
-                    
+                    beenHere10x2 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 3){
                 if (beenHere10x3 == false){
-                    
+                    beenHere10x3 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 4){
                 if (beenHere10x4 == false){
-                    
+                    beenHere10x4 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 5){
                 if (beenHere10x5 == false){
-                    
+                    beenHere10x5 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 6){
                 if (beenHere10x6 == false){
-                    
+                    beenHere10x6 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 7){
                 if (beenHere10x7 == false){
-                    
+                    beenHere10x7 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 8){
                 if (beenHere10x8 == false){
-                    
+                    beenHere10x8 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 9){
                 if (beenHere10x9 == false){
-                    
+                    beenHere10x9 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 10){
                 if (beenHere10x10 == false){
-                    
+                    beenHere10x10 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 11){
                 if (beenHere10x11 == false){
-                    
+                    beenHere10x11 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 12){
                 if (beenHere10x12 == false){
-                    
+                    beenHere10x12 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 13){
                 if (beenHere10x13 == false){
-                    
+                    beenHere10x13 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 14){
                 if (beenHere10x14 == false){
-                    
+                    beenHere10x14 = true;
                 } else {
                     RepeatedArea();
                 }
@@ -1189,85 +1191,85 @@ public class GameLoop{
         } else if (xPosition == 11){
             if (yPosition == 1){
                 if (beenHere11x1 == false){
-                    
+                    beenHere11x1 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 2){
                 if (beenHere11x2 == false){
-                    
+                    beenHere11x2 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 3){
                 if (beenHere11x3 == false){
-                    
+                    beenHere11x3 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 4){
                 if (beenHere11x4 == false){
-                    
+                    beenHere11x4 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 5){
                 if (beenHere11x5 == false){
-                    
+                    beenHere11x5 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 6){
                 if (beenHere11x6 == false){
-                    
+                    beenHere11x6 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 7){
                 if (beenHere11x7 == false){
-                    
+                    beenHere11x7 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 8){
                 if (beenHere11x8 == false){
-                    
+                    beenHere11x8 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 9){
                 if (beenHere11x9 == false){
-                    
+                    beenHere11x9 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 10){
                 if (beenHere11x10 == false){
-                    
+                    beenHere11x10 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 11){
                 if (beenHere11x11 == false){
-                    
+                    beenHere11x11 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 12){
                 if (beenHere11x12 == false){
-                    
+                    beenHere11x12 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 13){
                 if (beenHere11x13 == false){
-                    
+                    beenHere11x13 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 14){
                 if (beenHere11x14 == false){
-                    
+                    beenHere11x14 = true;
                 } else {
                     RepeatedArea();
                 }
@@ -1276,85 +1278,85 @@ public class GameLoop{
         } else if (xPosition == 12){
             if (yPosition == 1){
                 if (beenHere12x1 == false){
-                    
+                    beenHere12x1 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 2){
                 if (beenHere12x2 == false){
-                    
+                    beenHere12x2 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 3){
                 if (beenHere12x3 == false){
-                    
+                    beenHere12x3 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 4){
                 if (beenHere12x4 == false){
-                    
+                    beenHere12x4 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 5){
                 if (beenHere12x5 == false){
-                    
+                    beenHere12x5 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 6){
                 if (beenHere12x6 == false){
-                    
+                    beenHere12x6 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 7){
                 if (beenHere12x7 == false){
-                    
+                    beenHere12x7 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 8){
                 if (beenHere12x8 == false){
-                    
+                    beenHere12x8 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 9){
                 if (beenHere12x9 == false){
-                    
+                    beenHere12x9 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 10){
                 if (beenHere12x10 == false){
-                    
+                    beenHere12x10 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 11){
                 if (beenHere12x11 == false){
-                    
+                    beenHere12x11 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 12){
                 if (beenHere12x12 == false){
-                    
+                    beenHere12x12 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 13){
                 if (beenHere12x13 == false){
-                    
+                    beenHere12x13 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 14){
                 if (beenHere12x14 == false){
-                    
+                    beenHere12x14 = true;
                 } else {
                     RepeatedArea();
                 }
@@ -1363,85 +1365,85 @@ public class GameLoop{
         } else if (xPosition == 13){
             if (yPosition == 1){
                 if (beenHere13x1 == false){
-                    
+                    beenHere13x1 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 2){
                 if (beenHere13x2 == false){
-                    
+                    beenHere13x2 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 3){
                 if (beenHere13x3 == false){
-                    
+                    beenHere13x3 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 4){
                 if (beenHere13x4 == false){
-                    
+                    beenHere13x4 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 5){
                 if (beenHere13x5 == false){
-                    
+                    beenHere13x5 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 6){
                 if (beenHere13x6 == false){
-                    
+                    beenHere13x6 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 7){
                 if (beenHere13x7 == false){
-                    
+                    beenHere13x7 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 8){
                 if (beenHere13x8 == false){
-                    
+                    beenHere13x8 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 9){
                 if (beenHere13x9 == false){
-                    
+                    beenHere13x9 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 10){
                 if (beenHere13x10 == false){
-                    
+                    beenHere13x10 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 11){
                 if (beenHere13x11 == false){
-                    
+                    beenHere13x11 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 12){
                 if (beenHere13x12 == false){
-                    
+                    beenHere13x12 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 13){
                 if (beenHere13x13 == false){
-                    
+                    beenHere13x13 = true; 
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 14){
                 if (beenHere13x14 == false){
-                    
+                    beenHere13x14 = true; 
                 } else {
                     RepeatedArea();
                 }
@@ -1449,85 +1451,85 @@ public class GameLoop{
         } else if (xPosition == 14){
             if (yPosition == 1){
                 if (beenHere14x1 == false){
-                    
+                    beenHere14x1 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 2){
                 if (beenHere14x2 == false){
-                    
+                    beenHere14x2 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 3){
                 if (beenHere14x3 == false){
-                    
+                    beenHere14x3 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 4){
                 if (beenHere14x4 == false){
-                    
+                    beenHere14x4 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 5){
                 if (beenHere14x5 == false){
-                    
+                    beenHere14x5 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 6){
                 if (beenHere14x6 == false){
-                    
+                    beenHere14x6 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 7){
                 if (beenHere14x7 == false){
-                    
+                    beenHere14x7 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 8){
                 if (beenHere14x8 == false){
-                    
+                    beenHere14x8 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 9){
                 if (beenHere14x9 == false){
-                    
+                    beenHere14x9 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 10){
                 if (beenHere14x10 == false){
-                    
+                    beenHere14x10 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 11){
                 if (beenHere14x11 == false){
-                    
+                    beenHere14x11 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 12){
                 if (beenHere14x12 == false){
-                    
+                    beenHere14x = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 13){
                 if (beenHere14x13 == false){
-                    
+                    beenHere14x13 = true;
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 14){
                 if (beenHere14x14 == false){
-                    
+                    beenHere14x14 = true;
                 } else {
                     RepeatedArea();
                 }
