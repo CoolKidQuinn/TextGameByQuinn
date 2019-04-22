@@ -3,7 +3,6 @@
 
 import java.util.Scanner;
 //basically just a bunch of general utilies that java put into the language
-
 public class GameLoop{
     //Run this by typing "javac -d bin src/TextGameByQuinn/GameLoop.java" into the terminal
         //"javac" will tell vscode to tell java to compile the thing we tell it to
@@ -49,6 +48,203 @@ public class GameLoop{
             //this creates two integer values to represent our characters position on the map
             //since I have decided the map will be 14x14, I have set them to 7 to begin so our character is at the center
             //these will be editted later when we move
+            boolean beenHere1x1 = false;
+            boolean beenHere1x2 = false;
+            boolean beenHere1x3 = false;
+            boolean beenHere1x4 = false;
+            boolean beenHere1x5 = false;
+            boolean beenHere1x6 = false;
+            boolean beenHere1x7 = false;
+            boolean beenHere1x8 = false;
+            boolean beenHere1x9 = false;
+            boolean beenHere1x10 = false;
+            boolean beenHere1x1 = false;
+            boolean beenHere1x12 = false;
+            boolean beenHere1x13 = false;
+            boolean beenHere1x14 = false;
+            boolean beenHere2x1 = false;
+            boolean beenHere2x2 = false;
+            boolean beenHere2x3 = false;
+            boolean beenHere2x4 = false;
+            boolean beenHere2x5 = false;
+            boolean beenHere2x6 = false;
+            boolean beenHere2x7 = false;
+            boolean beenHere2x8 = false;
+            boolean beenHere2x9 = false;
+            boolean beenHere2x10 = false;
+            boolean beenHere2x1 = false;
+            boolean beenHere2x12 = false;
+            boolean beenHere2x13 = false;
+            boolean beenHere2x14 = false;
+            boolean beenHere3x1 = false;
+            boolean beenHere3x2 = false;
+            boolean beenHere3x3 = false;
+            boolean beenHere3x4 = false;
+            boolean beenHere3x5 = false;
+            boolean beenHere3x6 = false;
+            boolean beenHere3x7 = false;
+            boolean beenHere3x8 = false;
+            boolean beenHere3x9 = false;
+            boolean beenHere3x10 = false;
+            boolean beenHere3x11 = false;
+            boolean beenHere3x12 = false;
+            boolean beenHere3x13 = false;
+            boolean beenHere3x14 = false;
+            boolean beenHere4x1 = false;
+            boolean beenHere4x2 = false;
+            boolean beenHere4x3 = false;
+            boolean beenHere4x4 = false;
+            boolean beenHere4x5 = false;
+            boolean beenHere4x6 = false;
+            boolean beenHere4x7 = false;
+            boolean beenHere4x8 = false;
+            boolean beenHere4x9 = false;
+            boolean beenHere4x10 = false;
+            boolean beenHere4x11 = false;
+            boolean beenHere4x12 = false;
+            boolean beenHere4x13 = false;
+            boolean beenHere4x14 = false;
+            boolean beenHere5x1 = false;
+            boolean beenHere5x2 = false;
+            boolean beenHere5x3 = false;
+            boolean beenHere5x4 = false;
+            boolean beenHere5x5 = false;
+            boolean beenHere5x6 = false;
+            boolean beenHere5x7 = false;
+            boolean beenHere5x8 = false;
+            boolean beenHere5x9 = false;
+            boolean beenHere5x10 = false;
+            boolean beenHere5x11 = false;
+            boolean beenHere5x12 = false;
+            boolean beenHere5x13 = false;
+            boolean beenHere5x14 = false;
+            boolean beenHere6x1 = false;
+            boolean beenHere6x2 = false;
+            boolean beenHere6x3 = false;
+            boolean beenHere6x4 = false;
+            boolean beenHere6x5 = false;
+            boolean beenHere6x6 = false;
+            boolean beenHere6x7 = false;
+            boolean beenHere6x8 = false;
+            boolean beenHere6x9 = false;
+            boolean beenHere6x10 = false;
+            boolean beenHere6x11 = false;
+            boolean beenHere6x12 = false;
+            boolean beenHere6x13 = false;
+            boolean beenHere6x14 = false;
+            boolean beenHere7x1 = false;
+            boolean beenHere7x2 = false;
+            boolean beenHere7x3 = false;
+            boolean beenHere7x4 = false;
+            boolean beenHere7x5 = false;
+            boolean beenHere7x6 = false;
+            boolean beenHere7x7 = false;
+            boolean beenHere7x8 = false;
+            boolean beenHere7x9 = false;
+            boolean beenHere7x10 = false;
+            boolean beenHere7x11 = false;
+            boolean beenHere7x12 = false;
+            boolean beenHere7x13 = false;
+            boolean beenHere7x14 = false;
+            boolean beenHere8x1 = false;
+            boolean beenHere8x2 = false;
+            boolean beenHere8x3 = false;
+            boolean beenHere8x4 = false;
+            boolean beenHere8x5 = false;
+            boolean beenHere8x6 = false;
+            boolean beenHere8x7 = false;
+            boolean beenHere8x8 = false;
+            boolean beenHere8x9 = false;
+            boolean beenHere8x10 = false;
+            boolean beenHere8x11 = false;
+            boolean beenHere8x12 = false;
+            boolean beenHere8x13 = false;
+            boolean beenHere8x14 = false;
+            boolean beenHere9x1 = false;
+            boolean beenHere9x2 = false;
+            boolean beenHere9x3 = false;
+            boolean beenHere9x4 = false;
+            boolean beenHere9x5 = false;
+            boolean beenHere9x6 = false;
+            boolean beenHere9x7 = false;
+            boolean beenHere9x8 = false;
+            boolean beenHere9x9 = false;
+            boolean beenHere9x10 = false;
+            boolean beenHere9x11 = false;
+            boolean beenHere9x12 = false;
+            boolean beenHere9x13 = false;
+            boolean beenHere9x14 = false;
+            boolean beenHere10x1 = false;
+            boolean beenHere10x2 = false;
+            boolean beenHere10x3 = false;
+            boolean beenHere10x4 = false;
+            boolean beenHere10x5 = false;
+            boolean beenHere10x6 = false;
+            boolean beenHere10x7 = false;
+            boolean beenHere10x8 = false;
+            boolean beenHere10x9 = false;
+            boolean beenHere10x10 = false;
+            boolean beenHere10x11 = false;
+            boolean beenHere10x12 = false;
+            boolean beenHere10x13 = false;
+            boolean beenHere10x14 = false;
+            boolean beenHere11x1 = false;
+            boolean beenHere11x2 = false;
+            boolean beenHere11x3 = false;
+            boolean beenHere11x4 = false;
+            boolean beenHere11x5 = false;
+            boolean beenHere11x6 = false;
+            boolean beenHere11x7 = false;
+            boolean beenHere11x8 = false;
+            boolean beenHere11x9 = false;
+            boolean beenHere11x10 = false;
+            boolean beenHere11x11 = false;
+            boolean beenHere11x12 = false;
+            boolean beenHere11x13 = false;
+            boolean beenHere11x14 = false;
+            boolean beenHere12x1 = false;
+            boolean beenHere12x2 = false;
+            boolean beenHere12x3 = false;
+            boolean beenHere12x4 = false;
+            boolean beenHere12x5 = false;
+            boolean beenHere12x6 = false;
+            boolean beenHere12x7 = false;
+            boolean beenHere12x8 = false;
+            boolean beenHere12x9 = false;
+            boolean beenHere12x10 = false;
+            boolean beenHere12x11 = false;
+            boolean beenHere12x12 = false;
+            boolean beenHere12x13 = false;
+            boolean beenHere12x14 = false;
+            boolean beenHere13x1 = false;
+            boolean beenHere13x2 = false;
+            boolean beenHere13x3 = false;
+            boolean beenHere13x4 = false;
+            boolean beenHere13x5 = false;
+            boolean beenHere13x6 = false;
+            boolean beenHere13x7 = false;
+            boolean beenHere13x8 = false;
+            boolean beenHere13x9 = false;
+            boolean beenHere13x10 = false;
+            boolean beenHere13x11 = false;
+            boolean beenHere13x12 = false;
+            boolean beenHere13x13 = false;
+            boolean beenHere13x14 = false;
+            boolean beenHere14x1 = false;
+            boolean beenHere14x2 = false;
+            boolean beenHere14x3 = false;
+            boolean beenHere14x4 = false;
+            boolean beenHere14x5 = false;
+            boolean beenHere14x6 = false;
+            boolean beenHere14x7 = false;
+            boolean beenHere14x8 = false;
+            boolean beenHere14x9 = false;
+            boolean beenHere14x10 = false;
+            boolean beenHere14x11 = false;
+            boolean beenHere14x12 = false;
+            boolean beenHere14x13 = false;
+            boolean beenHere14x14 = false;
+            //these set up booleans for each position so we can tell later whether or not we have been there
             PrintOutClass();
             //this will run the method printOutClass()
         }
@@ -66,7 +262,7 @@ public class GameLoop{
         System.out.print("The game has begun. ");
         System.out.print("Choose Name. ");
         String stringyBoi1 = scannyBoi.nextLine();
-        System.out.print("Our tale begins one morning as you wake up alone in a large, foggy feild. You have a dagger in your hand and the only concrete memeroy you have is that you must find and rescue your father.");
+        System.out.print("Our tale begins one morning as you wake up alone in a large, foggy feild. You have a dagger in your hand and the only concrete memory you have is that you must find and rescue your father.");
         String stringyBoi2 = scannyBoi.nextLine();
         if (stringyBoi2.equals("commit sudoku"){
             Sudoku();
@@ -119,450 +315,1236 @@ public class GameLoop{
             if (yPosition == 1){
             //this checks the y position, these checks are after each x check so we can find the exact position after each move
                 //we can put encounters into each one of these different positions
-                //we will add a check to see if the character has been to this spot before so we don't just get infinite encounters from the same spot
+                if (beenHere1X1 == false){
+                //this checks to see if we have already been here
+                    
+                    //this is where we put the encounter that happens in this location
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 2){
-                
-            } else if (yPosition == 3){
-                
-            } else if (yPosition == 4){
-                
-            } else if (yPosition == 5){
-                
-            } else if (yPosition == 6){
-                
-            } else if (yPosition == 7){
-                
-            } else if (yPosition == 8){
-                
-            } else if (yPosition == 9){
-                
-            } else if (yPosition == 10){
-                
-            } else if (yPosition == 11){
-                
-            } else if (yPosition == 12){
-                
-            } else if (yPosition == 13){
-                
-            } else if (yPosition == 14){
+                if (beenHere1x2 == false){
 
+                } else {
+                    RepeatedArea();
+                }   
+            } else if (yPosition == 3){
+                if (beenHere1x3 == false){
+
+                } else {
+                    RepeatedArea();
+                }  
+            } else if (yPosition == 4){
+                if (beenHere1x4 == false){
+
+                } else {
+                    RepeatedArea();
+                }  
+            } else if (yPosition == 5){
+                if (beenHere1x5 == false){
+
+                } else {
+                    RepeatedArea();
+                }  
+            } else if (yPosition == 6){
+                if (beenHere1x6 == false){
+
+                } else {
+                    RepeatedArea();
+                }  
+            } else if (yPosition == 7){
+                if (beenHere1x7 == false){
+
+                } else {
+                    RepeatedArea();
+                }  
+            } else if (yPosition == 8){
+                if (beenHere1x8 == false){
+
+                } else {
+                    RepeatedArea();
+                }  
+            } else if (yPosition == 9){
+                if (beenHere1x9 == false){
+
+                } else {
+                    RepeatedArea();
+                }  
+            } else if (yPosition == 10){
+                if (beenHere1x10 == false){
+
+                } else {
+                    RepeatedArea();
+                }  
+            } else if (yPosition == 11){
+                if (beenHere1x11 == false){
+
+                } else {
+                    RepeatedArea();
+                }  
+            } else if (yPosition == 12){
+                if (beenHere1x12 == false){
+
+                } else {
+                    RepeatedArea();
+                }  
+            } else if (yPosition == 13){
+                if (beenHere1x13 == false){
+
+                } else {
+                    RepeatedArea();
+                }  
+            } else if (yPosition == 14){
+                if (beenHere1x14 == false){
+
+                } else {
+                    RepeatedArea();
+                }  
             }
         }
 
         } else if (xPosition == 2){
             if (yPosition == 1){
+                if (beenHere2x1 == false){
 
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 2){
-                
+                if (beenHere2x2 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 3){
-                
+                if (beenHere2x3 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 4){
-                
+                if (beenHere2x4 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 5){
-                
+                if (beenHere2x5 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 6){
-                
+                if (beenHere2x6 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 7){
-                
+                if (beenHere2x7 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 8){
-                
+                if (beenHere2x8 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 9){
-                
+                if (beenHere2x9 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 10){
-                
+                if (beenHere2x10 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 11){
-                
+                if (beenHere2x11 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 12){
-                
+                if (beenHere2x12 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 13){
-                
+                if (beenHere2x13 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 14){
-                
+                if (beenHere2x14 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             }
             
         } else if (xPosition == 3){
             if (yPosition == 1){
-
+                if (beenHere3x1 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 2){
-                
+                if (beenHere3x2 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 3){
-                
+                if (beenHere3x3 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 4){
-                
+                if (beenHere3x4 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 5){
-                
+                if (beenHere3x5 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 6){
-                
+                if (beenHere3x6 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 7){
-                
+                if (beenHere3x7 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 8){
-                
+                if (beenHere3x8 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 9){
-                
+                if (beenHere3x9 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 10){
-                
+                if (beenHere3x10 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 11){
-                
+                if (beenHere3x11 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 12){
-                
+                if (beenHere3x12 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 13){
-                
+                if (beenHere3x13 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 14){
-                
+                if (beenHere3x14 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             }
             
         } else if (xPosition == 4){
             if (yPosition == 1){
-
+                if (beenHere4x1 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 2){
-                
+                if (beenHere4x2 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 3){
-                
+                if (beenHere4x3 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 4){
-                
+                if (beenHere4x4 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 5){
-                
+                if (beenHere4x5 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 6){
-                
+                if (beenHere4x6 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 7){
-                
+                if (beenHere4x7 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 8){
-                
+                if (beenHere4x8 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 9){
-                
+                if (beenHere4x9 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 10){
-                
+                if (beenHere4x10 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 11){
-                
+                if (beenHere4x11 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 12){
-                
+                if (beenHere4x12 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 13){
-                
+                if (beenHere4x13 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 14){
-                
+                if (beenHere4x14 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             }
             
         } else if (xPosition == 5){
             if (yPosition == 1){
-
+                if (beenHere5x1 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 2){
-                
+                if (beenHere5x2 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 3){
-                
+                if (beenHere5x3 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 4){
-                
+                if (beenHere5x4 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 5){
-                
+                if (beenHere5x5 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 6){
-                
+                if (beenHere5x6 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 7){
-                
+                if (beenHere5x7 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 8){
-                
+                if (beenHere5x8 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 9){
-                
+                if (beenHere5x9 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 10){
-                
+                if (beenHere5x10 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 11){
-                
+                if (beenHere5x11 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 12){
-                
+                if (beenHere5x12 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 13){
-                
+                if (beenHere5x13 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 14){
-                
+                if (beenHere5x14 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             }
             
         } else if (xPosition == 6){
             if (yPosition == 1){
-
+                if (beenHere6x1 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 2){
-                
+                if (beenHere6x2 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 3){
-                
+                if (beenHere6x3 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 4){
-                
+                if (beenHere6x4 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 5){
-                
+                if (beenHere6x5 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 6){
-                
+                if (beenHere6x6 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 7){
-                
+                if (beenHere6x7 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 8){
-                
+                if (beenHere6x8 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 9){
-                
+                if (beenHere6x9 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 10){
-                
+                if (beenHere6x10 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 11){
-                
+                if (beenHere6x11 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 12){
-                
+                if (beenHere6x12 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 13){
-                
+                if (beenHere6x13 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 14){
-                
+                if (beenHere6x14 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             }
             
         } else if (xPosition == 7){
             if (yPosition == 1){
-
+                if (beenHere7x1 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 2){
-                
+                if (beenHere7x2 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 3){
-                
+                if (beenHere7x3 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 4){
-                
+                if (beenHere7x4 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 5){
-                
+                if (beenHere7x5 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 6){
-                
+                if (beenHere7x6 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 7){
-                
+                if (beenHere7x7 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 8){
-                
+                if (beenHere7x8 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 9){
-                
+                if (beenHere7x9 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 10){
-                
+                if (beenHere7x10 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 11){
-                
+                if (beenHere7x11 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 12){
-                
+                if (beenHere7x12 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 13){
-                
+                if (beenHere7x13 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 14){
-                
+                if (beenHere7x14 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             }
             
         } else if (xPosition == 8){
             if (yPosition == 1){
-
+                if (beenHere8x1 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 2){
-                
+                if (beenHere8x2 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 3){
-                
+                if (beenHere8x3 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 4){
-                
+                if (beenHere8x4 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 5){
-                
+                if (beenHere8x5 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 6){
-                
+                if (beenHere8x6 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 7){
-                
+                if (beenHere8x7 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 8){
-                
+                if (beenHere8x8 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 9){
-                
+                if (beenHere8x9 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 10){
-                
+                if (beenHere8x10 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 11){
-                
+                if (beenHere8x11 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 12){
-                
+                if (beenHere8x12 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 13){
-                
+                if (beenHere8x13 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 14){
-                
+                if (beenHere8x14 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             }
             
         } else if (xPosition == 9){
             if (yPosition == 1){
-
+                if (beenHere9x1 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 2){
-                
+                if (beenHere9x2 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 3){
-                
+                if (beenHere9x3 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 4){
-                
+                if (beenHere9x4 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 5){
-                
+                if (beenHere9x5 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 6){
-                
+                if (beenHere9x6 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 7){
-                
+                if (beenHere9x7 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 8){
-                
+                if (beenHere9x8 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 9){
-                
+                if (beenHere9x9 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 10){
-                
+                if (beenHere9x10 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 11){
-                
+                if (beenHere9x11 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 12){
-                
+                if (beenHere9x12 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 13){
-                
+                if (beenHere9x13 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 14){
-                
+                if (beenHere9x14 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             }
             
         } else if (xPosition == 10){
             if (yPosition == 1){
-
+                if (beenHere10x1 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 2){
-                
+                if (beenHere10x2 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 3){
-                
+                if (beenHere10x3 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 4){
-                
+                if (beenHere10x4 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 5){
-                
+                if (beenHere10x5 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 6){
-                
+                if (beenHere10x6 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 7){
-                
+                if (beenHere10x7 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 8){
-                
+                if (beenHere10x8 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 9){
-                
+                if (beenHere10x9 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 10){
-                
+                if (beenHere10x10 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 11){
-                
+                if (beenHere10x11 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 12){
-                
+                if (beenHere10x12 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 13){
-                
+                if (beenHere10x13 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 14){
-                
+                if (beenHere10x14 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             }
             
         } else if (xPosition == 11){
             if (yPosition == 1){
-
+                if (beenHere11x1 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 2){
-                
+                if (beenHere11x2 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 3){
-                
+                if (beenHere11x3 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 4){
-                
+                if (beenHere11x4 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 5){
-                
+                if (beenHere11x5 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 6){
-                
+                if (beenHere11x6 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 7){
-                
+                if (beenHere11x7 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 8){
-                
+                if (beenHere11x8 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 9){
-                
+                if (beenHere11x9 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 10){
-                
+                if (beenHere11x10 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 11){
-                
+                if (beenHere11x11 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 12){
-                
+                if (beenHere11x12 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 13){
-                
+                if (beenHere11x13 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 14){
-                
+                if (beenHere11x14 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             }
             
         } else if (xPosition == 12){
             if (yPosition == 1){
-
+                if (beenHere12x1 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 2){
-                
+                if (beenHere12x2 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 3){
-                
+                if (beenHere12x3 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 4){
-                
+                if (beenHere12x4 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 5){
-                
+                if (beenHere12x5 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 6){
-                
+                if (beenHere12x6 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 7){
-                
+                if (beenHere12x7 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 8){
-                
+                if (beenHere12x8 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 9){
-                
+                if (beenHere12x9 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 10){
-                
+                if (beenHere12x10 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 11){
-                
+                if (beenHere12x11 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 12){
-                
+                if (beenHere12x12 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 13){
-                
+                if (beenHere12x13 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 14){
-                
+                if (beenHere12x14 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             }
             
         } else if (xPosition == 13){
             if (yPosition == 1){
-
+                if (beenHere13x1 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 2){
-                
+                if (beenHere13x2 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 3){
-                
+                if (beenHere13x3 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 4){
-                
+                if (beenHere13x4 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 5){
-                
+                if (beenHere13x5 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 6){
-                
+                if (beenHere13x6 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 7){
-                
+                if (beenHere13x7 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 8){
-                
+                if (beenHere13x8 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 9){
-                
+                if (beenHere13x9 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 10){
-                
+                if (beenHere13x10 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 11){
-                
+                if (beenHere13x11 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 12){
-                
+                if (beenHere13x12 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 13){
-                
+                if (beenHere13x13 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 14){
-                
+                if (beenHere13x14 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             }
         } else if (xPosition == 14){
             if (yPosition == 1){
-
+                if (beenHere14x1 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 2){
-                
+                if (beenHere14x2 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 3){
-                
+                if (beenHere14x3 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 4){
-                
+                if (beenHere14x4 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 5){
-                
+                if (beenHere14x5 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 6){
-                
+                if (beenHere14x6 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 7){
-                
+                if (beenHere14x7 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 8){
-                
+                if (beenHere14x8 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 9){
-                
+                if (beenHere14x9 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 10){
-                
+                if (beenHere14x10 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 11){
-                
+                if (beenHere14x11 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 12){
-                
+                if (beenHere14x12 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 13){
-                
+                if (beenHere14x13 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             } else if (yPosition == 14){
-                
+                if (beenHere14x14 == false){
+                    
+                } else {
+                    RepeatedArea();
+                }
             }
         }
     }
 
     //we will program our various encounters to be called on from each position here
     public static void Treasure{
-        System.out.print("You see a treasure chest.")
+        System.out.print("You see a treasure chest.");
         String stringyBoi3 = scannyBoi.nextLine();
         if (stringyBoi3.equals("open")){
-
+            System.out.print("You open up the treasure chest and find ");
         } else if (stringyBoi3.equals("ignore")){
-
+            System.out.print("You decide to ignore the chest and continue searching.");
         } else {
-            System.out.print("That is not a recognized command.")
+            System.out.print("That is not a recognized command.");
             Treasure();
         }
     }
@@ -573,9 +1555,9 @@ public class GameLoop{
         if (stringyBoi4.equals("open")){
 
         } else if (stringyBoi4.equals("ignore")){
-
+            System.out.print("You decide to ignore the chest and continue searching.");
         } else {
-            System.out.print("That is not a recognized command.")
+            System.out.print("That is not a recognized command.");
             TrappedTreasure();
         }
     }
@@ -598,6 +1580,15 @@ public class GameLoop{
 
     public static void Potion{
 
+    }
+
+    public static void Shop{
+
+    }
+
+    public static void RepeatedArea{
+        System.out.print("You recognize this area. There isn't anything left to do here.")
+        PrintOutClass();
     }
 
     public static void GameOver(){
