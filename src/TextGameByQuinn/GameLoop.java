@@ -24,10 +24,10 @@ public class GameLoop{
             //scanners can take input from the keyboard (or other places, but for our purposes keyboards)
         //"= new Scanner(System.in)" tells that scanner to get input from the place inside the parenthesis
             //in this case, we are getting it from "System.in" which is just what the keyboard is in java
-        System.out.print("Type start to begin ");
+        //System.out.print("Type start to begin ");
         //This will print the thing in the parenthesis
 
-        String stringyBoi0 = scannyBoi.nextLine();
+        //String stringyBoi0 = scannyBoi.nextLine();
         //on the next line when the user is using it, it will take what that user types on the next line and save it as stringyboi
         //"String" tells us what data type we are using (ie: string, double, boolean)
         //"stringBoi" is just what we are calling our new String
@@ -41,234 +41,237 @@ public class GameLoop{
         //this will be set to true once certain actions in the game have been taken
         //we will display a different message in the game over section depending on wheather or not we have set this to true
 
-        if (stringyBoi0.equals("start")) {
-        //this will run the thing in it if stringyBoi0 was typed in as start
-            int xPosition = 7;
-            int yPosition = 7;
-            //this creates two integer values to represent our characters position on the map
-            //since I have decided the map will be 14x14, I have set them to 7 to begin so our character is at the center
-            //these will be editted later when we move
-            boolean beenHere1x1 = false;
-            boolean beenHere1x2 = false;
-            boolean beenHere1x3 = false;
-            boolean beenHere1x4 = false;
-            boolean beenHere1x5 = false;
-            boolean beenHere1x6 = false;
-            boolean beenHere1x7 = false;
-            boolean beenHere1x8 = false;
-            boolean beenHere1x9 = false;
-            boolean beenHere1x10 = false;
-            boolean beenHere1x11 = false;
-            boolean beenHere1x12 = false;
-            boolean beenHere1x13 = false;
-            boolean beenHere1x14 = false;
-            boolean beenHere2x1 = false;
-            boolean beenHere2x2 = false;
-            boolean beenHere2x3 = false;
-            boolean beenHere2x4 = false;
-            boolean beenHere2x5 = false;
-            boolean beenHere2x6 = false;
-            boolean beenHere2x7 = false;
-            boolean beenHere2x8 = false;
-            boolean beenHere2x9 = false;
-            boolean beenHere2x10 = false;
-            boolean beenHere2x11 = false;
-            boolean beenHere2x12 = false;
-            boolean beenHere2x13 = false;
-            boolean beenHere2x14 = false;
-            boolean beenHere3x1 = false;
-            boolean beenHere3x2 = false;
-            boolean beenHere3x3 = false;
-            boolean beenHere3x4 = false;
-            boolean beenHere3x5 = false;
-            boolean beenHere3x6 = false;
-            boolean beenHere3x7 = false;
-            boolean beenHere3x8 = false;
-            boolean beenHere3x9 = false;
-            boolean beenHere3x10 = false;
-            boolean beenHere3x11 = false;
-            boolean beenHere3x12 = false;
-            boolean beenHere3x13 = false;
-            boolean beenHere3x14 = false;
-            boolean beenHere4x1 = false;
-            boolean beenHere4x2 = false;
-            boolean beenHere4x3 = false;
-            boolean beenHere4x4 = false;
-            boolean beenHere4x5 = false;
-            boolean beenHere4x6 = false;
-            boolean beenHere4x7 = false;
-            boolean beenHere4x8 = false;
-            boolean beenHere4x9 = false;
-            boolean beenHere4x10 = false;
-            boolean beenHere4x11 = false;
-            boolean beenHere4x12 = false;
-            boolean beenHere4x13 = false;
-            boolean beenHere4x14 = false;
-            boolean beenHere5x1 = false;
-            boolean beenHere5x2 = false;
-            boolean beenHere5x3 = false;
-            boolean beenHere5x4 = false;
-            boolean beenHere5x5 = false;
-            boolean beenHere5x6 = false;
-            boolean beenHere5x7 = false;
-            boolean beenHere5x8 = false;
-            boolean beenHere5x9 = false;
-            boolean beenHere5x10 = false;
-            boolean beenHere5x11 = false;
-            boolean beenHere5x12 = false;
-            boolean beenHere5x13 = false;
-            boolean beenHere5x14 = false;
-            boolean beenHere6x1 = false;
-            boolean beenHere6x2 = false;
-            boolean beenHere6x3 = false;
-            boolean beenHere6x4 = false;
-            boolean beenHere6x5 = false;
-            boolean beenHere6x6 = false;
-            boolean beenHere6x7 = false;
-            boolean beenHere6x8 = false;
-            boolean beenHere6x9 = false;
-            boolean beenHere6x10 = false;
-            boolean beenHere6x11 = false;
-            boolean beenHere6x12 = false;
-            boolean beenHere6x13 = false;
-            boolean beenHere6x14 = false;
-            boolean beenHere7x1 = false;
-            boolean beenHere7x2 = false;
-            boolean beenHere7x3 = false;
-            boolean beenHere7x4 = false;
-            boolean beenHere7x5 = false;
-            boolean beenHere7x6 = false;
-            boolean beenHere7x7 = false;
-            boolean beenHere7x8 = false;
-            boolean beenHere7x9 = false;
-            boolean beenHere7x10 = false;
-            boolean beenHere7x11 = false;
-            boolean beenHere7x12 = false;
-            boolean beenHere7x13 = false;
-            boolean beenHere7x14 = false;
-            boolean beenHere8x1 = false;
-            boolean beenHere8x2 = false;
-            boolean beenHere8x3 = false;
-            boolean beenHere8x4 = false;
-            boolean beenHere8x5 = false;
-            boolean beenHere8x6 = false;
-            boolean beenHere8x7 = false;
-            boolean beenHere8x8 = false;
-            boolean beenHere8x9 = false;
-            boolean beenHere8x10 = false;
-            boolean beenHere8x11 = false;
-            boolean beenHere8x12 = false;
-            boolean beenHere8x13 = false;
-            boolean beenHere8x14 = false;
-            boolean beenHere9x1 = false;
-            boolean beenHere9x2 = false;
-            boolean beenHere9x3 = false;
-            boolean beenHere9x4 = false;
-            boolean beenHere9x5 = false;
-            boolean beenHere9x6 = false;
-            boolean beenHere9x7 = false;
-            boolean beenHere9x8 = false;
-            boolean beenHere9x9 = false;
-            boolean beenHere9x10 = false;
-            boolean beenHere9x11 = false;
-            boolean beenHere9x12 = false;
-            boolean beenHere9x13 = false;
-            boolean beenHere9x14 = false;
-            boolean beenHere10x1 = false;
-            boolean beenHere10x2 = false;
-            boolean beenHere10x3 = false;
-            boolean beenHere10x4 = false;
-            boolean beenHere10x5 = false;
-            boolean beenHere10x6 = false;
-            boolean beenHere10x7 = false;
-            boolean beenHere10x8 = false;
-            boolean beenHere10x9 = false;
-            boolean beenHere10x10 = false;
-            boolean beenHere10x11 = false;
-            boolean beenHere10x12 = false;
-            boolean beenHere10x13 = false;
-            boolean beenHere10x14 = false;
-            boolean beenHere11x1 = false;
-            boolean beenHere11x2 = false;
-            boolean beenHere11x3 = false;
-            boolean beenHere11x4 = false;
-            boolean beenHere11x5 = false;
-            boolean beenHere11x6 = false;
-            boolean beenHere11x7 = false;
-            boolean beenHere11x8 = false;
-            boolean beenHere11x9 = false;
-            boolean beenHere11x10 = false;
-            boolean beenHere11x11 = false;
-            boolean beenHere11x12 = false;
-            boolean beenHere11x13 = false;
-            boolean beenHere11x14 = false;
-            boolean beenHere12x1 = false;
-            boolean beenHere12x2 = false;
-            boolean beenHere12x3 = false;
-            boolean beenHere12x4 = false;
-            boolean beenHere12x5 = false;
-            boolean beenHere12x6 = false;
-            boolean beenHere12x7 = false;
-            boolean beenHere12x8 = false;
-            boolean beenHere12x9 = false;
-            boolean beenHere12x10 = false;
-            boolean beenHere12x11 = false;
-            boolean beenHere12x12 = false;
-            boolean beenHere12x13 = false;
-            boolean beenHere12x14 = false;
-            boolean beenHere13x1 = false;
-            boolean beenHere13x2 = false;
-            boolean beenHere13x3 = false;
-            boolean beenHere13x4 = false;
-            boolean beenHere13x5 = false;
-            boolean beenHere13x6 = false;
-            boolean beenHere13x7 = false;
-            boolean beenHere13x8 = false;
-            boolean beenHere13x9 = false;
-            boolean beenHere13x10 = false;
-            boolean beenHere13x11 = false;
-            boolean beenHere13x12 = false;
-            boolean beenHere13x13 = false;
-            boolean beenHere13x14 = false;
-            boolean beenHere14x1 = false;
-            boolean beenHere14x2 = false;
-            boolean beenHere14x3 = false;
-            boolean beenHere14x4 = false;
-            boolean beenHere14x5 = false;
-            boolean beenHere14x6 = false;
-            boolean beenHere14x7 = false;
-            boolean beenHere14x8 = false;
-            boolean beenHere14x9 = false;
-            boolean beenHere14x10 = false;
-            boolean beenHere14x11 = false;
-            boolean beenHere14x12 = false;
-            boolean beenHere14x13 = false;
-            boolean beenHere14x14 = false;
-            //these set up booleans for each position so we can tell later whether or not we have been there
-            double gold = 0;
-            //this will be the amount of gold our character has
-            int dagger = 1;
-            int sword = 0;
-            int shield = 0;
-            int bow = 0;
-            int armor = 0;
-            //these set up various items our character will be able to acquire
-            //0 means our character doesn't have one
-            //a higher number will indicate the the power of the item
-                //exe a sword saved as a 1 will be weak, but a sword saved as a 5 will be powerful
-                //the game will automatically equip the most powerful item a character has
-            int numberOfArrows = 0;
-            int numberOfPotions = 0;
-            //these will determine the amount of various consumables the player possesses
-            int experience = 0;
-            //the player gains experience after each encounter
-            int level = 1;
-            //once the player reaches different experience thresholds, the level will be moved up
-            int health = 100;
-            //the player starts with 100 health, they can lose it and gain it back by doing various actions
-            MapMovement();
-            //this will run the method MapMovement()
-        }
+        int xPosition = 7;
+        int yPosition = 7;
+        //this creates two integer values to represent our characters position on the map
+        //since I have decided the map will be 14x14, I have set them to 7 to begin so our character is at the center
+        //these will be editted later when we move
+        boolean beenHere1x1 = false;
+        boolean beenHere1x2 = false;
+        boolean beenHere1x3 = false;
+        boolean beenHere1x4 = false;
+        boolean beenHere1x5 = false;
+        boolean beenHere1x6 = false;
+        boolean beenHere1x7 = false;
+        boolean beenHere1x8 = false;
+        boolean beenHere1x9 = false;
+        boolean beenHere1x10 = false;
+        boolean beenHere1x11 = false;
+        boolean beenHere1x12 = false;
+        boolean beenHere1x13 = false;
+        boolean beenHere1x14 = false;
+        boolean beenHere2x1 = false;
+        boolean beenHere2x2 = false;
+        boolean beenHere2x3 = false;
+        boolean beenHere2x4 = false;
+        boolean beenHere2x5 = false;
+        boolean beenHere2x6 = false;
+        boolean beenHere2x7 = false;
+        boolean beenHere2x8 = false;
+        boolean beenHere2x9 = false;
+        boolean beenHere2x10 = false;
+        boolean beenHere2x11 = false;
+        boolean beenHere2x12 = false;
+        boolean beenHere2x13 = false;
+        boolean beenHere2x14 = false;
+        boolean beenHere3x1 = false;
+        boolean beenHere3x2 = false;
+        boolean beenHere3x3 = false;
+        boolean beenHere3x4 = false;
+        boolean beenHere3x5 = false;
+        boolean beenHere3x6 = false;
+        boolean beenHere3x7 = false;
+        boolean beenHere3x8 = false;
+        boolean beenHere3x9 = false;
+        boolean beenHere3x10 = false;
+        boolean beenHere3x11 = false;
+        boolean beenHere3x12 = false;
+        boolean beenHere3x13 = false;
+        boolean beenHere3x14 = false;
+        boolean beenHere4x1 = false;
+        boolean beenHere4x2 = false;
+        boolean beenHere4x3 = false;
+        boolean beenHere4x4 = false;
+        boolean beenHere4x5 = false;
+        boolean beenHere4x6 = false;
+        boolean beenHere4x7 = false;
+        boolean beenHere4x8 = false;
+        boolean beenHere4x9 = false;
+        boolean beenHere4x10 = false;
+        boolean beenHere4x11 = false;
+        boolean beenHere4x12 = false;
+        boolean beenHere4x13 = false;
+        boolean beenHere4x14 = false;
+        boolean beenHere5x1 = false;
+        boolean beenHere5x2 = false;
+        boolean beenHere5x3 = false;
+        boolean beenHere5x4 = false;
+        boolean beenHere5x5 = false;
+        boolean beenHere5x6 = false;
+        boolean beenHere5x7 = false;
+        boolean beenHere5x8 = false;
+        boolean beenHere5x9 = false;
+        boolean beenHere5x10 = false;
+        boolean beenHere5x11 = false;
+        boolean beenHere5x12 = false;
+        boolean beenHere5x13 = false;
+        boolean beenHere5x14 = false;
+        boolean beenHere6x1 = false;
+        boolean beenHere6x2 = false;
+        boolean beenHere6x3 = false;
+        boolean beenHere6x4 = false;
+        boolean beenHere6x5 = false;
+        boolean beenHere6x6 = false;
+        boolean beenHere6x7 = false;
+        boolean beenHere6x8 = false;
+        boolean beenHere6x9 = false;
+        boolean beenHere6x10 = false;
+        boolean beenHere6x11 = false;
+        boolean beenHere6x12 = false;
+        boolean beenHere6x13 = false;
+        boolean beenHere6x14 = false;
+        boolean beenHere7x1 = false;
+        boolean beenHere7x2 = false;
+        boolean beenHere7x3 = false;
+        boolean beenHere7x4 = false;
+        boolean beenHere7x5 = false;
+        boolean beenHere7x6 = false;
+        boolean beenHere7x7 = false;
+        boolean beenHere7x8 = false;
+        boolean beenHere7x9 = false;
+        boolean beenHere7x10 = false;
+        boolean beenHere7x11 = false;
+        boolean beenHere7x12 = false;
+        boolean beenHere7x13 = false;
+        boolean beenHere7x14 = false;
+        boolean beenHere8x1 = false;
+        boolean beenHere8x2 = false;
+        boolean beenHere8x3 = false;
+        boolean beenHere8x4 = false;
+        boolean beenHere8x5 = false;
+        boolean beenHere8x6 = false;
+        boolean beenHere8x7 = false;
+        boolean beenHere8x8 = false;
+        boolean beenHere8x9 = false;
+        boolean beenHere8x10 = false;
+        boolean beenHere8x11 = false;
+        boolean beenHere8x12 = false;
+        boolean beenHere8x13 = false;
+        boolean beenHere8x14 = false;
+        boolean beenHere9x1 = false;
+        boolean beenHere9x2 = false;
+        boolean beenHere9x3 = false;
+        boolean beenHere9x4 = false;
+        boolean beenHere9x5 = false;
+        boolean beenHere9x6 = false;
+        boolean beenHere9x7 = false;
+        boolean beenHere9x8 = false;
+        boolean beenHere9x9 = false;
+        boolean beenHere9x10 = false;
+        boolean beenHere9x11 = false;
+        boolean beenHere9x12 = false;
+        boolean beenHere9x13 = false;
+        boolean beenHere9x14 = false;
+        boolean beenHere10x1 = false;
+        boolean beenHere10x2 = false;
+        boolean beenHere10x3 = false;
+        boolean beenHere10x4 = false;
+        boolean beenHere10x5 = false;
+        boolean beenHere10x6 = false;
+        boolean beenHere10x7 = false;
+        boolean beenHere10x8 = false;
+        boolean beenHere10x9 = false;
+        boolean beenHere10x10 = false;
+        boolean beenHere10x11 = false;
+        boolean beenHere10x12 = false;
+        boolean beenHere10x13 = false;
+        boolean beenHere10x14 = false;
+        boolean beenHere11x1 = false;
+        boolean beenHere11x2 = false;
+        boolean beenHere11x3 = false;
+        boolean beenHere11x4 = false;
+        boolean beenHere11x5 = false;
+        boolean beenHere11x6 = false;
+        boolean beenHere11x7 = false;
+        boolean beenHere11x8 = false;
+        boolean beenHere11x9 = false;
+        boolean beenHere11x10 = false;
+        boolean beenHere11x11 = false;
+        boolean beenHere11x12 = false;
+        boolean beenHere11x13 = false;
+        boolean beenHere11x14 = false;
+        boolean beenHere12x1 = false;
+        boolean beenHere12x2 = false;
+        boolean beenHere12x3 = false;
+        boolean beenHere12x4 = false;
+        boolean beenHere12x5 = false;
+        boolean beenHere12x6 = false;
+        boolean beenHere12x7 = false;
+        boolean beenHere12x8 = false;
+        boolean beenHere12x9 = false;
+        boolean beenHere12x10 = false;
+        boolean beenHere12x11 = false;
+        boolean beenHere12x12 = false;
+        boolean beenHere12x13 = false;
+        boolean beenHere12x14 = false;
+        boolean beenHere13x1 = false;
+        boolean beenHere13x2 = false;
+        boolean beenHere13x3 = false;
+        boolean beenHere13x4 = false;
+        boolean beenHere13x5 = false;
+        boolean beenHere13x6 = false;
+        boolean beenHere13x7 = false;
+        boolean beenHere13x8 = false;
+        boolean beenHere13x9 = false;
+        boolean beenHere13x10 = false;
+        boolean beenHere13x11 = false;
+        boolean beenHere13x12 = false;
+        boolean beenHere13x13 = false;
+        boolean beenHere13x14 = false;
+        boolean beenHere14x1 = false;
+        boolean beenHere14x2 = false;
+        boolean beenHere14x3 = false;
+        boolean beenHere14x4 = false;
+        boolean beenHere14x5 = false;
+        boolean beenHere14x6 = false;
+        boolean beenHere14x7 = false;
+        boolean beenHere14x8 = false;
+        boolean beenHere14x9 = false;
+        boolean beenHere14x10 = false;
+        boolean beenHere14x11 = false;
+        boolean beenHere14x12 = false;
+        boolean beenHere14x13 = false;
+        boolean beenHere14x14 = false;
+        //these set up booleans for each position so we can tell later whether or not we have been there
+        double gold = 1000000000; //TODO: this amount should be 0, I am only setting it this high for testing purposes
+        //this will be the amount of gold our character has
+        int dagger = 1;
+        int sword = 0;
+        int shield = 0;
+        int bow = 0;
+        int armor = 0;
+        //these set up various items our character will be able to acquire
+        //0 means our character doesn't have one
+        //a higher number will indicate the the power of the item
+            //exe a sword saved as a 1 will be weak, but a sword saved as a 5 will be powerful
+            //the game will automatically equip the most powerful item a character has
+        int numberOfArrows = 0;
+        int numberOfPotions = 0;
+        //these will determine the amount of various consumables the player possesses
+        int experience = 0;
+        //the player gains experience after each encounter
+        int level = 1;
+        //once the player reaches different experience thresholds, the level will be moved up
+        int health = 100;
+        //the player starts with 100 health, they can lose it and gain it back by doing various actions
+        System.out.print("The game has begun. ");
+        System.out.print("Choose Name. ");
+        String stringyBoi1 = scannyBoi.nextLine();
+        System.out.print("Our tale begins one morning as you wake up alone in a large, foggy feild. You have a dagger in your hand and the only concrete memory you have is that you must find and rescue your father.");
+
+        MapMovement();
+        //this will run the method MapMovement()
+
         //System.out.print(stringyBoi);
             //"System.out." is how we find our desired command
                 //"System." tell us we are finding a command hardcoded into java
@@ -280,32 +283,59 @@ public class GameLoop{
     }
     
     public static void MapMovement(){
-        System.out.print("The game has begun. ");
-        System.out.print("Choose Name. ");
-        String stringyBoi1 = scannyBoi.nextLine();
-        System.out.print("Our tale begins one morning as you wake up alone in a large, foggy feild. You have a dagger in your hand and the only concrete memory you have is that you must find and rescue your father.");
-        String stringyBoi2 = scannyBoi.nextLine();
-        if (stringyBoi2.equals("commit sudoku")) {
-            Sudoku();
-            //this is just a joke that allows the character to stab themselves
-        } else if (stringyBoi2.equals("move forwards")){
-            xPosition = xPosition + 1;
-            //this takes the integer we set to be the xPosition of our character and increases the value by one
-            //this represents our character moving one space forwards
-            CheckPosition();
-            //this sends our code to a command that checks our position and depending on our position, does different things
-        } else if (stringyBoi2.equals("move backwards")){
-            xPosition = xPosition - 1;
-            CheckPosition();
-        } else if (stringyBoi2.equals("move left")){
-            yPosition = yPosition - 1;
-            CheckPosition();
-        } else if (stringyBoi2.equals("move right")){
-            yPosition = yPosition + 1;
-            CheckPosition();
-        } else{
-            System.out.print(stringyBoi2 + " is not a recognized command.");
-            MapMovement();
+        if (health <= 0) {
+            GameOver();
+        } else {
+            if (experience > 50){
+                level = 2;
+            } 
+            if (experience > 125){
+                level = 3;
+            }
+            if (experience > 225){
+                level = 4;
+            }
+            if (experience > 350){
+                level = 5;
+            }
+            if (experience > 500){
+                level = 6;
+            }
+            if (experience > 675){
+                level = 7;
+            }
+            if (experience > 875){
+                level = 8;
+            }
+            if (experience > 1100){
+                level = 9;
+            }
+            if (experience > 1350){
+                level = 10;
+            }
+            String stringyBoi2 = scannyBoi.nextLine();
+            if (stringyBoi2.equals("commit sudoku")) {
+                Sudoku();
+                //this is just a joke that allows the character to stab themselves
+            } else if (stringyBoi2.equals("move forwards")){
+                xPosition = xPosition + 1;
+                //this takes the integer we set to be the xPosition of our character and increases the value by one
+                //this represents our character moving one space forwards
+                CheckPosition();
+                //this sends our code to a command that checks our position and depending on our position, does different things
+            } else if (stringyBoi2.equals("move backwards")){
+                xPosition = xPosition - 1;
+                CheckPosition();
+            } else if (stringyBoi2.equals("move left")){
+                yPosition = yPosition - 1;
+                CheckPosition();
+            } else if (stringyBoi2.equals("move right")){
+                yPosition = yPosition + 1;
+                CheckPosition();
+            } else{
+                System.out.print(stringyBoi2 + " is not a recognized command.");
+                MapMovement();
+            }
         }
     }
 
@@ -862,39 +892,46 @@ public class GameLoop{
             }
             
         } else if (xPosition == 7){
+            //TODO: I am currently using pretty much this whole section for testing purposes, I will need to undo these encounters
             if (yPosition == 1){
                 if (beenHere7x1 == false){
                     beenHere7x1 = true;
+                    TrappedTreasure();
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 2){
                 if (beenHere7x2 == false){
                     beenHere7x2 = true;
+                    Treasure1();
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 3){
                 if (beenHere7x3 == false){
                     beenHere7x3 = true;
+                    Treasure2();
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 4){
                 if (beenHere7x4 == false){
                     beenHere7x4 = true;
+                    Treasure3();
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 5){
                 if (beenHere7x5 == false){
                     beenHere7x5 = true;
+                    Treasure2();
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 6){
                 if (beenHere7x6 == false){
                     beenHere7x6 = true;
+                    Treasure1();
                 } else {
                     RepeatedArea();
                 }
@@ -907,17 +944,20 @@ public class GameLoop{
             } else if (yPosition == 8){
                 if (beenHere7x8 == false){
                     beenHere7x8 = true; 
+                    Shop1();
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 9){
                 if (beenHere7x9 == false){
                     beenHere7x9 = true;
+                    Shop2();
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 10){
                 if (beenHere7x10 == false){
+                    Shop3(); //TODO: this order should make this encounterable multiple times, I need to check
                     beenHere7x10 = true;
                 } else {
                     RepeatedArea();
@@ -925,12 +965,14 @@ public class GameLoop{
             } else if (yPosition == 11){
                 if (beenHere7x11 == false){
                     beenHere7x11 = true;
+                    Shop4();
                 } else {
                     RepeatedArea();
                 }
             } else if (yPosition == 12){
                 if (beenHere7x12 == false){
                     beenHere7x12 = true;
+                    Shop5();
                 } else {
                     RepeatedArea();
                 }
@@ -1559,17 +1601,84 @@ public class GameLoop{
     }
 
     //we will program our various encounters to be called on from each position here
-    public static void Treasure(){
+    public static void Treasure1(){
         System.out.print("You see a treasure chest.");
         String stringyBoi3 = scannyBoi.nextLine();
         if (stringyBoi3.equals("open" || "open chest")){
-            System.out.print("You open up the treasure chest and find ");
+            System.out.print("You open up the treasure chest and find 20");
+            experience = experience + 5;
+            gold = gold + 20;
         } else if (stringyBoi3.equals("ignore" || "ignore chest")){
             System.out.print("You decide to ignore the chest and continue searching.");
         } else {
             System.out.print("That is not a recognized command.");
-            Treasure();
+            Treasure1();
         }
+        MapMovement();
+    }
+
+    public static void Treasure2(){
+        System.out.print("You see a treasure chest.");
+        String stringyBoi3 = scannyBoi.nextLine();
+        if (stringyBoi3.equals("open" || "open chest")){
+            System.out.print("You open up the treasure chest and find 40 gold");
+            experience = experience + 10;
+            gold = gold + 40;
+        } else if (stringyBoi3.equals("ignore" || "ignore chest")){
+            System.out.print("You decide to ignore the chest and continue searching.");
+        } else {
+            System.out.print("That is not a recognized command.");
+            Treasure2();
+        }
+        MapMovement();
+    }
+
+    public static void Treasure3(){
+        System.out.print("You see a treasure chest.");
+        String stringyBoi3 = scannyBoi.nextLine();
+        if (stringyBoi3.equals("open" || "open chest")){
+            System.out.print("You open up the treasure chest and find 60 gold");
+            experience = experience + 15;
+            gold = gold + 60;
+        } else if (stringyBoi3.equals("ignore" || "ignore chest")){
+            System.out.print("You decide to ignore the chest and continue searching.");
+        } else {
+            System.out.print("That is not a recognized command.");
+            Treasure3();
+        }
+        MapMovement();
+    }
+
+    public static void Treasure4(){
+        System.out.print("You see a treasure chest.");
+        String stringyBoi3 = scannyBoi.nextLine();
+        if (stringyBoi3.equals("open" || "open chest")){
+            System.out.print("You open up the treasure chest and find 80 gold");
+            experience = experience + 20;
+            gold = gold + 80;
+        } else if (stringyBoi3.equals("ignore" || "ignore chest")){
+            System.out.print("You decide to ignore the chest and continue searching.");
+        } else {
+            System.out.print("That is not a recognized command.");
+            Treasure4();
+        }
+        MapMovement();
+    }
+
+    public static void Treasure5(){
+        System.out.print("You see a treasure chest.");
+        String stringyBoi3 = scannyBoi.nextLine();
+        if (stringyBoi3.equals("open" || "open chest")){
+            System.out.print("You open up the treasure chest and find 100 gold");
+            experience = experience + 25;
+            gold = gold + 100;
+        } else if (stringyBoi3.equals("ignore" || "ignore chest")){
+            System.out.print("You decide to ignore the chest and continue searching.");
+        } else {
+            System.out.print("That is not a recognized command.");
+            Treasure5();
+        }
+        MapMovement();
     }
 
     public static void TrappedTreasure(){
@@ -1577,12 +1686,15 @@ public class GameLoop{
         String stringyBoi4 = scannyBoi.nextLine();
         if (stringyBoi4.equals("open" || "open chest")){
             System.out.print("You bend down to open the chest, but as soon as you touch it, it explodes, hurting you and knocking you down.");
+            health = health - 10;
         } else if (stringyBoi4.equals("ignore" || "ignore chest")){
             System.out.print("You decide to ignore the chest and continue searching.");
+            experience = experience + 5;
         } else {
             System.out.print("That is not a recognized command.");
             TrappedTreasure();
         }
+        MapMovement();
     }
     
     public static void Troll(){
@@ -1602,6 +1714,7 @@ public class GameLoop{
         String stringyBoi5 = scannyBoi.nextLine();
         if (strinyBoi5.equals("pick up bottle" || "get bottle")){
             System.out.print("You pick up the bottle and put it in your bag for later use.");
+            numberOfPotions = numberOfPotions + 1;
         } else if (stringyBoi5.equals("ignore" || "ignore bottle")){
             System.out.print("You choose to ignore the bottle.");
         } else {
