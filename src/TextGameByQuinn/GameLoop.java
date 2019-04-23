@@ -290,28 +290,28 @@ public class GameLoop{
             if (experience >= 50){
                 level = 2;
             } 
-            if (experience >= 125){
+            if (experience >= 150){
                 level = 3;
             }
-            if (experience >= 225){
+            if (experience >= 350){
                 level = 4;
             }
-            if (experience >= 350){
+            if (experience >= 650){
                 level = 5;
             }
-            if (experience >= 500){
+            if (experience >= 1050){
                 level = 6;
             }
-            if (experience >= 675){
+            if (experience >= 1550){
                 level = 7;
             }
-            if (experience >= 875){
+            if (experience >= 2150){
                 level = 8;
             }
-            if (experience >= 1100){
+            if (experience >= 2850){
                 level = 9;
             }
-            if (experience >= 1350){
+            if (experience >= 3650){
                 level = 10;
             }
             String stringyBoi2 = scannyBoi.nextLine();
@@ -900,7 +900,7 @@ public class GameLoop{
             }
             
         } else if (xPosition == 7){
-            //TODO: I am currently using pretty much this whole section for testing purposes, I will need to undo these encounters
+            //TODO: I am currently using this whole section for testing purposes, I will need to change these encounters
             if (yPosition == 1){
                 if (beenHere7x1 == false){
                     beenHere7x1 = true;
@@ -994,6 +994,7 @@ public class GameLoop{
             } else if (yPosition == 14){
                 if (beenHere7x14 == false){
                     beenHere7x14 = true;
+                    SmallSlimeEncounter();
                 } else {
                     RepeatedArea();
                 }
@@ -1830,7 +1831,7 @@ public class GameLoop{
         if (armor = 0){
             health = Math(health - 10);
         } else {
-            double troll1Damage = 
+            double troll1Damage = Math(8 / armor);
             health = Math(health - troll1Damage);
         }
         if (health <= 0){
@@ -1853,8 +1854,144 @@ public class GameLoop{
 
     }
 
-    public static void SmallSlime(){
+    public static void SmallSlimeEncounter(){
+        int smallSlimeHealth = 5;
+        System.out.print("A small slime appears.");
+        AttackSmallSlime();
+    }
+    
+    public static void AttackSmallSlime(){
+        String fightyBoi2 = scannyBoi.nextLine();
+        if (fightyBoi2.equals("use sword")) {
+            if (sword = 0){
+                System.out.print("You don't have a sword.");
+            } else {
+                int damage = Math(sword * level * 2);
+                smallSlimeHealth = Math(smallSlimeHealth - damage);
+                System.out.print("You slash the slime with your sword.");
+            }
+        } else if (fightyBoi2.equals("use dagger")) {
+            int damage = level;
+            smallSlimeHealth = Math(smallSlimeHealth - damage);
+            System.out.print("You stab the slime with your dagger.");
+        } else if (fightyBoi2.equals("use bow")) {
+            if (bow = 0){
+                System.out.print("You don't have a bow.");
+            } else if (numberOfArrows = 0) {
+                System.out.print("You don't have any arrows.");
+            } else {
+                int damage = Math(bow * level * 2);
+                numberOfArrows = Math(numberOfArrows - 1);
+                smallSlimeHealth = Math(smallSlimeHealth - damage);
+                System.out.print("Your shoot an arrow at the slime.");
+            }
+        } else if (fightyBoi2.equals("use potion")) {
+            if (numberOfPotions = 0){
+                System.out.print("You don't have any potions.");
+            } else {
+                health = Math(health + 25);
+                System.out.print("You drink the potion and feel reinvigorated.");
+                AttackSmallSlime();
+            }
+        } else if (fightyBoi2.equals("use shield")) {
+            if (shield = 0){
+                System.out.print("You don't have a shield.");
+            } else {
+                Random rand = new Random();
+                int shieldBlockTest = rand.nextInt(10);
+                int shieldStrength = Math(shield + 5);
+                if (shieldStrength > shieldBlockTest) {
+                    System.out.print("The slime tries to leap at you, but you knock it down with your shield and have an oppurtunity to counterattack.");
+                    CritAttackSmallSlime();
+                } else {
+                    System.out.print("You can't quite get your shield up in time.");
+                }
+            }
+        } else if (fightyBoi2.equals("punch")) {
+            System.out.print("You punch the slime.");
+            smallSlimeHealth = Math(smallSlimeHealth - 1);
+        } else if (fightyBoi2.equals("run")) {
+            System.out.print("You try to run away from the slime, but it is able to leap at you and prevent your escape.");
+        } else {
+            System.out.print("That is not a recognized command.");
+            AttackSmallSlime();
+        }
+        if (smallSlimeHealth <= 0) {
+            DeadSmallSlime();
+        } else {
+            SmallSlimeAttack();
+        }
+    }
 
+    public static void CritAttackSmallSlime(){
+        String fightyBoi2 = scannyBoi.nextLine();
+        if (fightyBoi2.equals("use sword")) {
+            if (sword = 0){
+                System.out.print("You don't have a sword.");
+            } else {
+                int damage = Math(sword * level * 4);
+                smallSlimeHealth = Math(smallSlimeHealth - damage);
+                System.out.print("You slash the slime with your sword. The slime wasn't anticipating the attack and is hit especially hard.");
+            }
+        } else if (fightyBoi2.equals("use dagger")) {
+            int damage = Math(level * 2);
+            smallSlimeHealth = Math(smallSlimeHealth - damage);
+            System.out.print("You stab the slime with your dagger. The slime wasn't anticipating the attack and is hit especially hard.");
+        } else if (fightyBoi2.equals("use bow")) {
+            if (bow = 0){
+                System.out.print("You don't have a bow.");
+            } else if (numberOfArrows = 0) {
+                System.out.print("You don't have any arrows.");
+            } else {
+                int damage = Math(bow * level * 4);
+                numberOfArrows = Math(numberOfArrows - 1);
+                smallSlimeHealth = Math(smallSlimeHealth - damage);
+                System.out.print("Your shoot an arrow at the slime. The slime wasn't anticipating the attack and is hit especially hard.");
+            }
+        } else if (fightyBoi2.equals("use potion")) {
+            if (numberOfPotions = 0){
+                System.out.print("You don't have any potions.");
+            } else {
+                health = Math(health + 25);
+                System.out.print("You drink the potion and feel reinvigorated.");
+                CritAttackSmallSlime();
+            }
+        } else if (fightyBoi2.equals("use shield")) {
+            System.out.print("The slime is already lying helpless on the ground.");
+        } else if (fightyBoi2.equals("punch")) {
+            System.out.print("You punch the slime.");
+            smallSlimeHealth = Math(smallSlimeHealth - 2);
+        } else if (fightyBoi2.equals("run")) {
+            System.out.print("You are able to succesfully escape the slime.");
+        } else {
+            System.out.print("That is not a recognized command.");
+            AttackSmallSlime();
+        }
+        if (smallSlimeHealth <= 0) {
+            DeadSmallSlime();
+        } else {
+            SmallSlimeAttack();
+        }
+    }
+
+    public static void SmallSlimeAttack(){
+        System.out.print("The small slime leaps at you.");
+        if (armor = 0){
+            health = Math(health - 4);
+        } else {
+            double smallSlimeDamage = Math(3 / armor);
+            health = Math(health - smallSlimeDamage);
+        }
+        if (health <= 0){
+            GameOver();
+        }
+    }
+
+    public static void DeadSmallSlime(){
+        System.out.print("And with that, the slime bursts open and its remains dissolved into the earth.");
+        experience = Math(experience + 20);
+        gold = Math(gold + 30);
+        System.out.println("You have gotten some gold and experience. You now have " + gold + " gold and " + experience + "experience");
     }
 
     public static void Dragon(){
