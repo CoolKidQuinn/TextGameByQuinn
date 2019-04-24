@@ -320,35 +320,6 @@ public class GameLoop{
                 level = 10;
             }
             String stringyBoi2 = scannyBoi.nextLine();
-            if (stringyBoi2.equals("commit sudoku")) {
-                Sudoku();
-                //this is just a joke that allows the character to stab themselves
-            } else if (stringyBoi2.equals("move forwards")){
-                xPosition = xPosition + 1;
-                //this takes the integer we set to be the xPosition of our character and increases the value by one
-                //this represents our character moving one space forwards
-                CheckPosition();
-                //this sends our code to a command that checks our position and depending on our position, does different things
-            } else if (stringyBoi2.equals("move backwards")){
-                xPosition = xPosition - 1;
-                CheckPosition();
-            } else if (stringyBoi2.equals("move left")){
-                yPosition = yPosition - 1;
-                CheckPosition();
-            } else if (stringyBoi2.equals("move right")){
-                yPosition = yPosition + 1;
-                CheckPosition();
-            } else if (stringyBoi2.equals("use potion")) {
-                if (numberOfPotions == 0){
-                    System.out.print("You don't have any potions. ");
-                } else {
-                    health = health + 25;
-                    System.out.print("You drink the potion and feel reinvigorated. ");
-                }
-            } else{
-                System.out.print(stringyBoi2 + " is not a recognized command. ");
-                MapMovement();
-            }
             switch(stringyBoi2){
                 case "commit sudoku" : Sudoku();
                     break;
