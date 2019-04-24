@@ -15,16 +15,243 @@ public class GameLoop{
         //"java" tells vscode we want to use java commands
         //"-cp" tells vscode to tell java that we are going give it a class path to run
         //"C:/users/chsrobotics/git/TextGame/bin GameLoop" is where the cass path for java to run is located
+        static int xPosition = 7;
+        static int yPosition = 7;
+        //this creates two integer values to represent our characters position on the map
+        //since I have decided the map will be 14x14, I have set them to 7 to begin so our character is at the center
+        //these will be editted later when we move
+        static boolean beenHere1x1 = false;
+        static boolean beenHere1x2 = false;
+        static boolean beenHere1x3 = false;
+        static boolean beenHere1x4 = false;
+        static boolean beenHere1x5 = false;
+        static boolean beenHere1x6 = false;
+        static boolean beenHere1x7 = false;
+        static boolean beenHere1x8 = false;
+        static boolean beenHere1x9 = false;
+        static boolean beenHere1x10 = false;
+        static boolean beenHere1x11 = false;
+        static boolean beenHere1x12 = false;
+        static boolean beenHere1x13 = false;
+        static boolean beenHere1x14 = false;
+        static boolean beenHere2x1 = false;
+        static boolean beenHere2x2 = false;
+        static boolean beenHere2x3 = false;
+        static boolean beenHere2x4 = false;
+        static boolean beenHere2x5 = false;
+        static boolean beenHere2x6 = false;
+        static boolean beenHere2x7 = false;
+        static boolean beenHere2x8 = false;
+        static boolean beenHere2x9 = false;
+        static boolean beenHere2x10 = false;
+        static boolean beenHere2x11 = false;
+        static boolean beenHere2x12 = false;
+        static boolean beenHere2x13 = false;
+        static boolean beenHere2x14 = false;
+        static boolean beenHere3x1 = false;
+        static boolean beenHere3x2 = false;
+        static boolean beenHere3x3 = false;
+        static boolean beenHere3x4 = false;
+        static boolean beenHere3x5 = false;
+        static boolean beenHere3x6 = false;
+        static boolean beenHere3x7 = false;
+        static boolean beenHere3x8 = false;
+        static boolean beenHere3x9 = false;
+        static boolean beenHere3x10 = false;
+        static boolean beenHere3x11 = false;
+        static boolean beenHere3x12 = false;
+        static boolean beenHere3x13 = false;
+        static boolean beenHere3x14 = false;
+        static boolean beenHere4x1 = false;
+        static boolean beenHere4x2 = false;
+        static boolean beenHere4x3 = false;
+        static boolean beenHere4x4 = false;
+        static boolean beenHere4x5 = false;
+        static boolean beenHere4x6 = false;
+        static boolean beenHere4x7 = false;
+        static boolean beenHere4x8 = false;
+        static boolean beenHere4x9 = false;
+        static boolean beenHere4x10 = false;
+        static boolean beenHere4x11 = false;
+        static boolean beenHere4x12 = false;
+        static boolean beenHere4x13 = false;
+        static boolean beenHere4x14 = false;
+        static boolean beenHere5x1 = false;
+        static boolean beenHere5x2 = false;
+        static boolean beenHere5x3 = false;
+        static boolean beenHere5x4 = false;
+        static boolean beenHere5x5 = false;
+        static boolean beenHere5x6 = false;
+        static boolean beenHere5x7 = false;
+        static boolean beenHere5x8 = false;
+        static boolean beenHere5x9 = false;
+        static boolean beenHere5x10 = false;
+        static boolean beenHere5x11 = false;
+        static boolean beenHere5x12 = false;
+        static boolean beenHere5x13 = false;
+        static boolean beenHere5x14 = false;
+        static boolean beenHere6x1 = false;
+        static boolean beenHere6x2 = false;
+        static boolean beenHere6x3 = false;
+        static boolean beenHere6x4 = false;
+        static boolean beenHere6x5 = false;
+        static boolean beenHere6x6 = false;
+        static boolean beenHere6x7 = false;
+        static boolean beenHere6x8 = false;
+        static boolean beenHere6x9 = false;
+        static boolean beenHere6x10 = false;
+        static boolean beenHere6x11 = false;
+        static boolean beenHere6x12 = false;
+        static boolean beenHere6x13 = false;
+        static boolean beenHere6x14 = false;
+        static boolean beenHere7x1 = false;
+        static boolean beenHere7x2 = false;
+        static boolean beenHere7x3 = false;
+        static boolean beenHere7x4 = false;
+        static boolean beenHere7x5 = false;
+        static boolean beenHere7x6 = false;
+        static boolean beenHere7x7 = false;
+        static boolean beenHere7x8 = false;
+        static boolean beenHere7x9 = false;
+        static boolean beenHere7x10 = false;
+        static boolean beenHere7x11 = false;
+        static boolean beenHere7x12 = false;
+        static boolean beenHere7x13 = false;
+        static boolean beenHere7x14 = false;
+        static boolean beenHere8x1 = false;
+        static boolean beenHere8x2 = false;
+        static boolean beenHere8x3 = false;
+        static boolean beenHere8x4 = false;
+        static boolean beenHere8x5 = false;
+        static boolean beenHere8x6 = false;
+        static boolean beenHere8x7 = false;
+        static boolean beenHere8x8 = false;
+        static boolean beenHere8x9 = false;
+        static boolean beenHere8x10 = false;
+        static boolean beenHere8x11 = false;
+        static boolean beenHere8x12 = false;
+        static boolean beenHere8x13 = false;
+        static boolean beenHere8x14 = false;
+        static boolean beenHere9x1 = false;
+        static boolean beenHere9x2 = false;
+        static boolean beenHere9x3 = false;
+        static boolean beenHere9x4 = false;
+        static boolean beenHere9x5 = false;
+        static boolean beenHere9x6 = false;
+        static boolean beenHere9x7 = false;
+        static boolean beenHere9x8 = false;
+        static boolean beenHere9x9 = false;
+        static boolean beenHere9x10 = false;
+        static boolean beenHere9x11 = false;
+        static boolean beenHere9x12 = false;
+        static boolean beenHere9x13 = false;
+        static boolean beenHere9x14 = false;
+        static boolean beenHere10x1 = false;
+        static boolean beenHere10x2 = false;
+        static boolean beenHere10x3 = false;
+        static boolean beenHere10x4 = false;
+        static boolean beenHere10x5 = false;
+        static boolean beenHere10x6 = false;
+        static boolean beenHere10x7 = false;
+        static boolean beenHere10x8 = false;
+        static boolean beenHere10x9 = false;
+        static boolean beenHere10x10 = false;
+        static boolean beenHere10x11 = false;
+        static boolean beenHere10x12 = false;
+        static boolean beenHere10x13 = false;
+        static boolean beenHere10x14 = false;
+        static boolean beenHere11x1 = false;
+        static boolean beenHere11x2 = false;
+        static boolean beenHere11x3 = false;
+        static boolean beenHere11x4 = false;
+        static boolean beenHere11x5 = false;
+        static boolean beenHere11x6 = false;
+        static boolean beenHere11x7 = false;
+        static boolean beenHere11x8 = false;
+        static boolean beenHere11x9 = false;
+        static boolean beenHere11x10 = false;
+        static boolean beenHere11x11 = false;
+        static boolean beenHere11x12 = false;
+        static boolean beenHere11x13 = false;
+        static boolean beenHere11x14 = false;
+        static boolean beenHere12x1 = false;
+        static boolean beenHere12x2 = false;
+        static boolean beenHere12x3 = false;
+        static boolean beenHere12x4 = false;
+        static boolean beenHere12x5 = false;
+        static boolean beenHere12x6 = false;
+        static boolean beenHere12x7 = false;
+        static boolean beenHere12x8 = false;
+        static boolean beenHere12x9 = false;
+        static boolean beenHere12x10 = false;
+        static boolean beenHere12x11 = false;
+        static boolean beenHere12x12 = false;
+        static boolean beenHere12x13 = false;
+        static boolean beenHere12x14 = false;
+        static boolean beenHere13x1 = false;
+        static boolean beenHere13x2 = false;
+        static boolean beenHere13x3 = false;
+        static boolean beenHere13x4 = false;
+        static boolean beenHere13x5 = false;
+        static boolean beenHere13x6 = false;
+        static boolean beenHere13x7 = false;
+        static boolean beenHere13x8 = false;
+        static boolean beenHere13x9 = false;
+        static boolean beenHere13x10 = false;
+        static boolean beenHere13x11 = false;
+        static boolean beenHere13x12 = false;
+        static boolean beenHere13x13 = false;
+        static boolean beenHere13x14 = false;
+        static boolean beenHere14x1 = false;
+        static boolean beenHere14x2 = false;
+        static boolean beenHere14x3 = false;
+        static boolean beenHere14x4 = false;
+        static boolean beenHere14x5 = false;
+        static boolean beenHere14x6 = false;
+        static boolean beenHere14x7 = false;
+        static boolean beenHere14x8 = false;
+        static boolean beenHere14x9 = false;
+        static boolean beenHere14x10 = false;
+        static boolean beenHere14x11 = false;
+        static boolean beenHere14x12 = false;
+        static boolean beenHere14x13 = false;
+        static boolean beenHere14x14 = false;
+        //these set up booleans for each position so we can tell later whether or not we have been there
+        static double gold = 1000000000; //TODO: this amount should be 0, I am only setting it this high for testing purposes
+        //this will be the amount of gold our character has
+        static int dagger = 1;
+        static int sword = 0;
+        static int shield = 0;
+        static int bow = 0;
+        static int armor = 0;
+        //these set up various items our character will be able to acquire
+        //0 means our character doesn't have one
+        //a higher number will indicate the the power of the item
+            //exe a sword saved as a 1 will be weak, but a sword saved as a 5 will be powerful
+            //the game will automatically equip the most powerful item a character has
+        static int numberOfArrows = 0;
+        static int numberOfPotions = 0;
+        //these will determine the amount of various consumables the player possesses
+        static int experience = 0;
+        //the player gains experience after each encounter
+        static int level = 1;
+        //once the player reaches different experience thresholds, the level will be moved up
+        static double health = 100;
+        //the player starts with 100 health, they can lose it and gain it back by doing various actions
+
+        static int trollHealth;
+        static int smallSlimeHealth;
+
+        static Scanner scannyBoi = new Scanner(System.in);
+        //"Scanner scannyBoi" brings a scanner into existence and names it scannyBoi
+            //scanners can take input from the keyboard (or other places, but for our purposes keyboards)
+        //"= new Scanner(System.in)" tells that scanner to get input from the place inside the parenthesis
+            //in this case, we are getting it from "System.in" which is just what the keyboard is in java
     public static void main(String[] args) {
     //public means it's accessible by every part of the program
     //static means one of these will always exist in a program
     //void means it doesn't return anything
     
-        Scanner scannyBoi = new Scanner(System.in);
-        //"Scanner scannyBoi" brings a scanner into existence and names it scannyBoi
-            //scanners can take input from the keyboard (or other places, but for our purposes keyboards)
-        //"= new Scanner(System.in)" tells that scanner to get input from the place inside the parenthesis
-            //in this case, we are getting it from "System.in" which is just what the keyboard is in java
         //System.out.print("Type start to begin ");
         //This will print the thing in the parenthesis
 
@@ -42,233 +269,11 @@ public class GameLoop{
         //this will be set to true once certain actions in the game have been taken
         //we will display a different message in the game over section depending on wheather or not we have set this to true
 
-        int xPosition = 7;
-        int yPosition = 7;
-        //this creates two integer values to represent our characters position on the map
-        //since I have decided the map will be 14x14, I have set them to 7 to begin so our character is at the center
-        //these will be editted later when we move
-        boolean beenHere1x1 = false;
-        boolean beenHere1x2 = false;
-        boolean beenHere1x3 = false;
-        boolean beenHere1x4 = false;
-        boolean beenHere1x5 = false;
-        boolean beenHere1x6 = false;
-        boolean beenHere1x7 = false;
-        boolean beenHere1x8 = false;
-        boolean beenHere1x9 = false;
-        boolean beenHere1x10 = false;
-        boolean beenHere1x11 = false;
-        boolean beenHere1x12 = false;
-        boolean beenHere1x13 = false;
-        boolean beenHere1x14 = false;
-        boolean beenHere2x1 = false;
-        boolean beenHere2x2 = false;
-        boolean beenHere2x3 = false;
-        boolean beenHere2x4 = false;
-        boolean beenHere2x5 = false;
-        boolean beenHere2x6 = false;
-        boolean beenHere2x7 = false;
-        boolean beenHere2x8 = false;
-        boolean beenHere2x9 = false;
-        boolean beenHere2x10 = false;
-        boolean beenHere2x11 = false;
-        boolean beenHere2x12 = false;
-        boolean beenHere2x13 = false;
-        boolean beenHere2x14 = false;
-        boolean beenHere3x1 = false;
-        boolean beenHere3x2 = false;
-        boolean beenHere3x3 = false;
-        boolean beenHere3x4 = false;
-        boolean beenHere3x5 = false;
-        boolean beenHere3x6 = false;
-        boolean beenHere3x7 = false;
-        boolean beenHere3x8 = false;
-        boolean beenHere3x9 = false;
-        boolean beenHere3x10 = false;
-        boolean beenHere3x11 = false;
-        boolean beenHere3x12 = false;
-        boolean beenHere3x13 = false;
-        boolean beenHere3x14 = false;
-        boolean beenHere4x1 = false;
-        boolean beenHere4x2 = false;
-        boolean beenHere4x3 = false;
-        boolean beenHere4x4 = false;
-        boolean beenHere4x5 = false;
-        boolean beenHere4x6 = false;
-        boolean beenHere4x7 = false;
-        boolean beenHere4x8 = false;
-        boolean beenHere4x9 = false;
-        boolean beenHere4x10 = false;
-        boolean beenHere4x11 = false;
-        boolean beenHere4x12 = false;
-        boolean beenHere4x13 = false;
-        boolean beenHere4x14 = false;
-        boolean beenHere5x1 = false;
-        boolean beenHere5x2 = false;
-        boolean beenHere5x3 = false;
-        boolean beenHere5x4 = false;
-        boolean beenHere5x5 = false;
-        boolean beenHere5x6 = false;
-        boolean beenHere5x7 = false;
-        boolean beenHere5x8 = false;
-        boolean beenHere5x9 = false;
-        boolean beenHere5x10 = false;
-        boolean beenHere5x11 = false;
-        boolean beenHere5x12 = false;
-        boolean beenHere5x13 = false;
-        boolean beenHere5x14 = false;
-        boolean beenHere6x1 = false;
-        boolean beenHere6x2 = false;
-        boolean beenHere6x3 = false;
-        boolean beenHere6x4 = false;
-        boolean beenHere6x5 = false;
-        boolean beenHere6x6 = false;
-        boolean beenHere6x7 = false;
-        boolean beenHere6x8 = false;
-        boolean beenHere6x9 = false;
-        boolean beenHere6x10 = false;
-        boolean beenHere6x11 = false;
-        boolean beenHere6x12 = false;
-        boolean beenHere6x13 = false;
-        boolean beenHere6x14 = false;
-        boolean beenHere7x1 = false;
-        boolean beenHere7x2 = false;
-        boolean beenHere7x3 = false;
-        boolean beenHere7x4 = false;
-        boolean beenHere7x5 = false;
-        boolean beenHere7x6 = false;
-        boolean beenHere7x7 = false;
-        boolean beenHere7x8 = false;
-        boolean beenHere7x9 = false;
-        boolean beenHere7x10 = false;
-        boolean beenHere7x11 = false;
-        boolean beenHere7x12 = false;
-        boolean beenHere7x13 = false;
-        boolean beenHere7x14 = false;
-        boolean beenHere8x1 = false;
-        boolean beenHere8x2 = false;
-        boolean beenHere8x3 = false;
-        boolean beenHere8x4 = false;
-        boolean beenHere8x5 = false;
-        boolean beenHere8x6 = false;
-        boolean beenHere8x7 = false;
-        boolean beenHere8x8 = false;
-        boolean beenHere8x9 = false;
-        boolean beenHere8x10 = false;
-        boolean beenHere8x11 = false;
-        boolean beenHere8x12 = false;
-        boolean beenHere8x13 = false;
-        boolean beenHere8x14 = false;
-        boolean beenHere9x1 = false;
-        boolean beenHere9x2 = false;
-        boolean beenHere9x3 = false;
-        boolean beenHere9x4 = false;
-        boolean beenHere9x5 = false;
-        boolean beenHere9x6 = false;
-        boolean beenHere9x7 = false;
-        boolean beenHere9x8 = false;
-        boolean beenHere9x9 = false;
-        boolean beenHere9x10 = false;
-        boolean beenHere9x11 = false;
-        boolean beenHere9x12 = false;
-        boolean beenHere9x13 = false;
-        boolean beenHere9x14 = false;
-        boolean beenHere10x1 = false;
-        boolean beenHere10x2 = false;
-        boolean beenHere10x3 = false;
-        boolean beenHere10x4 = false;
-        boolean beenHere10x5 = false;
-        boolean beenHere10x6 = false;
-        boolean beenHere10x7 = false;
-        boolean beenHere10x8 = false;
-        boolean beenHere10x9 = false;
-        boolean beenHere10x10 = false;
-        boolean beenHere10x11 = false;
-        boolean beenHere10x12 = false;
-        boolean beenHere10x13 = false;
-        boolean beenHere10x14 = false;
-        boolean beenHere11x1 = false;
-        boolean beenHere11x2 = false;
-        boolean beenHere11x3 = false;
-        boolean beenHere11x4 = false;
-        boolean beenHere11x5 = false;
-        boolean beenHere11x6 = false;
-        boolean beenHere11x7 = false;
-        boolean beenHere11x8 = false;
-        boolean beenHere11x9 = false;
-        boolean beenHere11x10 = false;
-        boolean beenHere11x11 = false;
-        boolean beenHere11x12 = false;
-        boolean beenHere11x13 = false;
-        boolean beenHere11x14 = false;
-        boolean beenHere12x1 = false;
-        boolean beenHere12x2 = false;
-        boolean beenHere12x3 = false;
-        boolean beenHere12x4 = false;
-        boolean beenHere12x5 = false;
-        boolean beenHere12x6 = false;
-        boolean beenHere12x7 = false;
-        boolean beenHere12x8 = false;
-        boolean beenHere12x9 = false;
-        boolean beenHere12x10 = false;
-        boolean beenHere12x11 = false;
-        boolean beenHere12x12 = false;
-        boolean beenHere12x13 = false;
-        boolean beenHere12x14 = false;
-        boolean beenHere13x1 = false;
-        boolean beenHere13x2 = false;
-        boolean beenHere13x3 = false;
-        boolean beenHere13x4 = false;
-        boolean beenHere13x5 = false;
-        boolean beenHere13x6 = false;
-        boolean beenHere13x7 = false;
-        boolean beenHere13x8 = false;
-        boolean beenHere13x9 = false;
-        boolean beenHere13x10 = false;
-        boolean beenHere13x11 = false;
-        boolean beenHere13x12 = false;
-        boolean beenHere13x13 = false;
-        boolean beenHere13x14 = false;
-        boolean beenHere14x1 = false;
-        boolean beenHere14x2 = false;
-        boolean beenHere14x3 = false;
-        boolean beenHere14x4 = false;
-        boolean beenHere14x5 = false;
-        boolean beenHere14x6 = false;
-        boolean beenHere14x7 = false;
-        boolean beenHere14x8 = false;
-        boolean beenHere14x9 = false;
-        boolean beenHere14x10 = false;
-        boolean beenHere14x11 = false;
-        boolean beenHere14x12 = false;
-        boolean beenHere14x13 = false;
-        boolean beenHere14x14 = false;
-        //these set up booleans for each position so we can tell later whether or not we have been there
-        double gold = 1000000000; //TODO: this amount should be 0, I am only setting it this high for testing purposes
-        //this will be the amount of gold our character has
-        int dagger = 1;
-        int sword = 0;
-        int shield = 0;
-        int bow = 0;
-        int armor = 0;
-        //these set up various items our character will be able to acquire
-        //0 means our character doesn't have one
-        //a higher number will indicate the the power of the item
-            //exe a sword saved as a 1 will be weak, but a sword saved as a 5 will be powerful
-            //the game will automatically equip the most powerful item a character has
-        int numberOfArrows = 0;
-        int numberOfPotions = 0;
-        //these will determine the amount of various consumables the player possesses
-        int experience = 0;
-        //the player gains experience after each encounter
-        int level = 1;
-        //once the player reaches different experience thresholds, the level will be moved up
-        double health = 100;
-        //the player starts with 100 health, they can lose it and gain it back by doing various actions
+       
         System.out.print("The game has begun. ");
         System.out.print("Choose Name. ");
         String stringyBoi1 = scannyBoi.nextLine();
-        System.out.print("Our tale begins one morning as you wake up alone in a large, foggy feild. You have a dagger in your hand and the only concrete memory you have is that you must find and rescue your father.");
+        System.out.print("Our tale begins one morning as you wake up alone in a large, foggy feild. You have a dagger in your hand and the only concrete memory you have is that you must find and rescue your father. ");
 
         MapMovement();
         //this will run the method MapMovement()
@@ -319,29 +324,29 @@ public class GameLoop{
                 Sudoku();
                 //this is just a joke that allows the character to stab themselves
             } else if (stringyBoi2.equals("move forwards")){
-                xPosition = Math(xPosition + 1);
+                xPosition = xPosition + 1;
                 //this takes the integer we set to be the xPosition of our character and increases the value by one
                 //this represents our character moving one space forwards
                 CheckPosition();
                 //this sends our code to a command that checks our position and depending on our position, does different things
             } else if (stringyBoi2.equals("move backwards")){
-                xPosition = Math(xPosition - 1);
+                xPosition = xPosition - 1;
                 CheckPosition();
             } else if (stringyBoi2.equals("move left")){
-                yPosition = Math(yPosition - 1);
+                yPosition = yPosition - 1;
                 CheckPosition();
             } else if (stringyBoi2.equals("move right")){
-                yPosition = Math(yPosition + 1);
+                yPosition = yPosition + 1;
                 CheckPosition();
             } else if (stringyBoi2.equals("use potion")) {
-                if (numberOfPotions = 0){
-                    System.out.print("You don't have any potions.");
+                if (numberOfPotions == 0){
+                    System.out.print("You don't have any potions. ");
                 } else {
-                    health = Math(health + 25);
-                    System.out.print("You drink the potion and feel reinvigorated.");
+                    health = health + 25;
+                    System.out.print("You drink the potion and feel reinvigorated. ");
                 }
             } else{
-                System.out.print(stringyBoi2 + " is not a recognized command.");
+                System.out.print(stringyBoi2 + " is not a recognized command. ");
                 MapMovement();
             }
         }
@@ -358,7 +363,7 @@ public class GameLoop{
         //each possible position will have a different encounter
             //these encounters can be treasure, enemies, weapons, etc.
         if (xPosition > 14 || xPosition < 1 || yPosition > 14 || yPosition < 1){
-            System.out.print("You start to " + stringyBoi2 + " but are hurled back the way you came by a mysterious force.");
+            System.out.print("You start to move there, but are hurled back the way you came by a mysterious force. ");
             //this stops our character from leaving the map we have programmed
             if (xPosition > 14){
                 xPosition = 14;
@@ -374,7 +379,7 @@ public class GameLoop{
             if (yPosition == 1){
             //this checks the y position, these checks are after each x check so we can find the exact position after each move
                 //we can put encounters into each one of these different positions
-                if (beenHere1X1 == false){
+                if (beenHere1x1 == false){
                 //this checks to see if we have already been here
                     beenHere1x1 = true;
                     //this will tell the code that we have now been here
@@ -1590,7 +1595,7 @@ public class GameLoop{
                 }
             } else if (yPosition == 12){
                 if (beenHere14x12 == false){
-                    beenHere14x = true;
+                    beenHere14x12 = true;
                 } else {
                     RepeatedArea();
                 }
@@ -1614,11 +1619,11 @@ public class GameLoop{
     public static void Treasure1(){
         System.out.print("You see a treasure chest.");
         String stringyBoi3 = scannyBoi.nextLine();
-        if (stringyBoi3.equals("open" || "open chest")){
+        if (stringyBoi3.equals("open chest")){
             System.out.print("You open up the treasure chest and find 20");
-            experience = Math(experience + 5);
-            gold = Math(gold + 20);
-        } else if (stringyBoi3.equals("ignore" || "ignore chest")){
+            experience = experience + 5;
+            gold = gold + 20;
+        } else if (stringyBoi3.equals("ignore chest")){
             System.out.print("You decide to ignore the chest and continue searching.");
         } else {
             System.out.print("That is not a recognized command.");
@@ -1630,11 +1635,11 @@ public class GameLoop{
     public static void Treasure2(){
         System.out.print("You see a treasure chest.");
         String stringyBoi3 = scannyBoi.nextLine();
-        if (stringyBoi3.equals("open" || "open chest")){
+        if (stringyBoi3.equals("open chest")){
             System.out.print("You open up the treasure chest and find 40 gold");
-            experience = Math(experience + 10);
-            gold = Math(gold + 40);
-        } else if (stringyBoi3.equals("ignore" || "ignore chest")){
+            experience = experience + 10;
+            gold = gold + 40;
+        } else if (stringyBoi3.equals("ignore chest")){
             System.out.print("You decide to ignore the chest and continue searching.");
         } else {
             System.out.print("That is not a recognized command.");
@@ -1646,11 +1651,11 @@ public class GameLoop{
     public static void Treasure3(){
         System.out.print("You see a treasure chest.");
         String stringyBoi3 = scannyBoi.nextLine();
-        if (stringyBoi3.equals("open" || "open chest")){
+        if (stringyBoi3.equals("open chest")){
             System.out.print("You open up the treasure chest and find 60 gold");
-            experience = Math(experience + 15);
-            gold = Math(gold + 60);
-        } else if (stringyBoi3.equals("ignore" || "ignore chest")){
+            experience = experience + 15;
+            gold = gold + 60;
+        } else if (stringyBoi3.equals("ignore chest")){
             System.out.print("You decide to ignore the chest and continue searching.");
         } else {
             System.out.print("That is not a recognized command.");
@@ -1662,11 +1667,11 @@ public class GameLoop{
     public static void Treasure4(){
         System.out.print("You see a treasure chest.");
         String stringyBoi3 = scannyBoi.nextLine();
-        if (stringyBoi3.equals("open" || "open chest")){
+        if (stringyBoi3.equals("open chest")){
             System.out.print("You open up the treasure chest and find 80 gold");
-            experience = Math(experience + 20);
-            gold = Math(gold + 80);
-        } else if (stringyBoi3.equals("ignore" || "ignore chest")){
+            experience = experience + 20;
+            gold = gold + 80;
+        } else if (stringyBoi3.equals("ignore chest")){
             System.out.print("You decide to ignore the chest and continue searching.");
         } else {
             System.out.print("That is not a recognized command.");
@@ -1678,11 +1683,11 @@ public class GameLoop{
     public static void Treasure5(){
         System.out.print("You see a treasure chest.");
         String stringyBoi3 = scannyBoi.nextLine();
-        if (stringyBoi3.equals("open" || "open chest")){
+        if (stringyBoi3.equals("open chest")){
             System.out.print("You open up the treasure chest and find 100 gold");
-            experience = Math(experience + 25);
-            gold = Math(gold + 100);
-        } else if (stringyBoi3.equals("ignore" || "ignore chest")){
+            experience = experience + 25;
+            gold = gold + 100;
+        } else if (stringyBoi3.equals("ignore chest")){
             System.out.print("You decide to ignore the chest and continue searching.");
         } else {
             System.out.print("That is not a recognized command.");
@@ -1694,12 +1699,12 @@ public class GameLoop{
     public static void TrappedTreasure(){
         System.out.print("You see a treasure chest.");
         String stringyBoi4 = scannyBoi.nextLine();
-        if (stringyBoi4.equals("open" || "open chest")){
+        if (stringyBoi4.equals("open chest")){
             System.out.print("You bend down to open the chest, but as soon as you touch it, it explodes, hurting you and knocking you down.");
-            health = Math(health - 10);
-        } else if (stringyBoi4.equals("ignore" || "ignore chest")){
+            health = health - 10;
+        } else if (stringyBoi4.equals("ignore chest")){
             System.out.print("You decide to ignore the chest and continue searching.");
-            experience = Math(experience + 5);
+            experience = experience + 5;
         } else {
             System.out.print("That is not a recognized command.");
             TrappedTreasure();
@@ -1708,7 +1713,7 @@ public class GameLoop{
     }
 
     public static void Troll1Encounter(){
-        int trollHealth = 10;
+        trollHealth = 10;
         System.out.print("You come across a troll about your size. He is armed with a club and a wooden shield.");
         AttackTroll1();
     }
@@ -1716,43 +1721,43 @@ public class GameLoop{
     public static void AttackTroll1(){
         String fightyBoi1 = scannyBoi.nextLine();
         if (fightyBoi1.equals("use sword")) {
-            if (sword = 0){
+            if (sword == 0){
                 System.out.print("You don't have a sword.");
             } else {
-                int damage = Math(sword * level * 2);
-                trollHealth = Math(trollHealth - damage);
+                int damage = sword * level * 2;
+                trollHealth = trollHealth - damage;
                 System.out.print("You slash the troll with your sword.");
             }
         } else if (fightyBoi1.equals("use dagger")) {
             int damage = level;
-            trollHealth = Math(trollHealth - damage);
+            trollHealth = trollHealth - damage;
             System.out.print("You stab the troll with your dagger.");
         } else if (fightyBoi1.equals("use bow")) {
-            if (bow = 0){
+            if (bow == 0){
                 System.out.print("You don't have a bow.");
-            } else if (numberOfArrows = 0) {
+            } else if (numberOfArrows == 0) {
                 System.out.print("You don't have any arrows.");
             } else {
-                int damage = Math(bow * level * 2);
-                numberOfArrows = Math(numberOfArrows - 1);
-                trollHealth = Math(trollHealth - damage);
+                int damage = bow * level * 2;
+                numberOfArrows = numberOfArrows - 1;
+                trollHealth = trollHealth - damage;
                 System.out.print("Your shoot an arrow at the troll.");
             }
         } else if (fightyBoi1.equals("use potion")) {
-            if (numberOfPotions = 0){
+            if (numberOfPotions == 0){
                 System.out.print("You don't have any potions.");
             } else {
-                health = Math(health + 25);
+                health = health + 25;
                 System.out.print("You drink the potion and feel reinvigorated.");
                 AttackTroll1();
             }
         } else if (fightyBoi1.equals("use shield")) {
-            if (shield = 0){
+            if (shield == 0){
                 System.out.print("You don't have a shield.");
             } else {
                 Random rand = new Random();
                 int shieldBlockTest = rand.nextInt(10);
-                int shieldStrength = Math(shield + 3);
+                int shieldStrength = shield + 3;
                 if (shieldStrength > shieldBlockTest) {
                     System.out.print("The troll tries to attack you with his club, but you block it with your shield and have an oppurtunity to counterattack.");
                 } else {
@@ -1761,7 +1766,7 @@ public class GameLoop{
             }
         } else if (fightyBoi1.equals("punch")) {
             System.out.print("You punch the troll. It barely even registers the attack.");
-            trollHealth = Math(trollHealth - 1);
+            trollHealth = trollHealth - 1;
         } else if (fightyBoi1.equals("run")) {
             System.out.print("You try to run away from the troll, but it is too fast and catches you.");
         } else {
@@ -1778,33 +1783,33 @@ public class GameLoop{
     public static void CritAttackTroll1(){
         String fightyBoi1 = scannyBoi.nextLine();
         if (fightyBoi1.equals("use sword")) {
-            if (sword = 0){
+            if (sword == 0){
                 System.out.print("You don't have a sword.");
             } else {
-                int damage = Math(sword * level * 4);
-                trollHealth = Math(trollHealth - damage);
+                int damage = sword * level * 4;
+                trollHealth = trollHealth - damage;
                 System.out.print("You slash the troll with your sword. The troll isn't ready for the attack and it hits extra hard.");
             }
         } else if (fightyBoi1.equals("use dagger")) {
             int damage = level;
-            trollHealth = Math(trollHealth - damage * 2);
+            trollHealth = trollHealth - damage * 2;
             System.out.print("You stab the troll with your dagger. The troll isn't ready for the attack and it hits extra hard.");
         } else if (fightyBoi1.equals("use bow")) {
-            if (bow = 0){
+            if (bow == 0){
                 System.out.print("You don't have a bow.");
-            } else if (numberOfArrows = 0) {
+            } else if (numberOfArrows == 0) {
                 System.out.print("You don't have any arrows.");
             } else {
-                int damage = Math(bow * level * 2);
-                numberOfArrows = Math(numberOfArrows - 1);
-                trollHealth = Math(trollHealth - damage);
+                int damage = bow * level * 2;
+                numberOfArrows = numberOfArrows - 1;
+                trollHealth = trollHealth - damage;
                 System.out.print("Your shoot an arrow at the troll. The troll isn't ready for the attack and it hits extra hard.");
             }
         } else if (fightyBoi1.equals("use potion")) {
-            if (numberOfPotions = 0){
+            if (numberOfPotions == 0){
                 System.out.print("You don't have any potions.");
             } else {
-                health = Math(health + 25);
+                health = health + 25;
                 System.out.print("You drink the potion and feel reinvigorated.");
                 CritAttackTroll1();
             }
@@ -1812,7 +1817,7 @@ public class GameLoop{
             System.out.print("There is no point in blocking. The troll is already off guard.");
         } else if (fightyBoi1.equals("punch")) {
             System.out.print("You punch the troll.");
-            trollHealth = Math(trollHealth - 2);
+            trollHealth = trollHealth - 2;
         } else if (fightyBoi1.equals("run")) {
             System.out.print("Even when the troll is off guard, it is still able to chase you down when you try to run.");
         } else {
@@ -1828,11 +1833,11 @@ public class GameLoop{
 
     public static void Troll1Attacks(){
         System.out.print("The troll swings its club at you.");
-        if (armor = 0){
-            health = Math(health - 10);
+        if (armor == 0){
+            health = health - 10;
         } else {
-            double troll1Damage = Math(8 / armor);
-            health = Math(health - troll1Damage);
+            double troll1Damage = 8 / armor;
+            health = health - troll1Damage;
         }
         if (health <= 0){
             GameOver();
@@ -1841,8 +1846,8 @@ public class GameLoop{
 
     public static void DeadTroll1(){
         System.out.print("And with that, the troll fell over with a resounding thud.");
-        experience = Math(experience + 50);
-        gold = Math(gold + 100);
+        experience = experience + 50;
+        gold = gold + 100;
         System.out.println("You have gotten some gold and experience. You now have " + gold + " gold and " + experience + "experience");
     }
 
@@ -1855,7 +1860,7 @@ public class GameLoop{
     }
 
     public static void SmallSlimeEncounter(){
-        int smallSlimeHealth = 5;
+        smallSlimeHealth = 5;
         System.out.print("A small slime appears.");
         AttackSmallSlime();
     }
@@ -1863,43 +1868,43 @@ public class GameLoop{
     public static void AttackSmallSlime(){
         String fightyBoi2 = scannyBoi.nextLine();
         if (fightyBoi2.equals("use sword")) {
-            if (sword = 0){
+            if (sword == 0){
                 System.out.print("You don't have a sword.");
             } else {
-                int damage = Math(sword * level * 2);
-                smallSlimeHealth = Math(smallSlimeHealth - damage);
+                int damage = sword * level * 2;
+                smallSlimeHealth = smallSlimeHealth - damage;
                 System.out.print("You slash the slime with your sword.");
             }
         } else if (fightyBoi2.equals("use dagger")) {
             int damage = level;
-            smallSlimeHealth = Math(smallSlimeHealth - damage);
+            smallSlimeHealth = smallSlimeHealth - damage;
             System.out.print("You stab the slime with your dagger.");
         } else if (fightyBoi2.equals("use bow")) {
-            if (bow = 0){
+            if (bow == 0){
                 System.out.print("You don't have a bow.");
-            } else if (numberOfArrows = 0) {
+            } else if (numberOfArrows == 0) {
                 System.out.print("You don't have any arrows.");
             } else {
-                int damage = Math(bow * level * 2);
-                numberOfArrows = Math(numberOfArrows - 1);
-                smallSlimeHealth = Math(smallSlimeHealth - damage);
+                int damage = bow * level * 2;
+                numberOfArrows = numberOfArrows - 1;
+                smallSlimeHealth = smallSlimeHealth - damage;
                 System.out.print("Your shoot an arrow at the slime.");
             }
         } else if (fightyBoi2.equals("use potion")) {
-            if (numberOfPotions = 0){
+            if (numberOfPotions == 0){
                 System.out.print("You don't have any potions.");
             } else {
-                health = Math(health + 25);
+                health = health + 25;
                 System.out.print("You drink the potion and feel reinvigorated.");
                 AttackSmallSlime();
             }
         } else if (fightyBoi2.equals("use shield")) {
-            if (shield = 0){
+            if (shield == 0){
                 System.out.print("You don't have a shield.");
             } else {
                 Random rand = new Random();
                 int shieldBlockTest = rand.nextInt(10);
-                int shieldStrength = Math(shield + 5);
+                int shieldStrength = shield + 5;
                 if (shieldStrength > shieldBlockTest) {
                     System.out.print("The slime tries to leap at you, but you knock it down with your shield and have an oppurtunity to counterattack.");
                     CritAttackSmallSlime();
@@ -1909,7 +1914,7 @@ public class GameLoop{
             }
         } else if (fightyBoi2.equals("punch")) {
             System.out.print("You punch the slime.");
-            smallSlimeHealth = Math(smallSlimeHealth - 1);
+            smallSlimeHealth = smallSlimeHealth - 1;
         } else if (fightyBoi2.equals("run")) {
             System.out.print("You try to run away from the slime, but it is able to leap at you and prevent your escape.");
         } else {
@@ -1926,33 +1931,33 @@ public class GameLoop{
     public static void CritAttackSmallSlime(){
         String fightyBoi2 = scannyBoi.nextLine();
         if (fightyBoi2.equals("use sword")) {
-            if (sword = 0){
+            if (sword == 0){
                 System.out.print("You don't have a sword.");
             } else {
-                int damage = Math(sword * level * 4);
-                smallSlimeHealth = Math(smallSlimeHealth - damage);
+                int damage = sword * level * 4;
+                smallSlimeHealth = smallSlimeHealth - damage;
                 System.out.print("You slash the slime with your sword. The slime wasn't anticipating the attack and is hit especially hard.");
             }
         } else if (fightyBoi2.equals("use dagger")) {
-            int damage = Math(level * 2);
-            smallSlimeHealth = Math(smallSlimeHealth - damage);
+            int damage = level * 2;
+            smallSlimeHealth = smallSlimeHealth - damage;
             System.out.print("You stab the slime with your dagger. The slime wasn't anticipating the attack and is hit especially hard.");
         } else if (fightyBoi2.equals("use bow")) {
-            if (bow = 0){
+            if (bow == 0){
                 System.out.print("You don't have a bow.");
-            } else if (numberOfArrows = 0) {
+            } else if (numberOfArrows == 0) {
                 System.out.print("You don't have any arrows.");
             } else {
-                int damage = Math(bow * level * 4);
-                numberOfArrows = Math(numberOfArrows - 1);
-                smallSlimeHealth = Math(smallSlimeHealth - damage);
+                int damage = bow * level * 4;
+                numberOfArrows = numberOfArrows - 1;
+                smallSlimeHealth = smallSlimeHealth - damage;
                 System.out.print("Your shoot an arrow at the slime. The slime wasn't anticipating the attack and is hit especially hard.");
             }
         } else if (fightyBoi2.equals("use potion")) {
-            if (numberOfPotions = 0){
+            if (numberOfPotions == 0){
                 System.out.print("You don't have any potions.");
             } else {
-                health = Math(health + 25);
+                health = health + 25;
                 System.out.print("You drink the potion and feel reinvigorated.");
                 CritAttackSmallSlime();
             }
@@ -1960,7 +1965,7 @@ public class GameLoop{
             System.out.print("The slime is already lying helpless on the ground.");
         } else if (fightyBoi2.equals("punch")) {
             System.out.print("You punch the slime.");
-            smallSlimeHealth = Math(smallSlimeHealth - 2);
+            smallSlimeHealth = smallSlimeHealth - 2;
         } else if (fightyBoi2.equals("run")) {
             System.out.print("You are able to succesfully escape the slime.");
         } else {
@@ -1976,11 +1981,11 @@ public class GameLoop{
 
     public static void SmallSlimeAttack(){
         System.out.print("The small slime leaps at you.");
-        if (armor = 0){
-            health = Math(health - 4);
+        if (armor == 0){
+            health = health - 4;
         } else {
-            double smallSlimeDamage = Math(3 / armor);
-            health = Math(health - smallSlimeDamage);
+            double smallSlimeDamage = 3 / armor;
+            health = health - smallSlimeDamage;
         }
         if (health <= 0){
             GameOver();
@@ -1989,8 +1994,8 @@ public class GameLoop{
 
     public static void DeadSmallSlime(){
         System.out.print("And with that, the slime bursts open and its remains dissolved into the earth.");
-        experience = Math(experience + 20);
-        gold = Math(gold + 30);
+        experience = experience + 20;
+        gold = gold + 30;
         System.out.println("You have gotten some gold and experience. You now have " + gold + " gold and " + experience + "experience");
     }
 
@@ -2010,7 +2015,7 @@ public class GameLoop{
         if (shoppyBoi1.equals("buy sword")){
             if (gold >= 100){
                 if (sword < 1){
-                    gold = Math(gold - 100);
+                    gold = gold - 100;
                     sword = 1;
                     System.out.print("You now have a sword. You have " + gold + " gold left.");
                 } else {
@@ -2023,7 +2028,7 @@ public class GameLoop{
         } else if (shoppyBoi1.equals("buy shield")){
             if (gold >= 100){
                 if (shield < 1){
-                    gold = Math(gold - 100);
+                    gold = gold - 100;
                     shield = 1;
                     System.out.print("You now have a shield. You have " + gold + " gold left.");
                 } else {
@@ -2036,7 +2041,7 @@ public class GameLoop{
         } else if (shoppyBoi1.equals("buy bow")){
             if (gold >= 75){
                 if (bow < 1){
-                    gold = Math(gold - 75);
+                    gold = gold - 75;
                     bow = 1;
                     System.out.print("You now have a bow. You have " + gold + " gold left.");
                 } else {
@@ -2046,13 +2051,13 @@ public class GameLoop{
                 System.out.print("You do not have enough gold to buy this.");
             }
             Shop1();
-        } else if (shoppyBoi1.equals("buy arrows" || "buy arrow")){
+        } else if (shoppyBoi1.equals("buy arrows")){
             System.out.print("How many would you like to buy?");
-            int arrowsPurchased = scannyBoi.nextLine();
-            int goldSpentOnArrows = Math(arrowsPurchased * 5);
+            int arrowsPurchased = scannyBoi.nextInt();
+            int goldSpentOnArrows = arrowsPurchased * 5;
             if (gold >= goldSpentOnArrows){
-                gold = Math(gold - goldSpentOnArrows);
-                numberOfArrows = Math(numberOfArrows + arrowsPurchased);
+                gold = gold - goldSpentOnArrows;
+                numberOfArrows = numberOfArrows + arrowsPurchased;
                 System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
@@ -2061,7 +2066,7 @@ public class GameLoop{
         } else if (shoppyBoi1.equals("buy armor")){
             if(gold >= 100){
                 if (armor < 1){
-                    gold = Math(gold - 100);
+                    gold = gold - 100;
                     armor = 1;
                     System.out.print("You now have armor. You have " + gold + " gold left.");
                 } else {
@@ -2071,12 +2076,12 @@ public class GameLoop{
                 System.out.print("You do not have enough gold to buy this.");
             }
             Shop1();
-        } else if (shoppyBoi1.equals("buy potions" || "buy potion")){
+        } else if (shoppyBoi1.equals("buy potions")){
             System.out.print("How many would you like to buy?");
-            int potionsPurchased = scannyBoi.nextLine();
-            int goldSpentOnPotions = Math(potionsPurchased * 10);
+            int potionsPurchased = scannyBoi.nextInt();
+            int goldSpentOnPotions = potionsPurchased * 10;
             if (gold >= goldSpentOnPotions){
-                gold = Math(gold - goldSpentOnPotions);
+                gold = gold - goldSpentOnPotions;
                 System.out.print("You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
@@ -2091,16 +2096,16 @@ public class GameLoop{
         } else if (shoppyBoi1.equals("steal bow")){
             System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
-        } else if (shoppyBoi1.equals("steal arrows" || "steal arrow")){
+        } else if (shoppyBoi1.equals("steal arrows")){
             System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
         } else if (shoppyBoi1.equals("steal armor")){
             System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
-        } else if (shoppyBoi1.equals("steal potions" || "steal potion")){
+        } else if (shoppyBoi1.equals("steal potions")){
             System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
-        } else if (shoppyBoi2.equals("leave shop")){
+        } else if (shoppyBoi1.equals("leave shop")){
             MapMovement();
         } else {
             System.out.print("This is not a recognized command");
@@ -2115,7 +2120,7 @@ public class GameLoop{
         if (shoppyBoi2.equals("buy sword")){
             if (gold >= 200){
                 if (sword < 2){
-                    gold = Math(gold - 200);
+                    gold = gold - 200;
                     sword = 2;
                     System.out.print("You now have a decent sword. You have " + gold + " gold left.");
                 } else {
@@ -2128,7 +2133,7 @@ public class GameLoop{
         } else if (shoppyBoi2.equals("buy shield")){
             if (gold >= 200){
                 if (shield < 2){
-                    gold = Math(gold - 200);
+                    gold = gold - 200;
                     shield = 2;
                     System.out.print("You now have a decent shield. You have " + gold + " gold left.");
                 } else {
@@ -2141,7 +2146,7 @@ public class GameLoop{
         } else if (shoppyBoi2.equals("buy bow")){
             if (gold >= 150){
                 if (bow < 2){
-                    gold = Math(gold - 150);
+                    gold = gold - 150;
                     bow = 2;
                     System.out.print("You now have a decent bow. You have " + gold + " gold left.");
                 } else {
@@ -2151,13 +2156,13 @@ public class GameLoop{
                 System.out.print("You do not have enough gold to buy this.");
             }
             Shop2();
-        } else if (shoppyBoi2.equals("buy arrows" || "buy arrow")){
+        } else if (shoppyBoi2.equals("buy arrows")){
             System.out.print("How many would you like to buy?");
-            int arrowsPurchased = scannyBoi.nextLine();
-            int goldSpentOnArrows = Math(arrowsPurchased * 5);
+            int arrowsPurchased = scannyBoi.nextInt();
+            int goldSpentOnArrows = arrowsPurchased * 5;
             if (gold >= goldSpentOnArrows){
-                gold = Math(gold - goldSpentOnArrows);
-                numberOfArrows = Math(numberOfArrows + arrowsPurchased);
+                gold = gold - goldSpentOnArrows;
+                numberOfArrows = numberOfArrows + arrowsPurchased;
                 System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
@@ -2166,7 +2171,7 @@ public class GameLoop{
         } else if (shoppyBoi2.equals("buy armor")){
             if(gold >= 200){
                 if (armor < 2){
-                    gold = Math(gold - 200);
+                    gold = gold - 200;
                     armor = 2;
                     System.out.print("You now have decent armor. You have " + gold + " gold left.");
                 } else {
@@ -2176,12 +2181,12 @@ public class GameLoop{
                 System.out.print("You do not have enough gold to buy this.");
             }
             Shop2();
-        } else if (shoppyBoi2.equals("buy potions" || "buy potion")){
+        } else if (shoppyBoi2.equals("buy potions")){
             System.out.print("How many would you like to buy?");
-            int potionsPurchased = scannyBoi.nextLine();
-            int goldSpentOnPotions = Math(potionsPurchased * 10);
+            int potionsPurchased = scannyBoi.nextInt();
+            int goldSpentOnPotions = potionsPurchased * 10;
             if (gold >= goldSpentOnPotions){
-                gold = Math(gold - goldSpentOnPotions);
+                gold = gold - goldSpentOnPotions;
                 System.out.print("You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
@@ -2196,13 +2201,13 @@ public class GameLoop{
         } else if (shoppyBoi2.equals("steal bow")){
             System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
-        } else if (shoppyBoi2.equals("steal arrows" || "steal arrow")){
+        } else if (shoppyBoi2.equals("steal arrows")){
             System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
         } else if (shoppyBoi2.equals("steal armor")){
             System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
-        } else if (shoppyBoi2.equals("steal potions" || "steal potion")){
+        } else if (shoppyBoi2.equals("steal potions")){
             System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
         } else if (shoppyBoi2.equals("leave shop")){
@@ -2220,7 +2225,7 @@ public class GameLoop{
         if (shoppyBoi3.equals("buy sword")){
             if (gold >= 400){
                 if (sword < 3){
-                    gold = Math(gold - 400);
+                    gold = gold - 400;
                     sword = 3;
                     System.out.print("You now have a good sword. You have " + gold + " gold left.");
                 } else {
@@ -2233,7 +2238,7 @@ public class GameLoop{
         } else if (shoppyBoi3.equals("buy shield")){
             if (gold >= 400){
                 if (shield < 3){
-                    gold = Math(gold - 400);
+                    gold = gold - 400;
                     shield = 3;
                     System.out.print("You now have a good shield. You have " + gold + " gold left.");
                 } else {
@@ -2246,7 +2251,7 @@ public class GameLoop{
         } else if (shoppyBoi3.equals("buy bow")){
             if (gold >= 300){
                 if (bow < 3){
-                    gold = Math(gold - 300);
+                    gold = gold - 300;
                     bow = 3;
                     System.out.print("You now have a good bow. You have " + gold + " gold left.");
                 } else {
@@ -2256,13 +2261,13 @@ public class GameLoop{
                 System.out.print("You do not have enough gold to buy this.");
             }
             Shop3();
-        } else if (shoppyBoi3.equals("buy arrows" || "buy arrow")){
+        } else if (shoppyBoi3.equals("buy arrows")){
             System.out.print("How many would you like to buy?");
-            int arrowsPurchased = scannyBoi.nextLine();
-            int goldSpentOnArrows = Math(arrowsPurchased * 5);
+            int arrowsPurchased = scannyBoi.nextInt();
+            int goldSpentOnArrows = arrowsPurchased * 5;
             if (gold >= goldSpentOnArrows){
-                gold = Math(gold - goldSpentOnArrows);
-                numberOfArrows = Math(numberOfArrows + arrowsPurchased);
+                gold = gold - goldSpentOnArrows;
+                numberOfArrows = numberOfArrows + arrowsPurchased;
                 System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
@@ -2271,7 +2276,7 @@ public class GameLoop{
         } else if (shoppyBoi3.equals("buy armor")){
             if(gold >= 400){
                 if (armor < 3){
-                    gold = Math(gold - 400);
+                    gold = gold - 400;
                     armor = 3;
                     System.out.print("You now have good armor. You have " + gold + " gold left.");
                 } else {
@@ -2281,12 +2286,12 @@ public class GameLoop{
                 System.out.print("You do not have enough gold to buy this.");
             }
             Shop3();
-        } else if (shoppyBoi3.equals("buy potions" || "buy potion")){
+        } else if (shoppyBoi3.equals("buy potions")){
             System.out.print("How many would you like to buy?");
-            int potionsPurchased = scannyBoi.nextLine();
-            int goldSpentOnPotions = Math(potionsPurchased * 10);
+            int potionsPurchased = scannyBoi.nextInt();
+            int goldSpentOnPotions = potionsPurchased * 10;
             if (gold >= goldSpentOnPotions){
-                gold = Math(gold - goldSpentOnPotions);
+                gold = gold - goldSpentOnPotions;
                 System.out.print("You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
@@ -2301,13 +2306,13 @@ public class GameLoop{
         } else if (shoppyBoi3.equals("steal bow")){
             System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
-        } else if (shoppyBoi3.equals("steal arrows" || "steal arrow")){
+        } else if (shoppyBoi3.equals("steal arrows")){
             System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
         } else if (shoppyBoi3.equals("steal armor")){
             System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
-        } else if (shoppyBoi3.equals("steal potions" || "steal potion")){
+        } else if (shoppyBoi3.equals("steal potions")){
             System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
         } else if (shoppyBoi3.equals("leave shop")){
@@ -2325,7 +2330,7 @@ public class GameLoop{
         if (shoppyBoi4.equals("buy sword")){
             if (gold >= 800){
                 if (sword < 4){
-                    gold = Math(gold - 800);
+                    gold = gold - 800;
                     sword = 4;
                     System.out.print("You now have an amazing sword. You have " + gold + " gold left.");
                 } else {
@@ -2338,7 +2343,7 @@ public class GameLoop{
         } else if (shoppyBoi4.equals("buy shield")){
             if (gold >= 800){
                 if (shield < 4){
-                    gold = Math(gold - 800);
+                    gold = gold - 800;
                     shield = 4;
                     System.out.print("You now have an amazing shield. You have " + gold + " gold left.");
                 } else {
@@ -2351,7 +2356,7 @@ public class GameLoop{
         } else if (shoppyBoi4.equals("buy bow")){
             if (gold >= 600){
                 if (bow < 4){
-                    gold = Math(gold - 600);
+                    gold = gold - 600;
                     bow = 4;
                     System.out.print("You now have an amazing bow. You have " + gold + " gold left.");
                 } else {
@@ -2361,13 +2366,13 @@ public class GameLoop{
                 System.out.print("You do not have enough gold to buy this.");
             }
             Shop4();
-        } else if (shoppyBoi4.equals("buy arrows" || "buy arrow")){
+        } else if (shoppyBoi4.equals("buy arrows")){
             System.out.print("How many would you like to buy?");
-            int arrowsPurchased = scannyBoi.nextLine();
-            int goldSpentOnArrows = Math(arrowsPurchased * 5);
+            int arrowsPurchased = scannyBoi.nextInt();
+            int goldSpentOnArrows = arrowsPurchased * 5;
             if (gold >= goldSpentOnArrows){
-                gold = Math(gold - goldSpentOnArrows);
-                numberOfArrows = Math(numberOfArrows + arrowsPurchased);
+                gold = gold - goldSpentOnArrows;
+                numberOfArrows = numberOfArrows + arrowsPurchased;
                 System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
@@ -2376,7 +2381,7 @@ public class GameLoop{
         } else if (shoppyBoi4.equals("buy armor")){
             if(gold >= 800){
                 if (armor < 4){
-                    gold = Math(gold - 800);
+                    gold = gold - 800;
                     armor = 4;
                     System.out.print("You now have amazing armor. You have " + gold + " gold left.");
                 } else {
@@ -2386,12 +2391,12 @@ public class GameLoop{
                 System.out.print("You do not have enough gold to buy this.");
             }
             Shop4();
-        } else if (shoppyBoi4.equals("buy potions" || "buy potion")){
+        } else if (shoppyBoi4.equals("buy potions")){
             System.out.print("How many would you like to buy?");
-            int potionsPurchased = scannyBoi.nextLine();
-            int goldSpentOnPotions = Math(potionsPurchased * 10);
+            int potionsPurchased = scannyBoi.nextInt();
+            int goldSpentOnPotions = potionsPurchased * 10;
             if (gold >= goldSpentOnPotions){
-                gold = Math(gold - goldSpentOnPotions);
+                gold = gold - goldSpentOnPotions;
                 System.out.print("You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
@@ -2406,13 +2411,13 @@ public class GameLoop{
         } else if (shoppyBoi4.equals("steal bow")){
             System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
-        } else if (shoppyBoi4.equals("steal arrows" || "steal arrow")){
+        } else if (shoppyBoi4.equals("steal arrows")){
             System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
         } else if (shoppyBoi4.equals("steal armor")){
             System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
-        } else if (shoppyBoi4.equals("steal potions" || "steal potion")){
+        } else if (shoppyBoi4.equals("steal potions")){
             System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
         } else if (shoppyBoi4.equals("leave shop")){
@@ -2430,7 +2435,7 @@ public class GameLoop{
         if (shoppyBoi5.equals("buy sword")){
             if (gold >= 1800){
                 if (sword < 5){
-                    gold = Math(gold - 1800);
+                    gold = gold - 1800;
                     sword = 5;
                     System.out.print("You now have a good sword. You have " + gold + " gold left.");
                 } else {
@@ -2443,7 +2448,7 @@ public class GameLoop{
         } else if (shoppyBoi5.equals("buy shield")){
             if (gold >= 1800){
                 if (shield < 5){
-                    gold = Math(gold - 1800);
+                    gold = gold - 1800;
                     shield = 5;
                     System.out.print("You now have a good shield. You have " + gold + " gold left.");
                 } else {
@@ -2456,7 +2461,7 @@ public class GameLoop{
         } else if (shoppyBoi5.equals("buy bow")){
             if (gold >= 1200){
                 if (bow < 5){
-                    gold = Math(gold - 1200);
+                    gold = gold - 1200;
                     bow = 5;
                     System.out.print("You now have a good bow. You have " + gold + " gold left.");
                 } else {
@@ -2466,13 +2471,13 @@ public class GameLoop{
                 System.out.print("You do not have enough gold to buy this.");
             }
             Shop5();
-        } else if (shoppyBoi5.equals("buy arrows" || "buy arrow")){
+        } else if (shoppyBoi5.equals("buy arrows")){
             System.out.print("How many would you like to buy?");
-            int arrowsPurchased = scannyBoi.nextLine();
-            int goldSpentOnArrows = Math(arrowsPurchased * 5);
+            int arrowsPurchased = scannyBoi.nextInt();
+            int goldSpentOnArrows = arrowsPurchased * 5;
             if (gold >= goldSpentOnArrows){
-                gold = Math(gold - goldSpentOnArrows);
-                numberOfArrows = Math(numberOfArrows + arrowsPurchased);
+                gold = gold - goldSpentOnArrows;
+                numberOfArrows = numberOfArrows + arrowsPurchased;
                 System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
@@ -2481,7 +2486,7 @@ public class GameLoop{
         } else if (shoppyBoi5.equals("buy armor")){
             if(gold >= 1800){
                 if (armor < 5){
-                    gold = Math(gold - 1800);
+                    gold = gold - 1800;
                     armor = 5;
                     System.out.print("You now have good armor. You have " + gold + " gold left.");
                 } else {
@@ -2491,12 +2496,12 @@ public class GameLoop{
                 System.out.print("You do not have enough gold to buy this.");
             }
             Shop5();
-        } else if (shoppyBoi5.equals("buy potions" || "buy potion")){
+        } else if (shoppyBoi5.equals("buy potions")){
             System.out.print("How many would you like to buy?");
-            int potionsPurchased = scannyBoi.nextLine();
-            int goldSpentOnPotions = Math(potionsPurchased * 10);
+            int potionsPurchased = scannyBoi.nextInt();
+            int goldSpentOnPotions = potionsPurchased * 10;
             if (gold >= goldSpentOnPotions){
-                gold = Math(gold - goldSpentOnPotions);
+                gold = gold - goldSpentOnPotions;
                 System.out.print("You have " + gold + " gold left.");
             } else {
                 System.out.print("You do not have enough gold to buy this.");
@@ -2511,13 +2516,13 @@ public class GameLoop{
         } else if (shoppyBoi5.equals("steal bow")){
             System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
-        } else if (shoppyBoi5.equals("steal arrows" || "steal arrow")){
+        } else if (shoppyBoi5.equals("steal arrows")){
             System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
         } else if (shoppyBoi5.equals("steal armor")){
             System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
-        } else if (shoppyBoi5.equals("steal potions" || "steal potion")){
+        } else if (shoppyBoi5.equals("steal potions")){
             System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
             GameOver();
         } else if (shoppyBoi5.equals("leave shop")){
@@ -2536,13 +2541,6 @@ public class GameLoop{
     public static void GameOver(){
         //this is where we go after the game has ended
         System.out.print("The game is over.");
-        //this tells the player that the game has ended
-        if (win == false){
-            System.out.print("You Lose");
-        } else {
-            System.out.print("Congratulations! You win!");
-        }
-        //this if statement determines whether or not the player won
-        //the boolean "win" will be set to true once certain conditions are met in the game
+        System.out.print("You Lose");
     }
 }
