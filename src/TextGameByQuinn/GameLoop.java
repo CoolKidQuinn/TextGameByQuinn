@@ -2275,11 +2275,11 @@ public class GameLoop{
             } else {
                 System.out.print("Would you like to attack slime 1 or slime 2? ");
                 fightyBoi2 = scannyBoi.nextLine();
-                if (fightyBoi2 == 1){
+                if (fightyBoi2.equals(1)){
                     int damage = sword * level * 2;
                     doubleSmallSlime1Health = doubleSmallSlime1Health - damage;
                     System.out.print("You slash the slime with your sword. ");
-                } else if (fightyBoi2 == 2){
+                } else if (fightyBoi2.equals(2)){
                     int damage = sword * level * 2;
                     doubleSmallSlime2Health = doubleSmallSlime2Health - damage;
                     System.out.print("You slash the slime with your sword. ");
@@ -2291,11 +2291,11 @@ public class GameLoop{
         case "use dagger" :
             System.out.print("Would you like to attack slime 1 or slime 2? ");
                 fightyBoi2 = scannyBoi.nextLine();
-                if (fightyBoi2 == 1){
+                if (fightyBoi2.equals(1)){
                     int damage = level;
                     doubleSmallSlime1Health = doubleSmallSlime1Health - damage;
                     System.out.print("You stab the slime with your dagger. ");
-                } else if (fightyBoi2 == 2){
+                } else if (fightyBoi2.equals(2)){
                     int damage = level;
                     doubleSmallSlime2Health = doubleSmallSlime2Health - damage;
                     System.out.print("You stab the slime with your dagger. ");
@@ -2311,13 +2311,13 @@ public class GameLoop{
             } else {
                 System.out.print("Would you like to attack slime 1 or slime 2? ");
                 fightyBoi2 = scannyBoi.nextLine();
-                if (fightyBoi2 == 1){
-                    damage = bow * level * 2;
+                if (fightyBoi2.equals(1)){
+                    int damage = bow * level * 2;
                     numberOfArrows = numberOfArrows - 1;
                     doubleSmallSlime1Health = doubleSmallSlime1Health - damage;
                     System.out.print("Your shoot an arrow at the slime. ");
-                } else if (fightyBoi2 == 1){
-                    damage = bow * level * 2;
+                } else if (fightyBoi2.equals(1)){
+                    int damage = bow * level * 2;
                     numberOfArrows = numberOfArrows - 1;
                     doubleSmallSlime2Health = doubleSmallSlime2Health - damage;
                     System.out.print("Your shoot an arrow at the slime. ");
@@ -2356,10 +2356,10 @@ public class GameLoop{
         case "punch" :
             System.out.print("Would you like to attack slime 1 or slime 2? ");
                 fightyBoi2 = scannyBoi.nextLine();
-                if (fightyBoi2 == 1){
+                if (fightyBoi2.equals(1)){
                     System.out.print("You punch the slime. ");
                     doubleSmallSlime1Health = doubleSmallSlime1Health - 1;
-                } else if (fightyBoi2 == 2){
+                } else if (fightyBoi2.equals(2)){
                     System.out.print("You punch the slime. ");
                     doubleSmallSlime2Health = doubleSmallSlime2Health - 1;
                 } else {
@@ -2389,11 +2389,11 @@ public class GameLoop{
             } else {
                 System.out.print("Would you like to attack slime 1 or slime 2? ");
                 fightyBoi2 = scannyBoi.nextLine();
-                if (fightyBoi2 == 1){
+                if (fightyBoi2.equals(1)){
                     int damage = sword * level * 4;
                     doubleSmallSlime1Health = doubleSmallSlime1Health - damage;
                     System.out.print("You slash the slime with your sword. ");
-                } else if (fightyBoi2 == 2){
+                } else if (fightyBoi2.equals(2)){
                     int damage = sword * level * 4;
                     doubleSmallSlime2Health = doubleSmallSlime2Health - damage;
                     System.out.print("You slash the slime with your sword. ");
@@ -2405,11 +2405,11 @@ public class GameLoop{
         case "use dagger" :
             System.out.print("Would you like to attack slime 1 or slime 2? ");
                 fightyBoi2 = scannyBoi.nextLine();
-                if (fightyBoi2 == 1){
+                if (fightyBoi2.equals(1)){
                     int damage = level * 2;
                     doubleSmallSlime1Health = doubleSmallSlime1Health - damage;
                     System.out.print("You stab the slime with your dagger. ");
-                } else if (fightyBoi2 == 2){
+                } else if (fightyBoi2.equals(2)){
                     int damage = level * 2;
                     doubleSmallSlime2Health = doubleSmallSlime2Health - damage;
                     System.out.print("You stab the slime with your dagger. ");
@@ -2425,13 +2425,13 @@ public class GameLoop{
             } else {
                 System.out.print("Would you like to attack slime 1 or slime 2? ");
                 fightyBoi2 = scannyBoi.nextLine();
-                if (fightyBoi2 == 1){
-                    damage = bow * level * 4;
+                if (fightyBoi2.equals(1)){
+                    int damage = bow * level * 4;
                     numberOfArrows = numberOfArrows - 1;
                     doubleSmallSlime1Health = doubleSmallSlime1Health - damage;
                     System.out.print("Your shoot an arrow at the slime. ");
-                } else if (fightyBoi2 == 1){
-                    damage = bow * level * 4;
+                } else if (fightyBoi2.equals(1)){
+                    int damage = bow * level * 4;
                     numberOfArrows = numberOfArrows - 1;
                     doubleSmallSlime2Health = doubleSmallSlime2Health - damage;
                     System.out.print("Your shoot an arrow at the slime. ");
@@ -2459,10 +2459,10 @@ public class GameLoop{
         case "punch" :
             System.out.print("Would you like to attack slime 1 or slime 2? ");
                 fightyBoi2 = scannyBoi.nextLine();
-                if (fightyBoi2 == 1){
+                if (fightyBoi2.equals(1)){
                     System.out.print("You punch the slime. ");
                     doubleSmallSlime1Health = doubleSmallSlime1Health - 2;
-                } else if (fightyBoi2 == 2){
+                } else if (fightyBoi2.equals(2)){
                     System.out.print("You punch the slime. ");
                     doubleSmallSlime2Health = doubleSmallSlime2Health - 2;
                 } else {
