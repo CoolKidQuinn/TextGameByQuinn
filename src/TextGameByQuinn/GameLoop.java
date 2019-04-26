@@ -1,8 +1,10 @@
 //This is going to be where everything happens in your game
 //By gameloop it just means that this is going to be what happens every frame
 
+import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
+
 //basically just a bunch of general utilies that java put into the language
 public class GameLoop{
     //Run this by typing "javac -d bin src/TextGameByQuinn/GameLoop.java" into the terminal
@@ -241,6 +243,10 @@ public class GameLoop{
 
         static int trollHealth;
         static int smallSlimeHealth;
+        static int mediumSlimeHealth;
+        static int largeSlimeHealth;
+        static int doubleSmallSlime1Health;
+        static int doubleSmallSlime2Health;
 
         static Scanner scannyBoi = new Scanner(System.in);
         //"Scanner scannyBoi" brings a scanner into existence and names it scannyBoi
@@ -279,9 +285,9 @@ public class GameLoop{
         //this will run the method MapMovement()
 
         //System.out.print(stringyBoi);
-            //"System.out." is how we find our desired command
-                //"System." tell us we are finding a command hardcoded into java
-                //"out." tells we are going to be using a command that has to do with output
+            //"System.out. " is how we find our desired command
+                //"System. " tell us we are finding a command hardcoded into java
+                //"out. " tells we are going to be using a command that has to do with output
             //"print(stringyBoi)" tells us to print whatever is in the parenthesis
                 //in this case it is the stringyBoi that the user inputed earlier
         
@@ -340,7 +346,7 @@ public class GameLoop{
     }
 
     public static void Sudoku(){
-        System.out.print("You stab yourself");
+        System.out.print("You stab yourself ");
         GameOver();
         //this sends us to the game over screen
     }
@@ -1838,160 +1844,187 @@ public class GameLoop{
 
     //we will program our various encounters to be called on from each position here
     public static void Treasure1(){
-        System.out.print("You see a treasure chest.");
+        System.out.print("You see a treasure chest. ");
         String stringyBoi3 = scannyBoi.nextLine();
-        if (stringyBoi3.equals("open chest")){
-            System.out.print("You open up the treasure chest and find 20");
+        switch (stringyBoi3){
+            case "open chest" : 
+            System.out.print("You open up the treasure chest and find 20 gold ");
             experience = experience + 5;
             gold = gold + 20;
-        } else if (stringyBoi3.equals("ignore chest")){
-            System.out.print("You decide to ignore the chest and continue searching.");
-        } else {
-            System.out.print("That is not a recognized command.");
+            break;
+            case "ignore chest" :
+            System.out.print("You decide to ignore the chest and continue searching. ");
+            break;
+            default :
+            System.out.print("That is not a recognized command. ");
             Treasure1();
+            break;
         }
         MapMovement();
     }
 
     public static void Treasure2(){
-        System.out.print("You see a treasure chest.");
+        System.out.print("You see a treasure chest. ");
         String stringyBoi3 = scannyBoi.nextLine();
-        if (stringyBoi3.equals("open chest")){
-            System.out.print("You open up the treasure chest and find 40 gold");
+        switch (stringyBoi3){
+            case "open chest" : 
+            System.out.print("You open up the treasure chest and find 20 gold ");
             experience = experience + 10;
             gold = gold + 40;
-        } else if (stringyBoi3.equals("ignore chest")){
-            System.out.print("You decide to ignore the chest and continue searching.");
-        } else {
-            System.out.print("That is not a recognized command.");
-            Treasure2();
+            break;
+            case "ignore chest" :
+            System.out.print("You decide to ignore the chest and continue searching. ");
+            break;
+            default :
+            System.out.print("That is not a recognized command. ");
+            Treasure1();
+            break;
         }
         MapMovement();
     }
 
     public static void Treasure3(){
-        System.out.print("You see a treasure chest.");
+        System.out.print("You see a treasure chest. ");
         String stringyBoi3 = scannyBoi.nextLine();
-        if (stringyBoi3.equals("open chest")){
-            System.out.print("You open up the treasure chest and find 60 gold");
+        switch (stringyBoi3){
+            case "open chest" : 
+            System.out.print("You open up the treasure chest and find 20 gold ");
             experience = experience + 15;
             gold = gold + 60;
-        } else if (stringyBoi3.equals("ignore chest")){
-            System.out.print("You decide to ignore the chest and continue searching.");
-        } else {
-            System.out.print("That is not a recognized command.");
-            Treasure3();
+            break;
+            case "ignore chest" :
+            System.out.print("You decide to ignore the chest and continue searching. ");
+            break;
+            default :
+            System.out.print("That is not a recognized command. ");
+            Treasure1();
+            break;
         }
         MapMovement();
     }
 
     public static void Treasure4(){
-        System.out.print("You see a treasure chest.");
+        System.out.print("You see a treasure chest. ");
         String stringyBoi3 = scannyBoi.nextLine();
-        if (stringyBoi3.equals("open chest")){
-            System.out.print("You open up the treasure chest and find 80 gold");
+        switch (stringyBoi3){
+            case "open chest" : 
+            System.out.print("You open up the treasure chest and find 20 gold ");
             experience = experience + 20;
             gold = gold + 80;
-        } else if (stringyBoi3.equals("ignore chest")){
-            System.out.print("You decide to ignore the chest and continue searching.");
-        } else {
-            System.out.print("That is not a recognized command.");
-            Treasure4();
+            break;
+            case "ignore chest" :
+            System.out.print("You decide to ignore the chest and continue searching. ");
+            break;
+            default :
+            System.out.print("That is not a recognized command. ");
+            Treasure1();
+            break;
         }
         MapMovement();
     }
 
     public static void Treasure5(){
-        System.out.print("You see a treasure chest.");
+        System.out.print("You see a treasure chest. ");
         String stringyBoi3 = scannyBoi.nextLine();
-        if (stringyBoi3.equals("open chest")){
-            System.out.print("You open up the treasure chest and find 100 gold");
+        switch (stringyBoi3){
+            case "open chest" : 
+            System.out.print("You open up the treasure chest and find 20 gold ");
             experience = experience + 25;
             gold = gold + 100;
-        } else if (stringyBoi3.equals("ignore chest")){
-            System.out.print("You decide to ignore the chest and continue searching.");
-        } else {
-            System.out.print("That is not a recognized command.");
-            Treasure5();
+            break;
+            case "ignore chest" :
+            System.out.print("You decide to ignore the chest and continue searching. ");
+            break;
+            default :
+            System.out.print("That is not a recognized command. ");
+            Treasure1();
+            break;
         }
         MapMovement();
     }
 
     public static void TrappedTreasure(){
-        System.out.print("You see a treasure chest.");
-        String stringyBoi4 = scannyBoi.nextLine();
-        if (stringyBoi4.equals("open chest")){
-            System.out.print("You bend down to open the chest, but as soon as you touch it, it explodes, hurting you and knocking you down.");
+        System.out.print("You see a treasure chest. ");
+        String stringyBoi3 = scannyBoi.nextLine();
+        switch (stringyBoi3){
+            case "open chest" : 
+            System.out.print("You bend down to open the chest, but as soon as you touch it, it explodes, hurting you and knocking you down. ");
             health = health - 10;
-        } else if (stringyBoi4.equals("ignore chest")){
-            System.out.print("You decide to ignore the chest and continue searching.");
-            experience = experience + 5;
-        } else {
-            System.out.print("That is not a recognized command.");
-            TrappedTreasure();
+            if (health <= 0){
+                GameOver();
+            }
+            break;
+            case "ignore chest" :
+            System.out.print("You decide to ignore the chest and continue searching. ");
+            break;
+            default :
+            System.out.print("That is not a recognized command. ");
+            Treasure1();
+            break;
         }
         MapMovement();
     }
-
+    
     public static void Troll1Encounter(){
         trollHealth = 10;
-        System.out.print("You come across a troll about your size. He is armed with a club and a wooden shield.");
+        System.out.print("You come across a troll about your size. He is armed with a club and a wooden shield. ");
         AttackTroll1();
     }
 
     public static void AttackTroll1(){
         String fightyBoi1 = scannyBoi.nextLine();
-        if (fightyBoi1.equals("use sword")) {
+        switch (fightyBoi1){
+        case "use sword" :
             if (sword == 0){
-                System.out.print("You don't have a sword.");
+                System.out.print("You don't have a sword. ");
             } else {
                 int damage = sword * level * 2;
                 trollHealth = trollHealth - damage;
-                System.out.print("You slash the troll with your sword.");
+                System.out.print("You slash the troll with your sword. ");
             }
-        } else if (fightyBoi1.equals("use dagger")) {
+        case "use dagger" :
             int damage = level;
             trollHealth = trollHealth - damage;
-            System.out.print("You stab the troll with your dagger.");
-        } else if (fightyBoi1.equals("use bow")) {
+            System.out.print("You stab the troll with your dagger. ");
+        case "use bow" :
             if (bow == 0){
-                System.out.print("You don't have a bow.");
+                System.out.print("You don't have a bow. ");
             } else if (numberOfArrows == 0) {
-                System.out.print("You don't have any arrows.");
+                System.out.print("You don't have any arrows. ");
             } else {
-                int damage = bow * level * 2;
+                damage = bow * level * 2;
                 numberOfArrows = numberOfArrows - 1;
                 trollHealth = trollHealth - damage;
-                System.out.print("Your shoot an arrow at the troll.");
+                System.out.print("Your shoot an arrow at the troll. ");
             }
-        } else if (fightyBoi1.equals("use potion")) {
+        case "use potion" :
             if (numberOfPotions == 0){
-                System.out.print("You don't have any potions.");
+                System.out.print("You don't have any potions. ");
             } else {
                 health = health + 25;
-                System.out.print("You drink the potion and feel reinvigorated.");
+                System.out.print("You drink the potion and feel reinvigorated. ");
                 AttackTroll1();
             }
-        } else if (fightyBoi1.equals("use shield")) {
+        case "use shield" :
             if (shield == 0){
-                System.out.print("You don't have a shield.");
+                System.out.print("You don't have a shield. ");
             } else {
                 Random rand = new Random();
                 int shieldBlockTest = rand.nextInt(10);
                 int shieldStrength = shield + 3;
                 if (shieldStrength > shieldBlockTest) {
-                    System.out.print("The troll tries to attack you with his club, but you block it with your shield and have an oppurtunity to counterattack.");
+                    System.out.print("The troll tries to attack you with his club, but you block it with your shield and have an oppurtunity to counterattack. ");
                 } else {
-                    System.out.print("You can't quite get your shield up in time.");
+                    System.out.print("You can't quite get your shield up in time. ");
                 }
             }
-        } else if (fightyBoi1.equals("punch")) {
-            System.out.print("You punch the troll. It barely even registers the attack.");
+        case "punch" :
+            System.out.print("You punch the troll. It barely even registers the attack. ");
             trollHealth = trollHealth - 1;
-        } else if (fightyBoi1.equals("run")) {
-            System.out.print("You try to run away from the troll, but it is too fast and catches you.");
-        } else {
-            System.out.print("That is not a recognized command.");
+        case "run" :
+            System.out.print("You try to run away from the troll, but it is too fast and catches you. ");
+        default :
+            System.out.print("That is not a recognized command. ");
             AttackTroll1();
         }
         if (trollHealth <= 0) {
@@ -2003,46 +2036,47 @@ public class GameLoop{
 
     public static void CritAttackTroll1(){
         String fightyBoi1 = scannyBoi.nextLine();
-        if (fightyBoi1.equals("use sword")) {
+        switch (fightyBoi1) {
+        case "use sword" :
             if (sword == 0){
-                System.out.print("You don't have a sword.");
+                System.out.print("You don't have a sword. ");
             } else {
                 int damage = sword * level * 4;
                 trollHealth = trollHealth - damage;
-                System.out.print("You slash the troll with your sword. The troll isn't ready for the attack and it hits extra hard.");
+                System.out.print("You slash the troll with your sword. The troll isn't ready for the attack and it hits extra hard. ");
             }
-        } else if (fightyBoi1.equals("use dagger")) {
+        case "use dagger" :
             int damage = level;
             trollHealth = trollHealth - damage * 2;
-            System.out.print("You stab the troll with your dagger. The troll isn't ready for the attack and it hits extra hard.");
-        } else if (fightyBoi1.equals("use bow")) {
+            System.out.print("You stab the troll with your dagger. The troll isn't ready for the attack and it hits extra hard. ");
+        case "use bow" :
             if (bow == 0){
-                System.out.print("You don't have a bow.");
+                System.out.print("You don't have a bow. ");
             } else if (numberOfArrows == 0) {
-                System.out.print("You don't have any arrows.");
+                System.out.print("You don't have any arrows. ");
             } else {
-                int damage = bow * level * 2;
+                damage = bow * level * 2;
                 numberOfArrows = numberOfArrows - 1;
                 trollHealth = trollHealth - damage;
-                System.out.print("Your shoot an arrow at the troll. The troll isn't ready for the attack and it hits extra hard.");
+                System.out.print("Your shoot an arrow at the troll. The troll isn't ready for the attack and it hits extra hard. ");
             }
-        } else if (fightyBoi1.equals("use potion")) {
+        case "use potion" :
             if (numberOfPotions == 0){
-                System.out.print("You don't have any potions.");
+                System.out.print("You don't have any potions. ");
             } else {
                 health = health + 25;
-                System.out.print("You drink the potion and feel reinvigorated.");
+                System.out.print("You drink the potion and feel reinvigorated. ");
                 CritAttackTroll1();
             }
-        } else if (fightyBoi1.equals("use shield")) {
-            System.out.print("There is no point in blocking. The troll is already off guard.");
-        } else if (fightyBoi1.equals("punch")) {
-            System.out.print("You punch the troll.");
+        case "use shield" :
+            System.out.print("There is no point in blocking. The troll is already off guard. ");
+        case "punch" :
+            System.out.print("You punch the troll. ");
             trollHealth = trollHealth - 2;
-        } else if (fightyBoi1.equals("run")) {
-            System.out.print("Even when the troll is off guard, it is still able to chase you down when you try to run.");
-        } else {
-            System.out.print("That is not a recognized command.");
+        case "run" :
+            System.out.print("Even when the troll is off guard, it is still able to chase you down when you try to run. ");
+        default :
+            System.out.print("That is not a recognized command. ");
             CritAttackTroll1();
         }
         if (trollHealth <= 0) {
@@ -2053,7 +2087,7 @@ public class GameLoop{
     }
 
     public static void Troll1Attacks(){
-        System.out.print("The troll swings its club at you.");
+        System.out.print("The troll swings its club at you. ");
         if (armor == 0){
             health = health - 10;
         } else {
@@ -2066,142 +2100,544 @@ public class GameLoop{
     }
 
     public static void DeadTroll1(){
-        System.out.print("And with that, the troll fell over with a resounding thud.");
+        System.out.print("And with that, the troll fell over with a resounding thud. ");
         experience = experience + 50;
         gold = gold + 100;
-        System.out.println("You have gotten some gold and experience. You now have " + gold + " gold and " + experience + "experience");
+        System.out.println("You have gotten some gold and experience. You now have " + gold + " gold and " + experience + "experience ");
+        MapMovement();
     }
 
     public static void BigSlime(){
 
     }
-
-    public static void MediumSlime(){
-
-    }
-
-    public static void SmallSlimeEncounter(){
-        smallSlimeHealth = 5;
-        System.out.print("A small slime appears.");
-        AttackSmallSlime();
+    
+    public static void MediumSlimeEncounter(){
+        mediumSlimeHealth = 15;
+        System.out.print("A medium slime appears. ");
+        AttackMediumSlime();
     }
     
-    public static void AttackSmallSlime(){
+    public static void AttackMediumSlime(){
         String fightyBoi2 = scannyBoi.nextLine();
-        if (fightyBoi2.equals("use sword")) {
+        switch (fightyBoi2) {
+        case "use sword" :
             if (sword == 0){
-                System.out.print("You don't have a sword.");
+                System.out.print("You don't have a sword. ");
             } else {
                 int damage = sword * level * 2;
-                smallSlimeHealth = smallSlimeHealth - damage;
-                System.out.print("You slash the slime with your sword.");
+                mediumSlimeHealth = mediumSlimeHealth - damage;
+                System.out.print("You slash the slime with your sword. ");
             }
-        } else if (fightyBoi2.equals("use dagger")) {
+        case "use dagger" :
             int damage = level;
-            smallSlimeHealth = smallSlimeHealth - damage;
-            System.out.print("You stab the slime with your dagger.");
-        } else if (fightyBoi2.equals("use bow")) {
+            mediumSlimeHealth = mediumSlimeHealth - damage;
+            System.out.print("You stab the slime with your dagger. ");
+        case "use bow" :
             if (bow == 0){
-                System.out.print("You don't have a bow.");
+                System.out.print("You don't have a bow. ");
             } else if (numberOfArrows == 0) {
-                System.out.print("You don't have any arrows.");
+                System.out.print("You don't have any arrows. ");
             } else {
-                int damage = bow * level * 2;
+                damage = bow * level * 2;
                 numberOfArrows = numberOfArrows - 1;
-                smallSlimeHealth = smallSlimeHealth - damage;
-                System.out.print("Your shoot an arrow at the slime.");
+                mediumSlimeHealth = mediumSlimeHealth - damage;
+                System.out.print("Your shoot an arrow at the slime. ");
             }
-        } else if (fightyBoi2.equals("use potion")) {
+        case "use potion" :
             if (numberOfPotions == 0){
-                System.out.print("You don't have any potions.");
+                System.out.print("You don't have any potions. ");
+            } else if (health == 100) {
+                System.out.print("You are already at full health. ");
+            } else if (health >= 75) {
+                health = 100;
+                System.out.print("You drink the potion and feel reinvigorated. ");
             } else {
                 health = health + 25;
-                System.out.print("You drink the potion and feel reinvigorated.");
-                AttackSmallSlime();
+                System.out.print("You drink the potion and feel reinvigorated. ");
             }
-        } else if (fightyBoi2.equals("use shield")) {
+            AttackMediumSlime();
+        case "use shield" :
             if (shield == 0){
-                System.out.print("You don't have a shield.");
+                System.out.print("You don't have a shield. ");
             } else {
                 Random rand = new Random();
                 int shieldBlockTest = rand.nextInt(10);
                 int shieldStrength = shield + 5;
                 if (shieldStrength > shieldBlockTest) {
-                    System.out.print("The slime tries to leap at you, but you knock it down with your shield and have an oppurtunity to counterattack.");
-                    CritAttackSmallSlime();
+                    System.out.print("The slime tries to leap at you, but you knock it down with your shield and have an oppurtunity to counterattack. ");
+                    CritAttackMediumSlime();
                 } else {
-                    System.out.print("You can't quite get your shield up in time.");
+                    System.out.print("You can't quite get your shield up in time. ");
                 }
             }
-        } else if (fightyBoi2.equals("punch")) {
-            System.out.print("You punch the slime.");
-            smallSlimeHealth = smallSlimeHealth - 1;
-        } else if (fightyBoi2.equals("run")) {
-            System.out.print("You try to run away from the slime, but it is able to leap at you and prevent your escape.");
+        case "punch" :
+            System.out.print("You punch the slime. ");
+            mediumSlimeHealth = mediumSlimeHealth - 1;
+        case "run" :
+            System.out.print("You try to run away from the slime, but it is able to leap at you and prevent your escape. ");
+        default :
+            System.out.print("That is not a recognized command. ");
+            AttackMediumSlime();
+        }
+        if (mediumSlimeHealth <= 0) {
+            DeadMediumSlime();
         } else {
-            System.out.print("That is not a recognized command.");
+            MediumSlimeAttack();
+        }
+    }
+
+    public static void CritAttackMediumSlime(){
+        String fightyBoi2 = scannyBoi.nextLine();
+        switch (fightyBoi2) {
+        case "use sword" :
+            if (sword == 0){
+                System.out.print("You don't have a sword. ");
+            } else {
+                int damage = sword * level * 4;
+                mediumSlimeHealth = mediumSlimeHealth - damage;
+                System.out.print("You slash the slime with your sword. The slime wasn't anticipating the attack and is hit especially hard. ");
+            }
+        case "use dagger" :
+            int damage = level * 2;
+            mediumSlimeHealth = mediumSlimeHealth - damage;
+            System.out.print("You stab the slime with your dagger. The slime wasn't anticipating the attack and is hit especially hard. ");
+        case "use bow" :
+            if (bow == 0){
+                System.out.print("You don't have a bow. ");
+            } else if (numberOfArrows == 0) {
+                System.out.print("You don't have any arrows. ");
+            } else {
+                damage = bow * level * 4;
+                numberOfArrows = numberOfArrows - 1;
+                mediumSlimeHealth = mediumSlimeHealth - damage;
+                System.out.print("Your shoot an arrow at the slime. The slime wasn't anticipating the attack and is hit especially hard. ");
+            }
+        case "use potion" :
+            if (numberOfPotions == 0){
+                System.out.print("You don't have any potions. ");
+            } else if (health == 100) {
+                System.out.print("You are already at full health. ");
+            } else if (health >= 75) {
+                health = 100;
+                System.out.print("You drink the potion and feel reinvigorated. ");
+            } else {
+                health = health + 25;
+                System.out.print("You drink the potion and feel reinvigorated. ");
+            }
+            CritAttackMediumSlime();
+        case "use shield" :
+            System.out.print("The slime is already lying helpless on the ground. ");
+            CritAttackMediumSlime();
+        case "punch" :
+            System.out.print("You punch the slime. ");
+            mediumSlimeHealth = mediumSlimeHealth - 2;
+        case "run" :
+            System.out.print("You are able to succesfully escape the slime. ");
+        default :
+            System.out.print("That is not a recognized command. ");
+            AttackMediumSlime();
+        }
+        if (mediumSlimeHealth <= 0) {
+            DeadMediumSlime();
+        } else {
+            MediumSlimeAttack();
+        }
+    }
+
+    public static void MediumSlimeAttack(){
+        System.out.print("The medium slime leaps at you. ");
+        if (armor == 0){
+            health = health - 8;
+        } else {
+            double mediumSlimeDamage = 6 / armor;
+            health = health - mediumSlimeDamage;
+        }
+        if (health <= 0){
+            GameOver();
+        }
+    }
+
+    public static void DeadMediumSlime(){
+        System.out.print("And with that, the slime bursts open and its remains scatter everywhere. Just as you think it is over, the remains begin to move together and reform into 2 smaller slimes.");
+        doubleSmallSlime1Health = 5;
+        doubleSmallSlime2Health = 5;
+        gold = gold + 70;
+        experience = experience + 40;
+        AttackDoubleSmallSlime();
+    }
+
+    public static void AttackDoubleSmallSlime(){
+        String fightyBoi2 = scannyBoi.nextLine();
+        switch (fightyBoi2) {
+        case "use sword" :
+            if (sword == 0){
+                System.out.print("You don't have a sword. ");
+            } else {
+                System.out.print("Would you like to attack slime 1 or slime 2? ");
+                fightyBoi2 = scannyBoi.nextLine();
+                if (fightyBoi2 == 1){
+                    int damage = sword * level * 2;
+                    doubleSmallSlime1Health = doubleSmallSlime1Health - damage;
+                    System.out.print("You slash the slime with your sword. ");
+                } else if (fightyBoi2 == 2){
+                    int damage = sword * level * 2;
+                    doubleSmallSlime2Health = doubleSmallSlime2Health - damage;
+                    System.out.print("You slash the slime with your sword. ");
+                } else {
+                    System.out.print("That is not a recognized command. ");
+                    AttackDoubleSmallSlime();
+                }
+            }
+        case "use dagger" :
+            System.out.print("Would you like to attack slime 1 or slime 2? ");
+                fightyBoi2 = scannyBoi.nextLine();
+                if (fightyBoi2 == 1){
+                    int damage = level;
+                    doubleSmallSlime1Health = doubleSmallSlime1Health - damage;
+                    System.out.print("You stab the slime with your dagger. ");
+                } else if (fightyBoi2 == 2){
+                    int damage = level;
+                    doubleSmallSlime2Health = doubleSmallSlime2Health - damage;
+                    System.out.print("You stab the slime with your dagger. ");
+                } else {
+                    System.out.print("That is not a recognized command. ");
+                    AttackDoubleSmallSlime();
+                }
+        case "use bow" :
+            if (bow == 0){
+                System.out.print("You don't have a bow. ");
+            } else if (numberOfArrows == 0) {
+                System.out.print("You don't have any arrows. ");
+            } else {
+                System.out.print("Would you like to attack slime 1 or slime 2? ");
+                fightyBoi2 = scannyBoi.nextLine();
+                if (fightyBoi2 == 1){
+                    damage = bow * level * 2;
+                    numberOfArrows = numberOfArrows - 1;
+                    doubleSmallSlime1Health = doubleSmallSlime1Health - damage;
+                    System.out.print("Your shoot an arrow at the slime. ");
+                } else if (fightyBoi2 == 1){
+                    damage = bow * level * 2;
+                    numberOfArrows = numberOfArrows - 1;
+                    doubleSmallSlime2Health = doubleSmallSlime2Health - damage;
+                    System.out.print("Your shoot an arrow at the slime. ");
+                } else {
+                    System.out.print("That is not a recognized command. ");
+                    AttackDoubleSmallSlime();
+                }
+            }
+        case "use potion" :
+            if (numberOfPotions == 0){
+                System.out.print("You don't have any potions. ");
+            } else if (health == 100) {
+                System.out.print("You are already at full health. ");
+            } else if (health >= 75) {
+                health = 100;
+                System.out.print("You drink the potion and feel reinvigorated. ");
+            } else {
+                health = health + 25;
+                System.out.print("You drink the potion and feel reinvigorated. ");
+            }
+            AttackDoubleSmallSlime();
+        case "use shield" :
+            if (shield == 0){
+                System.out.print("You don't have a shield. ");
+            } else {
+                Random rand = new Random();
+                int shieldBlockTest = rand.nextInt(10);
+                int shieldStrength = shield + 5;
+                if (shieldStrength > shieldBlockTest) {
+                    System.out.print("The slimes try to leap at you, but you knock them down with your shield and you have an oppurtunity to counterattack. ");
+                    CritAttackDoubleSmallSlime();
+                } else {
+                    System.out.print("You can't quite get your shield up in time. ");
+                }
+            }
+        case "punch" :
+            System.out.print("Would you like to attack slime 1 or slime 2? ");
+                fightyBoi2 = scannyBoi.nextLine();
+                if (fightyBoi2 == 1){
+                    System.out.print("You punch the slime. ");
+                    doubleSmallSlime1Health = doubleSmallSlime1Health - 1;
+                } else if (fightyBoi2 == 2){
+                    System.out.print("You punch the slime. ");
+                    doubleSmallSlime2Health = doubleSmallSlime2Health - 1;
+                } else {
+                    System.out.print("That is not a recognized command. ");
+                    AttackDoubleSmallSlime();
+                }
+        case "run" :
+            System.out.print("You try to run away from the slimes, but they are able to leap at you and prevent your escape. ");
+        default :
+            System.out.print("That is not a recognized command. ");
+            AttackDoubleSmallSlime();
+        }
+        if (doubleSmallSlime1Health <= 0 || doubleSmallSlime2Health <= 0) {
+            DeadDoubleSmallSlime();
+        } else {
+            DoubleSmallSlimeAttack();
+            AttackDoubleSmallSlime();
+        }
+    }
+
+    public static void CritAttackDoubleSmallSlime(){
+        String fightyBoi2 = scannyBoi.nextLine();
+        switch (fightyBoi2) {
+        case "use sword" :
+            if (sword == 0){
+                System.out.print("You don't have a sword. ");
+            } else {
+                System.out.print("Would you like to attack slime 1 or slime 2? ");
+                fightyBoi2 = scannyBoi.nextLine();
+                if (fightyBoi2 == 1){
+                    int damage = sword * level * 4;
+                    doubleSmallSlime1Health = doubleSmallSlime1Health - damage;
+                    System.out.print("You slash the slime with your sword. ");
+                } else if (fightyBoi2 == 2){
+                    int damage = sword * level * 4;
+                    doubleSmallSlime2Health = doubleSmallSlime2Health - damage;
+                    System.out.print("You slash the slime with your sword. ");
+                } else {
+                    System.out.print("That is not a recognized command. ");
+                    CritAttackDoubleSmallSlime();
+                }
+            }
+        case "use dagger" :
+            System.out.print("Would you like to attack slime 1 or slime 2? ");
+                fightyBoi2 = scannyBoi.nextLine();
+                if (fightyBoi2 == 1){
+                    int damage = level * 2;
+                    doubleSmallSlime1Health = doubleSmallSlime1Health - damage;
+                    System.out.print("You stab the slime with your dagger. ");
+                } else if (fightyBoi2 == 2){
+                    int damage = level * 2;
+                    doubleSmallSlime2Health = doubleSmallSlime2Health - damage;
+                    System.out.print("You stab the slime with your dagger. ");
+                } else {
+                    System.out.print("That is not a recognized command. ");
+                    CritAttackDoubleSmallSlime();
+                }
+        case "use bow" :
+            if (bow == 0){
+                System.out.print("You don't have a bow. ");
+            } else if (numberOfArrows == 0) {
+                System.out.print("You don't have any arrows. ");
+            } else {
+                System.out.print("Would you like to attack slime 1 or slime 2? ");
+                fightyBoi2 = scannyBoi.nextLine();
+                if (fightyBoi2 == 1){
+                    damage = bow * level * 4;
+                    numberOfArrows = numberOfArrows - 1;
+                    doubleSmallSlime1Health = doubleSmallSlime1Health - damage;
+                    System.out.print("Your shoot an arrow at the slime. ");
+                } else if (fightyBoi2 == 1){
+                    damage = bow * level * 4;
+                    numberOfArrows = numberOfArrows - 1;
+                    doubleSmallSlime2Health = doubleSmallSlime2Health - damage;
+                    System.out.print("Your shoot an arrow at the slime. ");
+                } else {
+                    System.out.print("That is not a recognized command. ");
+                    CritAttackDoubleSmallSlime();
+                }
+            }
+        case "use potion" :
+            if (numberOfPotions == 0){
+                System.out.print("You don't have any potions. ");
+            } else if (health == 100) {
+                System.out.print("You are already at full health. ");
+            } else if (health >= 75) {
+                health = 100;
+                System.out.print("You drink the potion and feel reinvigorated. ");
+            } else {
+                health = health + 25;
+                System.out.print("You drink the potion and feel reinvigorated. ");
+            }
+            CritAttackDoubleSmallSlime();
+        case "use shield" :
+            System.out.print("The slimes are already lying helpless");
+            CritAttackDoubleSmallSlime();
+        case "punch" :
+            System.out.print("Would you like to attack slime 1 or slime 2? ");
+                fightyBoi2 = scannyBoi.nextLine();
+                if (fightyBoi2 == 1){
+                    System.out.print("You punch the slime. ");
+                    doubleSmallSlime1Health = doubleSmallSlime1Health - 2;
+                } else if (fightyBoi2 == 2){
+                    System.out.print("You punch the slime. ");
+                    doubleSmallSlime2Health = doubleSmallSlime2Health - 2;
+                } else {
+                    System.out.print("That is not a recognized command. ");
+                    CritAttackDoubleSmallSlime();
+                }
+        case "run" :
+            System.out.print("You try to run away from the slimes, but they are able to leap at you and prevent your escape. ");
+        default :
+            System.out.print("That is not a recognized command. ");
+            CritAttackDoubleSmallSlime();
+        }
+        if (doubleSmallSlime1Health <= 0 || doubleSmallSlime2Health <= 0) {
+            DeadDoubleSmallSlime();
+        } else {
+            DoubleSmallSlimeAttack();
+            AttackDoubleSmallSlime();
+        }
+    }
+
+    public static void DoubleSmallSlimeAttack(){
+        SmallSlimeAttack();
+        SmallSlimeAttack();
+    }
+
+    public static void DeadDoubleSmallSlime(){
+        System.out.print("One of the slimes bursts open and dissolves into the ground. The other slime leaps on you. ");
+        if (armor == 0){
+            health = health - 4;
+        } else {
+            double smallSlimeDamage = 3 / armor;
+            health = health - smallSlimeDamage;
+        }
+        if (health <= 0){
+            GameOver();
+        }
+        AttackSmallSlime();
+    }
+
+    public static void SmallSlimeEncounter(){
+        smallSlimeHealth = 5;
+        System.out.print("A small slime appears. ");
+        AttackSmallSlime();
+    }
+    
+    public static void AttackSmallSlime(){
+        String fightyBoi2 = scannyBoi.nextLine();
+        switch (fightyBoi2) {
+        case "use sword" :
+            if (sword == 0){
+                System.out.print("You don't have a sword. ");
+            } else {
+                int damage = sword * level * 2;
+                smallSlimeHealth = smallSlimeHealth - damage;
+                System.out.print("You slash the slime with your sword. ");
+            }
+        case "use dagger" :
+            int damage = level;
+            smallSlimeHealth = smallSlimeHealth - damage;
+            System.out.print("You stab the slime with your dagger. ");
+        case "use bow" :
+            if (bow == 0){
+                System.out.print("You don't have a bow. ");
+            } else if (numberOfArrows == 0) {
+                System.out.print("You don't have any arrows. ");
+            } else {
+                damage = bow * level * 2;
+                numberOfArrows = numberOfArrows - 1;
+                smallSlimeHealth = smallSlimeHealth - damage;
+                System.out.print("Your shoot an arrow at the slime. ");
+            }
+        case "use potion" :
+            if (numberOfPotions == 0){
+                System.out.print("You don't have any potions. ");
+            } else if (health == 100) {
+                System.out.print("You are already at full health. ");
+            } else if (health >= 75) {
+                health = 100;
+                System.out.print("You drink the potion and feel reinvigorated. ");
+            } else {
+                health = health + 25;
+                System.out.print("You drink the potion and feel reinvigorated. ");
+            }
+            AttackSmallSlime();
+        case "use shield" :
+            if (shield == 0){
+                System.out.print("You don't have a shield. ");
+            } else {
+                Random rand = new Random();
+                int shieldBlockTest = rand.nextInt(10);
+                int shieldStrength = shield + 5;
+                if (shieldStrength > shieldBlockTest) {
+                    System.out.print("The slime tries to leap at you, but you knock it down with your shield and have an oppurtunity to counterattack. ");
+                    CritAttackSmallSlime();
+                } else {
+                    System.out.print("You can't quite get your shield up in time. ");
+                }
+            }
+        case "punch" :
+            System.out.print("You punch the slime. ");
+            smallSlimeHealth = smallSlimeHealth - 1;
+        case "run" :
+            System.out.print("You try to run away from the slime, but it is able to leap at you and prevent your escape. ");
+        default :
+            System.out.print("That is not a recognized command. ");
             AttackSmallSlime();
         }
         if (smallSlimeHealth <= 0) {
             DeadSmallSlime();
         } else {
             SmallSlimeAttack();
+            AttackSmallSlime();
         }
     }
 
     public static void CritAttackSmallSlime(){
         String fightyBoi2 = scannyBoi.nextLine();
-        if (fightyBoi2.equals("use sword")) {
+        switch (fightyBoi2) {
+        case "use sword" :
             if (sword == 0){
-                System.out.print("You don't have a sword.");
+                System.out.print("You don't have a sword. ");
             } else {
                 int damage = sword * level * 4;
                 smallSlimeHealth = smallSlimeHealth - damage;
-                System.out.print("You slash the slime with your sword. The slime wasn't anticipating the attack and is hit especially hard.");
+                System.out.print("You slash the slime with your sword. The slime wasn't anticipating the attack and is hit especially hard. ");
             }
-        } else if (fightyBoi2.equals("use dagger")) {
+        case "use dagger" :
             int damage = level * 2;
             smallSlimeHealth = smallSlimeHealth - damage;
-            System.out.print("You stab the slime with your dagger. The slime wasn't anticipating the attack and is hit especially hard.");
-        } else if (fightyBoi2.equals("use bow")) {
+            System.out.print("You stab the slime with your dagger. The slime wasn't anticipating the attack and is hit especially hard. ");
+        case "use bow" :
             if (bow == 0){
-                System.out.print("You don't have a bow.");
+                System.out.print("You don't have a bow. ");
             } else if (numberOfArrows == 0) {
-                System.out.print("You don't have any arrows.");
+                System.out.print("You don't have any arrows. ");
             } else {
-                int damage = bow * level * 4;
+                damage = bow * level * 4;
                 numberOfArrows = numberOfArrows - 1;
                 smallSlimeHealth = smallSlimeHealth - damage;
-                System.out.print("Your shoot an arrow at the slime. The slime wasn't anticipating the attack and is hit especially hard.");
+                System.out.print("Your shoot an arrow at the slime. The slime wasn't anticipating the attack and is hit especially hard. ");
             }
-        } else if (fightyBoi2.equals("use potion")) {
+        case "use potion" :
             if (numberOfPotions == 0){
-                System.out.print("You don't have any potions.");
+                System.out.print("You don't have any potions. ");
+            } else if (health == 100) {
+                System.out.print("You are already at full health. ");
+            } else if (health >= 75) {
+                health = 100;
+                System.out.print("You drink the potion and feel reinvigorated. ");
             } else {
                 health = health + 25;
-                System.out.print("You drink the potion and feel reinvigorated.");
-                CritAttackSmallSlime();
+                System.out.print("You drink the potion and feel reinvigorated. ");
             }
-        } else if (fightyBoi2.equals("use shield")) {
-            System.out.print("The slime is already lying helpless on the ground.");
-        } else if (fightyBoi2.equals("punch")) {
-            System.out.print("You punch the slime.");
+            CritAttackSmallSlime();
+        case "use shield" :
+            System.out.print("The slime is already lying helpless on the ground. ");
+        case "punch" :
+            System.out.print("You punch the slime. ");
             smallSlimeHealth = smallSlimeHealth - 2;
-        } else if (fightyBoi2.equals("run")) {
-            System.out.print("You are able to succesfully escape the slime.");
-        } else {
-            System.out.print("That is not a recognized command.");
+        case "run" :
+            System.out.print("You are able to succesfully escape the slime. ");
+        default :
+            System.out.print("That is not a recognized command. ");
             AttackSmallSlime();
         }
         if (smallSlimeHealth <= 0) {
             DeadSmallSlime();
         } else {
             SmallSlimeAttack();
+            AttackSmallSlime();
         }
     }
 
     public static void SmallSlimeAttack(){
-        System.out.print("The small slime leaps at you.");
+        System.out.print("The small slime leaps at you. ");
         if (armor == 0){
             health = health - 4;
         } else {
@@ -2214,10 +2650,11 @@ public class GameLoop{
     }
 
     public static void DeadSmallSlime(){
-        System.out.print("And with that, the slime bursts open and its remains dissolved into the earth.");
+        System.out.print("And with that, the slime bursts open and its remains dissolved into the earth. ");
         experience = experience + 20;
         gold = gold + 30;
-        System.out.println("You have gotten some gold and experience. You now have " + gold + " gold and " + experience + "experience");
+        System.out.println("You have gotten some gold and experience. You now have " + gold + " gold and " + experience + "experience ");
+        MapMovement();
     }
 
     public static void Dragon(){
@@ -2230,538 +2667,545 @@ public class GameLoop{
     //it will be an encounter you can have multiple times
     //the items here will be cheap
     public static void Shop1(){
-        System.out.print("You see a rickety building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be in relatively good condition, although they aren't very high quality. There is a sword with a price tag of 100 gold, a shield with a price tag of 100, a bow with a price tag of 75 gold, arrows with a price tag of 5 gold each, armor with a price tag of 100 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
-        System.out.println("You have " + gold + " gold.");
+        System.out.print("You see a rickety building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be in relatively good condition, although they aren't very high quality. There is a sword with a price tag of 100 gold, a shield with a price tag of 100, a bow with a price tag of 75 gold, arrows with a price tag of 5 gold each, armor with a price tag of 100 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
+        System.out.println("You have " + gold + " gold. ");
         String shoppyBoi1 = scannyBoi.nextLine();
-        if (shoppyBoi1.equals("buy sword")){
+        switch (shoppyBoi1) {
+            case "buy sword" : 
             if (gold >= 100){
                 if (sword < 1){
                     gold = gold - 100;
                     sword = 1;
-                    System.out.print("You now have a sword. You have " + gold + " gold left.");
+                    System.out.print("You now have a sword. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current sword is already better than this. There is no need to buy it.");
+                    System.out.print("Your current sword is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop1();
-        } else if (shoppyBoi1.equals("buy shield")){
+            break;
+            case "buy shield" :
             if (gold >= 100){
                 if (shield < 1){
                     gold = gold - 100;
                     shield = 1;
-                    System.out.print("You now have a shield. You have " + gold + " gold left.");
+                    System.out.print("You now have a shield. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current shield is already better than this. There is no need to buy it.");
+                    System.out.print("Your current shield is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop1();
-        } else if (shoppyBoi1.equals("buy bow")){
+        case "buy bow" :
             if (gold >= 75){
                 if (bow < 1){
                     gold = gold - 75;
                     bow = 1;
-                    System.out.print("You now have a bow. You have " + gold + " gold left.");
+                    System.out.print("You now have a bow. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current bow is already better than this. There is no need to buy it.");
+                    System.out.print("Your current bow is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop1();
-        } else if (shoppyBoi1.equals("buy arrows")){
+        case "buy arrows" :
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = scannyBoi.nextInt();
             int goldSpentOnArrows = arrowsPurchased * 5;
             if (gold >= goldSpentOnArrows){
                 gold = gold - goldSpentOnArrows;
                 numberOfArrows = numberOfArrows + arrowsPurchased;
-                System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
+                System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left. ");
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop1();
-        } else if (shoppyBoi1.equals("buy armor")){
+        case "buy armor" :
             if(gold >= 100){
                 if (armor < 1){
                     gold = gold - 100;
                     armor = 1;
-                    System.out.print("You now have armor. You have " + gold + " gold left.");
+                    System.out.print("You now have armor. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current armor is already better than this. There is no need to buy it.");
+                    System.out.print("Your current armor is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop1();
-        } else if (shoppyBoi1.equals("buy potions")){
+        case "buy potions" :
             System.out.print("How many would you like to buy?");
             int potionsPurchased = scannyBoi.nextInt();
             int goldSpentOnPotions = potionsPurchased * 10;
             if (gold >= goldSpentOnPotions){
                 gold = gold - goldSpentOnPotions;
-                System.out.print("You have " + gold + " gold left.");
+                System.out.print("You have " + gold + " gold left. ");
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop1();
-        } else if (shoppyBoi1.equals("steal sword")){
-            System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal sword" :
+            System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi1.equals("steal shield")){
-            System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal shield" :
+            System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi1.equals("steal bow")){
-            System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal bow" :
+            System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi1.equals("steal arrows")){
-            System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal arrows" :
+            System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi1.equals("steal armor")){
-            System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal armor" :
+            System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi1.equals("steal potions")){
-            System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal potions" :
+            System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi1.equals("leave shop")){
+        case "leave shop" :
             MapMovement();
-        } else {
+        default :
             System.out.print("This is not a recognized command");
             Shop1();
         }
     }
 
     public static void Shop2(){
-        System.out.print("You see an old building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be brand new and of decent quality. There is a sword with a price tag of 200 gold, a shield with a price tag of 200, a bow with a price tag of 150 gold, arrows with a price tag of 5 gold each, armor with a price tag of 200 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
-        System.out.println("You have " + gold + " gold.");
+        System.out.print("You see an old building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be brand new and of decent quality. There is a sword with a price tag of 200 gold, a shield with a price tag of 200, a bow with a price tag of 150 gold, arrows with a price tag of 5 gold each, armor with a price tag of 200 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
+        System.out.println("You have " + gold + " gold. ");
         String shoppyBoi2 = scannyBoi.nextLine();
-        if (shoppyBoi2.equals("buy sword")){
+        switch (shoppyBoi2) {
+        case "buy sword" :
             if (gold >= 200){
                 if (sword < 2){
                     gold = gold - 200;
                     sword = 2;
-                    System.out.print("You now have a decent sword. You have " + gold + " gold left.");
+                    System.out.print("You now have a decent sword. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current sword is already better than this. There is no need to buy it.");
+                    System.out.print("Your current sword is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop2();
-        } else if (shoppyBoi2.equals("buy shield")){
+        case "buy shield" :
             if (gold >= 200){
                 if (shield < 2){
                     gold = gold - 200;
                     shield = 2;
-                    System.out.print("You now have a decent shield. You have " + gold + " gold left.");
+                    System.out.print("You now have a decent shield. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current shield is already better than this. There is no need to buy it.");
+                    System.out.print("Your current shield is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop2();
-        } else if (shoppyBoi2.equals("buy bow")){
+        case "buy bow" :
             if (gold >= 150){
                 if (bow < 2){
                     gold = gold - 150;
                     bow = 2;
-                    System.out.print("You now have a decent bow. You have " + gold + " gold left.");
+                    System.out.print("You now have a decent bow. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current bow is already better than this. There is no need to buy it.");
+                    System.out.print("Your current bow is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop2();
-        } else if (shoppyBoi2.equals("buy arrows")){
+        case "buy arrows" :
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = scannyBoi.nextInt();
             int goldSpentOnArrows = arrowsPurchased * 5;
             if (gold >= goldSpentOnArrows){
                 gold = gold - goldSpentOnArrows;
                 numberOfArrows = numberOfArrows + arrowsPurchased;
-                System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
+                System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left. ");
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop2();
-        } else if (shoppyBoi2.equals("buy armor")){
+        case "buy armor" :
             if(gold >= 200){
                 if (armor < 2){
                     gold = gold - 200;
                     armor = 2;
-                    System.out.print("You now have decent armor. You have " + gold + " gold left.");
+                    System.out.print("You now have decent armor. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current armor is already better than this. There is no need to buy it.");
+                    System.out.print("Your current armor is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop2();
-        } else if (shoppyBoi2.equals("buy potions")){
+        case "buy potions" :
             System.out.print("How many would you like to buy?");
             int potionsPurchased = scannyBoi.nextInt();
             int goldSpentOnPotions = potionsPurchased * 10;
             if (gold >= goldSpentOnPotions){
                 gold = gold - goldSpentOnPotions;
-                System.out.print("You have " + gold + " gold left.");
+                System.out.print("You have " + gold + " gold left. ");
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop2();
-        } else if (shoppyBoi2.equals("steal sword")){
-            System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal sword" :
+            System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi2.equals("steal shield")){
-            System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal shield" :
+            System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi2.equals("steal bow")){
-            System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal bow" :
+            System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi2.equals("steal arrows")){
-            System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal arrows" :
+            System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi2.equals("steal armor")){
-            System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal armor" :
+            System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi2.equals("steal potions")){
-            System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal potions" :
+            System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi2.equals("leave shop")){
+        case "leave shop" :
             MapMovement();
-        } else {
+        default :
             System.out.print("This is not a recognized command");
             Shop2();
         }
     }
 
     public static void Shop3(){
-        System.out.print("You see a building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items seem to be good quality and in perfect condition. There is a sword with a price tag of 400 gold, a shield with a price tag of 400, a bow with a price tag of 300 gold, arrows with a price tag of 5 gold each, armor with a price tag of 400 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
-        System.out.println("You have " + gold + " gold.");
+        System.out.print("You see a building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items seem to be good quality and in perfect condition. There is a sword with a price tag of 400 gold, a shield with a price tag of 400, a bow with a price tag of 300 gold, arrows with a price tag of 5 gold each, armor with a price tag of 400 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
+        System.out.println("You have " + gold + " gold. ");
         String shoppyBoi3 = scannyBoi.nextLine();
-        if (shoppyBoi3.equals("buy sword")){
+        switch (shoppyBoi3) {
+        case "buy sword" :
             if (gold >= 400){
                 if (sword < 3){
                     gold = gold - 400;
                     sword = 3;
-                    System.out.print("You now have a good sword. You have " + gold + " gold left.");
+                    System.out.print("You now have a good sword. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current sword is already better than this. There is no need to buy it.");
+                    System.out.print("Your current sword is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop3();
-        } else if (shoppyBoi3.equals("buy shield")){
+        case "buy shield" :
             if (gold >= 400){
                 if (shield < 3){
                     gold = gold - 400;
                     shield = 3;
-                    System.out.print("You now have a good shield. You have " + gold + " gold left.");
+                    System.out.print("You now have a good shield. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current shield is already better than this. There is no need to buy it.");
+                    System.out.print("Your current shield is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop3();
-        } else if (shoppyBoi3.equals("buy bow")){
+        case "buy bow" :
             if (gold >= 300){
                 if (bow < 3){
                     gold = gold - 300;
                     bow = 3;
-                    System.out.print("You now have a good bow. You have " + gold + " gold left.");
+                    System.out.print("You now have a good bow. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current bow is already better than this. There is no need to buy it.");
+                    System.out.print("Your current bow is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop3();
-        } else if (shoppyBoi3.equals("buy arrows")){
+        case "buy arrows" :
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = scannyBoi.nextInt();
             int goldSpentOnArrows = arrowsPurchased * 5;
             if (gold >= goldSpentOnArrows){
                 gold = gold - goldSpentOnArrows;
                 numberOfArrows = numberOfArrows + arrowsPurchased;
-                System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
+                System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left. ");
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop3();
-        } else if (shoppyBoi3.equals("buy armor")){
+        case "buy armor" :
             if(gold >= 400){
                 if (armor < 3){
                     gold = gold - 400;
                     armor = 3;
-                    System.out.print("You now have good armor. You have " + gold + " gold left.");
+                    System.out.print("You now have good armor. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current armor is already better than this. There is no need to buy it.");
+                    System.out.print("Your current armor is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop3();
-        } else if (shoppyBoi3.equals("buy potions")){
+        case "buy potions" :
             System.out.print("How many would you like to buy?");
             int potionsPurchased = scannyBoi.nextInt();
             int goldSpentOnPotions = potionsPurchased * 10;
             if (gold >= goldSpentOnPotions){
                 gold = gold - goldSpentOnPotions;
-                System.out.print("You have " + gold + " gold left.");
+                System.out.print("You have " + gold + " gold left. ");
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop3();
-        } else if (shoppyBoi3.equals("steal sword")){
-            System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal sword" :
+            System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi3.equals("steal shield")){
-            System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal shield" :
+            System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi3.equals("steal bow")){
-            System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal bow" :
+            System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi3.equals("steal arrows")){
-            System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal arrows" :
+            System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi3.equals("steal armor")){
-            System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal armor" :
+            System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi3.equals("steal potions")){
-            System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal potions" :
+            System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi3.equals("leave shop")){
+        case "leave shop" :
             MapMovement();
-        } else {
+        default :
             System.out.print("This is not a recognized command");
             Shop3();
         }
     }
 
     public static void Shop4(){
-        System.out.print("You see a nice building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items seem to be amazing quality and in mint condition. There is a sword with a price tag of 800 gold, a shield with a price tag of 800, a bow with a price tag of 600 gold, arrows with a price tag of 5 gold each, armor with a price tag of 800 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
-        System.out.println("You have " + gold + " gold.");
+        System.out.print("You see a nice building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items seem to be amazing quality and in mint condition. There is a sword with a price tag of 800 gold, a shield with a price tag of 800, a bow with a price tag of 600 gold, arrows with a price tag of 5 gold each, armor with a price tag of 800 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
+        System.out.println("You have " + gold + " gold. ");
         String shoppyBoi4 = scannyBoi.nextLine();
-        if (shoppyBoi4.equals("buy sword")){
+        switch (shoppyBoi4){
+        case "buy sword" :
             if (gold >= 800){
                 if (sword < 4){
                     gold = gold - 800;
                     sword = 4;
-                    System.out.print("You now have an amazing sword. You have " + gold + " gold left.");
+                    System.out.print("You now have an amazing sword. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current sword is already better than this. There is no need to buy it.");
+                    System.out.print("Your current sword is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop4();
-        } else if (shoppyBoi4.equals("buy shield")){
+        case "buy shield" :
             if (gold >= 800){
                 if (shield < 4){
                     gold = gold - 800;
                     shield = 4;
-                    System.out.print("You now have an amazing shield. You have " + gold + " gold left.");
+                    System.out.print("You now have an amazing shield. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current shield is already better than this. There is no need to buy it.");
+                    System.out.print("Your current shield is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop4();
-        } else if (shoppyBoi4.equals("buy bow")){
+        case "buy bow" :
             if (gold >= 600){
                 if (bow < 4){
                     gold = gold - 600;
                     bow = 4;
-                    System.out.print("You now have an amazing bow. You have " + gold + " gold left.");
+                    System.out.print("You now have an amazing bow. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current bow is already better than this. There is no need to buy it.");
+                    System.out.print("Your current bow is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop4();
-        } else if (shoppyBoi4.equals("buy arrows")){
+        case "buy arrows" :
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = scannyBoi.nextInt();
             int goldSpentOnArrows = arrowsPurchased * 5;
             if (gold >= goldSpentOnArrows){
                 gold = gold - goldSpentOnArrows;
                 numberOfArrows = numberOfArrows + arrowsPurchased;
-                System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
+                System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left. ");
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop4();
-        } else if (shoppyBoi4.equals("buy armor")){
+        case "buy armor" :
             if(gold >= 800){
                 if (armor < 4){
                     gold = gold - 800;
                     armor = 4;
-                    System.out.print("You now have amazing armor. You have " + gold + " gold left.");
+                    System.out.print("You now have amazing armor. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current armor is already better than this. There is no need to buy it.");
+                    System.out.print("Your current armor is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop4();
-        } else if (shoppyBoi4.equals("buy potions")){
+        case "buy potions" :
             System.out.print("How many would you like to buy?");
             int potionsPurchased = scannyBoi.nextInt();
             int goldSpentOnPotions = potionsPurchased * 10;
             if (gold >= goldSpentOnPotions){
                 gold = gold - goldSpentOnPotions;
-                System.out.print("You have " + gold + " gold left.");
+                System.out.print("You have " + gold + " gold left. ");
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop4();
-        } else if (shoppyBoi4.equals("steal sword")){
-            System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal sword" :
+            System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi4.equals("steal shield")){
-            System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal shield" :
+            System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi4.equals("steal bow")){
-            System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal bow" :
+            System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi4.equals("steal arrows")){
-            System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal arrows" :
+            System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi4.equals("steal armor")){
-            System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal armor" :
+            System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi4.equals("steal potions")){
-            System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal potions" :
+            System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi4.equals("leave shop")){
+        case "leave shop" :
             MapMovement();
-        } else {
+        default :
             System.out.print("This is not a recognized command");
             Shop4();
         }
     }
 
     public static void Shop5(){
-        System.out.print("You see a magnificent building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items are the best quality you have ever seen. You can practically feel the power radiating off of them. There is a sword with a price tag of 1800 gold, a shield with a price tag of 1800, a bow with a price tag of 1200 gold, arrows with a price tag of 5 gold each, armor with a price tag of 1800 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing.");
-        System.out.println("You have " + gold + " gold.");
+        System.out.print("You see a magnificent building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items are the best quality you have ever seen. You can practically feel the power radiating off of them. There is a sword with a price tag of 1800 gold, a shield with a price tag of 1800, a bow with a price tag of 1200 gold, arrows with a price tag of 5 gold each, armor with a price tag of 1800 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
+        System.out.println("You have " + gold + " gold. ");
         String shoppyBoi5 = scannyBoi.nextLine();
-        if (shoppyBoi5.equals("buy sword")){
+        switch (shoppyBoi5) {
+        case "buy sword" :
             if (gold >= 1800){
                 if (sword < 5){
                     gold = gold - 1800;
                     sword = 5;
-                    System.out.print("You now have a good sword. You have " + gold + " gold left.");
+                    System.out.print("You now have a good sword. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current sword is already better than this. There is no need to buy it.");
+                    System.out.print("Your current sword is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop5();
-        } else if (shoppyBoi5.equals("buy shield")){
+        case "buy shield" :
             if (gold >= 1800){
                 if (shield < 5){
                     gold = gold - 1800;
                     shield = 5;
-                    System.out.print("You now have a good shield. You have " + gold + " gold left.");
+                    System.out.print("You now have a good shield. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current shield is already better than this. There is no need to buy it.");
+                    System.out.print("Your current shield is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop5();
-        } else if (shoppyBoi5.equals("buy bow")){
+        case "buy bow" :
             if (gold >= 1200){
                 if (bow < 5){
                     gold = gold - 1200;
                     bow = 5;
-                    System.out.print("You now have a good bow. You have " + gold + " gold left.");
+                    System.out.print("You now have a good bow. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current bow is already better than this. There is no need to buy it.");
+                    System.out.print("Your current bow is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop5();
-        } else if (shoppyBoi5.equals("buy arrows")){
+        case "buy arrows" :
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = scannyBoi.nextInt();
             int goldSpentOnArrows = arrowsPurchased * 5;
             if (gold >= goldSpentOnArrows){
                 gold = gold - goldSpentOnArrows;
                 numberOfArrows = numberOfArrows + arrowsPurchased;
-                System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left.");
+                System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left. ");
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop5();
-        } else if (shoppyBoi5.equals("buy armor")){
+        case "buy armor" :
             if(gold >= 1800){
                 if (armor < 5){
                     gold = gold - 1800;
                     armor = 5;
-                    System.out.print("You now have good armor. You have " + gold + " gold left.");
+                    System.out.print("You now have good armor. You have " + gold + " gold left. ");
                 } else {
-                    System.out.print("Your current armor is already better than this. There is no need to buy it.");
+                    System.out.print("Your current armor is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop5();
-        } else if (shoppyBoi5.equals("buy potions")){
+        case "buy potions" :
             System.out.print("How many would you like to buy?");
             int potionsPurchased = scannyBoi.nextInt();
             int goldSpentOnPotions = potionsPurchased * 10;
             if (gold >= goldSpentOnPotions){
                 gold = gold - goldSpentOnPotions;
-                System.out.print("You have " + gold + " gold left.");
+                System.out.print("You have " + gold + " gold left. ");
             } else {
-                System.out.print("You do not have enough gold to buy this.");
+                System.out.print("You do not have enough gold to buy this. ");
             }
             Shop5();
-        } else if (shoppyBoi5.equals("steal sword")){
-            System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal sword" :
+            System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi5.equals("steal shield")){
-            System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal shield" :
+            System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi5.equals("steal bow")){
-            System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal bow" :
+            System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi5.equals("steal arrows")){
-            System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal arrows" :
+            System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi5.equals("steal armor")){
-            System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal armor" :
+            System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi5.equals("steal potions")){
-            System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain.");
+        case "steal potions" :
+            System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
-        } else if (shoppyBoi5.equals("leave shop")){
+        case "leave shop" :
             MapMovement();
-        } else {
+        default :
             System.out.print("This is not a recognized command");
             Shop5();
         }
     }
 
     public static void RepeatedArea(){
-        System.out.print("You recognize this area. There isn't anything left to do here.");
+        System.out.print("You recognize this area. There isn't anything left to do here. ");
         MapMovement();
     }
 
     public static void GameOver(){
         //this is where we go after the game has ended
-        System.out.print("The game is over.");
+        System.out.print("The game is over. ");
         System.out.print("You Lose");
+        System.exit(0);
     }
 }
