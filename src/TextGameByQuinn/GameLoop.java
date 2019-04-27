@@ -326,21 +326,23 @@ public class GameLoop{
                 level = 10;
             }
             String stringyBoi2 = scannyBoi.nextLine();
-            switch(stringyBoi2){
-                case "commit sudoku" : Sudoku();
-                    break;
-                case "move forwards" : yPosition = yPosition + 1;
-                    CheckPosition();
-                    break;
-                case "move backwards" : yPosition = yPosition - 1;
-                    CheckPosition();
-                    break;
-                case "move right" : xPosition = xPosition + 1;
-                    CheckPosition();
-                    break;
-                case "move left" : xPosition = xPosition - 1;
-                    CheckPosition();
-                    break;
+            if (stringyBoi2.equals("commit sudoku")){
+                Sudoku();
+            } else if (stringyBoi2.equals("move forwards")){ 
+                yPosition = yPosition + 1;
+                CheckPosition();
+            } else if (stringyBoi2.equals("move backwards")){
+                yPosition = yPosition - 1;
+                CheckPosition();
+            } else if (stringyBoi2.equals("move right")){ 
+                xPosition = xPosition + 1;
+                CheckPosition();
+            } else if (stringyBoi2.equals("move left")){
+                xPosition = xPosition - 1;
+                CheckPosition();
+            } else {
+                System.out.print("That is not a recognized command. ");
+                MapMovement();
             }
         }
     }
@@ -355,7 +357,7 @@ public class GameLoop{
         //this will check the position of our character after moving
         //each possible position will have a different encounter
             //these encounters can be treasure, enemies, weapons, etc.
-        if (xPosition > 14 || xPosition < 1 || yPosition > 14 || yPosition < 1){
+        if ((xPosition > 14) || (xPosition < 1) || (yPosition > 14) || (yPosition < 1)){
             System.out.print("You start to move there, but are hurled back the way you came by a mysterious force. ");
             //this stops our character from leaving the map we have programmed
             if (xPosition > 14){
@@ -378,98 +380,84 @@ public class GameLoop{
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 2 : 
                     if (beenHere1x2 == false){
                         beenHere1x2 = true;
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 3 : 
                     if (beenHere1x3 == false){
                         beenHere1x3 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 4 :
                     if (beenHere1x4 == false){
                         beenHere1x4 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 5 :
                     if (beenHere1x5 == false){
                         beenHere1x5 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 6 : 
                     if (beenHere1x6 == false){
                         beenHere1x6 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 7 : 
                     if (beenHere1x7 == false){
                         beenHere1x7 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 8 : 
                     if (beenHere1x8 == false){
                         beenHere1x8 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 9 : 
                     if (beenHere1x9 == false){
                         beenHere1x9 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 10 : 
                     if (beenHere1x10 == false){
                         beenHere1x10 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 11 : 
                     if (beenHere1x11 == false){
                         beenHere1x11 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 12 : 
                     if (beenHere1x12 == false){
                         beenHere1x12 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 13 : 
                     if (beenHere1x13 == false){
                         beenHere1x13 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 14 : 
                     if (beenHere1x14 == false){
                         beenHere1x14 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
             } 
 
         } else if (xPosition == 2){
@@ -484,98 +472,84 @@ public class GameLoop{
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 2 : 
                     if (beenHere2x2 == false){
                         beenHere2x2 = true;
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 3 : 
                     if (beenHere2x3 == false){
                         beenHere2x3 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 4 :
                     if (beenHere2x4 == false){
                         beenHere2x4 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 5 :
                     if (beenHere2x5 == false){
                         beenHere2x5 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 6 : 
                     if (beenHere2x6 == false){
                         beenHere2x6 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 7 : 
                     if (beenHere2x7 == false){
                         beenHere2x7 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 8 : 
                     if (beenHere2x8 == false){
                         beenHere2x8 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 9 : 
                     if (beenHere2x9 == false){
                         beenHere2x9 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 10 : 
                     if (beenHere2x10 == false){
                         beenHere2x10 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 11 : 
                     if (beenHere2x11 == false){
                         beenHere2x11 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 12 : 
                     if (beenHere2x12 == false){
                         beenHere2x12 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 13 : 
                     if (beenHere2x13 == false){
                         beenHere2x13 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 14 : 
                     if (beenHere2x14 == false){
                         beenHere2x14 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
             }
             
         } else if (xPosition == 3){
@@ -590,98 +564,84 @@ public class GameLoop{
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 2 : 
                     if (beenHere3x2 == false){
                         beenHere3x2 = true;
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 3 : 
                     if (beenHere3x3 == false){
                         beenHere3x3 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 4 :
                     if (beenHere3x4 == false){
                         beenHere3x4 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 5 :
                     if (beenHere3x5 == false){
                         beenHere3x5 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 6 : 
                     if (beenHere3x6 == false){
                         beenHere3x6 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 7 : 
                     if (beenHere3x7 == false){
                         beenHere3x7 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 8 : 
                     if (beenHere3x8 == false){
                         beenHere3x8 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 9 : 
                     if (beenHere3x9 == false){
                         beenHere3x9 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 10 : 
                     if (beenHere3x10 == false){
                         beenHere3x10 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 11 : 
                     if (beenHere3x11 == false){
                         beenHere3x11 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 12 : 
                     if (beenHere3x12 == false){
                         beenHere3x12 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 13 : 
                     if (beenHere3x13 == false){
                         beenHere3x13 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 14 : 
                     if (beenHere3x14 == false){
                         beenHere3x14 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
             } 
         } else if (xPosition == 4){
             switch (yPosition){
@@ -695,98 +655,84 @@ public class GameLoop{
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 2 : 
                     if (beenHere4x2 == false){
                         beenHere4x2 = true;
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 3 : 
                     if (beenHere4x3 == false){
                         beenHere4x3 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 4 :
                     if (beenHere4x4 == false){
                         beenHere4x4 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 5 :
                     if (beenHere4x5 == false){
                         beenHere4x5 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 6 : 
                     if (beenHere4x6 == false){
                         beenHere4x6 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 7 : 
                     if (beenHere4x7 == false){
                         beenHere4x7 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 8 : 
                     if (beenHere4x8 == false){
                         beenHere4x8 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 9 : 
                     if (beenHere4x9 == false){
                         beenHere4x9 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 10 : 
                     if (beenHere4x10 == false){
                         beenHere4x10 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 11 : 
                     if (beenHere4x11 == false){
                         beenHere4x11 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 12 : 
                     if (beenHere4x12 == false){
                         beenHere4x12 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 13 : 
                     if (beenHere4x13 == false){
                         beenHere4x13 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 14 : 
                     if (beenHere4x14 == false){
                         beenHere4x14 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
             }
         } else if (xPosition == 5){
             switch (yPosition){
@@ -800,98 +746,84 @@ public class GameLoop{
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 2 : 
                     if (beenHere5x2 == false){
                         beenHere5x2 = true;
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 3 : 
                     if (beenHere5x3 == false){
                         beenHere5x3 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 4 :
                     if (beenHere5x4 == false){
                         beenHere5x4 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 5 :
                     if (beenHere5x5 == false){
                         beenHere5x5 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 6 : 
                     if (beenHere5x6 == false){
                         beenHere5x6 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 7 : 
                     if (beenHere5x7 == false){
                         beenHere5x7 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 8 : 
                     if (beenHere5x8 == false){
                         beenHere5x8 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 9 : 
                     if (beenHere5x9 == false){
                         beenHere5x9 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 10 : 
                     if (beenHere5x10 == false){
                         beenHere5x10 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 11 : 
                     if (beenHere5x11 == false){
                         beenHere5x11 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 12 : 
                     if (beenHere5x12 == false){
                         beenHere5x12 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 13 : 
                     if (beenHere5x13 == false){
                         beenHere5x13 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 14 : 
                     if (beenHere5x14 == false){
                         beenHere5x14 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
             }
         } else if (xPosition == 6){
             switch (yPosition){
@@ -905,98 +837,84 @@ public class GameLoop{
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 2 : 
                     if (beenHere6x2 == false){
                         beenHere6x2 = true;
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 3 : 
                     if (beenHere6x3 == false){
                         beenHere6x3 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 4 :
                     if (beenHere6x4 == false){
                         beenHere6x4 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 5 :
                     if (beenHere6x5 == false){
                         beenHere6x5 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 6 : 
                     if (beenHere6x6 == false){
                         beenHere6x6 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 7 : 
                     if (beenHere6x7 == false){
                         beenHere6x7 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 8 : 
                     if (beenHere6x8 == false){
                         beenHere6x8 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 9 : 
                     if (beenHere6x9 == false){
                         beenHere6x9 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 10 : 
                     if (beenHere6x10 == false){
                         beenHere6x10 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 11 : 
                     if (beenHere6x11 == false){
                         beenHere6x11 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 12 : 
                     if (beenHere6x12 == false){
                         beenHere6x12 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 13 : 
                     if (beenHere6x13 == false){
                         beenHere6x13 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 14 : 
                     if (beenHere6x14 == false){
                         beenHere6x14 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
             }
         } else if (xPosition == 7){
             switch (yPosition){
@@ -1005,103 +923,101 @@ public class GameLoop{
                     //this checks to see if we have already been here
                         beenHere7x1 = true;
                         //this will tell the code that we have now been here
-    
+                        MediumSlimeEncounter();
                         //this is where we put the encounter that happens in this location
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 2 : 
                     if (beenHere7x2 == false){
                         beenHere7x2 = true;
+                        SmallSlimeEncounter();
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 3 : 
                     if (beenHere7x3 == false){
                         beenHere7x3 = true;
+                        Troll1Encounter();
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 4 :
                     if (beenHere7x4 == false){
                         beenHere7x4 = true;
+                        Treasure1();
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 5 :
                     if (beenHere7x5 == false){
                         beenHere7x5 = true;
+                        Treasure2();
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 6 : 
                     if (beenHere7x6 == false){
                         beenHere7x6 = true;
+                        Treasure3();
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 7 : 
                     if (beenHere7x7 == false){
                         beenHere7x7 = true;
+                        Treasure4();
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 8 : 
                     if (beenHere7x8 == false){
                         beenHere7x8 = true;
+                        Treasure5();
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 9 : 
                     if (beenHere7x9 == false){
+                        Shop1();
                         beenHere7x9 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 10 : 
                     if (beenHere7x10 == false){
+                        Shop2();
                         beenHere7x10 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 11 : 
                     if (beenHere7x11 == false){
+                        Shop3();
                         beenHere7x11 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 12 : 
                     if (beenHere7x12 == false){
+                        Shop4();
                         beenHere7x12 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 13 : 
                     if (beenHere7x13 == false){
+                        Shop5();
                         beenHere7x13 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 14 : 
                     if (beenHere7x14 == false){
                         beenHere7x14 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
             }
         } else if (xPosition == 8){
             switch (yPosition){
@@ -1115,98 +1031,84 @@ public class GameLoop{
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 2 : 
                     if (beenHere8x2 == false){
                         beenHere8x2 = true;
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 3 : 
                     if (beenHere8x3 == false){
                         beenHere8x3 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 4 :
                     if (beenHere8x4 == false){
                         beenHere8x4 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 5 :
                     if (beenHere8x5 == false){
                         beenHere8x5 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 6 : 
                     if (beenHere8x6 == false){
                         beenHere8x6 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 7 : 
                     if (beenHere8x7 == false){
                         beenHere8x7 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 8 : 
                     if (beenHere8x8 == false){
                         beenHere8x8 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 9 : 
                     if (beenHere8x9 == false){
                         beenHere8x9 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 10 : 
                     if (beenHere8x10 == false){
                         beenHere8x10 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 11 : 
                     if (beenHere8x11 == false){
                         beenHere8x11 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 12 : 
                     if (beenHere8x12 == false){
                         beenHere8x12 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 13 : 
                     if (beenHere8x13 == false){
                         beenHere8x13 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 14 : 
                     if (beenHere8x14 == false){
                         beenHere8x14 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
             }
         } else if (xPosition == 9){
             switch (yPosition){
@@ -1220,98 +1122,84 @@ public class GameLoop{
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 2 : 
                     if (beenHere9x2 == false){
                         beenHere9x2 = true;
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 3 : 
                     if (beenHere9x3 == false){
                         beenHere9x3 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 4 :
                     if (beenHere9x4 == false){
                         beenHere9x4 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 5 :
                     if (beenHere9x5 == false){
                         beenHere9x5 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 6 : 
                     if (beenHere9x6 == false){
                         beenHere9x6 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 7 : 
                     if (beenHere9x7 == false){
                         beenHere9x7 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 8 : 
                     if (beenHere9x8 == false){
                         beenHere9x8 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 9 : 
                     if (beenHere9x9 == false){
                         beenHere9x9 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 10 : 
                     if (beenHere9x10 == false){
                         beenHere9x10 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 11 : 
                     if (beenHere9x11 == false){
                         beenHere9x11 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 12 : 
                     if (beenHere9x12 == false){
                         beenHere9x12 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 13 : 
                     if (beenHere9x13 == false){
                         beenHere9x13 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 14 : 
                     if (beenHere9x14 == false){
                         beenHere9x14 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
             }
         } else if (xPosition == 10){
             switch (yPosition){
@@ -1325,98 +1213,84 @@ public class GameLoop{
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 2 : 
                     if (beenHere10x2 == false){
                         beenHere10x2 = true;
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 3 : 
                     if (beenHere10x3 == false){
                         beenHere10x3 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 4 :
                     if (beenHere10x4 == false){
                         beenHere10x4 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 5 :
                     if (beenHere10x5 == false){
                         beenHere10x5 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 6 : 
                     if (beenHere10x6 == false){
                         beenHere10x6 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 7 : 
                     if (beenHere10x7 == false){
                         beenHere10x7 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 8 : 
                     if (beenHere10x8 == false){
                         beenHere10x8 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 9 : 
                     if (beenHere10x9 == false){
                         beenHere10x9 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 10 : 
                     if (beenHere10x10 == false){
                         beenHere10x10 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 11 : 
                     if (beenHere10x11 == false){
                         beenHere10x11 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 12 : 
                     if (beenHere10x12 == false){
                         beenHere10x12 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 13 : 
                     if (beenHere10x13 == false){
                         beenHere10x13 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 14 : 
                     if (beenHere10x14 == false){
                         beenHere10x14 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
             }
         } else if (xPosition == 11){
             switch (yPosition){
@@ -1430,98 +1304,84 @@ public class GameLoop{
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 2 : 
                     if (beenHere11x2 == false){
                         beenHere11x2 = true;
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 3 : 
                     if (beenHere11x3 == false){
                         beenHere11x3 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 4 :
                     if (beenHere11x4 == false){
                         beenHere11x4 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 5 :
                     if (beenHere11x5 == false){
                         beenHere11x5 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 6 : 
                     if (beenHere11x6 == false){
                         beenHere11x6 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 7 : 
                     if (beenHere11x7 == false){
                         beenHere11x7 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 8 : 
                     if (beenHere11x8 == false){
                         beenHere11x8 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 9 : 
                     if (beenHere11x9 == false){
                         beenHere11x9 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 10 : 
                     if (beenHere11x10 == false){
                         beenHere11x10 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 11 : 
                     if (beenHere11x11 == false){
                         beenHere11x11 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 12 : 
                     if (beenHere11x12 == false){
                         beenHere11x12 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 13 : 
                     if (beenHere11x13 == false){
                         beenHere11x13 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 14 : 
                     if (beenHere11x14 == false){
                         beenHere11x14 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
             }
         } else if (xPosition == 12){
             switch (yPosition){
@@ -1535,98 +1395,84 @@ public class GameLoop{
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 2 : 
                     if (beenHere12x2 == false){
                         beenHere12x2 = true;
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 3 : 
                     if (beenHere12x3 == false){
                         beenHere12x3 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 4 :
                     if (beenHere12x4 == false){
                         beenHere12x4 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 5 :
                     if (beenHere12x5 == false){
                         beenHere12x5 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 6 : 
                     if (beenHere12x6 == false){
                         beenHere12x6 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 7 : 
                     if (beenHere12x7 == false){
                         beenHere12x7 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 8 : 
                     if (beenHere12x8 == false){
                         beenHere12x8 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 9 : 
                     if (beenHere12x9 == false){
                         beenHere12x9 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 10 : 
                     if (beenHere12x10 == false){
                         beenHere12x10 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 11 : 
                     if (beenHere12x11 == false){
                         beenHere12x11 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 12 : 
                     if (beenHere12x12 == false){
                         beenHere12x12 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 13 : 
                     if (beenHere12x13 == false){
                         beenHere12x13 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 14 : 
                     if (beenHere12x14 == false){
                         beenHere12x14 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
             }
         } else if (xPosition == 13){
             switch (yPosition){
@@ -1640,98 +1486,84 @@ public class GameLoop{
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 2 : 
                     if (beenHere13x2 == false){
                         beenHere13x2 = true;
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 3 : 
                     if (beenHere13x3 == false){
                         beenHere13x3 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 4 :
                     if (beenHere13x4 == false){
                         beenHere13x4 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 5 :
                     if (beenHere13x5 == false){
                         beenHere13x5 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 6 : 
                     if (beenHere13x6 == false){
                         beenHere13x6 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 7 : 
                     if (beenHere13x7 == false){
                         beenHere13x7 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 8 : 
                     if (beenHere13x8 == false){
                         beenHere13x8 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 9 : 
                     if (beenHere13x9 == false){
                         beenHere13x9 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 10 : 
                     if (beenHere13x10 == false){
                         beenHere13x10 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 11 : 
                     if (beenHere13x11 == false){
                         beenHere13x11 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 12 : 
                     if (beenHere13x12 == false){
                         beenHere13x12 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 13 : 
                     if (beenHere13x13 == false){
                         beenHere13x13 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 14 : 
                     if (beenHere13x14 == false){
                         beenHere13x14 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 }
         } else if (xPosition == 14){
             switch (yPosition){
@@ -1745,98 +1577,84 @@ public class GameLoop{
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 2 : 
                     if (beenHere14x2 == false){
                         beenHere14x2 = true;
                     } else {
                         RepeatedArea();
                     };
-                    break;
                 case 3 : 
                     if (beenHere14x3 == false){
                         beenHere14x3 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 4 :
                     if (beenHere14x4 == false){
                         beenHere14x4 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 5 :
                     if (beenHere14x5 == false){
                         beenHere14x5 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 6 : 
                     if (beenHere14x6 == false){
                         beenHere14x6 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 7 : 
                     if (beenHere14x7 == false){
                         beenHere14x7 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 8 : 
                     if (beenHere14x8 == false){
                         beenHere14x8 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 9 : 
                     if (beenHere14x9 == false){
                         beenHere14x9 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 10 : 
                     if (beenHere14x10 == false){
                         beenHere14x10 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 11 : 
                     if (beenHere14x11 == false){
                         beenHere14x11 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 12 : 
                     if (beenHere14x12 == false){
                         beenHere14x12 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 13 : 
                     if (beenHere14x13 == false){
                         beenHere14x13 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 case 14 : 
                     if (beenHere14x14 == false){
                         beenHere14x14 = true;
                     } else {
                        RepeatedArea();
                     };
-                    break;
                 }
             }
         }
@@ -2255,6 +2073,7 @@ public class GameLoop{
         if (health <= 0){
             GameOver();
         }
+        AttackMediumSlime();
     }
 
     public static void DeadMediumSlime(){
