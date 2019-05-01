@@ -22,202 +22,15 @@ public class GameLoop{
         //this creates two integer values to represent our characters position on the map
         //since I have decided the map will be 14x14, I have set them to 7 to begin so our character is at the center
         //these will be editted later when we move
-        static boolean beenHere1x1 = false;
-        static boolean beenHere1x2 = false;
-        static boolean beenHere1x3 = false;
-        static boolean beenHere1x4 = false;
-        static boolean beenHere1x5 = false;
-        static boolean beenHere1x6 = false;
-        static boolean beenHere1x7 = false;
-        static boolean beenHere1x8 = false;
-        static boolean beenHere1x9 = false;
-        static boolean beenHere1x10 = false;
-        static boolean beenHere1x11 = false;
-        static boolean beenHere1x12 = false;
-        static boolean beenHere1x13 = false;
-        static boolean beenHere1x14 = false;
-        static boolean beenHere2x1 = false;
-        static boolean beenHere2x2 = false;
-        static boolean beenHere2x3 = false;
-        static boolean beenHere2x4 = false;
-        static boolean beenHere2x5 = false;
-        static boolean beenHere2x6 = false;
-        static boolean beenHere2x7 = false;
-        static boolean beenHere2x8 = false;
-        static boolean beenHere2x9 = false;
-        static boolean beenHere2x10 = false;
-        static boolean beenHere2x11 = false;
-        static boolean beenHere2x12 = false;
-        static boolean beenHere2x13 = false;
-        static boolean beenHere2x14 = false;
-        static boolean beenHere3x1 = false;
-        static boolean beenHere3x2 = false;
-        static boolean beenHere3x3 = false;
-        static boolean beenHere3x4 = false;
-        static boolean beenHere3x5 = false;
-        static boolean beenHere3x6 = false;
-        static boolean beenHere3x7 = false;
-        static boolean beenHere3x8 = false;
-        static boolean beenHere3x9 = false;
-        static boolean beenHere3x10 = false;
-        static boolean beenHere3x11 = false;
-        static boolean beenHere3x12 = false;
-        static boolean beenHere3x13 = false;
-        static boolean beenHere3x14 = false;
-        static boolean beenHere4x1 = false;
-        static boolean beenHere4x2 = false;
-        static boolean beenHere4x3 = false;
-        static boolean beenHere4x4 = false;
-        static boolean beenHere4x5 = false;
-        static boolean beenHere4x6 = false;
-        static boolean beenHere4x7 = false;
-        static boolean beenHere4x8 = false;
-        static boolean beenHere4x9 = false;
-        static boolean beenHere4x10 = false;
-        static boolean beenHere4x11 = false;
-        static boolean beenHere4x12 = false;
-        static boolean beenHere4x13 = false;
-        static boolean beenHere4x14 = false;
-        static boolean beenHere5x1 = false;
-        static boolean beenHere5x2 = false;
-        static boolean beenHere5x3 = false;
-        static boolean beenHere5x4 = false;
-        static boolean beenHere5x5 = false;
-        static boolean beenHere5x6 = false;
-        static boolean beenHere5x7 = false;
-        static boolean beenHere5x8 = false;
-        static boolean beenHere5x9 = false;
-        static boolean beenHere5x10 = false;
-        static boolean beenHere5x11 = false;
-        static boolean beenHere5x12 = false;
-        static boolean beenHere5x13 = false;
-        static boolean beenHere5x14 = false;
-        static boolean beenHere6x1 = false;
-        static boolean beenHere6x2 = false;
-        static boolean beenHere6x3 = false;
-        static boolean beenHere6x4 = false;
-        static boolean beenHere6x5 = false;
-        static boolean beenHere6x6 = false;
-        static boolean beenHere6x7 = false;
-        static boolean beenHere6x8 = false;
-        static boolean beenHere6x9 = false;
-        static boolean beenHere6x10 = false;
-        static boolean beenHere6x11 = false;
-        static boolean beenHere6x12 = false;
-        static boolean beenHere6x13 = false;
-        static boolean beenHere6x14 = false;
-        static boolean beenHere7x1 = false;
-        static boolean beenHere7x2 = false;
-        static boolean beenHere7x3 = false;
-        static boolean beenHere7x4 = false;
-        static boolean beenHere7x5 = false;
-        static boolean beenHere7x6 = false;
-        static boolean beenHere7x7 = false;
-        static boolean beenHere7x8 = false;
-        static boolean beenHere7x9 = false;
-        static boolean beenHere7x10 = false;
-        static boolean beenHere7x11 = false;
-        static boolean beenHere7x12 = false;
-        static boolean beenHere7x13 = false;
-        static boolean beenHere7x14 = false;
-        static boolean beenHere8x1 = false;
-        static boolean beenHere8x2 = false;
-        static boolean beenHere8x3 = false;
-        static boolean beenHere8x4 = false;
-        static boolean beenHere8x5 = false;
-        static boolean beenHere8x6 = false;
-        static boolean beenHere8x7 = false;
-        static boolean beenHere8x8 = false;
-        static boolean beenHere8x9 = false;
-        static boolean beenHere8x10 = false;
-        static boolean beenHere8x11 = false;
-        static boolean beenHere8x12 = false;
-        static boolean beenHere8x13 = false;
-        static boolean beenHere8x14 = false;
-        static boolean beenHere9x1 = false;
-        static boolean beenHere9x2 = false;
-        static boolean beenHere9x3 = false;
-        static boolean beenHere9x4 = false;
-        static boolean beenHere9x5 = false;
-        static boolean beenHere9x6 = false;
-        static boolean beenHere9x7 = false;
-        static boolean beenHere9x8 = false;
-        static boolean beenHere9x9 = false;
-        static boolean beenHere9x10 = false;
-        static boolean beenHere9x11 = false;
-        static boolean beenHere9x12 = false;
-        static boolean beenHere9x13 = false;
-        static boolean beenHere9x14 = false;
-        static boolean beenHere10x1 = false;
-        static boolean beenHere10x2 = false;
-        static boolean beenHere10x3 = false;
-        static boolean beenHere10x4 = false;
-        static boolean beenHere10x5 = false;
-        static boolean beenHere10x6 = false;
-        static boolean beenHere10x7 = false;
-        static boolean beenHere10x8 = false;
-        static boolean beenHere10x9 = false;
-        static boolean beenHere10x10 = false;
-        static boolean beenHere10x11 = false;
-        static boolean beenHere10x12 = false;
-        static boolean beenHere10x13 = false;
-        static boolean beenHere10x14 = false;
-        static boolean beenHere11x1 = false;
-        static boolean beenHere11x2 = false;
-        static boolean beenHere11x3 = false;
-        static boolean beenHere11x4 = false;
-        static boolean beenHere11x5 = false;
-        static boolean beenHere11x6 = false;
-        static boolean beenHere11x7 = false;
-        static boolean beenHere11x8 = false;
-        static boolean beenHere11x9 = false;
-        static boolean beenHere11x10 = false;
-        static boolean beenHere11x11 = false;
-        static boolean beenHere11x12 = false;
-        static boolean beenHere11x13 = false;
-        static boolean beenHere11x14 = false;
-        static boolean beenHere12x1 = false;
-        static boolean beenHere12x2 = false;
-        static boolean beenHere12x3 = false;
-        static boolean beenHere12x4 = false;
-        static boolean beenHere12x5 = false;
-        static boolean beenHere12x6 = false;
-        static boolean beenHere12x7 = false;
-        static boolean beenHere12x8 = false;
-        static boolean beenHere12x9 = false;
-        static boolean beenHere12x10 = false;
-        static boolean beenHere12x11 = false;
-        static boolean beenHere12x12 = false;
-        static boolean beenHere12x13 = false;
-        static boolean beenHere12x14 = false;
-        static boolean beenHere13x1 = false;
-        static boolean beenHere13x2 = false;
-        static boolean beenHere13x3 = false;
-        static boolean beenHere13x4 = false;
-        static boolean beenHere13x5 = false;
-        static boolean beenHere13x6 = false;
-        static boolean beenHere13x7 = false;
-        static boolean beenHere13x8 = false;
-        static boolean beenHere13x9 = false;
-        static boolean beenHere13x10 = false;
-        static boolean beenHere13x11 = false;
-        static boolean beenHere13x12 = false;
-        static boolean beenHere13x13 = false;
-        static boolean beenHere13x14 = false;
-        static boolean beenHere14x1 = false;
-        static boolean beenHere14x2 = false;
-        static boolean beenHere14x3 = false;
-        static boolean beenHere14x4 = false;
-        static boolean beenHere14x5 = false;
-        static boolean beenHere14x6 = false;
-        static boolean beenHere14x7 = false;
-        static boolean beenHere14x8 = false;
-        static boolean beenHere14x9 = false;
-        static boolean beenHere14x10 = false;
-        static boolean beenHere14x11 = false;
-        static boolean beenHere14x12 = false;
-        static boolean beenHere14x13 = false;
-        static boolean beenHere14x14 = false;
+
+        static boolean[][] beenHere = new boolean[15][15]; 
+        //this is an arrray
+        //this array is 2d which means it will create a grid with x and y axis of whatever values I tell it
+        //in this case those values are from 0-13 for each axis
+        //this will create a map of booleans that I can call on later when I am making my map checks
+        //you call on one by saying name[x coordinate][y coordinate]
+            // in this case we would call the 12 4 coordinate by saying beenHere[12][4]
+        
         //these set up booleans for each position so we can tell later whether or not we have been there
         static double gold = 1000000000; //TODO: this amount should be 0, I am only setting it this high for testing purposes
         //this will be the amount of gold our character has
@@ -354,26 +167,29 @@ public class GameLoop{
     }
 
     public static void CheckPosition(){
+        //System.out.print("hmmm");
         //this will check the position of our character after moving
         //each possible position will have a different encounter
             //these encounters can be treasure, enemies, weapons, etc.
         if ((xPosition > 14) || (xPosition < 1) || (yPosition > 14) || (yPosition < 1)){
             System.out.print("You start to move there, but are hurled back the way you came by a mysterious force. ");
-            //this stops our character from leaving the map we have programmed
+            MapMovement();
             if (xPosition > 14){
                 xPosition = 14;
             } else if (xPosition < 1){
                 xPosition = 1;
             } else if (yPosition > 14){
                 yPosition = 14;
-            } else if (yPosition < 1){
+            } else {
                 yPosition = 1;
+            }
+            //this stops our character from leaving the map we have programmed
         } else if (xPosition == 1){
             switch (yPosition){
                 case 1 :  
-                    if (beenHere1x1 == false){
+                    if (beenHere[1][1] == false){
                     //this checks to see if we have already been here
-                        beenHere1x1 = true;
+                        beenHere[1][1] = true;
                         //this will tell the code that we have now been here
     
                         //this is where we put the encounter that happens in this location
@@ -381,80 +197,80 @@ public class GameLoop{
                         RepeatedArea();
                     };
                 case 2 : 
-                    if (beenHere1x2 == false){
-                        beenHere1x2 = true;
+                    if (beenHere[1][2] == false){
+                        beenHere[1][2] = true;
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
-                    if (beenHere1x3 == false){
-                        beenHere1x3 = true;
+                    if (beenHere[1][3] == false){
+                        beenHere[1][3] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
-                    if (beenHere1x4 == false){
-                        beenHere1x4 = true;
+                    if (beenHere[1][4] == false){
+                        beenHere[1][4] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
-                    if (beenHere1x5 == false){
-                        beenHere1x5 = true;
+                    if (beenHere[1][5] == false){
+                        beenHere[1][5] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
-                    if (beenHere1x6 == false){
-                        beenHere1x6 = true;
+                    if (beenHere[1][6] == false){
+                        beenHere[1][6] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
-                    if (beenHere1x7 == false){
-                        beenHere1x7 = true;
+                    if (beenHere[1][7] == false){
+                        beenHere[1][7] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
-                    if (beenHere1x8 == false){
-                        beenHere1x8 = true;
+                    if (beenHere[1][8] == false){
+                        beenHere[1][8] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 9 : 
-                    if (beenHere1x9 == false){
-                        beenHere1x9 = true;
+                    if (beenHere[1][9] == false){
+                        beenHere[1][9] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
-                    if (beenHere1x10 == false){
-                        beenHere1x10 = true;
+                    if (beenHere[1][10] == false){
+                        beenHere[1][10] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
-                    if (beenHere1x11 == false){
-                        beenHere1x11 = true;
+                    if (beenHere[1][11] == false){
+                        beenHere[1][11] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
-                    if (beenHere1x12 == false){
-                        beenHere1x12 = true;
+                    if (beenHere[1][12] == false){
+                        beenHere[1][12] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
-                    if (beenHere1x13 == false){
-                        beenHere1x13 = true;
+                    if (beenHere[1][13] == false){
+                        beenHere[1][13] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 14 : 
-                    if (beenHere1x14 == false){
-                        beenHere1x14 = true;
+                    if (beenHere[1][14] == false){
+                        beenHere[1][14] = true;
                     } else {
                        RepeatedArea();
                     };
@@ -463,9 +279,9 @@ public class GameLoop{
         } else if (xPosition == 2){
             switch (yPosition){
                 case 1 :  
-                    if (beenHere2x1 == false){
+                    if (beenHere[2][1] == false){
                     //this checks to see if we have already been here
-                        beenHere2x1 = true;
+                        beenHere[2][1] = true;
                         //this will tell the code that we have now been here
     
                         //this is where we put the encounter that happens in this location
@@ -473,80 +289,80 @@ public class GameLoop{
                         RepeatedArea();
                     };
                 case 2 : 
-                    if (beenHere2x2 == false){
-                        beenHere2x2 = true;
+                    if (beenHere[2][2] == false){
+                        beenHere[2][2] = true;
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
-                    if (beenHere2x3 == false){
-                        beenHere2x3 = true;
+                    if (beenHere[2][3] == false){
+                        beenHere[2][3] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
-                    if (beenHere2x4 == false){
-                        beenHere2x4 = true;
+                    if (beenHere[2][4] == false){
+                        beenHere[2][4] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
-                    if (beenHere2x5 == false){
-                        beenHere2x5 = true;
+                    if (beenHere[2][5] == false){
+                        beenHere[2][5] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
-                    if (beenHere2x6 == false){
-                        beenHere2x6 = true;
+                    if (beenHere[2][6] == false){
+                        beenHere[2][6] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
-                    if (beenHere2x7 == false){
-                        beenHere2x7 = true;
+                    if (beenHere[2][7] == false){
+                        beenHere[2][7] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
-                    if (beenHere2x8 == false){
-                        beenHere2x8 = true;
+                    if (beenHere[2][8] == false){
+                        beenHere[2][8] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 9 : 
-                    if (beenHere2x9 == false){
-                        beenHere2x9 = true;
+                    if (beenHere[2][9] == false){
+                        beenHere[2][9] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
-                    if (beenHere2x10 == false){
-                        beenHere2x10 = true;
+                    if (beenHere[2][10] == false){
+                        beenHere[2][10] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
-                    if (beenHere2x11 == false){
-                        beenHere2x11 = true;
+                    if (beenHere[2][11] == false){
+                        beenHere[2][11] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
-                    if (beenHere2x12 == false){
-                        beenHere2x12 = true;
+                    if (beenHere[2][12] == false){
+                        beenHere[2][12] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
-                    if (beenHere2x13 == false){
-                        beenHere2x13 = true;
+                    if (beenHere[2][13] == false){
+                        beenHere[2][13] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 14 : 
-                    if (beenHere2x14 == false){
-                        beenHere2x14 = true;
+                    if (beenHere[2][14] == false){
+                        beenHere[2][14] = true;
                     } else {
                        RepeatedArea();
                     };
@@ -555,9 +371,9 @@ public class GameLoop{
         } else if (xPosition == 3){
             switch (yPosition){
                 case 1 :  
-                    if (beenHere3x1 == false){
+                    if (beenHere[3][1] == false){
                     //this checks to see if we have already been here
-                        beenHere3x1 = true;
+                        beenHere[3][1] = true;
                         //this will tell the code that we have now been here
     
                         //this is where we put the encounter that happens in this location
@@ -565,80 +381,80 @@ public class GameLoop{
                         RepeatedArea();
                     };
                 case 2 : 
-                    if (beenHere3x2 == false){
-                        beenHere3x2 = true;
+                    if (beenHere[3][2] == false){
+                        beenHere[3][2] = true;
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
-                    if (beenHere3x3 == false){
-                        beenHere3x3 = true;
+                    if (beenHere[3][3] == false){
+                        beenHere[3][3] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
-                    if (beenHere3x4 == false){
-                        beenHere3x4 = true;
+                    if (beenHere[3][4] == false){
+                        beenHere[3][4] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
-                    if (beenHere3x5 == false){
-                        beenHere3x5 = true;
+                    if (beenHere[3][5] == false){
+                        beenHere[3][5] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
-                    if (beenHere3x6 == false){
-                        beenHere3x6 = true;
+                    if (beenHere[3][6] == false){
+                        beenHere[3][6] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
-                    if (beenHere3x7 == false){
-                        beenHere3x7 = true;
+                    if (beenHere[3][7] == false){
+                        beenHere[3][7] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
-                    if (beenHere3x8 == false){
-                        beenHere3x8 = true;
+                    if (beenHere[3][8] == false){
+                        beenHere[3][8] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 9 : 
-                    if (beenHere3x9 == false){
-                        beenHere3x9 = true;
+                    if (beenHere[3][9] == false){
+                        beenHere[3][9] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
-                    if (beenHere3x10 == false){
-                        beenHere3x10 = true;
+                    if (beenHere[3][10] == false){
+                        beenHere[3][10] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
-                    if (beenHere3x11 == false){
-                        beenHere3x11 = true;
+                    if (beenHere[3][11] == false){
+                        beenHere[3][11] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
-                    if (beenHere3x12 == false){
-                        beenHere3x12 = true;
+                    if (beenHere[3][12] == false){
+                        beenHere[3][12] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
-                    if (beenHere3x13 == false){
-                        beenHere3x13 = true;
+                    if (beenHere[3][13] == false){
+                        beenHere[3][13] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 14 : 
-                    if (beenHere3x14 == false){
-                        beenHere3x14 = true;
+                    if (beenHere[3][14] == false){
+                        beenHere[3][14] = true;
                     } else {
                        RepeatedArea();
                     };
@@ -646,9 +462,9 @@ public class GameLoop{
         } else if (xPosition == 4){
             switch (yPosition){
                 case 1 :  
-                    if (beenHere4x1 == false){
+                    if (beenHere[4][1] == false){
                     //this checks to see if we have already been here
-                        beenHere4x1 = true;
+                        beenHere[4][1] = true;
                         //this will tell the code that we have now been here
     
                         //this is where we put the encounter that happens in this location
@@ -656,80 +472,80 @@ public class GameLoop{
                         RepeatedArea();
                     };
                 case 2 : 
-                    if (beenHere4x2 == false){
-                        beenHere4x2 = true;
+                    if (beenHere[4][2] == false){
+                        beenHere[4][2] = true;
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
-                    if (beenHere4x3 == false){
-                        beenHere4x3 = true;
+                    if (beenHere[4][3] == false){
+                        beenHere[4][3] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
-                    if (beenHere4x4 == false){
-                        beenHere4x4 = true;
+                    if (beenHere[4][4] == false){
+                        beenHere[4][4] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
-                    if (beenHere4x5 == false){
-                        beenHere4x5 = true;
+                    if (beenHere[4][5] == false){
+                        beenHere[4][5] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
-                    if (beenHere4x6 == false){
-                        beenHere4x6 = true;
+                    if (beenHere[4][6] == false){
+                        beenHere[4][6] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
-                    if (beenHere4x7 == false){
-                        beenHere4x7 = true;
+                    if (beenHere[4][7] == false){
+                        beenHere[4][7] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
-                    if (beenHere4x8 == false){
-                        beenHere4x8 = true;
+                    if (beenHere[4][8] == false){
+                        beenHere[4][8] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 9 : 
-                    if (beenHere4x9 == false){
-                        beenHere4x9 = true;
+                    if (beenHere[4][9] == false){
+                        beenHere[4][9] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
-                    if (beenHere4x10 == false){
-                        beenHere4x10 = true;
+                    if (beenHere[4][10] == false){
+                        beenHere[4][10] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
-                    if (beenHere4x11 == false){
-                        beenHere4x11 = true;
+                    if (beenHere[4][11] == false){
+                        beenHere[4][11] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
-                    if (beenHere4x12 == false){
-                        beenHere4x12 = true;
+                    if (beenHere[4][12] == false){
+                        beenHere[4][12] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
-                    if (beenHere4x13 == false){
-                        beenHere4x13 = true;
+                    if (beenHere[4][13] == false){
+                        beenHere[4][13] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 14 : 
-                    if (beenHere4x14 == false){
-                        beenHere4x14 = true;
+                    if (beenHere[4][14] == false){
+                        beenHere[4][14] = true;
                     } else {
                        RepeatedArea();
                     };
@@ -737,9 +553,9 @@ public class GameLoop{
         } else if (xPosition == 5){
             switch (yPosition){
                 case 1 :  
-                    if (beenHere5x1 == false){
+                    if (beenHere[5][1] == false){
                     //this checks to see if we have already been here
-                        beenHere5x1 = true;
+                        beenHere[5][1] = true;
                         //this will tell the code that we have now been here
     
                         //this is where we put the encounter that happens in this location
@@ -747,80 +563,80 @@ public class GameLoop{
                         RepeatedArea();
                     };
                 case 2 : 
-                    if (beenHere5x2 == false){
-                        beenHere5x2 = true;
+                    if (beenHere[5][2] == false){
+                        beenHere[5][2] = true;
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
-                    if (beenHere5x3 == false){
-                        beenHere5x3 = true;
+                    if (beenHere[5][3] == false){
+                        beenHere[5][3] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
-                    if (beenHere5x4 == false){
-                        beenHere5x4 = true;
+                    if (beenHere[5][4] == false){
+                        beenHere[5][4] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
-                    if (beenHere5x5 == false){
-                        beenHere5x5 = true;
+                    if (beenHere[5][5] == false){
+                        beenHere[5][5] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
-                    if (beenHere5x6 == false){
-                        beenHere5x6 = true;
+                    if (beenHere[5][6] == false){
+                        beenHere[5][6] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
-                    if (beenHere5x7 == false){
-                        beenHere5x7 = true;
+                    if (beenHere[5][7] == false){
+                        beenHere[5][7] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
-                    if (beenHere5x8 == false){
-                        beenHere5x8 = true;
+                    if (beenHere[5][8] == false){
+                        beenHere[5][8] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 9 : 
-                    if (beenHere5x9 == false){
-                        beenHere5x9 = true;
+                    if (beenHere[5][9] == false){
+                        beenHere[5][9] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
-                    if (beenHere5x10 == false){
-                        beenHere5x10 = true;
+                    if (beenHere[5][10] == false){
+                        beenHere[5][10] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
-                    if (beenHere5x11 == false){
-                        beenHere5x11 = true;
+                    if (beenHere[5][11] == false){
+                        beenHere[5][11] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
-                    if (beenHere5x12 == false){
-                        beenHere5x12 = true;
+                    if (beenHere[5][12] == false){
+                        beenHere[5][12] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
-                    if (beenHere5x13 == false){
-                        beenHere5x13 = true;
+                    if (beenHere[5][13] == false){
+                        beenHere[5][13] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 14 : 
-                    if (beenHere5x14 == false){
-                        beenHere5x14 = true;
+                    if (beenHere[5][14] == false){
+                        beenHere[5][14] = true;
                     } else {
                        RepeatedArea();
                     };
@@ -828,9 +644,9 @@ public class GameLoop{
         } else if (xPosition == 6){
             switch (yPosition){
                 case 1 :  
-                    if (beenHere6x1 == false){
+                    if (beenHere[6][1] == false){
                     //this checks to see if we have already been here
-                        beenHere6x1 = true;
+                        beenHere[6][1] = true;
                         //this will tell the code that we have now been here
     
                         //this is where we put the encounter that happens in this location
@@ -838,80 +654,80 @@ public class GameLoop{
                         RepeatedArea();
                     };
                 case 2 : 
-                    if (beenHere6x2 == false){
-                        beenHere6x2 = true;
+                    if (beenHere[6][2] == false){
+                        beenHere[6][2] = true;
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
-                    if (beenHere6x3 == false){
-                        beenHere6x3 = true;
+                    if (beenHere[6][3] == false){
+                        beenHere[6][3] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
-                    if (beenHere6x4 == false){
-                        beenHere6x4 = true;
+                    if (beenHere[6][4] == false){
+                        beenHere[6][4] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
-                    if (beenHere6x5 == false){
-                        beenHere6x5 = true;
+                    if (beenHere[6][5] == false){
+                        beenHere[6][5] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
-                    if (beenHere6x6 == false){
-                        beenHere6x6 = true;
+                    if (beenHere[6][6] == false){
+                        beenHere[6][6] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
-                    if (beenHere6x7 == false){
-                        beenHere6x7 = true;
+                    if (beenHere[6][7] == false){
+                        beenHere[6][7] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
-                    if (beenHere6x8 == false){
-                        beenHere6x8 = true;
+                    if (beenHere[6][8] == false){
+                        beenHere[6][8] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 9 : 
-                    if (beenHere6x9 == false){
-                        beenHere6x9 = true;
+                    if (beenHere[6][9] == false){
+                        beenHere[6][9] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
-                    if (beenHere6x10 == false){
-                        beenHere6x10 = true;
+                    if (beenHere[6][10] == false){
+                        beenHere[6][10] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
-                    if (beenHere6x11 == false){
-                        beenHere6x11 = true;
+                    if (beenHere[6][11] == false){
+                        beenHere[6][11] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
-                    if (beenHere6x12 == false){
-                        beenHere6x12 = true;
+                    if (beenHere[6][12] == false){
+                        beenHere[6][12] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
-                    if (beenHere6x13 == false){
-                        beenHere6x13 = true;
+                    if (beenHere[6][13] == false){
+                        beenHere[6][13] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 14 : 
-                    if (beenHere6x14 == false){
-                        beenHere6x14 = true;
+                    if (beenHere[6][14] == false){
+                        beenHere[6][14] = true;
                     } else {
                        RepeatedArea();
                     };
@@ -919,9 +735,9 @@ public class GameLoop{
         } else if (xPosition == 7){
             switch (yPosition){
                 case 1 :  
-                    if (beenHere7x1 == false){
+                    if (beenHere[7][1] == false){
                     //this checks to see if we have already been here
-                        beenHere7x1 = true;
+                        beenHere[7][1] = true;
                         //this will tell the code that we have now been here
                         MediumSlimeEncounter();
                         //this is where we put the encounter that happens in this location
@@ -929,92 +745,92 @@ public class GameLoop{
                         RepeatedArea();
                     };
                 case 2 : 
-                    if (beenHere7x2 == false){
-                        beenHere7x2 = true;
+                    if (beenHere[7][2] == false){
+                        beenHere[7][2] = true;
                         SmallSlimeEncounter();
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
-                    if (beenHere7x3 == false){
-                        beenHere7x3 = true;
+                    if (beenHere[7][3] == false){
+                        beenHere[7][3] = true;
                         Troll1Encounter();
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
-                    if (beenHere7x4 == false){
-                        beenHere7x4 = true;
+                    if (beenHere[7][4] == false){
+                        beenHere[7][4] = true;
                         Treasure1();
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
-                    if (beenHere7x5 == false){
-                        beenHere7x5 = true;
+                    if (beenHere[7][5] == false){
+                        beenHere[7][5] = true;
                         Treasure2();
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
-                    if (beenHere7x6 == false){
-                        beenHere7x6 = true;
+                    if (beenHere[7][6] == false){
+                        beenHere[7][6] = true;
                         Treasure3();
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
-                    if (beenHere7x7 == false){
-                        beenHere7x7 = true;
+                    if (beenHere[7][7] == false){
+                        beenHere[7][7] = true;
                         Treasure4();
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
-                    if (beenHere7x8 == false){
-                        beenHere7x8 = true;
+                    if (beenHere[7][8] == false){
+                        beenHere[7][8] = true;
                         Treasure5();
                     } else {
                        RepeatedArea();
                     };
                 case 9 : 
-                    if (beenHere7x9 == false){
+                    if (beenHere[7][9] == false){
                         Shop1();
-                        beenHere7x9 = true;
+                        beenHere[7][9] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
-                    if (beenHere7x10 == false){
+                    if (beenHere[7][10] == false){
                         Shop2();
-                        beenHere7x10 = true;
+                        beenHere[7][10] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
-                    if (beenHere7x11 == false){
+                    if (beenHere[7][11] == false){
                         Shop3();
-                        beenHere7x11 = true;
+                        beenHere[7][11] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
-                    if (beenHere7x12 == false){
+                    if (beenHere[7][12] == false){
                         Shop4();
-                        beenHere7x12 = true;
+                        beenHere[7][12] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
-                    if (beenHere7x13 == false){
+                    if (beenHere[7][13] == false){
                         Shop5();
-                        beenHere7x13 = true;
+                        beenHere[7][13] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 14 : 
-                    if (beenHere7x14 == false){
-                        beenHere7x14 = true;
+                    if (beenHere[7][14] == false){
+                        beenHere[7][14] = true;
                     } else {
                        RepeatedArea();
                     };
@@ -1022,9 +838,9 @@ public class GameLoop{
         } else if (xPosition == 8){
             switch (yPosition){
                 case 1 :  
-                    if (beenHere8x1 == false){
+                    if (beenHere[8][1] == false){
                     //this checks to see if we have already been here
-                        beenHere8x1 = true;
+                        beenHere[8][1] = true;
                         //this will tell the code that we have now been here
     
                         //this is where we put the encounter that happens in this location
@@ -1032,80 +848,80 @@ public class GameLoop{
                         RepeatedArea();
                     };
                 case 2 : 
-                    if (beenHere8x2 == false){
-                        beenHere8x2 = true;
+                    if (beenHere[8][2] == false){
+                        beenHere[8][2] = true;
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
-                    if (beenHere8x3 == false){
-                        beenHere8x3 = true;
+                    if (beenHere[8][3] == false){
+                        beenHere[8][3] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
-                    if (beenHere8x4 == false){
-                        beenHere8x4 = true;
+                    if (beenHere[8][4] == false){
+                        beenHere[8][4] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
-                    if (beenHere8x5 == false){
-                        beenHere8x5 = true;
+                    if (beenHere[8][5] == false){
+                        beenHere[8][5] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
-                    if (beenHere8x6 == false){
-                        beenHere8x6 = true;
+                    if (beenHere[8][6] == false){
+                        beenHere[8][6] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
-                    if (beenHere8x7 == false){
-                        beenHere8x7 = true;
+                    if (beenHere[8][7] == false){
+                        beenHere[8][7] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
-                    if (beenHere8x8 == false){
-                        beenHere8x8 = true;
+                    if (beenHere[8][8] == false){
+                        beenHere[8][8] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 9 : 
-                    if (beenHere8x9 == false){
-                        beenHere8x9 = true;
+                    if (beenHere[8][9] == false){
+                        beenHere[8][9] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
-                    if (beenHere8x10 == false){
-                        beenHere8x10 = true;
+                    if (beenHere[8][10] == false){
+                        beenHere[8][10] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
-                    if (beenHere8x11 == false){
-                        beenHere8x11 = true;
+                    if (beenHere[8][11] == false){
+                        beenHere[8][11] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
-                    if (beenHere8x12 == false){
-                        beenHere8x12 = true;
+                    if (beenHere[8][12] == false){
+                        beenHere[8][12] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
-                    if (beenHere8x13 == false){
-                        beenHere8x13 = true;
+                    if (beenHere[8][13] == false){
+                        beenHere[8][13] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 14 : 
-                    if (beenHere8x14 == false){
-                        beenHere8x14 = true;
+                    if (beenHere[8][14] == false){
+                        beenHere[8][14] = true;
                     } else {
                        RepeatedArea();
                     };
@@ -1113,9 +929,9 @@ public class GameLoop{
         } else if (xPosition == 9){
             switch (yPosition){
                 case 1 :  
-                    if (beenHere9x1 == false){
+                    if (beenHere[9][1] == false){
                     //this checks to see if we have already been here
-                        beenHere9x1 = true;
+                        beenHere[9][1] = true;
                         //this will tell the code that we have now been here
     
                         //this is where we put the encounter that happens in this location
@@ -1123,80 +939,80 @@ public class GameLoop{
                         RepeatedArea();
                     };
                 case 2 : 
-                    if (beenHere9x2 == false){
-                        beenHere9x2 = true;
+                    if (beenHere[9][2] == false){
+                        beenHere[9][2] = true;
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
-                    if (beenHere9x3 == false){
-                        beenHere9x3 = true;
+                    if (beenHere[9][3] == false){
+                        beenHere[9][3] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
-                    if (beenHere9x4 == false){
-                        beenHere9x4 = true;
+                    if (beenHere[9][4] == false){
+                        beenHere[9][4] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
-                    if (beenHere9x5 == false){
-                        beenHere9x5 = true;
+                    if (beenHere[9][5] == false){
+                        beenHere[9][5] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
-                    if (beenHere9x6 == false){
-                        beenHere9x6 = true;
+                    if (beenHere[9][6] == false){
+                        beenHere[9][6] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
-                    if (beenHere9x7 == false){
-                        beenHere9x7 = true;
+                    if (beenHere[9][7] == false){
+                        beenHere[9][7] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
-                    if (beenHere9x8 == false){
-                        beenHere9x8 = true;
+                    if (beenHere[9][8] == false){
+                        beenHere[9][8] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 9 : 
-                    if (beenHere9x9 == false){
-                        beenHere9x9 = true;
+                    if (beenHere[9][9] == false){
+                        beenHere[9][9] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
-                    if (beenHere9x10 == false){
-                        beenHere9x10 = true;
+                    if (beenHere[9][10] == false){
+                        beenHere[9][10] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
-                    if (beenHere9x11 == false){
-                        beenHere9x11 = true;
+                    if (beenHere[9][11] == false){
+                        beenHere[9][11] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
-                    if (beenHere9x12 == false){
-                        beenHere9x12 = true;
+                    if (beenHere[9][12] == false){
+                        beenHere[9][12] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
-                    if (beenHere9x13 == false){
-                        beenHere9x13 = true;
+                    if (beenHere[9][13] == false){
+                        beenHere[9][13] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 14 : 
-                    if (beenHere9x14 == false){
-                        beenHere9x14 = true;
+                    if (beenHere[9][14] == false){
+                        beenHere[9][14] = true;
                     } else {
                        RepeatedArea();
                     };
@@ -1204,9 +1020,9 @@ public class GameLoop{
         } else if (xPosition == 10){
             switch (yPosition){
                 case 1 :  
-                    if (beenHere10x1 == false){
+                    if (beenHere[10][1] == false){
                     //this checks to see if we have already been here
-                        beenHere10x1 = true;
+                        beenHere[10][1] = true;
                         //this will tell the code that we have now been here
     
                         //this is where we put the encounter that happens in this location
@@ -1214,80 +1030,80 @@ public class GameLoop{
                         RepeatedArea();
                     };
                 case 2 : 
-                    if (beenHere10x2 == false){
-                        beenHere10x2 = true;
+                    if (beenHere[10][2] == false){
+                        beenHere[10][2] = true;
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
-                    if (beenHere10x3 == false){
-                        beenHere10x3 = true;
+                    if (beenHere[10][3] == false){
+                        beenHere[10][3] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
-                    if (beenHere10x4 == false){
-                        beenHere10x4 = true;
+                    if (beenHere[10][4] == false){
+                        beenHere[10][4] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
-                    if (beenHere10x5 == false){
-                        beenHere10x5 = true;
+                    if (beenHere[10][5] == false){
+                        beenHere[10][5] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
-                    if (beenHere10x6 == false){
-                        beenHere10x6 = true;
+                    if (beenHere[10][6] == false){
+                        beenHere[10][6] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
-                    if (beenHere10x7 == false){
-                        beenHere10x7 = true;
+                    if (beenHere[10][7] == false){
+                        beenHere[10][7] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
-                    if (beenHere10x8 == false){
-                        beenHere10x8 = true;
+                    if (beenHere[10][8] == false){
+                        beenHere[10][8] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 9 : 
-                    if (beenHere10x9 == false){
-                        beenHere10x9 = true;
+                    if (beenHere[10][9] == false){
+                        beenHere[10][9] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
-                    if (beenHere10x10 == false){
-                        beenHere10x10 = true;
+                    if (beenHere[10][10] == false){
+                        beenHere[10][10] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
-                    if (beenHere10x11 == false){
-                        beenHere10x11 = true;
+                    if (beenHere[10][11] == false){
+                        beenHere[10][11] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
-                    if (beenHere10x12 == false){
-                        beenHere10x12 = true;
+                    if (beenHere[10][12] == false){
+                        beenHere[10][12] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
-                    if (beenHere10x13 == false){
-                        beenHere10x13 = true;
+                    if (beenHere[10][13] == false){
+                        beenHere[10][13] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 14 : 
-                    if (beenHere10x14 == false){
-                        beenHere10x14 = true;
+                    if (beenHere[10][14] == false){
+                        beenHere[10][14] = true;
                     } else {
                        RepeatedArea();
                     };
@@ -1295,9 +1111,9 @@ public class GameLoop{
         } else if (xPosition == 11){
             switch (yPosition){
                 case 1 :  
-                    if (beenHere11x1 == false){
+                    if (beenHere[11][1] == false){
                     //this checks to see if we have already been here
-                        beenHere11x1 = true;
+                        beenHere[11][1] = true;
                         //this will tell the code that we have now been here
     
                         //this is where we put the encounter that happens in this location
@@ -1305,80 +1121,80 @@ public class GameLoop{
                         RepeatedArea();
                     };
                 case 2 : 
-                    if (beenHere11x2 == false){
-                        beenHere11x2 = true;
+                    if (beenHere[11][2] == false){
+                        beenHere[11][2] = true;
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
-                    if (beenHere11x3 == false){
-                        beenHere11x3 = true;
+                    if (beenHere[11][3] == false){
+                        beenHere[11][3] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
-                    if (beenHere11x4 == false){
-                        beenHere11x4 = true;
+                    if (beenHere[11][4] == false){
+                        beenHere[11][4] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
-                    if (beenHere11x5 == false){
-                        beenHere11x5 = true;
+                    if (beenHere[11][5] == false){
+                        beenHere[11][5] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
-                    if (beenHere11x6 == false){
-                        beenHere11x6 = true;
+                    if (beenHere[11][6] == false){
+                        beenHere[11][6] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
-                    if (beenHere11x7 == false){
-                        beenHere11x7 = true;
+                    if (beenHere[11][7] == false){
+                        beenHere[11][7] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
-                    if (beenHere11x8 == false){
-                        beenHere11x8 = true;
+                    if (beenHere[11][8] == false){
+                        beenHere[11][8] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 9 : 
-                    if (beenHere11x9 == false){
-                        beenHere11x9 = true;
+                    if (beenHere[11][9] == false){
+                        beenHere[11][9] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
-                    if (beenHere11x10 == false){
-                        beenHere11x10 = true;
+                    if (beenHere[11][10] == false){
+                        beenHere[11][10] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
-                    if (beenHere11x11 == false){
-                        beenHere11x11 = true;
+                    if (beenHere[11][11] == false){
+                        beenHere[11][11] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
-                    if (beenHere11x12 == false){
-                        beenHere11x12 = true;
+                    if (beenHere[11][12] == false){
+                        beenHere[11][12] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
-                    if (beenHere11x13 == false){
-                        beenHere11x13 = true;
+                    if (beenHere[11][13] == false){
+                        beenHere[11][13] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 14 : 
-                    if (beenHere11x14 == false){
-                        beenHere11x14 = true;
+                    if (beenHere[11][14] == false){
+                        beenHere[11][14] = true;
                     } else {
                        RepeatedArea();
                     };
@@ -1386,9 +1202,9 @@ public class GameLoop{
         } else if (xPosition == 12){
             switch (yPosition){
                 case 1 :  
-                    if (beenHere12x1 == false){
+                    if (beenHere[12][1] == false){
                     //this checks to see if we have already been here
-                        beenHere12x1 = true;
+                        beenHere[12][1] = true;
                         //this will tell the code that we have now been here
     
                         //this is where we put the encounter that happens in this location
@@ -1396,80 +1212,80 @@ public class GameLoop{
                         RepeatedArea();
                     };
                 case 2 : 
-                    if (beenHere12x2 == false){
-                        beenHere12x2 = true;
+                    if (beenHere[12][2] == false){
+                        beenHere[12][2] = true;
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
-                    if (beenHere12x3 == false){
-                        beenHere12x3 = true;
+                    if (beenHere[12][3] == false){
+                        beenHere[12][3] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
-                    if (beenHere12x4 == false){
-                        beenHere12x4 = true;
+                    if (beenHere[12][4] == false){
+                        beenHere[12][4] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
-                    if (beenHere12x5 == false){
-                        beenHere12x5 = true;
+                    if (beenHere[12][5] == false){
+                        beenHere[12][5] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
-                    if (beenHere12x6 == false){
-                        beenHere12x6 = true;
+                    if (beenHere[12][6] == false){
+                        beenHere[12][6] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
-                    if (beenHere12x7 == false){
-                        beenHere12x7 = true;
+                    if (beenHere[12][7] == false){
+                        beenHere[12][7] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
-                    if (beenHere12x8 == false){
-                        beenHere12x8 = true;
+                    if (beenHere[12][8] == false){
+                        beenHere[12][8] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 9 : 
-                    if (beenHere12x9 == false){
-                        beenHere12x9 = true;
+                    if (beenHere[12][9] == false){
+                        beenHere[12][9] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
-                    if (beenHere12x10 == false){
-                        beenHere12x10 = true;
+                    if (beenHere[12][10] == false){
+                        beenHere[12][10] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
-                    if (beenHere12x11 == false){
-                        beenHere12x11 = true;
+                    if (beenHere[12][11] == false){
+                        beenHere[12][11] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
-                    if (beenHere12x12 == false){
-                        beenHere12x12 = true;
+                    if (beenHere[12][12] == false){
+                        beenHere[12][12] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
-                    if (beenHere12x13 == false){
-                        beenHere12x13 = true;
+                    if (beenHere[12][13] == false){
+                        beenHere[12][13] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 14 : 
-                    if (beenHere12x14 == false){
-                        beenHere12x14 = true;
+                    if (beenHere[12][14] == false){
+                        beenHere[12][14] = true;
                     } else {
                        RepeatedArea();
                     };
@@ -1477,9 +1293,9 @@ public class GameLoop{
         } else if (xPosition == 13){
             switch (yPosition){
                 case 1 :  
-                    if (beenHere13x1 == false){
+                    if (beenHere[13][1] == false){
                     //this checks to see if we have already been here
-                        beenHere13x1 = true;
+                        beenHere[13][1] = true;
                         //this will tell the code that we have now been here
     
                         //this is where we put the encounter that happens in this location
@@ -1487,80 +1303,81 @@ public class GameLoop{
                         RepeatedArea();
                     };
                 case 2 : 
-                    if (beenHere13x2 == false){
-                        beenHere13x2 = true;
+                    if (beenHere[13][2] == false){
+                        beenHere[13][2] = true;
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
-                    if (beenHere13x3 == false){
-                        beenHere13x3 = true;
+                    if (beenHere[13][3] == false){
+                        beenHere[13][3] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
-                    if (beenHere13x4 == false){
-                        beenHere13x4 = true;
+                    if (beenHere[13][4] == false){
+                        beenHere[13][4] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
-                    if (beenHere13x5 == false){
-                        beenHere13x5 = true;
+                    if (beenHere[13][5] == false){
+                        beenHere[13][5] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
-                    if (beenHere13x6 == false){
-                        beenHere13x6 = true;
+                    if (beenHere[13][6] == false){
+                        beenHere[13][6] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
-                    if (beenHere13x7 == false){
-                        beenHere13x7 = true;
+                    if (beenHere[13][7] == false){
+                        beenHere[13][7] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
-                    if (beenHere13x8 == false){
-                        beenHere13x8 = true;
+                    if (beenHere[13][8] == false){
+                        beenHere[13][8] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 9 : 
-                    if (beenHere13x9 == false){
-                        beenHere13x9 = true;
+                    if (beenHere[13][9] == false){
+                        beenHere[13][9] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
-                    if (beenHere13x10 == false){
-                        beenHere13x10 = true;
+                    if (beenHere[13][10] == false){
+                        beenHere[13][10] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
-                    if (beenHere13x11 == false){
-                        beenHere13x11 = true;
+                    if (beenHere[13][11] == false){
+                        beenHere[13][11] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
-                    if (beenHere13x12 == false){
-                        beenHere13x12 = true;
+                    if (beenHere[13][12] == false){
+                        beenHere[13][12] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
-                    if (beenHere13x13 == false){
-                        beenHere13x13 = true;
+                    if (beenHere[13][13] == false){
+                        beenHere[13][13] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 14 : 
-                    if (beenHere13x14 == false){
-                        beenHere13x14 = true;
+                    if (beenHere[13][14] == false){
+                        beenHere[13][14] = true;
+                        System.out.print("hmmm but its the second one");
                     } else {
                        RepeatedArea();
                     };
@@ -1568,9 +1385,9 @@ public class GameLoop{
         } else if (xPosition == 14){
             switch (yPosition){
                 case 1 :  
-                    if (beenHere14x1 == false){
+                    if (beenHere[14][1] == false){
                     //this checks to see if we have already been here
-                        beenHere14x1 = true;
+                        beenHere[14][1] = true;
                         //this will tell the code that we have now been here
     
                         //this is where we put the encounter that happens in this location
@@ -1578,84 +1395,85 @@ public class GameLoop{
                         RepeatedArea();
                     };
                 case 2 : 
-                    if (beenHere14x2 == false){
-                        beenHere14x2 = true;
+                    if (beenHere[14][2] == false){
+                        beenHere[14][2] = true;
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
-                    if (beenHere14x3 == false){
-                        beenHere14x3 = true;
+                    if (beenHere[14][3] == false){
+                        beenHere[14][3] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
-                    if (beenHere14x4 == false){
-                        beenHere14x4 = true;
+                    if (beenHere[14][4] == false){
+                        beenHere[14][4] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
-                    if (beenHere14x5 == false){
-                        beenHere14x5 = true;
+                    if (beenHere[14][5] == false){
+                        beenHere[14][5] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
-                    if (beenHere14x6 == false){
-                        beenHere14x6 = true;
+                    if (beenHere[14][6] == false){
+                        beenHere[14][6] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
-                    if (beenHere14x7 == false){
-                        beenHere14x7 = true;
+                    if (beenHere[14][7] == false){
+                        beenHere[14][7] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
-                    if (beenHere14x8 == false){
-                        beenHere14x8 = true;
+                    if (beenHere[14][8] == false){
+                        beenHere[14][8] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 9 : 
-                    if (beenHere14x9 == false){
-                        beenHere14x9 = true;
+                    if (beenHere[14][9] == false){
+                        beenHere[14][9] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
-                    if (beenHere14x10 == false){
-                        beenHere14x10 = true;
+                    if (beenHere[14][10] == false){
+                        beenHere[14][10] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
-                    if (beenHere14x11 == false){
-                        beenHere14x11 = true;
+                    if (beenHere[14][11] == false){
+                        beenHere[14][11] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
-                    if (beenHere14x12 == false){
-                        beenHere14x12 = true;
+                    if (beenHere[14][12] == false){
+                        beenHere[14][12] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
-                    if (beenHere14x13 == false){
-                        beenHere14x13 = true;
+                    if (beenHere[14][13] == false){
+                        beenHere[14][13] = true;
+                        System.out.print("hmmm");
                     } else {
                        RepeatedArea();
                     };
                 case 14 : 
-                    if (beenHere14x14 == false){
-                        beenHere14x14 = true;
+                    if (beenHere[14][14] == false){
+                        beenHere[14][14] = true;
                     } else {
                        RepeatedArea();
                     };
-                }
+                
             }
         }
     }
@@ -2487,6 +2305,10 @@ public class GameLoop{
     //the items here will be cheap
     public static void Shop1(){
         System.out.print("You see a rickety building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be in relatively good condition, although they aren't very high quality. There is a sword with a price tag of 100 gold, a shield with a price tag of 100, a bow with a price tag of 75 gold, arrows with a price tag of 5 gold each, armor with a price tag of 100 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
+        MainShop1();
+    }
+
+    public static void MainShop1(){
         System.out.println("You have " + gold + " gold. ");
         String shoppyBoi1 = scannyBoi.nextLine();
         switch (shoppyBoi1) {
@@ -2502,7 +2324,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop1();
+            MainShop1();
             break;
             case "buy shield" :
             if (gold >= 100){
@@ -2516,7 +2338,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop1();
+            MainShop1();
         case "buy bow" :
             if (gold >= 75){
                 if (bow < 1){
@@ -2529,7 +2351,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop1();
+            MainShop1();
         case "buy arrows" :
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = scannyBoi.nextInt();
@@ -2541,7 +2363,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop1();
+            MainShop1();
         case "buy armor" :
             if(gold >= 100){
                 if (armor < 1){
@@ -2554,7 +2376,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop1();
+            MainShop1();
         case "buy potions" :
             System.out.print("How many would you like to buy?");
             int potionsPurchased = scannyBoi.nextInt();
@@ -2565,7 +2387,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop1();
+            MainShop1();
         case "steal sword" :
             System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
@@ -2588,12 +2410,16 @@ public class GameLoop{
             MapMovement();
         default :
             System.out.print("This is not a recognized command");
-            Shop1();
+            MainShop1();
         }
     }
 
     public static void Shop2(){
         System.out.print("You see an old building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be brand new and of decent quality. There is a sword with a price tag of 200 gold, a shield with a price tag of 200, a bow with a price tag of 150 gold, arrows with a price tag of 5 gold each, armor with a price tag of 200 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
+        MainShop2();
+    }
+
+    public static void MainShop2(){
         System.out.println("You have " + gold + " gold. ");
         String shoppyBoi2 = scannyBoi.nextLine();
         switch (shoppyBoi2) {
@@ -2609,7 +2435,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop2();
+            MainShop2();
         case "buy shield" :
             if (gold >= 200){
                 if (shield < 2){
@@ -2622,7 +2448,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop2();
+            MainShop2();
         case "buy bow" :
             if (gold >= 150){
                 if (bow < 2){
@@ -2635,7 +2461,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop2();
+            MainShop2();
         case "buy arrows" :
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = scannyBoi.nextInt();
@@ -2647,7 +2473,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop2();
+            MainShop2();
         case "buy armor" :
             if(gold >= 200){
                 if (armor < 2){
@@ -2660,7 +2486,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop2();
+            MainShop2();
         case "buy potions" :
             System.out.print("How many would you like to buy?");
             int potionsPurchased = scannyBoi.nextInt();
@@ -2671,7 +2497,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop2();
+            MainShop2();
         case "steal sword" :
             System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
@@ -2694,12 +2520,15 @@ public class GameLoop{
             MapMovement();
         default :
             System.out.print("This is not a recognized command");
-            Shop2();
+            MainShop2();
         }
     }
 
     public static void Shop3(){
         System.out.print("You see a building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items seem to be good quality and in perfect condition. There is a sword with a price tag of 400 gold, a shield with a price tag of 400, a bow with a price tag of 300 gold, arrows with a price tag of 5 gold each, armor with a price tag of 400 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
+        MainShop3();
+    }
+    public static void MainShop3(){
         System.out.println("You have " + gold + " gold. ");
         String shoppyBoi3 = scannyBoi.nextLine();
         switch (shoppyBoi3) {
@@ -2715,7 +2544,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop3();
+            MainShop3();
         case "buy shield" :
             if (gold >= 400){
                 if (shield < 3){
@@ -2728,7 +2557,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop3();
+            MainShop3();
         case "buy bow" :
             if (gold >= 300){
                 if (bow < 3){
@@ -2741,7 +2570,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop3();
+            MainShop3();
         case "buy arrows" :
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = scannyBoi.nextInt();
@@ -2753,7 +2582,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop3();
+            MainShop3();
         case "buy armor" :
             if(gold >= 400){
                 if (armor < 3){
@@ -2766,7 +2595,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop3();
+            MainShop3();
         case "buy potions" :
             System.out.print("How many would you like to buy?");
             int potionsPurchased = scannyBoi.nextInt();
@@ -2777,7 +2606,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop3();
+            MainShop3();
         case "steal sword" :
             System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
@@ -2800,12 +2629,16 @@ public class GameLoop{
             MapMovement();
         default :
             System.out.print("This is not a recognized command");
-            Shop3();
+            MainShop3();
         }
     }
 
     public static void Shop4(){
         System.out.print("You see a nice building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items seem to be amazing quality and in mint condition. There is a sword with a price tag of 800 gold, a shield with a price tag of 800, a bow with a price tag of 600 gold, arrows with a price tag of 5 gold each, armor with a price tag of 800 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
+        MainShop4();
+    }
+
+    public static void MainShop4(){
         System.out.println("You have " + gold + " gold. ");
         String shoppyBoi4 = scannyBoi.nextLine();
         switch (shoppyBoi4){
@@ -2821,7 +2654,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop4();
+            MainShop4();
         case "buy shield" :
             if (gold >= 800){
                 if (shield < 4){
@@ -2834,7 +2667,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop4();
+            MainShop4();
         case "buy bow" :
             if (gold >= 600){
                 if (bow < 4){
@@ -2847,7 +2680,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop4();
+            MainShop4();
         case "buy arrows" :
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = scannyBoi.nextInt();
@@ -2859,7 +2692,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop4();
+            MainShop4();
         case "buy armor" :
             if(gold >= 800){
                 if (armor < 4){
@@ -2872,7 +2705,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop4();
+            MainShop4();
         case "buy potions" :
             System.out.print("How many would you like to buy?");
             int potionsPurchased = scannyBoi.nextInt();
@@ -2883,7 +2716,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop4();
+            MainShop4();
         case "steal sword" :
             System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
@@ -2906,12 +2739,16 @@ public class GameLoop{
             MapMovement();
         default :
             System.out.print("This is not a recognized command");
-            Shop4();
+            MainShop4();
         }
     }
 
     public static void Shop5(){
         System.out.print("You see a magnificent building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items are the best quality you have ever seen. You can practically feel the power radiating off of them. There is a sword with a price tag of 1800 gold, a shield with a price tag of 1800, a bow with a price tag of 1200 gold, arrows with a price tag of 5 gold each, armor with a price tag of 1800 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
+        MainShop5();
+    }
+
+    public static void MainShop5(){
         System.out.println("You have " + gold + " gold. ");
         String shoppyBoi5 = scannyBoi.nextLine();
         switch (shoppyBoi5) {
@@ -2927,7 +2764,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop5();
+            MainShop5();
         case "buy shield" :
             if (gold >= 1800){
                 if (shield < 5){
@@ -2940,7 +2777,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop5();
+            MainShop5();
         case "buy bow" :
             if (gold >= 1200){
                 if (bow < 5){
@@ -2953,7 +2790,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop5();
+            MainShop5();
         case "buy arrows" :
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = scannyBoi.nextInt();
@@ -2965,7 +2802,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop5();
+            MainShop5();
         case "buy armor" :
             if(gold >= 1800){
                 if (armor < 5){
@@ -2978,7 +2815,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop5();
+            MainShop5();
         case "buy potions" :
             System.out.print("How many would you like to buy?");
             int potionsPurchased = scannyBoi.nextInt();
@@ -2989,7 +2826,7 @@ public class GameLoop{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            Shop5();
+            MainShop5();
         case "steal sword" :
             System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameOver();
@@ -3012,7 +2849,7 @@ public class GameLoop{
             MapMovement();
         default :
             System.out.print("This is not a recognized command");
-            Shop5();
+            MainShop5();
         }
     }
 
