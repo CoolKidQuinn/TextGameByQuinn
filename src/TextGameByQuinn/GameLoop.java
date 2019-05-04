@@ -1,5 +1,6 @@
 //This is going to be where everything happens in your game
 //By gameloop it just means that this is going to be what happens every frame
+package textgamebyquinn;
 
 import java.util.Map;
 import java.util.Random;
@@ -7,16 +8,18 @@ import java.util.Scanner;
 
 //basically just a bunch of general utilies that java put into the language
 public class GameLoop{
-    //Run this by typing "javac -d bin src/TextGameByQuinn/GameLoop.java" into the terminal
+    //Run this by typing "javac -d bin src/TextGameByQuinn/*.java" into the terminal
         //"javac" will tell vscode to tell java to compile the thing we tell it to
             //compiling something turns it from java into binary so the machine can read it
         //"-d" allows us to tell vs code where the thing is and where to put it once we finish compiling it
         // "bin" is the folder that we are putting the code in once it is compiled
-        //"src/TextGameByQuinn/GameLoop.java" is where the thing is
-    //after doing that, type "java -cp C:/users/chsrobotics/git/TextGameByQuinn/bin GameLoop" into the terminal
+        //"src/TextGameByQuinn/*.java" is where the thing is
+            //*.java means we are doing all the things in java
+    //after doing that, type "java -cp C:/users/chsrobotics/git/TextGame/bin textgamebyquinn.GameLoop" into the terminal
         //"java" tells vscode we want to use java commands
         //"-cp" tells vscode to tell java that we are going give it a class path to run
-        //"C:/users/chsrobotics/git/TextGame/bin GameLoop" is where the cass path for java to run is located
+        //"C:/users/chsrobotics/git/TextGame/bin textgamebyquinn.GameLoop" is where the cass path for java to run is located
+            //textgamebyquinn.GameLoop tells us to run GameLoop from the folder textgamebyquinn
         static int xPosition = 7;
         static int yPosition = 7;
         //this creates two integer values to represent our characters position on the map
@@ -67,6 +70,8 @@ public class GameLoop{
         //"= new Scanner(System.in)" tells that scanner to get input from the place inside the parenthesis
             //in this case, we are getting it from "System.in" which is just what the keyboard is in java
     public static void main(String[] args) {
+        TestClass.TestMethod();
+        System.out.println(TestClass.TestMethod());
     //public means it's accessible by every part of the program
     //static means one of these will always exist in a program
     //void means it doesn't return anything
@@ -1513,7 +1518,7 @@ public class GameLoop{
             break;
             default :
             System.out.print("That is not a recognized command. ");
-            Treasure1();
+            Treasure2();
             break;
         }
         MapMovement();
@@ -1533,7 +1538,7 @@ public class GameLoop{
             break;
             default :
             System.out.print("That is not a recognized command. ");
-            Treasure1();
+            Treasure3();
             break;
         }
         MapMovement();
@@ -1553,7 +1558,7 @@ public class GameLoop{
             break;
             default :
             System.out.print("That is not a recognized command. ");
-            Treasure1();
+            Treasure4();
             break;
         }
         MapMovement();
@@ -1573,7 +1578,7 @@ public class GameLoop{
             break;
             default :
             System.out.print("That is not a recognized command. ");
-            Treasure1();
+            Treasure5();
             break;
         }
         MapMovement();
@@ -1595,7 +1600,7 @@ public class GameLoop{
             break;
             default :
             System.out.print("That is not a recognized command. ");
-            Treasure1();
+            TrappedTreasure();
             break;
         }
         MapMovement();
@@ -1618,24 +1623,30 @@ public class GameLoop{
                 trollHealth = trollHealth - damage;
                 System.out.print("You slash the troll with your sword. ");
             }
+            Troll1Attacks();
         case "use dagger" :
             int damage = level;
             trollHealth = trollHealth - damage;
             System.out.print("You stab the troll with your dagger. ");
+            Troll1Attacks();
         case "use bow" :
             if (bow == 0){
                 System.out.print("You don't have a bow. ");
+                AttackTroll1();
             } else if (numberOfArrows == 0) {
                 System.out.print("You don't have any arrows. ");
+                AttackTroll1();
             } else {
                 damage = bow * level * 2;
                 numberOfArrows = numberOfArrows - 1;
                 trollHealth = trollHealth - damage;
                 System.out.print("Your shoot an arrow at the troll. ");
+                Troll1Attacks();
             }
         case "use potion" :
             if (numberOfPotions == 0){
                 System.out.print("You don't have any potions. ");
+                Troll1Attacks();
             } else {
                 health = health + 25;
                 System.out.print("You drink the potion and feel reinvigorated. ");
@@ -1644,29 +1655,29 @@ public class GameLoop{
         case "use shield" :
             if (shield == 0){
                 System.out.print("You don't have a shield. ");
+                AttackTroll1();
             } else {
                 Random rand = new Random();
                 int shieldBlockTest = rand.nextInt(10);
                 int shieldStrength = shield + 3;
                 if (shieldStrength > shieldBlockTest) {
                     System.out.print("The troll tries to attack you with his club, but you block it with your shield and have an oppurtunity to counterattack. ");
+                    CritAttackTroll1();
                 } else {
                     System.out.print("You can't quite get your shield up in time. ");
+                    Troll1Attacks();
                 }
             }
         case "punch" :
             System.out.print("You punch the troll. It barely even registers the attack. ");
             trollHealth = trollHealth - 1;
+            Troll1Attacks();
         case "run" :
             System.out.print("You try to run away from the troll, but it is too fast and catches you. ");
+            Troll1Attacks();
         default :
             System.out.print("That is not a recognized command. ");
             AttackTroll1();
-        }
-        if (trollHealth <= 0) {
-            DeadTroll1();
-        } else {
-            Troll1Attacks();
         }
     }
 
@@ -1676,29 +1687,36 @@ public class GameLoop{
         case "use sword" :
             if (sword == 0){
                 System.out.print("You don't have a sword. ");
+                CritAttackTroll1();
             } else {
                 int damage = sword * level * 4;
                 trollHealth = trollHealth - damage;
                 System.out.print("You slash the troll with your sword. The troll isn't ready for the attack and it hits extra hard. ");
+                Troll1Attacks();
             }
         case "use dagger" :
             int damage = level;
             trollHealth = trollHealth - damage * 2;
             System.out.print("You stab the troll with your dagger. The troll isn't ready for the attack and it hits extra hard. ");
+            Troll1Attacks();
         case "use bow" :
             if (bow == 0){
                 System.out.print("You don't have a bow. ");
+                CritAttackTroll1();
             } else if (numberOfArrows == 0) {
                 System.out.print("You don't have any arrows. ");
+                CritAttackTroll1();
             } else {
                 damage = bow * level * 2;
                 numberOfArrows = numberOfArrows - 1;
                 trollHealth = trollHealth - damage;
                 System.out.print("Your shoot an arrow at the troll. The troll isn't ready for the attack and it hits extra hard. ");
+                Troll1Attacks();
             }
         case "use potion" :
             if (numberOfPotions == 0){
                 System.out.print("You don't have any potions. ");
+                CritAttackTroll1();
             } else {
                 health = health + 25;
                 System.out.print("You drink the potion and feel reinvigorated. ");
@@ -1706,19 +1724,17 @@ public class GameLoop{
             }
         case "use shield" :
             System.out.print("There is no point in blocking. The troll is already off guard. ");
+            CritAttackTroll1();
         case "punch" :
             System.out.print("You punch the troll. ");
             trollHealth = trollHealth - 2;
+            Troll1Attacks();
         case "run" :
             System.out.print("Even when the troll is off guard, it is still able to chase you down when you try to run. ");
+            Troll1Attacks();
         default :
             System.out.print("That is not a recognized command. ");
             CritAttackTroll1();
-        }
-        if (trollHealth <= 0) {
-            DeadTroll1();
-        } else {
-            Troll1Attacks();
         }
     }
 
