@@ -6,7 +6,7 @@ public class Shop1{
     //it has power level 1 items
     //it will be an encounter you can have multiple times
     //the items here will be cheap
-    public static void Shop1(){
+    public static void main(String[] args) {
         System.out.print("You see a rickety building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be in relatively good condition, although they aren't very high quality. There is a sword with a price tag of 100 gold, a shield with a price tag of 100, a bow with a price tag of 75 gold, arrows with a price tag of 5 gold each, armor with a price tag of 100 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
         MainShop1();
     }

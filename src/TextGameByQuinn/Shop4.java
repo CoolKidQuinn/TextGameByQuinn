@@ -1,7 +1,7 @@
 package textgamebyquinn;
 
 public class Shop4{
-    public static void Shop4(){
+    public static void main(String[] args) {
         System.out.print("You see a nice building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items seem to be amazing quality and in mint condition. There is a sword with a price tag of 800 gold, a shield with a price tag of 800, a bow with a price tag of 600 gold, arrows with a price tag of 5 gold each, armor with a price tag of 800 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
         MainShop4();
     }
