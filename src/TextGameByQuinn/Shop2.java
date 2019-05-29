@@ -1,6 +1,6 @@
 package textgamebyquinn;
 
-import textgamebyquinn.GameLoop.java;
+import textgamebyquinn.GameLoop;
 import java.util.*;
 
 public class Shop2{
@@ -10,15 +10,15 @@ public class Shop2{
     }
 
     public static void MainShop2(){
-        System.out.println("You have " + gold + " gold. ");
-        String shoppyBoi2 = scannyBoi.nextLine();
+        System.out.println("You have " + GameLoop.gold + " gold. ");
+        String shoppyBoi2 = GameLoop.scannyBoi.nextLine();
         switch (shoppyBoi2) {
         case "buy sword" :
-            if (gold >= 200){
-                if (sword < 2){
-                    gold = gold - 200;
-                    sword = 2;
-                    System.out.print("You now have a decent sword. You have " + gold + " gold left. ");
+            if (GameLoop.gold >= 200){
+                if (GameLoop.sword < 2){
+                    GameLoop.gold = GameLoop.gold - 200;
+                    GameLoop.sword = 2;
+                    System.out.print("You now have a decent sword. You have " + GameLoop.gold + " gold left. ");
                 } else {
                     System.out.print("Your current sword is already better than this. There is no need to buy it. ");
                 }
@@ -27,11 +27,11 @@ public class Shop2{
             }
             MainShop2();
         case "buy shield" :
-            if (gold >= 200){
-                if (shield < 2){
-                    gold = gold - 200;
-                    shield = 2;
-                    System.out.print("You now have a decent shield. You have " + gold + " gold left. ");
+            if (GameLoop.gold >= 200){
+                if (GameLoop.shield < 2){
+                    GameLoop.gold = GameLoop.gold - 200;
+                    GameLoop.shield = 2;
+                    System.out.print("You now have a decent shield. You have " + GameLoop.gold + " gold left. ");
                 } else {
                     System.out.print("Your current shield is already better than this. There is no need to buy it. ");
                 }
@@ -40,11 +40,11 @@ public class Shop2{
             }
             MainShop2();
         case "buy bow" :
-            if (gold >= 150){
-                if (bow < 2){
-                    gold = gold - 150;
-                    bow = 2;
-                    System.out.print("You now have a decent bow. You have " + gold + " gold left. ");
+            if (GameLoop.gold >= 150){
+                if (GameLoop.bow < 2){
+                    GameLoop.gold = GameLoop.gold - 150;
+                    GameLoop.bow = 2;
+                    System.out.print("You now have a decent bow. You have " + GameLoop.gold + " gold left. ");
                 } else {
                     System.out.print("Your current bow is already better than this. There is no need to buy it. ");
                 }
@@ -54,22 +54,22 @@ public class Shop2{
             MainShop2();
         case "buy arrows" :
             System.out.print("How many would you like to buy?");
-            int arrowsPurchased = scannyBoi.nextInt();
+            int arrowsPurchased = GameLoop.scannyBoi.nextInt();
             int goldSpentOnArrows = arrowsPurchased * 5;
-            if (gold >= goldSpentOnArrows){
-                gold = gold - goldSpentOnArrows;
-                numberOfArrows = numberOfArrows + arrowsPurchased;
-                System.out.print("You now have " + numberOfArrows + " arrows. You have " + gold + " gold left. ");
+            if (GameLoop.gold >= goldSpentOnArrows){
+                GameLoop.gold = GameLoop.gold - goldSpentOnArrows;
+                GameLoop.numberOfArrows = GameLoop.numberOfArrows + arrowsPurchased;
+                System.out.print("You now have " + GameLoop.numberOfArrows + " arrows. You have " + GameLoop.gold + " gold left. ");
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
             MainShop2();
         case "buy armor" :
-            if(gold >= 200){
-                if (armor < 2){
-                    gold = gold - 200;
-                    armor = 2;
-                    System.out.print("You now have decent armor. You have " + gold + " gold left. ");
+            if(GameLoop.gold >= 200){
+                if (GameLoop.armor < 2){
+                    GameLoop.gold = GameLoop.gold - 200;
+                    GameLoop.armor = 2;
+                    System.out.print("You now have decent armor. You have " + GameLoop.gold + " gold left. ");
                 } else {
                     System.out.print("Your current armor is already better than this. There is no need to buy it. ");
                 }
@@ -79,11 +79,11 @@ public class Shop2{
             MainShop2();
         case "buy potions" :
             System.out.print("How many would you like to buy?");
-            int potionsPurchased = scannyBoi.nextInt();
+            int potionsPurchased = GameLoop.scannyBoi.nextInt();
             int goldSpentOnPotions = potionsPurchased * 10;
-            if (gold >= goldSpentOnPotions){
-                gold = gold - goldSpentOnPotions;
-                System.out.print("You have " + gold + " gold left. ");
+            if (GameLoop.gold >= goldSpentOnPotions){
+                GameLoop.gold = GameLoop.gold - goldSpentOnPotions;
+                System.out.print("You have " + GameLoop.gold + " gold left. ");
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
@@ -107,7 +107,7 @@ public class Shop2{
             System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
         case "leave shop" :
-            MapMovement();
+            GameLoop.MapMovement();
         default :
             System.out.print("This is not a recognized command");
             MainShop2();

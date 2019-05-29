@@ -1,6 +1,6 @@
 package textgamebyquinn;
 
-import textgamebyquinn.GameLoop.java;
+import textgamebyquinn.GameLoop;
 import java.util.*;
 
 public class Shop5{
@@ -15,10 +15,10 @@ public class Shop5{
         switch (shoppyBoi5) {
         case "buy sword" :
             if (GameLoop.gold >= 1800){
-                if (sword < 5){
+                if (GameLoop.sword < 5){
                     GameLoop.gold = GameLoop.gold - 1800;
                     GameLoop.sword = 5;
-                    System.out.print("You now have a good sword. You have " + gold + " gold left. ");
+                    System.out.print("You now have a good sword. You have " + GameLoop.gold + " gold left. ");
                 } else {
                     System.out.print("Your current sword is already better than this. There is no need to buy it. ");
                 }
@@ -31,7 +31,7 @@ public class Shop5{
                 if (GameLoop.shield < 5){
                     GameLoop.gold = GameLoop.gold - 1800;
                     GameLoop.shield = 5;
-                    System.out.print("You now have a good shield. You have " + gold + " gold left. ");
+                    System.out.print("You now have a good shield. You have " + GameLoop.gold + " gold left. ");
                 } else {
                     System.out.print("Your current shield is already better than this. There is no need to buy it. ");
                 }
@@ -44,7 +44,7 @@ public class Shop5{
                 if (GameLoop.bow < 5){
                     GameLoop.gold = GameLoop.gold - 1200;
                     GameLoop.bow = 5;
-                    System.out.print("You now have a good bow. You have " + gold + " gold left. ");
+                    System.out.print("You now have a good bow. You have " + GameLoop.gold + " gold left. ");
                 } else {
                     System.out.print("Your current bow is already better than this. There is no need to buy it. ");
                 }
@@ -58,8 +58,8 @@ public class Shop5{
             int goldSpentOnArrows = arrowsPurchased * 5;
             if (GameLoop.gold >= goldSpentOnArrows){
                 GameLoop.gold = GameLoop.gold - goldSpentOnArrows;
-                numberOfArrows = numberOfArrows + arrowsPurchased;
-                System.out.print("You now have " + numberOfArrows + " arrows. You have " + GameLoop.gold + " gold left. ");
+                GameLoop.numberOfArrows = GameLoop.numberOfArrows + arrowsPurchased;
+                System.out.print("You now have " + GameLoop.numberOfArrows + " arrows. You have " + GameLoop.gold + " gold left. ");
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }

@@ -2,16 +2,16 @@
 //By gameloop it just means that this is going to be what happens every frame
 package textgamebyquinn;
 
-import textgamebyquinn.Shop1.java;
-import textgamebyquinn.Shop2.java;
-import textgamebyquinn.Shop3.java;
-import textgamebyquinn.Shop4.java;
-import textgamebyquinn.Shop5.java;
-import textgamebyquinn.TestClass.java;
+import textgamebyquinn.Shop1;
+import textgamebyquinn.Shop2;
+import textgamebyquinn.Shop3;
+import textgamebyquinn.Shop4;
+import textgamebyquinn.Shop5;
+import textgamebyquinn.TestClass;
 import java.util.*;
 
 //basically just a bunch of general utilies that java put into the language
-public static class GameLoop{
+public class GameLoop{
     //Run this by typing "javac -d bin src/TextGameByQuinn/*.java" into the terminal
         //"javac" will tell vscode to tell java to compile the thing we tell it to
             //compiling something turns it from java into binary so the machine can read it
@@ -804,35 +804,35 @@ public static class GameLoop{
                     };
                 case 9 : 
                     if (beenHere[7][9] == false){
-                        textgamebyquinn.Shop1();
+                        Shop1.MainShop1();
                         beenHere[7][9] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
                     if (beenHere[7][10] == false){
-                        textgamebyquinn.Shop2();
+                        Shop2.MainShop2();
                         beenHere[7][10] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
                     if (beenHere[7][11] == false){
-                        textgamebyquinn.Shop3();
+                        Shop3.MainShop3();
                         beenHere[7][11] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
                     if (beenHere[7][12] == false){
-                        textgamebyquinn.Shop4();
+                        Shop4.MainShop4();
                         beenHere[7][12] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
                     if (beenHere[7][13] == false){
-                        textgamebyquinn.Shop5();
+                        Shop5.MainShop5();
                         beenHere[7][13] = true;
                     } else {
                        RepeatedArea();
