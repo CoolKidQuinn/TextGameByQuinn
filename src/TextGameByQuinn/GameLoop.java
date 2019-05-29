@@ -2,6 +2,11 @@
 //By gameloop it just means that this is going to be what happens every frame
 package textgamebyquinn;
 
+import textgamebyquinn.Treasure1;
+import textgamebyquinn.Treasure2;
+import textgamebyquinn.Treasure3;
+import textgamebyquinn.Treasure4;
+import textgamebyquinn.Treasure5;
 import textgamebyquinn.Shop1;
 import textgamebyquinn.Shop2;
 import textgamebyquinn.Shop3;
@@ -39,7 +44,7 @@ public class GameLoop{
             // in this case we would call the 12 4 coordinate by saying beenHere[12][4]
         
         //these set up booleans for each position so we can tell later whether or not we have been there
-        public static int gold = 1000000000; //TODO: this amount should be 0, I am only setting it this high for testing purposes
+        public static int gold = 10000; //TODO: this amount should be 0, I am only setting it this high for testing purposes
         //this will be the amount of gold our character has
         public static int dagger = 1;
         public static int sword = 0;
@@ -770,35 +775,35 @@ public class GameLoop{
                 case 4 :
                     if (beenHere[7][4] == false){
                         beenHere[7][4] = true;
-                        Treasure1();
+                        Treasure1.Treasure();
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
                     if (beenHere[7][5] == false){
                         beenHere[7][5] = true;
-                        Treasure2();
+                        Treasure2.Treasure();
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
                     if (beenHere[7][6] == false){
                         beenHere[7][6] = true;
-                        Treasure3();
+                        Treasure3.Treasure();
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
                     if (beenHere[7][7] == false){
                         beenHere[7][7] = true;
-                        Treasure4();
+                        Treasure4.Treasure();
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
                     if (beenHere[7][8] == false){
                         beenHere[7][8] = true;
-                        Treasure5();
+                        Treasure5.Treasure();
                     } else {
                        RepeatedArea();
                     };
@@ -1488,106 +1493,6 @@ public class GameLoop{
     }
 
     //we will program our various encounters to be called on from each position here
-    public static void Treasure1(){
-        System.out.print("You see a treasure chest. ");
-        String stringyBoi3 = scannyBoi.nextLine();
-        switch (stringyBoi3){
-            case "open chest" : 
-            System.out.print("You open up the treasure chest and find 20 gold ");
-            experience = experience + 5;
-            gold = gold + 20;
-            break;
-            case "ignore chest" :
-            System.out.print("You decide to ignore the chest and continue searching. ");
-            break;
-            default :
-            System.out.print("That is not a recognized command. ");
-            Treasure1();
-            break;
-        }
-        MapMovement();
-    }
-
-    public static void Treasure2(){
-        System.out.print("You see a treasure chest. ");
-        String stringyBoi3 = scannyBoi.nextLine();
-        switch (stringyBoi3){
-            case "open chest" : 
-            System.out.print("You open up the treasure chest and find 20 gold ");
-            experience = experience + 10;
-            gold = gold + 40;
-            break;
-            case "ignore chest" :
-            System.out.print("You decide to ignore the chest and continue searching. ");
-            break;
-            default :
-            System.out.print("That is not a recognized command. ");
-            Treasure2();
-            break;
-        }
-        MapMovement();
-    }
-
-    public static void Treasure3(){
-        System.out.print("You see a treasure chest. ");
-        String stringyBoi3 = scannyBoi.nextLine();
-        switch (stringyBoi3){
-            case "open chest" : 
-            System.out.print("You open up the treasure chest and find 20 gold ");
-            experience = experience + 15;
-            gold = gold + 60;
-            break;
-            case "ignore chest" :
-            System.out.print("You decide to ignore the chest and continue searching. ");
-            break;
-            default :
-            System.out.print("That is not a recognized command. ");
-            Treasure3();
-            break;
-        }
-        MapMovement();
-    }
-
-    public static void Treasure4(){
-        System.out.print("You see a treasure chest. ");
-        String stringyBoi3 = scannyBoi.nextLine();
-        switch (stringyBoi3){
-            case "open chest" : 
-            System.out.print("You open up the treasure chest and find 20 gold ");
-            experience = experience + 20;
-            gold = gold + 80;
-            break;
-            case "ignore chest" :
-            System.out.print("You decide to ignore the chest and continue searching. ");
-            break;
-            default :
-            System.out.print("That is not a recognized command. ");
-            Treasure4();
-            break;
-        }
-        MapMovement();
-    }
-
-    public static void Treasure5(){
-        System.out.print("You see a treasure chest. ");
-        String stringyBoi3 = scannyBoi.nextLine();
-        switch (stringyBoi3){
-            case "open chest" : 
-            System.out.print("You open up the treasure chest and find 20 gold ");
-            experience = experience + 25;
-            gold = gold + 100;
-            break;
-            case "ignore chest" :
-            System.out.print("You decide to ignore the chest and continue searching. ");
-            break;
-            default :
-            System.out.print("That is not a recognized command. ");
-            Treasure5();
-            break;
-        }
-        MapMovement();
-    }
-
     public static void TrappedTreasure(){
         System.out.print("You see a treasure chest. ");
         String stringyBoi3 = scannyBoi.nextLine();
