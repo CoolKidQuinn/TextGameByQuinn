@@ -1,5 +1,8 @@
 package textgamebyquinn;
 
+import textgamebyquinn.GameLoop.java;
+import java.util.*;
+
 public class Shop2{
     public static void main(String[] args) {
         System.out.print("You see an old building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be brand new and of decent quality. There is a sword with a price tag of 200 gold, a shield with a price tag of 200, a bow with a price tag of 150 gold, arrows with a price tag of 5 gold each, armor with a price tag of 200 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
@@ -87,22 +90,22 @@ public class Shop2{
             MainShop2();
         case "steal sword" :
             System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
-            GameOver();
+            GameLoop.GameOver();
         case "steal shield" :
             System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
-            GameOver();
+            GameLoop.GameOver();
         case "steal bow" :
             System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
-            GameOver();
+            GameLoop.GameOver();
         case "steal arrows" :
             System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
-            GameOver();
+            GameLoop.GameOver();
         case "steal armor" :
             System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
-            GameOver();
+            GameLoop.GameOver();
         case "steal potions" :
             System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
-            GameOver();
+            GameLoop.GameOver();
         case "leave shop" :
             MapMovement();
         default :

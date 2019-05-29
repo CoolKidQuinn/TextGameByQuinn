@@ -2,12 +2,16 @@
 //By gameloop it just means that this is going to be what happens every frame
 package textgamebyquinn;
 
-import java.util.Map;
-import java.util.Random;
-import java.util.Scanner;
+import textgamebyquinn.Shop1.java;
+import textgamebyquinn.Shop2.java;
+import textgamebyquinn.Shop3.java;
+import textgamebyquinn.Shop4.java;
+import textgamebyquinn.Shop5.java;
+import textgamebyquinn.TestClass.java;
+import java.util.*;
 
 //basically just a bunch of general utilies that java put into the language
-public class GameLoop{
+public static class GameLoop{
     //Run this by typing "javac -d bin src/TextGameByQuinn/*.java" into the terminal
         //"javac" will tell vscode to tell java to compile the thing we tell it to
             //compiling something turns it from java into binary so the machine can read it
@@ -35,36 +39,36 @@ public class GameLoop{
             // in this case we would call the 12 4 coordinate by saying beenHere[12][4]
         
         //these set up booleans for each position so we can tell later whether or not we have been there
-        static double gold = 1000000000; //TODO: this amount should be 0, I am only setting it this high for testing purposes
+        public static int gold = 1000000000; //TODO: this amount should be 0, I am only setting it this high for testing purposes
         //this will be the amount of gold our character has
-        static int dagger = 1;
-        static int sword = 0;
-        static int shield = 0;
-        static int bow = 0;
-        static int armor = 0;
+        public static int dagger = 1;
+        public static int sword = 0;
+        public static int shield = 0;
+        public static int bow = 0;
+        public static int armor = 0;
         //these set up various items our character will be able to acquire
         //0 means our character doesn't have one
         //a higher number will indicate the the power of the item
-            //exe a sword saved as a 1 will be weak, but a sword saved as a 5 will be powerful
-            //the game will automatically equip the most powerful item a character has
-        static int numberOfArrows = 0;
-        static int numberOfPotions = 0;
+        //exe a sword saved as a 1 will be weak, but a sword saved as a 5 will be powerful
+        //the game will automatically equip the most powerful item a character has
+        public static int numberOfArrows = 0;
+        public static int numberOfPotions = 0;
         //these will determine the amount of various consumables the player possesses
-        static int experience = 0;
+        public static int experience = 0;
         //the player gains experience after each encounter
-        static int level = 1;
+        public static int level = 1;
         //once the player reaches different experience thresholds, the level will be moved up
-        static double health = 100;
+        public static double health = 100;
         //the player starts with 100 health, they can lose it and gain it back by doing various actions
 
-        static int trollHealth;
-        static int smallSlimeHealth;
-        static int mediumSlimeHealth;
-        static int largeSlimeHealth;
-        static int doubleSmallSlime1Health;
-        static int doubleSmallSlime2Health;
+        public static int trollHealth;
+        public static int smallSlimeHealth;
+        public static int mediumSlimeHealth;
+        public static int largeSlimeHealth;
+        public static int doubleSmallSlime1Health;
+        public static int doubleSmallSlime2Health;
 
-        static Scanner scannyBoi = new Scanner(System.in);
+        public static Scanner scannyBoi = new Scanner(System.in);
         //"Scanner scannyBoi" brings a scanner into existence and names it scannyBoi
             //scanners can take input from the keyboard (or other places, but for our purposes keyboards)
         //"= new Scanner(System.in)" tells that scanner to get input from the place inside the parenthesis

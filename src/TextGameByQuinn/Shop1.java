@@ -1,5 +1,8 @@
 package textgamebyquinn;
 
+import textgamebyquinn.GameLoop.java;
+import java.util.*;
+
 public class Shop1{
     //this is the first shop
     //it will be the closest to spawn
@@ -93,22 +96,22 @@ public class Shop1{
             MainShop1();
         case "steal sword" :
             System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
-            GameOver();
+            GameLoop.GameOver();
         case "steal shield" :
             System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
-            GameOver();
+            GameLoop.GameOver();
         case "steal bow" :
             System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
-            GameOver();
+            GameLoop.GameOver();
         case "steal arrows" :
             System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
-            GameOver();
+            GameLoop.GameOver();
         case "steal armor" :
             System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
-            GameOver();
+            GameLoop.GameOver();
         case "steal potions" :
             System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
-            GameOver();
+            GameLoop.GameOver();
         case "leave shop" :
             MapMovement();
         default :
