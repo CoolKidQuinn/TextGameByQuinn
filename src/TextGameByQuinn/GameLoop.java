@@ -2,6 +2,10 @@
 //By gameloop it just means that this is going to be what happens every frame
 package textgamebyquinn;
 
+import textgamebyquinn.AirElemental;
+import textgamebyquinn.EarthElemental;
+import textgamebyquinn.FireElemental;
+import textgamebyquinn.WaterElemental;
 import textgamebyquinn.Troll1;
 import textgamebyquinn.MediumSlime;
 import textgamebyquinn.SmallSlime;
@@ -190,7 +194,7 @@ public class GameLoop{
         //each possible position will have a different encounter
             //these encounters can be treasure, enemies, weapons, etc.
         if ((xPosition > 14) || (xPosition < 1) || (yPosition > 14) || (yPosition < 1)){
-            System.out.print("You start to move there, but are hurled back the way you came by a mysterious force. ");
+            System.out.print("There is a wall there. ");
             MapMovement();
             if (xPosition > 14){
                 xPosition = 14;
@@ -813,35 +817,35 @@ public class GameLoop{
                     };
                 case 9 : 
                     if (beenHere[7][9] == false){
-                        Shop1.MainShop1();
+                        Shop1.Shop();
                         beenHere[7][9] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
                     if (beenHere[7][10] == false){
-                        Shop2.MainShop2();
+                        Shop2.Shop();
                         beenHere[7][10] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
                     if (beenHere[7][11] == false){
-                        Shop3.MainShop3();
+                        Shop3.Shop();
                         beenHere[7][11] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
                     if (beenHere[7][12] == false){
-                        Shop4.MainShop4();
+                        Shop4.Shop();
                         beenHere[7][12] = true;
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
                     if (beenHere[7][13] == false){
-                        Shop5.MainShop5();
+                        Shop5.Shop();
                         beenHere[7][13] = true;
                     } else {
                        RepeatedArea();

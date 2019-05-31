@@ -4,7 +4,7 @@ import textgamebyquinn.GameLoop;
 import java.util.*;
 
 public class Shop5{
-    public static void main(String[] args) {
+    public static void Shop() {
         System.out.print("You see a magnificent building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items are the best quality you have ever seen. You can practically feel the power radiating off of them. There is a sword with a price tag of 1800 gold, a shield with a price tag of 1800, a bow with a price tag of 1200 gold, arrows with a price tag of 5 gold each, armor with a price tag of 1800 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
         MainShop5();
     }
