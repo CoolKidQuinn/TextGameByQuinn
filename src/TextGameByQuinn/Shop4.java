@@ -10,7 +10,7 @@ public class Shop4{
     }
 
     public static void MainShop4(){
-        System.out.println("You have " + GameLoop.gold + " GameLoop.gold. ");
+        System.out.println("You have " + GameLoop.gold + " gold. ");
         String shoppyBoi4 = GameLoop.scannyBoi.nextLine();
         switch (shoppyBoi4){
         case "buy sword" :
