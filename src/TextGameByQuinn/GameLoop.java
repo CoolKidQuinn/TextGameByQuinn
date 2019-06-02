@@ -42,7 +42,7 @@ public class GameLoop{
         //this creates two integer values to represent our characters position on the map
         //since I have decided the map will be 14x14, I have set them to 7 to begin so our character is at the center
         //these will be editted later when we move
-
+        
         static boolean[][] beenHere = new boolean[15][15]; 
         //this is an arrray
         //this array is 2d which means it will create a grid with x and y axis of whatever values I tell it
