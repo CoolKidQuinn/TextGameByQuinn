@@ -87,8 +87,8 @@ public class GameLoop{
         //"= new Scanner(System.in)" tells that scanner to get input from the place inside the parenthesis
             //in this case, we are getting it from "System.in" which is just what the keyboard is in java
     public static void main(String[] args) {
-        TestClass.TestMethod();
-        System.out.println(TestClass.TestMethod());
+        //TestClass.TestMethod();
+        //System.out.println(TestClass.TestMethod());
     //public means it's accessible by every part of the program
     //static means one of these will always exist in a program
     //void means it doesn't return anything

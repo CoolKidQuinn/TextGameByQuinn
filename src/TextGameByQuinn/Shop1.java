@@ -15,10 +15,11 @@ public class Shop1{
     }
 
     public static void MainShop1(){
+        System.out.print("test");
         System.out.println("You have " + GameLoop.gold + " gold. ");
         String shoppyBoi1 = GameLoop.scannyBoi.nextLine();
         switch (shoppyBoi1) {
-            case "buy sword" : 
+        case "buy sword" : 
             if (GameLoop.gold >= 100){
                 if (GameLoop.sword < 1){
                     GameLoop.gold = GameLoop.gold - 100;
@@ -32,7 +33,7 @@ public class Shop1{
             }
             MainShop1();
             break;
-            case "buy shield" :
+        case "buy shield" :
             if (GameLoop.gold >= 100){
                 if (GameLoop.shield < 1){
                     GameLoop.gold = GameLoop.gold - 100;
@@ -45,6 +46,7 @@ public class Shop1{
                 System.out.print("You do not have enough gold to buy this. ");
             }
             MainShop1();
+            break;
         case "buy bow" :
             if (GameLoop.gold >= 75){
                 if (GameLoop.bow < 1){
@@ -58,6 +60,7 @@ public class Shop1{
                 System.out.print("You do not have enough gold to buy this. ");
             }
             MainShop1();
+            break;
         case "buy arrows" :
             System.out.print("How many would you like to buy?");
             int arrowsPurchased = GameLoop.scannyBoi.nextInt();
@@ -65,11 +68,12 @@ public class Shop1{
             if (GameLoop.gold >= goldSpentOnArrows){
                 GameLoop.gold = GameLoop.gold - goldSpentOnArrows;
                 GameLoop.numberOfArrows = GameLoop.numberOfArrows + arrowsPurchased;
-                System.out.print("You now have " + GameLoop.numberOfArrows + " arrows. You have " + GameLoop.gold + " gold left. ");
+                System.out.print("You now have " + GameLoop.numberOfArrows + " arrows. ");
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
             MainShop1();
+            break;
         case "buy armor" :
             if(GameLoop.gold >= 100){
                 if (GameLoop.armor < 1){
@@ -83,6 +87,7 @@ public class Shop1{
                 System.out.print("You do not have enough gold to buy this. ");
             }
             MainShop1();
+            break;
         case "buy potions" :
             System.out.print("How many would you like to buy?");
             int potionsPurchased = GameLoop.scannyBoi.nextInt();
@@ -93,25 +98,31 @@ public class Shop1{
             } else {
                 System.out.print("You do not have enough gold to buy this. ");
             }
-            MainShop1();
+            break;
         case "steal sword" :
             System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
+            break;
         case "steal shield" :
             System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
+            break;
         case "steal bow" :
             System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
-        case "steal arrows" :
+            break;
+            case "steal arrows" :
             System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
+            break;
         case "steal armor" :
             System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
+            break;
         case "steal potions" :
             System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
+            break;
         case "leave shop" :
             GameLoop.MapMovement();
         default :
