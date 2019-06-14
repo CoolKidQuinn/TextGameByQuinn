@@ -157,7 +157,7 @@ public class Troll1{
     public static void DeadTroll1(){
         System.out.print("And with that, the troll fell over with a resounding thud. ");
         GameLoop.experience = GameLoop.experience + 30;
-        GameLoop.gold = GameLoop.gold + 750;
+        GameLoop.gold = GameLoop.gold + 75;
         System.out.println("You have gotten some gold and experience. You now have " + GameLoop.gold + " gold and " + GameLoop.experience + "experience ");
         GameLoop.MapMovement();
     }
