@@ -16,25 +16,31 @@ public class SmallSlime{
         case "use sword" :
             if (GameLoop.sword == 0){
                 System.out.print("You don't have a sword. ");
+                AttackSmallSlime();
             } else {
                 int damage = GameLoop.sword * GameLoop.level * 2;
                 GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - damage;
                 System.out.print("You slash the slime with your sword. ");
+                SmallSlimeAttack();
             }
         case "use dagger" :
             int damage = GameLoop.level;
             GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - damage;
             System.out.print("You stab the slime with your dagger. ");
+            SmallSlimeAttack();
         case "use bow" :
             if (GameLoop.bow == 0){
                 System.out.print("You don't have a bow. ");
+                AttackSmallSlime();
             } else if (GameLoop.numberOfArrows == 0) {
                 System.out.print("You don't have any arrows. ");
+                AttackSmallSlime();
             } else {
                 damage = GameLoop.bow * GameLoop.level * 2;
                 GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                 GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - damage;
                 System.out.print("Your shoot an arrow at the slime. ");
+                SmallSlimeAttack();
             }
         case "use potion" :
             if (GameLoop.numberOfPotions == 0){
@@ -52,6 +58,7 @@ public class SmallSlime{
         case "use shield" :
             if (GameLoop.shield == 0){
                 System.out.print("You don't have a shield. ");
+                AttackSmallSlime();
             } else {
                 Random rand = new Random();
                 int shieldBlockTest = rand.nextInt(10);
@@ -61,21 +68,18 @@ public class SmallSlime{
                     CritAttackSmallSlime();
                 } else {
                     System.out.print("You can't quite get your shield up in time. ");
+                    SmallSlimeAttack();
                 }
             }
         case "punch" :
             System.out.print("You punch the slime. ");
             GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - 1;
+            SmallSlimeAttack();
         case "run" :
             System.out.print("You try to run away from the slime, but it is able to leap at you and prevent your escape. ");
+            SmallSlimeAttack();
         default :
             System.out.print("That is not a recognized command. ");
-            AttackSmallSlime();
-        }
-        if (GameLoop.smallSlimeHealth <= 0) {
-            DeadSmallSlime();
-        } else {
-            SmallSlimeAttack();
             AttackSmallSlime();
         }
     }
@@ -86,25 +90,31 @@ public class SmallSlime{
         case "use sword" :
             if (GameLoop.sword == 0){
                 System.out.print("You don't have a sword. ");
+                CritAttackSmallSlime();
             } else {
                 int damage = GameLoop.sword * GameLoop.level * 4;
                 GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - damage;
                 System.out.print("You slash the slime with your sword. The slime wasn't anticipating the attack and is hit especially hard. ");
+                SmallSlimeAttack();
             }
         case "use dagger" :
             int damage = GameLoop.level * 2;
             GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - damage;
             System.out.print("You stab the slime with your dagger. The slime wasn't anticipating the attack and is hit especially hard. ");
+            SmallSlimeAttack();
         case "use bow" :
             if (GameLoop.bow == 0){
                 System.out.print("You don't have a bow. ");
+                CritAttackSmallSlime();
             } else if (GameLoop.numberOfArrows == 0) {
                 System.out.print("You don't have any arrows. ");
+                CritAttackSmallSlime();
             } else {
                 damage = GameLoop.bow * GameLoop.level * 4;
                 GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                 GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - damage;
                 System.out.print("Your shoot an arrow at the slime. The slime wasn't anticipating the attack and is hit especially hard. ");
+                SmallSlimeAttack();
             }
         case "use potion" :
             if (GameLoop.numberOfPotions == 0){
@@ -121,33 +131,34 @@ public class SmallSlime{
             CritAttackSmallSlime();
         case "use shield" :
             System.out.print("The slime is already lying helpless on the ground. ");
+            CritAttackSmallSlime();
         case "punch" :
             System.out.print("You punch the slime. ");
             GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - 2;
+            SmallSlimeAttack();
         case "run" :
             System.out.print("You are able to succesfully escape the slime. ");
+            GameLoop.MapMovement();
         default :
             System.out.print("That is not a recognized command. ");
-            AttackSmallSlime();
-        }
-        if (GameLoop.smallSlimeHealth <= 0) {
-            DeadSmallSlime();
-        } else {
-            SmallSlimeAttack();
-            AttackSmallSlime();
+            CritAttackSmallSlime();
         }
     }
 
     public static void SmallSlimeAttack(){
-        System.out.print("The small slime leaps at you. ");
-        if (GameLoop.armor == 0){
-            GameLoop.health = GameLoop.health - 4;
+        if (GameLoop.smallSlimeHealth <= 0) {
+            DeadSmallSlime();
         } else {
-            double smallSlimeDamage = 3 / GameLoop.armor;
-            GameLoop.health = GameLoop.health - smallSlimeDamage;
-        }
-        if (GameLoop.health <= 0){
-            GameLoop.GameOver();
+            System.out.print("The small slime leaps at you. ");
+            if (GameLoop.armor == 0){
+                GameLoop.health = GameLoop.health - 4;
+            } else {
+                double smallSlimeDamage = 3 / GameLoop.armor;
+                GameLoop.health = GameLoop.health - smallSlimeDamage;
+            }
+            if (GameLoop.health <= 0){
+                GameLoop.GameOver();
+            }
         }
     }
 
