@@ -84,6 +84,7 @@ public class GameLoop{
         public static int largeSlimeHealth;
         public static int doubleSmallSlime1Health;
         public static int doubleSmallSlime2Health;
+        public static int goblinHealth;
 
         public static Scanner scannyBoi = new Scanner(System.in);
         //"Scanner scannyBoi" brings a scanner into existence and names it scannyBoi
