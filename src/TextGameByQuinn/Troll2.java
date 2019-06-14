@@ -159,15 +159,19 @@ public class Troll2{
     }
 
     public static void Troll2Attacks(){
-        System.out.print("The troll swings its club at you. ");
-        if (GameLoop.armor == 0){
-            GameLoop.health = GameLoop.health - 20;
+        if (GameLoop.trollHealth <= 0){
+            DeadTroll2();
         } else {
-            double troll2Damage = 16 / GameLoop.armor;
-            GameLoop.health = GameLoop.health - troll2Damage;
-        }
-        if (GameLoop.health <= 0){
-            GameLoop.GameOver();
+            System.out.print("The troll swings its club at you. ");
+            if (GameLoop.armor == 0){
+                GameLoop.health = GameLoop.health - 20;
+            } else {
+                double troll2Damage = 16 / GameLoop.armor;
+                GameLoop.health = GameLoop.health - troll2Damage;
+            }
+            if (GameLoop.health <= 0){
+                GameLoop.GameOver();
+            }
         }
     }
 
