@@ -58,7 +58,7 @@ public class Troll1{
             } else {
                 Random rand = new Random();
                 int shieldBlockTest = rand.nextInt(10);
-                int shieldStrength = GameLoop.shield + 3;
+                int shieldStrength = GameLoop.shield + 5;
                 if (shieldStrength > shieldBlockTest) {
                     System.out.print("The troll tries to attack you with his club, but you block it with your shield and have an oppurtunity to counterattack. ");
                     CritAttackTroll1();
