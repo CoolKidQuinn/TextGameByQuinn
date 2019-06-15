@@ -7,6 +7,10 @@ import textgamebyquinn.EarthElemental;
 import textgamebyquinn.FireElemental;
 import textgamebyquinn.WaterElemental;
 import textgamebyquinn.Troll1;
+import textgamebyquinn.Troll2;
+import textgamebyquinn.Troll3;
+import textgamebyquinn.Troll4;
+import textgamebyquinn.Troll5;
 import textgamebyquinn.MediumSlime;
 import textgamebyquinn.SmallSlime;
 import textgamebyquinn.TrappedTreasure;
@@ -80,6 +84,7 @@ public class GameLoop{
         public static int largeSlimeHealth;
         public static int doubleSmallSlime1Health;
         public static int doubleSmallSlime2Health;
+        public static int goblinHealth;
 
         public static Scanner scannyBoi = new Scanner(System.in);
         //"Scanner scannyBoi" brings a scanner into existence and names it scannyBoi
@@ -87,8 +92,8 @@ public class GameLoop{
         //"= new Scanner(System.in)" tells that scanner to get input from the place inside the parenthesis
             //in this case, we are getting it from "System.in" which is just what the keyboard is in java
     public static void main(String[] args) {
-        TestClass.TestMethod();
-        System.out.println(TestClass.TestMethod());
+        //TestClass.TestMethod();
+        //System.out.println(TestClass.TestMethod());
     //public means it's accessible by every part of the program
     //static means one of these will always exist in a program
     //void means it doesn't return anything
