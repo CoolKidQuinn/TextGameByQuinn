@@ -5,7 +5,7 @@ import java.util.*;
 
 public class SmallSlime{
     public static void SmallSlimeEncounter(){
-        GameLoop.smallSlimeHealth = 5;
+        GameLoop.smallSlimeHealth = 10;
         System.out.print("A small slime appears. ");
         AttackSmallSlime();
     }
