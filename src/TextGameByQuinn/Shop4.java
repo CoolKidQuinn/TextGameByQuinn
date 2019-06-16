@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Shop4{
     public static void Shop() {
-        System.out.print("You see a nice building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items seem to be amazing quality and in mint condition. There is a sword with a price tag of 800 GameLoop.gold, a shield with a price tag of 800, a bow with a price tag of 600 GameLoop.gold, arrows with a price tag of 5 GameLoop.gold each, armor with a price tag of 800 GameLoop.gold, and mysterious potions with a price tag of 10 GameLoop.gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
+        System.out.println("You see a nice building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items seem to be amazing quality and in mint condition. There is a sword with a price tag of 800 GameLoop.gold, a shield with a price tag of 800, a bow with a price tag of 600 GameLoop.gold, arrows with a price tag of 5 GameLoop.gold each, armor with a price tag of 800 GameLoop.gold, and mysterious potions with a price tag of 10 GameLoop.gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
         MainShop4();
     }
 
@@ -18,12 +18,12 @@ public class Shop4{
                 if (GameLoop.sword < 4){
                     GameLoop.gold = GameLoop.gold - 800;
                     GameLoop.sword = 4;
-                    System.out.print("You now have an amazing sword. You have " + GameLoop.gold + " gold left. ");
+                    System.out.println("You now have an amazing sword. You have " + GameLoop.gold + " gold left. ");
                 } else {
-                    System.out.print("Your current sword is already better than this. There is no need to buy it. ");
+                    System.out.println("Your current sword is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this. ");
+                System.out.println("You do not have enough gold to buy this. ");
             }
             MainShop4();
         case "buy shield" :
@@ -31,12 +31,12 @@ public class Shop4{
                 if (GameLoop.shield < 4){
                     GameLoop.gold = GameLoop.gold - 800;
                     GameLoop.shield = 4;
-                    System.out.print("You now have an amazing shield. You have " + GameLoop.gold + " gold left. ");
+                    System.out.println("You now have an amazing shield. You have " + GameLoop.gold + " gold left. ");
                 } else {
-                    System.out.print("Your current shield is already better than this. There is no need to buy it. ");
+                    System.out.println("Your current shield is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this. ");
+                System.out.println("You do not have enough gold to buy this. ");
             }
             MainShop4();
         case "buy bow" :
@@ -44,24 +44,24 @@ public class Shop4{
                 if (GameLoop.bow < 4){
                     GameLoop.gold = GameLoop.gold - 600;
                     GameLoop.bow = 4;
-                    System.out.print("You now have an amazing bow. You have " + GameLoop.gold + " gold left. ");
+                    System.out.println("You now have an amazing bow. You have " + GameLoop.gold + " gold left. ");
                 } else {
-                    System.out.print("Your current bow is already better than this. There is no need to buy it. ");
+                    System.out.println("Your current bow is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this. ");
+                System.out.println("You do not have enough gold to buy this. ");
             }
             MainShop4();
         case "buy arrows" :
-            System.out.print("How many would you like to buy?");
+            System.out.println("How many would you like to buy?");
             int arrowsPurchased = GameLoop.scannyBoi.nextInt();
             int goldSpentOnArrows = arrowsPurchased * 5;
             if (GameLoop.gold >= goldSpentOnArrows){
                 GameLoop.gold = GameLoop.gold - goldSpentOnArrows;
                 GameLoop.numberOfArrows = GameLoop.numberOfArrows + arrowsPurchased;
-                System.out.print("You now have " + GameLoop.numberOfArrows + " arrows. You have " + GameLoop.gold + " gold left. ");
+                System.out.println("You now have " + GameLoop.numberOfArrows + " arrows. You have " + GameLoop.gold + " gold left. ");
             } else {
-                System.out.print("You do not have enough gold to buy this. ");
+                System.out.println("You do not have enough gold to buy this. ");
             }
             MainShop4();
         case "buy armor" :
@@ -69,47 +69,47 @@ public class Shop4{
                 if (GameLoop.armor < 4){
                     GameLoop.gold = GameLoop.gold - 800;
                     GameLoop.armor = 4;
-                    System.out.print("You now have amazing armor. You have " + GameLoop.gold + " gold left. ");
+                    System.out.println("You now have amazing armor. You have " + GameLoop.gold + " gold left. ");
                 } else {
-                    System.out.print("Your current armor is already better than this. There is no need to buy it. ");
+                    System.out.println("Your current armor is already better than this. There is no need to buy it. ");
                 }
             } else {
-                System.out.print("You do not have enough gold to buy this. ");
+                System.out.println("You do not have enough gold to buy this. ");
             }
             MainShop4();
         case "buy potions" :
-            System.out.print("How many would you like to buy?");
+            System.out.println("How many would you like to buy?");
             int potionsPurchased = GameLoop.scannyBoi.nextInt();
             int goldSpentOnPotions = potionsPurchased * 10;
             if (GameLoop.gold >= goldSpentOnPotions){
                 GameLoop.gold = GameLoop.gold - goldSpentOnPotions;
-                System.out.print("You have " + GameLoop.gold + " gold left. ");
+                System.out.println("You have " + GameLoop.gold + " gold left. ");
             } else {
-                System.out.print("You do not have enough gold to buy this. ");
+                System.out.println("You do not have enough gold to buy this. ");
             }
             MainShop4();
         case "steal sword" :
-            System.out.print("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
+            System.out.println("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
         case "steal shield" :
-            System.out.print("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
+            System.out.println("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
         case "steal bow" :
-            System.out.print("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
+            System.out.println("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
         case "steal arrows" :
-            System.out.print("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
+            System.out.println("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
         case "steal armor" :
-            System.out.print("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
+            System.out.println("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
         case "steal potions" :
-            System.out.print("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
+            System.out.println("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
         case "leave shop" :
             GameLoop.MapMovement();
         default :
-            System.out.print("This is not a recognized command");
+            System.out.println("This is not a recognized command");
             MainShop4();
         }
     }

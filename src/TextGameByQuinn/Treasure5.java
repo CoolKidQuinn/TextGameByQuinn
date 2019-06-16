@@ -6,19 +6,19 @@ import java.util.*;
 public class Treasure5{
     
     public static void Treasure() {
-        System.out.print("You see a treasure chest. ");
+        System.out.println("You see a treasure chest. ");
         String stringyBoi3 = GameLoop.scannyBoi.nextLine();
         switch (stringyBoi3){
             case "open chest" : 
-            System.out.print("You open up the treasure chest and find 100 gold ");
+            System.out.println("You open up the treasure chest and find 100 gold ");
             GameLoop.experience = GameLoop.experience + 25;
             GameLoop.gold = GameLoop.gold + 100;
             break;
             case "ignore chest" :
-            System.out.print("You decide to ignore the chest and continue searching. ");
+            System.out.println("You decide to ignore the chest and continue searching. ");
             break;
             default :
-            System.out.print("That is not a recognized command. ");
+            System.out.println("That is not a recognized command. ");
             Treasure();
             break;
         }

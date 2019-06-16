@@ -98,7 +98,7 @@ public class GameLoop{
     //static means one of these will always exist in a program
     //void means it doesn't return anything
     
-        //System.out.print("Type start to begin ");
+        //System.out.println("Type start to begin ");
         //This will print the thing in the parenthesis
 
         //String stringyBoi0 = scannyBoi.nextLine();
@@ -116,22 +116,22 @@ public class GameLoop{
         //we will display a different message in the game over section depending on wheather or not we have set this to true
 
        
-        System.out.print("The game has begun. ");
-        System.out.print("Choose Name. ");
+        System.out.println("The game has begun. ");
+        System.out.println("Choose Name. ");
         String stringyBoi1 = scannyBoi.nextLine();
-        System.out.print("Our tale begins one morning as you wake up alone in a large, foggy feild. You have a dagger in your hand and the only concrete memory you have is that you must find and rescue your father. ");
+        System.out.println("Our tale begins one morning as you wake up alone in a large, foggy feild. You have a dagger in your hand and the only concrete memory you have is that you must find and rescue your father. ");
 
         MapMovement();
         //this will run the method MapMovement()
 
-        //System.out.print(stringyBoi);
+        //System.out.println(stringyBoi);
             //"System.out. " is how we find our desired command
                 //"System. " tell us we are finding a command hardcoded into java
                 //"out. " tells we are going to be using a command that has to do with output
             //"print(stringyBoi)" tells us to print whatever is in the parenthesis
                 //in this case it is the stringyBoi that the user inputed earlier
         
-        //System.out.print("tictac time");
+        //System.out.println("tictac time");
     }
     
     public static void MapMovement(){
@@ -181,25 +181,25 @@ public class GameLoop{
                 xPosition = xPosition - 1;
                 CheckPosition();
             } else {
-                System.out.print("That is not a recognized command. ");
+                System.out.println("That is not a recognized command. ");
                 MapMovement();
             }
         }
     }
 
     public static void Sudoku(){
-        System.out.print("You stab yourself ");
+        System.out.println("You stab yourself ");
         GameOver();
         //this sends us to the game over screen
     }
 
     public static void CheckPosition(){
-        //System.out.print("hmmm");
+        //System.out.println("hmmm");
         //this will check the position of our character after moving
         //each possible position will have a different encounter
             //these encounters can be treasure, enemies, weapons, etc.
         if ((xPosition > 14) || (xPosition < 1) || (yPosition > 14) || (yPosition < 1)){
-            System.out.print("There is a wall there. ");
+            System.out.println("There is a wall there. ");
             MapMovement();
             if (xPosition > 14){
                 xPosition = 14;
@@ -1405,7 +1405,7 @@ public class GameLoop{
                 case 14 : 
                     if (beenHere[13][14] == false){
                         beenHere[13][14] = true;
-                        System.out.print("hmmm but its the second one");
+                        System.out.println("hmmm but its the second one");
                     } else {
                        RepeatedArea();
                     };
@@ -1491,7 +1491,7 @@ public class GameLoop{
                 case 13 : 
                     if (beenHere[14][13] == false){
                         beenHere[14][13] = true;
-                        System.out.print("hmmm");
+                        System.out.println("hmmm");
                     } else {
                        RepeatedArea();
                     };
@@ -1507,14 +1507,14 @@ public class GameLoop{
     }
 
     public static void RepeatedArea(){
-        System.out.print("You recognize this area. There isn't anything left to do here. ");
+        System.out.println("You recognize this area. There isn't anything left to do here. ");
         MapMovement();
     }
 
     public static void GameOver(){
         //this is where we go after the game has ended
-        System.out.print("The game is over. ");
-        System.out.print("You Lose");
+        System.out.println("The game is over. ");
+        System.out.println("You Lose");
         System.exit(0);
     }
 }

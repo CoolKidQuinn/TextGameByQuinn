@@ -6,7 +6,7 @@ import java.util.*;
 public class SmallSlime{
     public static void SmallSlimeEncounter(){
         GameLoop.smallSlimeHealth = 10;
-        System.out.print("A small slime appears. ");
+        System.out.println("A small slime appears. ");
         AttackSmallSlime();
     }
     
@@ -15,71 +15,71 @@ public class SmallSlime{
         switch (fightyBoi2) {
         case "use sword" :
             if (GameLoop.sword == 0){
-                System.out.print("You don't have a sword. ");
+                System.out.println("You don't have a sword. ");
                 AttackSmallSlime();
             } else {
                 int damage = GameLoop.sword * GameLoop.level * 2;
                 GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - damage;
-                System.out.print("You slash the slime with your sword. ");
+                System.out.println("You slash the slime with your sword. ");
                 SmallSlimeAttack();
             }
         case "use dagger" :
             int damage = GameLoop.level;
             GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - damage;
-            System.out.print("You stab the slime with your dagger. ");
+            System.out.println("You stab the slime with your dagger. ");
             SmallSlimeAttack();
         case "use bow" :
             if (GameLoop.bow == 0){
-                System.out.print("You don't have a bow. ");
+                System.out.println("You don't have a bow. ");
                 AttackSmallSlime();
             } else if (GameLoop.numberOfArrows == 0) {
-                System.out.print("You don't have any arrows. ");
+                System.out.println("You don't have any arrows. ");
                 AttackSmallSlime();
             } else {
                 damage = GameLoop.bow * GameLoop.level * 2;
                 GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                 GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - damage;
-                System.out.print("Your shoot an arrow at the slime. ");
+                System.out.println("Your shoot an arrow at the slime. ");
                 SmallSlimeAttack();
             }
         case "use potion" :
             if (GameLoop.numberOfPotions == 0){
-                System.out.print("You don't have any potions. ");
+                System.out.println("You don't have any potions. ");
             } else if (GameLoop.health == 100) {
-                System.out.print("You are already at full health. ");
+                System.out.println("You are already at full health. ");
             } else if (GameLoop.health >= 75) {
                 GameLoop.health = 100;
-                System.out.print("You drink the potion and feel reinvigorated. ");
+                System.out.println("You drink the potion and feel reinvigorated. ");
             } else {
                 GameLoop.health = GameLoop.health + 25;
-                System.out.print("You drink the potion and feel reinvigorated. ");
+                System.out.println("You drink the potion and feel reinvigorated. ");
             }
             AttackSmallSlime();
         case "use shield" :
             if (GameLoop.shield == 0){
-                System.out.print("You don't have a shield. ");
+                System.out.println("You don't have a shield. ");
                 AttackSmallSlime();
             } else {
                 Random rand = new Random();
                 int shieldBlockTest = rand.nextInt(10);
                 int shieldStrength = GameLoop.shield + 5;
                 if (shieldStrength > shieldBlockTest) {
-                    System.out.print("The slime tries to leap at you, but you knock it down with your shield and have an oppurtunity to counterattack. ");
+                    System.out.println("The slime tries to leap at you, but you knock it down with your shield and have an oppurtunity to counterattack. ");
                     CritAttackSmallSlime();
                 } else {
-                    System.out.print("You can't quite get your shield up in time. ");
+                    System.out.println("You can't quite get your shield up in time. ");
                     SmallSlimeAttack();
                 }
             }
         case "punch" :
-            System.out.print("You punch the slime. ");
+            System.out.println("You punch the slime. ");
             GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - 1;
             SmallSlimeAttack();
         case "run" :
-            System.out.print("You try to run away from the slime, but it is able to leap at you and prevent your escape. ");
+            System.out.println("You try to run away from the slime, but it is able to leap at you and prevent your escape. ");
             SmallSlimeAttack();
         default :
-            System.out.print("That is not a recognized command. ");
+            System.out.println("That is not a recognized command. ");
             AttackSmallSlime();
         }
     }
@@ -89,58 +89,58 @@ public class SmallSlime{
         switch (fightyBoi2) {
         case "use sword" :
             if (GameLoop.sword == 0){
-                System.out.print("You don't have a sword. ");
+                System.out.println("You don't have a sword. ");
                 CritAttackSmallSlime();
             } else {
                 int damage = GameLoop.sword * GameLoop.level * 4;
                 GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - damage;
-                System.out.print("You slash the slime with your sword. The slime wasn't anticipating the attack and is hit especially hard. ");
+                System.out.println("You slash the slime with your sword. The slime wasn't anticipating the attack and is hit especially hard. ");
                 SmallSlimeAttack();
             }
         case "use dagger" :
             int damage = GameLoop.level * 2;
             GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - damage;
-            System.out.print("You stab the slime with your dagger. The slime wasn't anticipating the attack and is hit especially hard. ");
+            System.out.println("You stab the slime with your dagger. The slime wasn't anticipating the attack and is hit especially hard. ");
             SmallSlimeAttack();
         case "use bow" :
             if (GameLoop.bow == 0){
-                System.out.print("You don't have a bow. ");
+                System.out.println("You don't have a bow. ");
                 CritAttackSmallSlime();
             } else if (GameLoop.numberOfArrows == 0) {
-                System.out.print("You don't have any arrows. ");
+                System.out.println("You don't have any arrows. ");
                 CritAttackSmallSlime();
             } else {
                 damage = GameLoop.bow * GameLoop.level * 4;
                 GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                 GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - damage;
-                System.out.print("Your shoot an arrow at the slime. The slime wasn't anticipating the attack and is hit especially hard. ");
+                System.out.println("Your shoot an arrow at the slime. The slime wasn't anticipating the attack and is hit especially hard. ");
                 SmallSlimeAttack();
             }
         case "use potion" :
             if (GameLoop.numberOfPotions == 0){
-                System.out.print("You don't have any potions. ");
+                System.out.println("You don't have any potions. ");
             } else if (GameLoop.health == 100) {
-                System.out.print("You are already at full health. ");
+                System.out.println("You are already at full health. ");
             } else if (GameLoop.health >= 75) {
                 GameLoop.health = 100;
-                System.out.print("You drink the potion and feel reinvigorated. ");
+                System.out.println("You drink the potion and feel reinvigorated. ");
             } else {
                 GameLoop.health = GameLoop.health + 25;
-                System.out.print("You drink the potion and feel reinvigorated. ");
+                System.out.println("You drink the potion and feel reinvigorated. ");
             }
             CritAttackSmallSlime();
         case "use shield" :
-            System.out.print("The slime is already lying helpless on the ground. ");
+            System.out.println("The slime is already lying helpless on the ground. ");
             CritAttackSmallSlime();
         case "punch" :
-            System.out.print("You punch the slime. ");
+            System.out.println("You punch the slime. ");
             GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - 2;
             SmallSlimeAttack();
         case "run" :
-            System.out.print("You are able to succesfully escape the slime. ");
+            System.out.println("You are able to succesfully escape the slime. ");
             GameLoop.MapMovement();
         default :
-            System.out.print("That is not a recognized command. ");
+            System.out.println("That is not a recognized command. ");
             CritAttackSmallSlime();
         }
     }
@@ -149,7 +149,7 @@ public class SmallSlime{
         if (GameLoop.smallSlimeHealth <= 0) {
             DeadSmallSlime();
         } else {
-            System.out.print("The small slime leaps at you. ");
+            System.out.println("The small slime leaps at you. ");
             if (GameLoop.armor == 0){
                 GameLoop.health = GameLoop.health - 4;
             } else {
@@ -163,7 +163,7 @@ public class SmallSlime{
     }
 
     public static void DeadSmallSlime(){
-        System.out.print("And with that, the slime bursts open and its remains dissolved into the earth. ");
+        System.out.println("And with that, the slime bursts open and its remains dissolved into the earth. ");
         GameLoop.experience = GameLoop.experience + 20;
         GameLoop.gold = GameLoop.gold + 30;
         System.out.println("You have gotten some gold and experience. You now have " + GameLoop.gold + " gold and " + GameLoop.experience + "experience ");
