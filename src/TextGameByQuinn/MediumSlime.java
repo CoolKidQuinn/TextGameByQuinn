@@ -166,8 +166,8 @@ public class MediumSlime{
 
     public static void DeadMediumSlime(){
         System.out.print("And with that, the slime bursts open and its remains scatter everywhere. Just as you think it is over, the remains begin to move together and reform into 2 smaller slimes.");
-        GameLoop.doubleSmallSlime1Health = 5;
-        GameLoop.doubleSmallSlime2Health = 5;
+        GameLoop.doubleSmallSlime1Health = 10;
+        GameLoop.doubleSmallSlime2Health = 10;
         GameLoop.gold = GameLoop.gold + 70;
         GameLoop.experience = GameLoop.experience + 40;
         AttackDoubleSmallSlime();
@@ -179,6 +179,7 @@ public class MediumSlime{
         case "use sword" :
             if (GameLoop.sword == 0){
                 System.out.print("You don't have a sword. ");
+                AttackDoubleSmallSlime();
             } else {
                 System.out.print("Would you like to attack slime 1 or slime 2? ");
                 fightyBoi2 = GameLoop.scannyBoi.nextLine();
@@ -186,10 +187,12 @@ public class MediumSlime{
                     int damage = GameLoop.sword * GameLoop.level * 2;
                     GameLoop.doubleSmallSlime1Health = GameLoop.doubleSmallSlime1Health - damage;
                     System.out.print("You slash the slime with your sword. ");
+                    DoubleSmallSlimeAttack();
                 } else if (fightyBoi2.equals("2")){
                     int damage = GameLoop.sword * GameLoop.level * 2;
                     GameLoop.doubleSmallSlime2Health = GameLoop.doubleSmallSlime2Health - damage;
                     System.out.print("You slash the slime with your sword. ");
+                    DoubleSmallSlimeAttack();
                 } else {
                     System.out.print("That is not a recognized command. ");
                     AttackDoubleSmallSlime();
@@ -202,10 +205,12 @@ public class MediumSlime{
                     int damage = GameLoop.level;
                     GameLoop.doubleSmallSlime1Health = GameLoop.doubleSmallSlime1Health - damage;
                     System.out.print("You stab the slime with your dagger. ");
+                    DoubleSmallSlimeAttack();
                 } else if (fightyBoi2.equals("2")){
                     int damage = GameLoop.level;
                     GameLoop.doubleSmallSlime2Health = GameLoop.doubleSmallSlime2Health - damage;
                     System.out.print("You stab the slime with your dagger. ");
+                    DoubleSmallSlimeAttack();
                 } else {
                     System.out.print("That is not a recognized command. ");
                     AttackDoubleSmallSlime();
@@ -213,8 +218,10 @@ public class MediumSlime{
         case "use bow" :
             if (GameLoop.bow == 0){
                 System.out.print("You don't have a bow. ");
+                AttackDoubleSmallSlime();
             } else if (GameLoop.numberOfArrows == 0) {
                 System.out.print("You don't have any arrows. ");
+                AttackDoubleSmallSlime();
             } else {
                 System.out.print("Would you like to attack slime 1 or slime 2? ");
                 fightyBoi2 = GameLoop.scannyBoi.nextLine();
@@ -223,11 +230,13 @@ public class MediumSlime{
                     GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                     GameLoop.doubleSmallSlime1Health = GameLoop.doubleSmallSlime1Health - damage;
                     System.out.print("Your shoot an arrow at the slime. ");
+                    DoubleSmallSlimeAttack();
                 } else if (fightyBoi2.equals("1")){
                     int damage = GameLoop.bow * GameLoop.level * 2;
                     GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                     GameLoop.doubleSmallSlime2Health = GameLoop.doubleSmallSlime2Health - damage;
                     System.out.print("Your shoot an arrow at the slime. ");
+                    DoubleSmallSlimeAttack();
                 } else {
                     System.out.print("That is not a recognized command. ");
                     AttackDoubleSmallSlime();
@@ -249,6 +258,7 @@ public class MediumSlime{
         case "use shield" :
             if (GameLoop.shield == 0){
                 System.out.print("You don't have a shield. ");
+                AttackDoubleSmallSlime();
             } else {
                 Random rand = new Random();
                 int shieldBlockTest = rand.nextInt(10);
@@ -258,6 +268,7 @@ public class MediumSlime{
                     CritAttackDoubleSmallSlime();
                 } else {
                     System.out.print("You can't quite get your shield up in time. ");
+                    DoubleSmallSlimeAttack();
                 }
             }
         case "punch" :
@@ -266,23 +277,20 @@ public class MediumSlime{
                 if (fightyBoi2.equals("1")){
                     System.out.print("You punch the slime. ");
                     GameLoop.doubleSmallSlime1Health = GameLoop.doubleSmallSlime1Health - 1;
+                    DoubleSmallSlimeAttack();
                 } else if (fightyBoi2.equals("2")){
                     System.out.print("You punch the slime. ");
                     GameLoop.doubleSmallSlime2Health = GameLoop.doubleSmallSlime2Health - 1;
+                    DoubleSmallSlimeAttack();
                 } else {
                     System.out.print("That is not a recognized command. ");
                     AttackDoubleSmallSlime();
                 }
         case "run" :
             System.out.print("You try to run away from the slimes, but they are able to leap at you and prevent your escape. ");
+            DoubleSmallSlimeAttack();
         default :
             System.out.print("That is not a recognized command. ");
-            AttackDoubleSmallSlime();
-        }
-        if (GameLoop.doubleSmallSlime1Health <= 0 || GameLoop.doubleSmallSlime2Health <= 0) {
-            DeadDoubleSmallSlime();
-        } else {
-            DoubleSmallSlimeAttack();
             AttackDoubleSmallSlime();
         }
     }
@@ -293,6 +301,7 @@ public class MediumSlime{
         case "use sword" :
             if (GameLoop.sword == 0){
                 System.out.print("You don't have a sword. ");
+                CritAttackDoubleSmallSlime();
             } else {
                 System.out.print("Would you like to attack slime 1 or slime 2? ");
                 fightyBoi2 = GameLoop.scannyBoi.nextLine();
@@ -300,10 +309,12 @@ public class MediumSlime{
                     int damage = GameLoop.sword * GameLoop.level * 4;
                     GameLoop.doubleSmallSlime1Health = GameLoop.doubleSmallSlime1Health - damage;
                     System.out.print("You slash the slime with your sword. ");
+                    DoubleSmallSlimeAttack();
                 } else if (fightyBoi2.equals("2")){
                     int damage = GameLoop.sword * GameLoop.level * 4;
                     GameLoop.doubleSmallSlime2Health = GameLoop.doubleSmallSlime2Health - damage;
                     System.out.print("You slash the slime with your sword. ");
+                    DoubleSmallSlimeAttack();
                 } else {
                     System.out.print("That is not a recognized command. ");
                     CritAttackDoubleSmallSlime();
@@ -316,10 +327,12 @@ public class MediumSlime{
                     int damage = GameLoop.level * 2;
                     GameLoop.doubleSmallSlime1Health = GameLoop.doubleSmallSlime1Health - damage;
                     System.out.print("You stab the slime with your dagger. ");
+                    DoubleSmallSlimeAttack();
                 } else if (fightyBoi2.equals("2")){
                     int damage = GameLoop.level * 2;
                     GameLoop.doubleSmallSlime2Health = GameLoop.doubleSmallSlime2Health - damage;
                     System.out.print("You stab the slime with your dagger. ");
+                    DoubleSmallSlimeAttack();
                 } else {
                     System.out.print("That is not a recognized command. ");
                     CritAttackDoubleSmallSlime();
@@ -327,8 +340,10 @@ public class MediumSlime{
         case "use bow" :
             if (GameLoop.bow == 0){
                 System.out.print("You don't have a bow. ");
+                CritAttackDoubleSmallSlime();
             } else if (GameLoop.numberOfArrows == 0) {
                 System.out.print("You don't have any arrows. ");
+                CritAttackDoubleSmallSlime();
             } else {
                 System.out.print("Would you like to attack slime 1 or slime 2? ");
                 fightyBoi2 = GameLoop.scannyBoi.nextLine();
@@ -337,11 +352,13 @@ public class MediumSlime{
                     GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                     GameLoop.doubleSmallSlime1Health = GameLoop.doubleSmallSlime1Health - damage;
                     System.out.print("Your shoot an arrow at the slime. ");
+                    DoubleSmallSlimeAttack();
                 } else if (fightyBoi2.equals("1")){
                     int damage = GameLoop.bow * GameLoop.level * 4;
                     GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                     GameLoop.doubleSmallSlime2Health = GameLoop.doubleSmallSlime2Health - damage;
                     System.out.print("Your shoot an arrow at the slime. ");
+                    DoubleSmallSlimeAttack();
                 } else {
                     System.out.print("That is not a recognized command. ");
                     CritAttackDoubleSmallSlime();
@@ -369,30 +386,40 @@ public class MediumSlime{
                 if (fightyBoi2.equals("1")){
                     System.out.print("You punch the slime. ");
                     GameLoop.doubleSmallSlime1Health = GameLoop.doubleSmallSlime1Health - 2;
+                    DoubleSmallSlimeAttack();
                 } else if (fightyBoi2.equals("2")){
                     System.out.print("You punch the slime. ");
                     GameLoop.doubleSmallSlime2Health = GameLoop.doubleSmallSlime2Health - 2;
+                    DoubleSmallSlimeAttack();
                 } else {
                     System.out.print("That is not a recognized command. ");
                     CritAttackDoubleSmallSlime();
                 }
         case "run" :
             System.out.print("You try to run away from the slimes, but they are able to leap at you and prevent your escape. ");
+            DoubleSmallSlimeAttack();
         default :
             System.out.print("That is not a recognized command. ");
             CritAttackDoubleSmallSlime();
         }
-        if (GameLoop.doubleSmallSlime1Health <= 0 || GameLoop.doubleSmallSlime2Health <= 0) {
-            DeadDoubleSmallSlime();
-        } else {
-            DoubleSmallSlimeAttack();
-            AttackDoubleSmallSlime();
-        }
     }
 
     public static void DoubleSmallSlimeAttack(){
-        SmallSlime.SmallSlimeAttack();
-        SmallSlime.SmallSlimeAttack();
+        if (GameLoop.doubleSmallSlime1Health <= 0 || GameLoop.doubleSmallSlime2Health <= 0) {
+            DeadDoubleSmallSlime();
+        } else {
+            System.out.print("The small slimes leap at you. ");
+            if (GameLoop.armor == 0){
+                GameLoop.health = GameLoop.health - 8;
+            } else {
+                double smallSlimeDamage = 6 / GameLoop.armor;
+                GameLoop.health = GameLoop.health - smallSlimeDamage;
+            }
+            if (GameLoop.health <= 0){
+                GameLoop.GameOver();
+            }
+            AttackDoubleSmallSlime();
+        }
     }
 
     public static void DeadDoubleSmallSlime(){
@@ -406,16 +433,12 @@ public class MediumSlime{
         if (GameLoop.health <= 0){
             GameLoop.GameOver();
         }
-        System.out.print("The other slime leaps at you. ");
-        if (GameLoop.armor == 0){
-            GameLoop.health = GameLoop.health - 4;
+        if (GameLoop.doubleSmallSlime1Health <= 0) {
+            GameLoop.smallSlimeHealth = GameLoop.doubleSmallSlime2Health;
+            SmallSlime.AttackSmallSlime();
         } else {
-            double smallSlimeDamage = 3 / GameLoop.armor;
-            GameLoop.health = GameLoop.health - smallSlimeDamage;
+            GameLoop.smallSlimeHealth = GameLoop.doubleSmallSlime1Health;
+            SmallSlime.AttackSmallSlime();
         }
-        if (GameLoop.health <= 0){
-            GameLoop.GameOver();
-        }
-        SmallSlime.AttackSmallSlime();
     }
 }
