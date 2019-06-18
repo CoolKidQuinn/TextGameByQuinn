@@ -162,13 +162,15 @@ public class Goblin3 {
         if (GameLoop.goblinHealth <= 0) {
             DeadGoblin3();
         } else {
-            System.out.println("The goblin runs up and stabs you. ");
+            System.out.println("The goblin runs up and stabs you with both knives. ");
             if (GameLoop.armor == 0) {
-                GameLoop.health = GameLoop.health - 30;
+                GameLoop.health = GameLoop.health - 20;
+                GameLoop.health = GameLoop.health - 20;
             } else {
-                double goblin3Damage = 24 / GameLoop.armor;
+                double goblin3Damage = 16 / GameLoop.armor;
                 GameLoop.health = GameLoop.health - goblin3Damage;
-            }
+                GameLoop.health = GameLoop.health - goblin3Damage;
+            } 
             if (GameLoop.health <= 0) {
                 GameLoop.GameOver();
             }
@@ -178,7 +180,7 @@ public class Goblin3 {
     public static void DeadGoblin3() {
         System.out.println("And with that, the goblin let out a high pitched shriek and fell to the ground. ");
         GameLoop.experience = GameLoop.experience + 90;
-        GameLoop.gold = GameLoop.gold + 225;
+        GameLoop.gold = GameLoop.gold + 150;
         System.out.println("You have gotten some gold and experience. You now have " + GameLoop.gold + " gold and " + GameLoop.experience + " experience. ");
         GameLoop.MapMovement();
     }

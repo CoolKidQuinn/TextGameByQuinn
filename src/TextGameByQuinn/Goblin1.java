@@ -176,9 +176,9 @@ public class Goblin1 {
     }
 
     public static void DeadGoblin1() {
-        System.out.println("And with that, the goblin let out a high pitched shriek and fell to the ground. ");
+        System.out.println("And with that, the goblin lets out a high pitched shriek and falls to the ground. ");
         GameLoop.experience = GameLoop.experience + 30;
-        GameLoop.gold = GameLoop.gold + 75;
+        GameLoop.gold = GameLoop.gold + 50;
         System.out.println("You have gotten some gold and experience. You now have " + GameLoop.gold + " gold and " + GameLoop.experience + " experience. ");
         GameLoop.MapMovement();
     }

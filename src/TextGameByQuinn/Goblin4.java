@@ -180,16 +180,40 @@ public class Goblin4 {
                     System.out.println("You don't have a sword. ");
                     CritAttackGoblin4();
                 } else {
-                    int damage = GameLoop.sword * GameLoop.level * 4;
-                    GameLoop.goblinHealth = GameLoop.goblinHealth - damage;
-                    System.out.println("You plunge your sword directly into the defenseless goblin's stomach with your sword. ");
-                    Goblin4Attacks();
+                    System.out.println("Would you like to attack goblin 1 or goblin 2. ");
+                    fightyBoi1 = GameLoop.scannyBoi.nextLine();
+                    if (fightyBoi1.equals("1")) {
+                        int damage = GameLoop.sword * GameLoop.level * 4;
+                        GameLoop.goblinHealth1 = GameLoop.goblinHealth1 - damage;
+                        System.out.println("You plunge your sword directly into the defenseless goblin's stomach with your sword. ");
+                        Goblin4Attacks();
+                    } else if (fightyBoi1.equals("2")){
+                        int damage = GameLoop.sword * GameLoop.level * 4;
+                        GameLoop.goblinHealth2 = GameLoop.goblinHealth2 - damage;
+                        System.out.println("You plunge your sword directly into the defenseless goblin's stomach with your sword. ");
+                        Goblin4Attacks();
+                    } else {
+                        System.out.println("That is not a recognized command. ");
+                        CritAttackGoblin4();
+                    }
                 }
             case "use dagger" :
-                int damage = GameLoop.level;
-                GameLoop.goblinHealth1 = GameLoop.goblinHealth1 - damage;
-                System.out.println("You stab the defenseless goblin with your dagger. ");
-                Goblin4Attacks();
+                System.out.println("Would you like to attack goblin 1 or goblin 2. ");
+                fightyBoi1 = GameLoop.scannyBoi.nextLine();
+                if (fightyBoi1.equals("1")) {
+                    int damage = GameLoop.level;
+                    GameLoop.goblinHealth1 = GameLoop.goblinHealth1 - damage;
+                    System.out.println("You stab the defenseless goblin with your dagger. ");
+                    Goblin4Attacks();
+                } else if (fightyBoi1.equals("2")) {
+                    int damage = GameLoop.level;
+                    GameLoop.goblinHealth2 = GameLoop.goblinHealth2 - damage;
+                    System.out.println("You stab the defenseless goblin with your dagger. ");
+                    Goblin4Attacks();
+                } else {
+                    System.out.println("That is not a recognized command. ");
+                    CritAttackGoblin4();
+                }
             case "use bow" :
                 if (GameLoop.bow == 0) {
                     System.out.println("You don't have a bow. ");
@@ -198,11 +222,24 @@ public class Goblin4 {
                     System.out.println("You don't have any arrows. ");
                     CritAttackGoblin4();
                 } else {
-                    damage = GameLoop.bow * GameLoop.level * 4;
-                    GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
-                        GameLoop.goblinHealth = GameLoop.goblinHealth - damage;
+                    System.out.println("Would you like to attack goblin 1 or goblin 2. ");
+                    fightyBoi1 = GameLoop.scannyBoi.nextLine();
+                    if (fightyBoi1.equals("1")) {
+                        int damage = GameLoop.bow * GameLoop.level * 4;
+                        GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
+                        GameLoop.goblinHealth1 = GameLoop.goblinHealth1 - damage;
                         System.out.println("You shoot an arrow directly at the defenseless goblin's head. ");
-                    Goblin4Attacks();
+                        Goblin4Attacks();
+                    } else if (fightyBoi1.equals("2")){
+                        int damage = GameLoop.bow * GameLoop.level * 4;
+                        GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
+                        GameLoop.goblinHealth2 = GameLoop.goblinHealth2 - damage;
+                        System.out.println("You shoot an arrow directly at the defenseless goblin's head. ");
+                        Goblin4Attacks();
+                    } else {
+                        System.out.println("That is not a recognize command. ");
+                        CritAttackGoblin4();
+                    }
                 }
             case "use potion" :
                 if (GameLoop.numberOfPotions == 0){
@@ -214,11 +251,22 @@ public class Goblin4 {
                     CritAttackGoblin4();
                 }
             case "use shield" :
-                System.out.println("The goblin is already defenseless. ");
+                System.out.println("The goblins are already defenseless. ");
             case "punch" :
-                System.out.println("You punch the goblin. ");
-                GameLoop.goblinHealth = GameLoop.goblinHealth - 2;
-                Goblin4Attacks();
+                System.out.println("Would you like to attack goblin 1 or goblin 2. ");
+                fightyBoi1 = GameLoop.scannyBoi.nextLine();
+                if (fightyBoi1.equals("1")) {
+                    System.out.println("You punch the goblin. ");
+                    GameLoop.goblinHealth1 = GameLoop.goblinHealth1 - 2;
+                    Goblin4Attacks();
+                } else if (fightyBoi1.equals("2")) {
+                    System.out.println("You punch the goblin. ");
+                    GameLoop.goblinHealth2 = GameLoop.goblinHealth2 - 2;
+                    Goblin4Attacks();
+                } else {
+                    System.out.println("That is not a recognized command. ");
+                    CritAttackGoblin4();
+                }
             case "run" :
                 System.out.println("You try to run away, but the goblin gets up and is able to chase you down. ");
                 Goblin4Attacks();
@@ -229,14 +277,18 @@ public class Goblin4 {
     }
 
     public static void Goblin4Attacks() {
-        if (GameLoop.goblinHealth <= 0) {
+        if (GameLoop.goblinHealth1 <= 0) {
+            DeadGoblin4();
+        } else if (GameLoop.goblinHealth2 <= 0) {
             DeadGoblin4();
         } else {
-            System.out.println("The goblin runs up and stabs you. ");
+            System.out.println("The goblins run up and stab you. ");
             if (GameLoop.armor == 0) {
-                GameLoop.health = GameLoop.health - 10;
+                GameLoop.health = GameLoop.health - 20;
+                GameLoop.health = GameLoop.health - 20;
             } else {
-                double goblin4Damage = 8 / GameLoop.armor;
+                double goblin4Damage = 16 / GameLoop.armor;
+                GameLoop.health = GameLoop.health - goblin4Damage;
                 GameLoop.health = GameLoop.health - goblin4Damage;
             }
             if (GameLoop.health <= 0) {
@@ -246,10 +298,15 @@ public class Goblin4 {
     }
 
     public static void DeadGoblin4() {
-        System.out.println("And with that, the goblin let out a high pitched shriek and fell to the ground. ");
-        GameLoop.experience = GameLoop.experience + 30;
-        GameLoop.gold = GameLoop.gold + 75;
+        System.out.println("And with that, the goblin lets out a high pitched shriek and falls to the ground. ");
+        GameLoop.experience = GameLoop.experience + 60;
+        GameLoop.gold = GameLoop.gold + 100;
         System.out.println("You have gotten some gold and experience. You now have " + GameLoop.gold + " gold and " + GameLoop.experience + " experience. ");
-        GameLoop.MapMovement();
+        if (GameLoop.goblinHealth1 <= 0){
+            GameLoop.goblinHealth = GameLoop.goblinHealth2;
+        } else {
+            GameLoop.goblinHealth = GameLoop.goblinHealth1;
+        }
+        Goblin2.Goblin2Attacks();
     }
 }
