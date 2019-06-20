@@ -124,14 +124,18 @@ public class Goblin5 {
                     }
                 }
             case "use potion" :
-                if (GameLoop.numberOfPotions == 0){
-                    System.out.println("You don't have any potions. ");
-                    AttackGoblin5();
-                } else {
-                    GameLoop.health = GameLoop.health + 25;
-                    System.out.println("You drink the potion and feel reinvigorated. ");
-                    AttackGoblin5();
-                }
+            if (GameLoop.numberOfPotions == 0){
+                System.out.println("You don't have any potions. ");
+            } else if (GameLoop.health == 100) {
+                System.out.println("You are already at full health. ");
+            } else if (GameLoop.health >= 75) {
+                GameLoop.health = 100;
+                System.out.println("You drink the potion and feel reinvigorated. ");
+            } else {
+                GameLoop.health = GameLoop.health + 25;
+                System.out.println("You drink the potion and feel reinvigorated. ");
+            }
+            AttackGoblin5();
             case "use shield" :
                 if (GameLoop.shield == 0) {
                     System.out.println("You don't have a shield. ");

@@ -29,7 +29,7 @@ public class GameLoop{
         static boolean[][] beenHere = new boolean[15][15]; 
         //this is an arrray
         //this array is 2d which means it will create a grid with x and y axis of whatever values I tell it
-        //in this case those values are from 0-13 for each axis
+        //in this case those values are from 0-14 for each axis
         //this will create a map of booleans that I can call on later when I am making my map checks
         //you call on one by saying name[x coordinate][y coordinate]
             // in this case we would call the 12 4 coordinate by saying beenHere[12][4]
@@ -66,7 +66,9 @@ public class GameLoop{
         public static int goblinHealth;
         public static int goblinHealth1;
         public static int goblinHealth2;
+        public static int elementalHealth;
 
+        public static int numberOfBossesDefeated;
         public static Scanner scannyBoi = new Scanner(System.in);
         //"Scanner scannyBoi" brings a scanner into existence and names it scannyBoi
             //scanners can take input from the keyboard (or other places, but for our purposes keyboards)
