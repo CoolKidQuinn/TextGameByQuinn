@@ -53,6 +53,26 @@ public class FireElemental{
                 } 
                 FireElementalAttacks();
             case "use bow" :
+                if (GameLoop.bow == 0) {
+                    System.out.println("You don't have a bow. ");
+                    AttackFireElemental();
+                } else if (GameLoop.numberOfArrows == 0) {
+                    System.out.println("You don't have any arrows. ");
+                    AttackFireElemental();
+                } else {
+                    int damage = GameLoop.bow * GameLoop.level *2;
+                    GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
+                    rand = new Random();
+                    attackMissChance = rand.nextInt(10);
+                    attackHitChance = GameLoop.bow + 6;
+                    if (attackMissChance >= attackHitChance){
+                        System.out.println("You shoot an arrow at the elemental but it passes right through it. ");
+                    } else {
+                        GameLoop.goblinHealth = GameLoop.goblinHealth - damage;
+                        System.out.println("You shoot an arrow at the elemental and it hits something in the center. ");
+                    }
+                    FireElementalAttacks();
+                }
             case "use potion" :
                 if (GameLoop.numberOfPotions == 0){
                     System.out.println("You don't have any potions. ");
@@ -121,6 +141,19 @@ public class FireElemental{
                 GameLoop.elementalHealth = GameLoop.elementalHealth - damage;    
                 FireElementalAttacks();
             case "use bow" :
+                if (GameLoop.bow == 0) {
+                    System.out.println("You don't have a bow. ");
+                    CritAttackFireElemental();
+                } else if (GameLoop.numberOfArrows == 0) {
+                    System.out.println("You don't have any arrows. ");
+                    CritAttackFireElemental();
+                } else {
+                    damage = GameLoop.bow * GameLoop.level * 4;
+                    GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
+                    GameLoop.goblinHealth = GameLoop.goblinHealth - damage;
+                    System.out.println("You shoot an arrow at the elemental. ");
+                    FireElementalAttacks();
+                }
             case "use potion" :
                 if (GameLoop.numberOfPotions == 0){
                     System.out.println("You don't have any potions. ");
