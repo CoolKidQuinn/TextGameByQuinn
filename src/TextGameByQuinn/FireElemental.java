@@ -30,7 +30,11 @@ public class FireElemental{
                         destroyChance = rand.nextInt(10);
                         if (destroyChance == 9) {
                             GameLoop.sword = GameLoop.sword - 1;
-                            System.out.println("The flames burn your sword and damage it. ");
+                            if (GameLoop.sword == 0) {
+                                System.out.println("The flames light your sword ablaze and it burns up completely, leaving nothing but ash in it's place. ");
+                            } else {
+                                System.out.println("The flames burn your sword and damage it. ");
+                            }
                         }
                     } else {
                         System.out.println("You swing your sword at the elemental and it passes straight through the flames. ");
@@ -38,9 +42,53 @@ public class FireElemental{
                     FireElementalAttacks();
                 }
             case "use dagger" :
+                int attackHitChance = 6;
+                int attackMissChance = rand.nextInt(10);
+                if (attackHitChance >= attackMissChance) {
+                    int damage = GameLoop.level;
+                    System.out.println("You stab your dagger into the elemental and hit something solid at the center. ");
+                    GameLoop.elementalHealth = GameLoop.elementalHealth - damage;    
+                } else {
+                    System.out.println("You stab at the elemental, but your dagger goes straight through it's flames and has no affect. ");
+                } 
+                FireElementalAttacks();
             case "use bow" :
             case "use potion" :
+                if (GameLoop.numberOfPotions == 0){
+                    System.out.println("You don't have any potions. ");
+                } else if (GameLoop.health == 100) {
+                    System.out.println("You are already at full health. ");
+                } else if (GameLoop.health >= 75) {
+                    GameLoop.health = 100;
+                    System.out.println("You drink the potion and feel reinvigorated. ");
+                } else {
+                    GameLoop.health = GameLoop.health + 25;
+                    System.out.println("You drink the potion and feel reinvigorated. ");
+                }
+                AttackFireElemental();
             case "use shield" :
+                if (GameLoop.shield == 0) {
+                    System.out.println("You don't have a shield. ");
+                } else {
+                    int attackBlockChance = GameLoop.shield + 5;
+                    attackHitChance = rand.nextInt(11);
+                    if (attackBlockChance > attackHitChance) {
+                        System.out.println("The elemental shoots flames at you but you are able to block them with your shield. ");
+                        destroyChance = rand.nextInt(10);
+                        if (destroyChance == 9) {
+                            if (GameLoop.shield == 1) {
+                                System.out.println("The flames ignite your shield and it burns up, leaving a pile of ash behind. ");
+                            } else {
+                                System.out.println("The flames damage your shield. ");
+                            }
+                            GameLoop.shield = GameLoop.shield - 1;
+                        }
+                        CritAttackFireElemental();
+                    } else {
+                        System.out.println("You can't get your shield up in time. ");
+                        FireElementalAttacks();
+                    }
+                }
             case "punch" :
                 System.out.println("You punch the fire elemental. The elemental doesn't even notice the attack and you burn your fist. ");
                 GameLoop.health = GameLoop.health - 5;
@@ -74,6 +122,18 @@ public class FireElemental{
                 FireElementalAttacks();
             case "use bow" :
             case "use potion" :
+                if (GameLoop.numberOfPotions == 0){
+                    System.out.println("You don't have any potions. ");
+                } else if (GameLoop.health == 100) {
+                    System.out.println("You are already at full health. ");
+                } else if (GameLoop.health >= 75) {
+                    GameLoop.health = 100;
+                    System.out.println("You drink the potion and feel reinvigorated. ");
+                } else {
+                    GameLoop.health = GameLoop.health + 25;
+                    System.out.println("You drink the potion and feel reinvigorated. ");
+                }
+                CritAttackFireElemental();
             case "use shield" :
                 System.out.println("The elemental is already vulnerable. ");
                 CritAttackFireElemental();

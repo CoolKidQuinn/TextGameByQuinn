@@ -45,12 +45,16 @@ public class Troll1{
         case "use potion" :
             if (GameLoop.numberOfPotions == 0){
                 System.out.println("You don't have any potions. ");
-                AttackTroll1();
+            } else if (GameLoop.health == 100) {
+                System.out.println("You are already at full health. ");
+            } else if (GameLoop.health >= 75) {
+                GameLoop.health = 100;
+                System.out.println("You drink the potion and feel reinvigorated. ");
             } else {
                 GameLoop.health = GameLoop.health + 25;
                 System.out.println("You drink the potion and feel reinvigorated. ");
-                AttackTroll1();
             }
+            AttackTroll1();
         case "use shield" :
             if (GameLoop.shield == 0){
                 System.out.println("You don't have a shield. ");
@@ -115,12 +119,16 @@ public class Troll1{
         case "use potion" :
             if (GameLoop.numberOfPotions == 0){
                 System.out.println("You don't have any potions. ");
-                CritAttackTroll1();
+            } else if (GameLoop.health == 100) {
+                System.out.println("You are already at full health. ");
+            } else if (GameLoop.health >= 75) {
+                GameLoop.health = 100;
+                System.out.println("You drink the potion and feel reinvigorated. ");
             } else {
                 GameLoop.health = GameLoop.health + 25;
                 System.out.println("You drink the potion and feel reinvigorated. ");
-                CritAttackTroll1();
             }
+            CritAttackTroll1();
         case "use shield" :
             System.out.println("There is no point in blocking. The troll is already off guard. ");
             CritAttackTroll1();
