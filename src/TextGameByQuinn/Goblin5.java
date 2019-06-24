@@ -29,7 +29,7 @@ public class Goblin5 {
                         if (attackMissChance >= attackHitChance) {
                         System.out.println("You swing your sword but the goblin is too quick and leaps out of the way. ");
                         } else {
-                        int damage = GameLoop.sword * GameLoop.level * 2;
+                        int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 2;
                         GameLoop.goblinHealth1 = GameLoop.goblinHealth1 - damage;
                         System.out.println("You slash at the goblin with your sword. ");
                         }
@@ -41,7 +41,7 @@ public class Goblin5 {
                         if (attackMissChance >= attackHitChance) {
                         System.out.println("You swing your sword but the goblin is too quick and leaps out of the way. ");
                         } else {
-                        int damage = GameLoop.sword * GameLoop.level * 2;
+                        int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 2;
                         GameLoop.goblinHealth2 = GameLoop.goblinHealth2 - damage;
                         System.out.println("You slash at the goblin with your sword. ");
                         }
@@ -93,7 +93,7 @@ public class Goblin5 {
                     System.out.println("Would you like to attack goblin 1 or goblin 2. ");
                     fightyBoi1 = GameLoop.scannyBoi.nextLine();
                     if (fightyBoi1.equals("1")) {
-                        int damage = GameLoop.bow * GameLoop.level *2;
+                        int damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) *2;
                         GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                         Random rand = new Random();
                         attackMissChance = rand.nextInt(10);
@@ -106,7 +106,7 @@ public class Goblin5 {
                         }
                         Goblin5Attacks();
                     } else if (fightyBoi1.equals("2")) {
-                        int damage = GameLoop.bow * GameLoop.level *2;
+                        int damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) *2;
                         GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                         Random rand = new Random();
                         attackMissChance = rand.nextInt(10);
@@ -187,12 +187,12 @@ public class Goblin5 {
                     System.out.println("Would you like to attack goblin 1 or goblin 2. ");
                     fightyBoi1 = GameLoop.scannyBoi.nextLine();
                     if (fightyBoi1.equals("1")) {
-                        int damage = GameLoop.sword * GameLoop.level * 4;
+                        int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 4;
                         GameLoop.goblinHealth1 = GameLoop.goblinHealth1 - damage;
                         System.out.println("You plunge your sword directly into the defenseless goblin's stomach with your sword. ");
                         Goblin5Attacks();
                     } else if (fightyBoi1.equals("2")){
-                        int damage = GameLoop.sword * GameLoop.level * 4;
+                        int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 4;
                         GameLoop.goblinHealth2 = GameLoop.goblinHealth2 - damage;
                         System.out.println("You plunge your sword directly into the defenseless goblin's stomach with your sword. ");
                         Goblin5Attacks();
@@ -229,13 +229,13 @@ public class Goblin5 {
                     System.out.println("Would you like to attack goblin 1 or goblin 2. ");
                     fightyBoi1 = GameLoop.scannyBoi.nextLine();
                     if (fightyBoi1.equals("1")) {
-                        int damage = GameLoop.bow * GameLoop.level * 4;
+                        int damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) * 4;
                         GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                         GameLoop.goblinHealth1 = GameLoop.goblinHealth1 - damage;
                         System.out.println("You shoot an arrow directly at the defenseless goblin's head. ");
                         Goblin5Attacks();
                     } else if (fightyBoi1.equals("2")){
-                        int damage = GameLoop.bow * GameLoop.level * 4;
+                        int damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) * 4;
                         GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                         GameLoop.goblinHealth2 = GameLoop.goblinHealth2 - damage;
                         System.out.println("You shoot an arrow directly at the defenseless goblin's head. ");

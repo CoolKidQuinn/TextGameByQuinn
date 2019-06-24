@@ -25,7 +25,7 @@ public class Goblin3 {
                     if (attackMissChance >= attackHitChance) {
                         System.out.println("You swing your sword but the goblin is too quick and leaps out of the way. ");
                     } else {
-                        int damage = GameLoop.sword * GameLoop.level * 2;
+                        int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 2;
                         GameLoop.goblinHealth = GameLoop.goblinHealth - damage;
                         System.out.println("You slash at the goblin with your sword. ");
                     }
@@ -51,7 +51,7 @@ public class Goblin3 {
                     System.out.println("You don't have any arrows. ");
                     AttackGoblin3();
                 } else {
-                    int damage = GameLoop.bow * GameLoop.level *2;
+                    int damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) *2;
                     GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                     rand = new Random();
                     attackMissChance = rand.nextInt(10);
@@ -114,7 +114,7 @@ public class Goblin3 {
                     System.out.println("You don't have a sword. ");
                     CritAttackGoblin3();
                 } else {
-                        int damage = GameLoop.sword * GameLoop.level * 4;
+                        int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 4;
                         GameLoop.goblinHealth = GameLoop.goblinHealth - damage;
                         System.out.println("You plunge your sword directly into the defenseless goblin's stomach with your sword. ");
                     Goblin3Attacks();
@@ -132,7 +132,7 @@ public class Goblin3 {
                     System.out.println("You don't have any arrows. ");
                     CritAttackGoblin3();
                 } else {
-                    damage = GameLoop.bow * GameLoop.level * 4;
+                    damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) * 4;
                     GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                         GameLoop.goblinHealth = GameLoop.goblinHealth - damage;
                         System.out.println("You shoot an arrow directly at the defenseless goblin's head. ");

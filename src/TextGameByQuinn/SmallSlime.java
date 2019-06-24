@@ -18,7 +18,7 @@ public class SmallSlime{
                 System.out.println("You don't have a sword. ");
                 AttackSmallSlime();
             } else {
-                int damage = GameLoop.sword * GameLoop.level * 2;
+                int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 2;
                 GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - damage;
                 System.out.println("You slash the slime with your sword. ");
                 SmallSlimeAttack();
@@ -36,7 +36,7 @@ public class SmallSlime{
                 System.out.println("You don't have any arrows. ");
                 AttackSmallSlime();
             } else {
-                damage = GameLoop.bow * GameLoop.level * 2;
+                damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) * 2;
                 GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                 GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - damage;
                 System.out.println("Your shoot an arrow at the slime. ");
@@ -92,13 +92,13 @@ public class SmallSlime{
                 System.out.println("You don't have a sword. ");
                 CritAttackSmallSlime();
             } else {
-                int damage = GameLoop.sword * GameLoop.level * 4;
+                int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 4;
                 GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - damage;
                 System.out.println("You slash the slime with your sword. The slime wasn't anticipating the attack and is hit especially hard. ");
                 SmallSlimeAttack();
             }
         case "use dagger" :
-            int damage = GameLoop.level * 2;
+            int damage = GameLoop.level;
             GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - damage;
             System.out.println("You stab the slime with your dagger. The slime wasn't anticipating the attack and is hit especially hard. ");
             SmallSlimeAttack();
@@ -110,7 +110,7 @@ public class SmallSlime{
                 System.out.println("You don't have any arrows. ");
                 CritAttackSmallSlime();
             } else {
-                damage = GameLoop.bow * GameLoop.level * 4;
+                damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) * 4;
                 GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                 GameLoop.smallSlimeHealth = GameLoop.smallSlimeHealth - damage;
                 System.out.println("Your shoot an arrow at the slime. The slime wasn't anticipating the attack and is hit especially hard. ");

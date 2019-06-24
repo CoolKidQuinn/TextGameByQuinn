@@ -24,7 +24,7 @@ public class FireElemental{
                     int attackHitChance = GameLoop.sword + 6;
                     int attackMissChance = rand.nextInt(10);
                     if (attackHitChance >= attackMissChance) {
-                        int damage = GameLoop.sword * GameLoop.level * 2;
+                        int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 2;
                         System.out.println("You swing your sword at the elemental and hit something solid at the center. ");
                         GameLoop.elementalHealth = GameLoop.elementalHealth - damage;
                         destroyChance = rand.nextInt(10);
@@ -60,7 +60,7 @@ public class FireElemental{
                     System.out.println("You don't have any arrows. ");
                     AttackFireElemental();
                 } else {
-                    int damage = GameLoop.bow * GameLoop.level *2;
+                    int damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) * 2;
                     GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                     rand = new Random();
                     attackMissChance = rand.nextInt(10);
@@ -130,13 +130,13 @@ public class FireElemental{
                     System.out.println("You don't have a sword");
                     CritAttackFireElemental();
                 } else {
-                    int damage = GameLoop.sword * GameLoop.level * 4;
+                    int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 4;
                     System.out.println("You swing your sword at the elemental and hit something solid at the center. ");
                     GameLoop.elementalHealth = GameLoop.elementalHealth - damage;    
                     FireElementalAttacks();
                 }
             case "use dagger" :
-                int damage = GameLoop.level * 2;
+                int damage = GameLoop.level;
                 System.out.println("You stab your dagger into the elemental and hit something solid at the center. ");
                 GameLoop.elementalHealth = GameLoop.elementalHealth - damage;    
                 FireElementalAttacks();
@@ -148,7 +148,7 @@ public class FireElemental{
                     System.out.println("You don't have any arrows. ");
                     CritAttackFireElemental();
                 } else {
-                    damage = GameLoop.bow * GameLoop.level * 4;
+                    damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) * 4;
                     GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                     GameLoop.goblinHealth = GameLoop.goblinHealth - damage;
                     System.out.println("You shoot an arrow at the elemental. ");

@@ -57,6 +57,8 @@ public class GameLoop{
         public static double health = 100;
         //the player starts with 100 health, they can lose it and gain it back by doing various actions
 
+        public static int levelDamageMultiplier;
+
         public static int trollHealth;
         public static int smallSlimeHealth;
         public static int mediumSlimeHealth;
@@ -93,15 +95,13 @@ public class GameLoop{
         //".nextLine()" tells the scanner we mentioned before to get the value the user inputs on the next line
             //this is a command from the import we imported earlier
 
-        boolean win = false;
-        //creates a boolean for wheather or not we win
         //this will be set to true once certain actions in the game have been taken
         //we will display a different message in the game over section depending on wheather or not we have set this to true
 
        
-        System.out.println("The game has begun. ");
-        System.out.println("Choose Name. ");
-        String stringyBoi1 = scannyBoi.nextLine();
+        //System.out.println("The game has begun. ");
+        //System.out.println("Choose Name. ");
+        //String stringyBoi1 = scannyBoi.nextLine();
         System.out.println("Our tale begins one morning as you wake up alone in a large, foggy feild. You have a dagger in your hand and the only concrete memory you have is that you must find and rescue your father. ");
 
         MapMovement();
@@ -119,6 +119,7 @@ public class GameLoop{
     
     public static void MapMovement(){
         LevelCheck.LevelSet();
+        levelDamageMultiplier = level * 2;
         String stringyBoi2 = scannyBoi.nextLine();
         if (stringyBoi2.equals("commit sudoku")){
             Sudoku();

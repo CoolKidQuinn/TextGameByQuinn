@@ -19,7 +19,20 @@ public class AirElemental{
     }
 
     public static void AirElementalAttacks() {
-
+        if (GameLoop.elementalHealth <= 0){
+            DeadAirElemental();
+        } else {
+            System.out.println("The elemental shoots a gust of wind at you. ");
+            if (GameLoop.armor == 0){
+                GameLoop.health = GameLoop.health - 30;
+            } else {
+                System.out.println("Your armor does nothing against the attack. ");
+                GameLoop.health = GameLoop.health - 30;
+            }
+            if (GameLoop.health <= 0){
+                GameLoop.GameOver();
+            }
+        }
     }
 
     public static void DeadAirElemental() {

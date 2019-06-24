@@ -18,7 +18,7 @@ public class Troll1{
                 System.out.println("You don't have a sword. ");
                 AttackTroll1();
             } else {
-                int damage = GameLoop.sword * GameLoop.level * 2;
+                int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 2;
                 GameLoop.trollHealth = GameLoop.trollHealth - damage;
                 System.out.println("You slash the troll with your sword. ");
                 Troll1Attacks();
@@ -36,7 +36,7 @@ public class Troll1{
                 System.out.println("You don't have any arrows. ");
                 AttackTroll1();
             } else {
-                damage = GameLoop.bow * GameLoop.level * 2;
+                damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) * 2;
                 GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                 GameLoop.trollHealth = GameLoop.trollHealth - damage;
                 System.out.println("Your shoot an arrow at the troll. ");
@@ -92,7 +92,7 @@ public class Troll1{
                 System.out.println("You don't have a sword. ");
                 CritAttackTroll1();
             } else {
-                int damage = GameLoop.sword * GameLoop.level * 4;
+                int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 4;
                 GameLoop.trollHealth = GameLoop.trollHealth - damage;
                 System.out.println("You slash the troll with your sword. The troll isn't ready for the attack and it hits extra hard. ");
                 Troll1Attacks();
@@ -110,7 +110,7 @@ public class Troll1{
                 System.out.println("You don't have any arrows. ");
                 CritAttackTroll1();
             } else {
-                damage = GameLoop.bow * GameLoop.level * 2;
+                damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) * 2;
                 GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                 GameLoop.trollHealth = GameLoop.trollHealth - damage;
                 System.out.println("Your shoot an arrow at the troll. The troll isn't ready for the attack and it hits extra hard. ");

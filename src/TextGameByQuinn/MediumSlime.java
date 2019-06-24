@@ -19,7 +19,7 @@ public class MediumSlime{
                 System.out.println("You don't have a sword. ");
                 AttackMediumSlime();
             } else {
-                int damage = GameLoop.sword * GameLoop.level * 2;
+                int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 2;
                 GameLoop.mediumSlimeHealth = GameLoop.mediumSlimeHealth - damage;
                 System.out.println("You slash the slime with your sword. ");
                 MediumSlimeAttack();
@@ -37,7 +37,7 @@ public class MediumSlime{
                 System.out.println("You don't have any arrows. ");
                 AttackMediumSlime();
             } else {
-                damage = GameLoop.bow * GameLoop.level * 2;
+                damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) * 2;
                 GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                 GameLoop.mediumSlimeHealth = GameLoop.mediumSlimeHealth - damage;
                 System.out.println("Your shoot an arrow at the slime. ");
@@ -93,13 +93,13 @@ public class MediumSlime{
                 System.out.println("You don't have a sword. ");
                 CritAttackMediumSlime();
             } else {
-                int damage = GameLoop.sword * GameLoop.level * 4;
+                int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 4;
                 GameLoop.mediumSlimeHealth = GameLoop.mediumSlimeHealth - damage;
                 System.out.println("You slash the slime with your sword. The slime wasn't anticipating the attack and is hit especially hard. ");
                 MediumSlimeAttack();
             }
         case "use dagger" :
-            int damage = GameLoop.level * 2;
+            int damage = GameLoop.level;
             GameLoop.mediumSlimeHealth = GameLoop.mediumSlimeHealth - damage;
             System.out.println("You stab the slime with your dagger. The slime wasn't anticipating the attack and is hit especially hard. ");
             MediumSlimeAttack();
@@ -111,7 +111,7 @@ public class MediumSlime{
                 System.out.println("You don't have any arrows. ");
                 CritAttackMediumSlime();
             } else {
-                damage = GameLoop.bow * GameLoop.level * 4;
+                damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) * 4;
                 GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                 GameLoop.mediumSlimeHealth = GameLoop.mediumSlimeHealth - damage;
                 System.out.println("Your shoot an arrow at the slime. The slime wasn't anticipating the attack and is hit especially hard. ");
@@ -184,12 +184,12 @@ public class MediumSlime{
                 System.out.println("Would you like to attack slime 1 or slime 2? ");
                 fightyBoi2 = GameLoop.scannyBoi.nextLine();
                 if (fightyBoi2.equals("1")){
-                    int damage = GameLoop.sword * GameLoop.level * 2;
+                    int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 2;
                     GameLoop.doubleSmallSlime1Health = GameLoop.doubleSmallSlime1Health - damage;
                     System.out.println("You slash the slime with your sword. ");
                     DoubleSmallSlimeAttack();
                 } else if (fightyBoi2.equals("2")){
-                    int damage = GameLoop.sword * GameLoop.level * 2;
+                    int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 2;
                     GameLoop.doubleSmallSlime2Health = GameLoop.doubleSmallSlime2Health - damage;
                     System.out.println("You slash the slime with your sword. ");
                     DoubleSmallSlimeAttack();
@@ -226,13 +226,13 @@ public class MediumSlime{
                 System.out.println("Would you like to attack slime 1 or slime 2? ");
                 fightyBoi2 = GameLoop.scannyBoi.nextLine();
                 if (fightyBoi2.equals("1")){
-                    int damage = GameLoop.bow * GameLoop.level * 2;
+                    int damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) * 2;
                     GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                     GameLoop.doubleSmallSlime1Health = GameLoop.doubleSmallSlime1Health - damage;
                     System.out.println("Your shoot an arrow at the slime. ");
                     DoubleSmallSlimeAttack();
                 } else if (fightyBoi2.equals("1")){
-                    int damage = GameLoop.bow * GameLoop.level * 2;
+                    int damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) * 2;
                     GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                     GameLoop.doubleSmallSlime2Health = GameLoop.doubleSmallSlime2Health - damage;
                     System.out.println("Your shoot an arrow at the slime. ");
@@ -306,12 +306,12 @@ public class MediumSlime{
                 System.out.println("Would you like to attack slime 1 or slime 2? ");
                 fightyBoi2 = GameLoop.scannyBoi.nextLine();
                 if (fightyBoi2.equals("1")){
-                    int damage = GameLoop.sword * GameLoop.level * 4;
+                    int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 4;
                     GameLoop.doubleSmallSlime1Health = GameLoop.doubleSmallSlime1Health - damage;
                     System.out.println("You slash the slime with your sword. ");
                     DoubleSmallSlimeAttack();
                 } else if (fightyBoi2.equals("2")){
-                    int damage = GameLoop.sword * GameLoop.level * 4;
+                    int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 4;
                     GameLoop.doubleSmallSlime2Health = GameLoop.doubleSmallSlime2Health - damage;
                     System.out.println("You slash the slime with your sword. ");
                     DoubleSmallSlimeAttack();
@@ -324,12 +324,12 @@ public class MediumSlime{
             System.out.println("Would you like to attack slime 1 or slime 2? ");
                 fightyBoi2 = GameLoop.scannyBoi.nextLine();
                 if (fightyBoi2.equals("1")){
-                    int damage = GameLoop.level * 2;
+                    int damage = GameLoop.level;
                     GameLoop.doubleSmallSlime1Health = GameLoop.doubleSmallSlime1Health - damage;
                     System.out.println("You stab the slime with your dagger. ");
                     DoubleSmallSlimeAttack();
                 } else if (fightyBoi2.equals("2")){
-                    int damage = GameLoop.level * 2;
+                    int damage = GameLoop.level;
                     GameLoop.doubleSmallSlime2Health = GameLoop.doubleSmallSlime2Health - damage;
                     System.out.println("You stab the slime with your dagger. ");
                     DoubleSmallSlimeAttack();
@@ -348,13 +348,13 @@ public class MediumSlime{
                 System.out.println("Would you like to attack slime 1 or slime 2? ");
                 fightyBoi2 = GameLoop.scannyBoi.nextLine();
                 if (fightyBoi2.equals("1")){
-                    int damage = GameLoop.bow * GameLoop.level * 4;
+                    int damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) * 4;
                     GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                     GameLoop.doubleSmallSlime1Health = GameLoop.doubleSmallSlime1Health - damage;
                     System.out.println("Your shoot an arrow at the slime. ");
                     DoubleSmallSlimeAttack();
                 } else if (fightyBoi2.equals("1")){
-                    int damage = GameLoop.bow * GameLoop.level * 4;
+                    int damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) * 4;
                     GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
                     GameLoop.doubleSmallSlime2Health = GameLoop.doubleSmallSlime2Health - damage;
                     System.out.println("Your shoot an arrow at the slime. ");
