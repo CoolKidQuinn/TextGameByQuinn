@@ -68,7 +68,7 @@ public class FireElemental{
                     if (attackMissChance >= attackHitChance){
                         System.out.println("You shoot an arrow at the elemental but it passes right through it. ");
                     } else {
-                        GameLoop.goblinHealth = GameLoop.goblinHealth - damage;
+                        GameLoop.elementalHealth = GameLoop.elementalHealth - damage;
                         System.out.println("You shoot an arrow at the elemental and it hits something in the center. ");
                     }
                     FireElementalAttacks();
@@ -150,7 +150,7 @@ public class FireElemental{
                 } else {
                     damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) * 4;
                     GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
-                    GameLoop.goblinHealth = GameLoop.goblinHealth - damage;
+                    GameLoop.elementalHealth = GameLoop.elementalHealth - damage;
                     System.out.println("You shoot an arrow at the elemental. ");
                     FireElementalAttacks();
                 }
