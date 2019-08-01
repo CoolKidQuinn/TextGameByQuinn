@@ -107,7 +107,62 @@ public class WaterElemental{
     }
 
     public static void CritAttackWaterElemental() {
-
+        String fightyBoi1 = GameLoop.scannyBoi.nextLine();
+        switch (fightyBoi1) {
+        case "use sword" :
+                if (GameLoop.sword == 0) {
+                    System.out.println("You don't have a sword");
+                    CritAttackWaterElemental();
+                } else {
+                    int damage = (GameLoop.sword + GameLoop.levelDamageMultiplier) * 4;
+                    System.out.println("You swing your sword at the elemental and hit something solid at the center. ");
+                    GameLoop.elementalHealth = GameLoop.elementalHealth - damage;
+                    WaterElementalAttacks();
+                }
+            case "use dagger" :
+                int damage = GameLoop.level * 2;
+                System.out.println("You stab your dagger into the elemental and hit something solid at the center. ");
+                GameLoop.elementalHealth = GameLoop.elementalHealth - damage; 
+                WaterElementalAttacks();
+            case "use bow" :
+                if (GameLoop.bow == 0) {
+                    System.out.println("You don't have a bow. ");
+                    CritAttackWaterElemental();
+                } else if (GameLoop.numberOfArrows == 0) {
+                    System.out.println("You don't have any arrows. ");
+                    CritAttackWaterElemental();
+                } else {
+                    damage = (GameLoop.bow + GameLoop.levelDamageMultiplier) * 4;
+                    GameLoop.numberOfArrows = GameLoop.numberOfArrows - 1;
+                    GameLoop.elementalHealth = GameLoop.elementalHealth - damage;
+                    System.out.println("You shoot an arrow at the elemental and it hits something in the center. ");
+                    }
+                    WaterElementalAttacks();
+            case "use potion" :
+                if (GameLoop.numberOfPotions == 0){
+                    System.out.println("You don't have any potions. ");
+                } else if (GameLoop.health == 100) {
+                    System.out.println("You are already at full health. ");
+                } else if (GameLoop.health >= 75) {
+                    GameLoop.health = 100;
+                    System.out.println("You drink the potion and feel reinvigorated. ");
+                } else {
+                    GameLoop.health = GameLoop.health + 25;
+                    System.out.println("You drink the potion and feel reinvigorated. ");
+                }
+                CritAttackWaterElemental();
+            case "use shield" :
+                System.out.println("The elemental is already off guard. ");
+            case "punch" :
+                System.out.println("You punch the water elemental. The elemental doesn't even notice the attack. ");
+                WaterElementalAttacks();
+            case "run" :
+                System.out.println("You try to run away, but a pillar of water shoots up and blocks your path. ");
+                WaterElementalAttacks();
+            default :
+                System.out.println("That is not a recognized command. ");
+                CritAttackWaterElemental();
+        }
     }
 
     public static void WaterElementalAttacks() {
