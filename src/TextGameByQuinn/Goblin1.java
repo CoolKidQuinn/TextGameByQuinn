@@ -180,6 +180,7 @@ public class Goblin1 {
             if (GameLoop.health <= 0) {
                 GameLoop.GameOver();
             }
+            AttackGoblin1();
         }
     }
 

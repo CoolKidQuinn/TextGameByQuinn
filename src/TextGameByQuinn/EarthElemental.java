@@ -182,6 +182,7 @@ public class EarthElemental{
                 System.out.println("You are knocked down and while you are getting back up the elemental attacks again. ");
                 EarthElementalAttacks();
             }
+            AttackEarthElemental();
         }
     }
 

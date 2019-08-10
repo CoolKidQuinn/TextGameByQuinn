@@ -185,6 +185,7 @@ public class WaterElemental{
             if (GameLoop.health <= 0){
                 GameLoop.GameOver();
             }
+            AttackWaterElemental();
         }
     }
 

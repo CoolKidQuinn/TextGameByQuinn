@@ -159,6 +159,7 @@ public class SmallSlime{
             if (GameLoop.health <= 0){
                 GameLoop.GameOver();
             }
+            AttackSmallSlime();
         }
     }
 

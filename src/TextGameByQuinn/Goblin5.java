@@ -306,6 +306,7 @@ public class Goblin5 {
             if (GameLoop.health <= 0) {
                 GameLoop.GameOver();
             }
+            AttackGoblin5();
         }
     }
 

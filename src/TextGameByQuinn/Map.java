@@ -831,39 +831,31 @@ public class Map {
                     };
                 case 1 :  
                     if (GameLoop.beenHere[7][1] == false){
-                    //this checks to see if we have already been here
-                        GameLoop.beenHere[7][1] = true;
-                        //this will tell the code that we have now been here
-                        //this is where we put the encounter that happens in this location
-                        Level6Area();
+                        Shop5.Shop();
                     } else {
                         RepeatedArea();
                     };
                 case 2 : 
                     if (GameLoop.beenHere[7][2] == false){
-                        GameLoop.beenHere[7][2] = true;
-                        Level5Area();
+                        Shop4.Shop();
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
                     if (GameLoop.beenHere[7][3] == false){
-                        GameLoop.beenHere[7][3] = true;
-                        Level4Area();
+                        Shop3.Shop();
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
                     if (GameLoop.beenHere[7][4] == false){
-                        GameLoop.beenHere[7][4] = true;
-                        Level3Area();
+                        Shop2.Shop();
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
                     if (GameLoop.beenHere[7][5] == false){
-                        GameLoop.beenHere[7][5] = true;
-                        Level2Area();
+                        Shop1.Shop();
                     } else {
                        RepeatedArea();
                     };
@@ -876,7 +868,6 @@ public class Map {
                     };
                 case 7 : 
                     if (GameLoop.beenHere[7][7] == false){
-                        GameLoop.beenHere[7][7] = true;
                         System.out.println("You recognize this as the place your journey began. You feel revitilized by returning here. ");
                         GameLoop.health = 100;
                         if (GameLoop.numberOfBossesDefeated == 1) {
@@ -908,36 +899,31 @@ public class Map {
                     };
                 case 9 : 
                     if (GameLoop.beenHere[7][9] == false){
-                        GameLoop.beenHere[7][9] = true;
-                        Level2Area();
+                        Shop1.Shop();
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
                     if (GameLoop.beenHere[7][10] == false){
-                        GameLoop.beenHere[7][10] = true;
-                        Level3Area();
+                        Shop2.Shop();
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
                     if (GameLoop.beenHere[7][11] == false){
-                        GameLoop.beenHere[7][11] = true;
-                        Level4Area();
+                        Shop3.Shop();
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
                     if (GameLoop.beenHere[7][12] == false){
-                        GameLoop.beenHere[7][12] = true;
-                        Level5Area();
+                        Shop4.Shop();
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
                     if (GameLoop.beenHere[7][13] == false){
-                        GameLoop.beenHere[7][13] = true;
-                        Level6Area();
+                        Shop5.Shop();
                     } else {
                        RepeatedArea();
                     };

@@ -159,6 +159,7 @@ public class Troll1{
             if (GameLoop.health <= 0){
                 GameLoop.GameOver();
             }
+            AttackTroll1();
         }
     }
 

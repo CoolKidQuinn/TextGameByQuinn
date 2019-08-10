@@ -26,6 +26,8 @@ public class GameLoop{
         //since I have decided the map will be 14x14, I have set them to 7 to begin so our character is at the center
         //these will be editted later when we move
         
+        static int continues = 0;
+
         static boolean[][] beenHere = new boolean[15][15]; 
         //this is an arrray
         //this array is 2d which means it will create a grid with x and y axis of whatever values I tell it
@@ -148,9 +150,16 @@ public class GameLoop{
     }
 
     public static void GameOver(){
-        //this is where we go after the game has ended
-        System.out.println("The game is over. ");
-        System.out.println("You Lose");
-        System.exit(0);
+        System.out.println("You died. Would you like to continue? ");
+        String stringyBoi = scannyBoi.nextLine();
+        if (stringyBoi.equals("yes")){
+            continues = continues + 1;
+            System.out.println("You have cheated " + continues + "times. ");
+            health = 100;
+        } else {
+            System.out.println("The game is over. ");
+            System.out.println("You Lose");
+            System.exit(0);
+        }
     }
 }
