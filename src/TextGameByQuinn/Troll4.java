@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Troll4{
     public static void Troll4Encounter(){
-        GameLoop.trollHealth = 100;
+        GameLoop.trollHealth = 150;
         System.out.println("You come across a troll that towers over you. He is armed with a large, spiked club and a metal shield. ");
         AttackTroll4();
     }

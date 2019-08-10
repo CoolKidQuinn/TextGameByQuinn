@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Troll3{
     public static void Troll3Encounter(){
-        GameLoop.trollHealth = 50;
+        GameLoop.trollHealth = 100;
         System.out.println("You come across a troll about twice your size. He is armed with a huge club and a wooden shield reinforced with metal pieces. ");
         AttackTroll3();
     }

@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Troll1{
     public static void Troll1Encounter(){
-        GameLoop.trollHealth = 10;
+        GameLoop.trollHealth = 25;
         System.out.println("You come across a troll about your size. He is armed with a club. ");
         AttackTroll1();
     }
@@ -151,9 +151,9 @@ public class Troll1{
         } else {
             System.out.println("The troll swings its club at you. ");
             if (GameLoop.armor == 0){
-                GameLoop.health = GameLoop.health - 10;
+                GameLoop.health = GameLoop.health - 16;
             } else {
-                double troll1Damage = 8 / GameLoop.armor;
+                double troll1Damage = 12 / GameLoop.armor;
                 GameLoop.health = GameLoop.health - troll1Damage;
             }
             if (GameLoop.health <= 0){
