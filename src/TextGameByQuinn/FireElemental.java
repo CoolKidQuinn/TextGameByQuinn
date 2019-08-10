@@ -8,7 +8,7 @@ public class FireElemental{
     static Random rand = new Random();
 
     public static void Encounter() {
-        GameLoop.elementalHealth = 100;
+        GameLoop.elementalHealth = 200;
         System.out.println("As you approach, you see a pedestal surrounded by flames. As you get closer, the fire starts blazing. The closer you get, the brighter and hotter it burns. Finally, the pedestal itself is lit ablaze and the flames form into an elemental being of pure fire. ");
         AttackFireElemental();
     }

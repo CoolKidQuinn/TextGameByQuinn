@@ -1,6 +1,6 @@
 package textgamebyquinn;
 
-
+import java.util.*;
 import textgamebyquinn.AirElemental;
 import textgamebyquinn.EarthElemental;
 import textgamebyquinn.FireElemental;
@@ -31,25 +31,129 @@ import textgamebyquinn.Goblin5;
 import textgamebyquinn.GameLoop;
 
 public class Map {
+    static Random rand = new Random();
     public static void CheckPosition(){
         //this will check the position of our character after moving
         //each possible position will have a different encounter
             //these encounters can be treasure, enemies, weapons, etc.
-        if ((GameLoop.xPosition > 14) || (GameLoop.xPosition < 1) || (GameLoop.yPosition > 14) || (GameLoop.yPosition < 1)){
+        if ((GameLoop.xPosition > 14) || (GameLoop.xPosition < 0) || (GameLoop.yPosition > 14) || (GameLoop.yPosition < 0)){
             System.out.println("There is a wall there. ");
-            GameLoop.MapMovement();
             if (GameLoop.xPosition > 14){
                 GameLoop.xPosition = 14;
-            } else if (GameLoop.xPosition < 1){
-                GameLoop.xPosition = 1;
+            } else if (GameLoop.xPosition < 0){
+                GameLoop.xPosition = 0;
             } else if (GameLoop.yPosition > 14){
                 GameLoop.yPosition = 14;
             } else {
-                GameLoop.yPosition = 1;
+                GameLoop.yPosition = 0;
             }
+            GameLoop.MapMovement();
             //this stops our character from leaving the map we have programmed
         } else if (GameLoop.xPosition == 1){
             switch (GameLoop.yPosition){
+                case 0 : 
+                    if (GameLoop.beenHere[1][0] == false){
+                        GameLoop.beenHere[1][0] = true;
+                    } else {
+                        RepeatedArea();
+                    };
+                case 1 :  
+                    if (GameLoop.beenHere[1][1] == false){
+                    //this checks to see if we have already been here
+                        GameLoop.beenHere[1][1] = true;
+                        //this will tell the code that we have now been here
+    
+                        //this is where we put the encounter that happens in this location
+                    } else {
+                        RepeatedArea();
+                    };
+                case 2 : 
+                    if (GameLoop.beenHere[1][2] == false){
+                        GameLoop.beenHere[1][2] = true;
+                    } else {
+                        RepeatedArea();
+                    };
+                case 3 : 
+                    if (GameLoop.beenHere[1][3] == false){
+                        GameLoop.beenHere[1][3] = true;
+                    } else {
+                       RepeatedArea();
+                    };
+                case 4 :
+                    if (GameLoop.beenHere[1][4] == false){
+                        GameLoop.beenHere[1][4] = true;
+                    } else {
+                       RepeatedArea();
+                    };
+                case 5 :
+                    if (GameLoop.beenHere[1][5] == false){
+                        GameLoop.beenHere[1][5] = true;
+                    } else {
+                       RepeatedArea();
+                    };
+                case 6 : 
+                    if (GameLoop.beenHere[1][6] == false){
+                        GameLoop.beenHere[1][6] = true;
+                    } else {
+                       RepeatedArea();
+                    };
+                case 7 : 
+                    if (GameLoop.beenHere[1][7] == false){
+                        GameLoop.beenHere[1][7] = true;
+                    } else {
+                       RepeatedArea();
+                    };
+                case 8 : 
+                    if (GameLoop.beenHere[1][8] == false){
+                        GameLoop.beenHere[1][8] = true;
+                    } else {
+                       RepeatedArea();
+                    };
+                case 9 : 
+                    if (GameLoop.beenHere[1][9] == false){
+                        GameLoop.beenHere[1][9] = true;
+                    } else {
+                       RepeatedArea();
+                    };
+                case 10 : 
+                    if (GameLoop.beenHere[1][10] == false){
+                        GameLoop.beenHere[1][10] = true;
+                    } else {
+                       RepeatedArea();
+                    };
+                case 11 : 
+                    if (GameLoop.beenHere[1][11] == false){
+                        GameLoop.beenHere[1][11] = true;
+                    } else {
+                       RepeatedArea();
+                    };
+                case 12 : 
+                    if (GameLoop.beenHere[1][12] == false){
+                        GameLoop.beenHere[1][12] = true;
+                    } else {
+                       RepeatedArea();
+                    };
+                case 13 : 
+                    if (GameLoop.beenHere[1][13] == false){
+                        GameLoop.beenHere[1][13] = true;
+                    } else {
+                       RepeatedArea();
+                    };
+                case 14 : 
+                    if (GameLoop.beenHere[1][14] == false){
+                        GameLoop.beenHere[1][14] = true;
+                    } else {
+                       RepeatedArea();
+                    };
+            }
+        } else if (GameLoop.xPosition == 1){
+            switch (GameLoop.yPosition){
+                case 0 : 
+                    if (GameLoop.beenHere[1][0] == false){
+                        GameLoop.beenHere[1][0] = true;
+                    } else {
+                        RepeatedArea();
+                    };
                 case 1 :  
                     if (GameLoop.beenHere[1][1] == false){
                     //this checks to see if we have already been here
@@ -139,9 +243,14 @@ public class Map {
                        RepeatedArea();
                     };
             } 
-
         } else if (GameLoop.xPosition == 2){
             switch (GameLoop.yPosition){
+                case 0 : 
+                    if (GameLoop.beenHere[2][0] == false){
+                        GameLoop.beenHere[2][0] = true;
+                    } else {
+                        RepeatedArea();
+                    };
                 case 1 :  
                     if (GameLoop.beenHere[2][1] == false){
                     //this checks to see if we have already been here
@@ -234,6 +343,12 @@ public class Map {
             
         } else if (GameLoop.xPosition == 3){
             switch (GameLoop.yPosition){
+                case 0 : 
+                    if (GameLoop.beenHere[3][0] == false){
+                        GameLoop.beenHere[3][0] = true;
+                    } else {
+                        RepeatedArea();
+                    };
                 case 1 :  
                     if (GameLoop.beenHere[3][1] == false){
                     //this checks to see if we have already been here
@@ -325,6 +440,12 @@ public class Map {
             } 
         } else if (GameLoop.xPosition == 4){
             switch (GameLoop.yPosition){
+                case 0 : 
+                    if (GameLoop.beenHere[4][0] == false){
+                        GameLoop.beenHere[4][0] = true;
+                    } else {
+                        RepeatedArea();
+                    };
                 case 1 :  
                     if (GameLoop.beenHere[4][1] == false){
                     //this checks to see if we have already been here
@@ -416,6 +537,12 @@ public class Map {
             }
         } else if (GameLoop.xPosition == 5){
             switch (GameLoop.yPosition){
+                case 0 : 
+                    if (GameLoop.beenHere[5][0] == false){
+                        GameLoop.beenHere[5][0] = true;
+                    } else {
+                        RepeatedArea();
+                    };
                 case 1 :  
                     if (GameLoop.beenHere[5][1] == false){
                     //this checks to see if we have already been here
@@ -507,6 +634,12 @@ public class Map {
             }
         } else if (GameLoop.xPosition == 6){
             switch (GameLoop.yPosition){
+                case 0 : 
+                    if (GameLoop.beenHere[6][0] == false){
+                        GameLoop.beenHere[6][0] = true;
+                    } else {
+                        RepeatedArea();
+                    };
                 case 1 :  
                     if (GameLoop.beenHere[6][1] == false){
                     //this checks to see if we have already been here
@@ -598,110 +731,142 @@ public class Map {
             }
         } else if (GameLoop.xPosition == 7){
             switch (GameLoop.yPosition){
+                case 0 : 
+                    if (GameLoop.beenHere[7][0] == false){
+                        GameLoop.beenHere[7][0] = true;
+                        Level7Area();
+                    } else {
+                        RepeatedArea();
+                    };
                 case 1 :  
                     if (GameLoop.beenHere[7][1] == false){
                     //this checks to see if we have already been here
                         GameLoop.beenHere[7][1] = true;
                         //this will tell the code that we have now been here
-                        MediumSlime.MediumSlimeEncounter();
                         //this is where we put the encounter that happens in this location
+                        Level6Area();
                     } else {
                         RepeatedArea();
                     };
                 case 2 : 
                     if (GameLoop.beenHere[7][2] == false){
                         GameLoop.beenHere[7][2] = true;
-                        SmallSlime.SmallSlimeEncounter();
+                        Level5Area();
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
                     if (GameLoop.beenHere[7][3] == false){
                         GameLoop.beenHere[7][3] = true;
-                        Troll1.Troll1Encounter();
+                        Level4Area();
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
                     if (GameLoop.beenHere[7][4] == false){
                         GameLoop.beenHere[7][4] = true;
-                        Treasure1.Treasure();
+                        Level3Area();
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
                     if (GameLoop.beenHere[7][5] == false){
                         GameLoop.beenHere[7][5] = true;
-                        Treasure2.Treasure();
+                        Level2Area();
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
                     if (GameLoop.beenHere[7][6] == false){
                         GameLoop.beenHere[7][6] = true;
-                        Treasure3.Treasure();
+                        Level1Area();
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
                     if (GameLoop.beenHere[7][7] == false){
                         GameLoop.beenHere[7][7] = true;
-                        Treasure4.Treasure();
+                        System.out.println("You recognize this as the place your journey began. You feel revitilized by returning here. ");
+                        GameLoop.health = 100;
+                        if (GameLoop.numberOfBossesDefeated == 1) {
+                            System.out.println("You notice that where there was nothing but grass before, there is now a pedestal. You hear a booming voice echo across the area. ");
+                            System.out.println("You have defeated one of the four elemental guardians of this plane. Defeat the other three and I will give you the chance to win your freedom by facing me in battle. ");
+                        }
+                        if (GameLoop.numberOfBossesDefeated == 2) {
+                            System.out.println("You notice that where there was nothing but grass before, there are now two pedestals. You hear a booming voice echo across the area. ");
+                            System.out.println("You have defeated two of the four elemental guardians of this plane. Defeat the other two and I will give you the chance to win your freedom by facing me in battle. ");
+                        }
+                        if (GameLoop.numberOfBossesDefeated == 3) {
+                            System.out.println("You notice that where there was nothing but grass before, there are now three pedestals. You hear a booming voice echo across the area. ");
+                            System.out.println("You have defeated three of the four elemental guardians of this plane. Defeat the other one and I will give you the chance to win your freedom by facing me in battle. ");
+                        }
+                        if (GameLoop.numberOfBossesDefeated == 4) {
+                            System.out.println("You notice that where there was nothing but grass before, there are now four pedestals. You hear a booming voice echo across the area. ");
+                            System.out.println("You have defeated all of the elemental guardians of this plane. You have proven yourself worthy and now I will give you a chance to face me in a fight to the death to earn your freedom. ");
+                            Dragon.DragonEncounter();
+                        }
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
                     if (GameLoop.beenHere[7][8] == false){
                         GameLoop.beenHere[7][8] = true;
-                        Treasure5.Treasure();
+                        Level1Area();
                     } else {
                        RepeatedArea();
                     };
                 case 9 : 
                     if (GameLoop.beenHere[7][9] == false){
-                        Shop1.Shop();
                         GameLoop.beenHere[7][9] = true;
+                        Level2Area();
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
                     if (GameLoop.beenHere[7][10] == false){
-                        Shop2.Shop();
                         GameLoop.beenHere[7][10] = true;
+                        Level3Area();
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
                     if (GameLoop.beenHere[7][11] == false){
-                        Shop3.Shop();
                         GameLoop.beenHere[7][11] = true;
+                        Level4Area();
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
                     if (GameLoop.beenHere[7][12] == false){
-                        Shop4.Shop();
                         GameLoop.beenHere[7][12] = true;
+                        Level5Area();
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
                     if (GameLoop.beenHere[7][13] == false){
-                        Shop5.Shop();
                         GameLoop.beenHere[7][13] = true;
+                        Level6Area();
                     } else {
                        RepeatedArea();
                     };
                 case 14 : 
                     if (GameLoop.beenHere[7][14] == false){
-                        TrappedTreasure.Treasure();
                         GameLoop.beenHere[7][14] = true;
+                        Level7Area();
                     } else {
                        RepeatedArea();
                     };
             }
         } else if (GameLoop.xPosition == 8){
             switch (GameLoop.yPosition){
+                case 0 : 
+                    if (GameLoop.beenHere[8][0] == false){
+                        GameLoop.beenHere[8][0] = true;
+                        Level8Area();
+                    } else {
+                        RepeatedArea();
+                    };
                 case 1 :  
                     if (GameLoop.beenHere[8][1] == false){
                     //this checks to see if we have already been here
@@ -709,90 +874,111 @@ public class Map {
                         //this will tell the code that we have now been here
     
                         //this is where we put the encounter that happens in this location
+                        Level7Area();
                     } else {
                         RepeatedArea();
                     };
                 case 2 : 
                     if (GameLoop.beenHere[8][2] == false){
                         GameLoop.beenHere[8][2] = true;
+                        Level6Area();
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
                     if (GameLoop.beenHere[8][3] == false){
                         GameLoop.beenHere[8][3] = true;
+                        Level5Area();
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
                     if (GameLoop.beenHere[8][4] == false){
                         GameLoop.beenHere[8][4] = true;
+                        Level4Area();
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
                     if (GameLoop.beenHere[8][5] == false){
                         GameLoop.beenHere[8][5] = true;
+                        Level3Area();
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
                     if (GameLoop.beenHere[8][6] == false){
                         GameLoop.beenHere[8][6] = true;
+                        Level2Area();
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
                     if (GameLoop.beenHere[8][7] == false){
                         GameLoop.beenHere[8][7] = true;
+                        Level1Area();
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
                     if (GameLoop.beenHere[8][8] == false){
                         GameLoop.beenHere[8][8] = true;
+                        Level2Area();
                     } else {
                        RepeatedArea();
                     };
                 case 9 : 
                     if (GameLoop.beenHere[8][9] == false){
                         GameLoop.beenHere[8][9] = true;
+                        Level3Area();
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
                     if (GameLoop.beenHere[8][10] == false){
                         GameLoop.beenHere[8][10] = true;
+                        Level4Area();
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
                     if (GameLoop.beenHere[8][11] == false){
                         GameLoop.beenHere[8][11] = true;
+                        Level5Area();
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
                     if (GameLoop.beenHere[8][12] == false){
                         GameLoop.beenHere[8][12] = true;
+                        Level6Area();
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
                     if (GameLoop.beenHere[8][13] == false){
                         GameLoop.beenHere[8][13] = true;
+                        Level7Area();
                     } else {
                        RepeatedArea();
                     };
                 case 14 : 
                     if (GameLoop.beenHere[8][14] == false){
                         GameLoop.beenHere[8][14] = true;
+                        Level8Area();
                     } else {
                        RepeatedArea();
                     };
             }
         } else if (GameLoop.xPosition == 9){
             switch (GameLoop.yPosition){
+                case 0 : 
+                    if (GameLoop.beenHere[9][0] == false){
+                        GameLoop.beenHere[9][0] = true;
+                        Level9Area();
+                    } else {
+                        RepeatedArea();
+                    };
                 case 1 :  
                     if (GameLoop.beenHere[9][1] == false){
                     //this checks to see if we have already been here
@@ -800,90 +986,110 @@ public class Map {
                         //this will tell the code that we have now been here
     
                         //this is where we put the encounter that happens in this location
+                        Level8Area();
                     } else {
                         RepeatedArea();
                     };
                 case 2 : 
                     if (GameLoop.beenHere[9][2] == false){
                         GameLoop.beenHere[9][2] = true;
+                        Level7Area();
                     } else {
                         RepeatedArea();
                     };
                 case 3 : 
                     if (GameLoop.beenHere[9][3] == false){
                         GameLoop.beenHere[9][3] = true;
+                        Level6Area();
                     } else {
                        RepeatedArea();
                     };
                 case 4 :
                     if (GameLoop.beenHere[9][4] == false){
                         GameLoop.beenHere[9][4] = true;
+                        Level5Area();
                     } else {
                        RepeatedArea();
                     };
                 case 5 :
                     if (GameLoop.beenHere[9][5] == false){
                         GameLoop.beenHere[9][5] = true;
+                        Level4Area();
                     } else {
                        RepeatedArea();
                     };
                 case 6 : 
                     if (GameLoop.beenHere[9][6] == false){
                         GameLoop.beenHere[9][6] = true;
+                        Level3Area();
                     } else {
                        RepeatedArea();
                     };
                 case 7 : 
                     if (GameLoop.beenHere[9][7] == false){
                         GameLoop.beenHere[9][7] = true;
+                        Level2Area();
                     } else {
                        RepeatedArea();
                     };
                 case 8 : 
                     if (GameLoop.beenHere[9][8] == false){
                         GameLoop.beenHere[9][8] = true;
+                        Level3Area();
                     } else {
                        RepeatedArea();
                     };
                 case 9 : 
                     if (GameLoop.beenHere[9][9] == false){
                         GameLoop.beenHere[9][9] = true;
+                        Level4Area();
                     } else {
                        RepeatedArea();
                     };
                 case 10 : 
                     if (GameLoop.beenHere[9][10] == false){
                         GameLoop.beenHere[9][10] = true;
+                        Level5Area();
                     } else {
                        RepeatedArea();
                     };
                 case 11 : 
                     if (GameLoop.beenHere[9][11] == false){
                         GameLoop.beenHere[9][11] = true;
+                        Level6Area();
                     } else {
                        RepeatedArea();
                     };
                 case 12 : 
                     if (GameLoop.beenHere[9][12] == false){
                         GameLoop.beenHere[9][12] = true;
+                        Level7Area();
                     } else {
                        RepeatedArea();
                     };
                 case 13 : 
                     if (GameLoop.beenHere[9][13] == false){
                         GameLoop.beenHere[9][13] = true;
+                        Level8Area();
                     } else {
                        RepeatedArea();
                     };
                 case 14 : 
                     if (GameLoop.beenHere[9][14] == false){
                         GameLoop.beenHere[9][14] = true;
+                        Level9Area();
                     } else {
                        RepeatedArea();
                     };
             }
         } else if (GameLoop.xPosition == 10){
             switch (GameLoop.yPosition){
+                case 0 : 
+                    if (GameLoop.beenHere[10][0] == false){
+                        GameLoop.beenHere[10][0] = true;
+                    } else {
+                        RepeatedArea();
+                    };
                 case 1 :  
                     if (GameLoop.beenHere[10][1] == false){
                     //this checks to see if we have already been here
@@ -975,6 +1181,12 @@ public class Map {
             }
         } else if (GameLoop.xPosition == 11){
             switch (GameLoop.yPosition){
+                case 0 : 
+                    if (GameLoop.beenHere[11][0] == false){
+                        GameLoop.beenHere[11][0] = true;
+                    } else {
+                        RepeatedArea();
+                    };
                 case 1 :  
                     if (GameLoop.beenHere[11][1] == false){
                     //this checks to see if we have already been here
@@ -1066,6 +1278,12 @@ public class Map {
             }
         } else if (GameLoop.xPosition == 12){
             switch (GameLoop.yPosition){
+                case 0 : 
+                    if (GameLoop.beenHere[12][0] == false){
+                        GameLoop.beenHere[12][0] = true;
+                    } else {
+                        RepeatedArea();
+                    };
                 case 1 :  
                     if (GameLoop.beenHere[12][1] == false){
                     //this checks to see if we have already been here
@@ -1157,6 +1375,12 @@ public class Map {
             }
         } else if (GameLoop.xPosition == 13){
             switch (GameLoop.yPosition){
+                case 0 : 
+                    if (GameLoop.beenHere[13][0] == false){
+                        GameLoop.beenHere[13][0] = true;
+                    } else {
+                        RepeatedArea();
+                    };
                 case 1 :  
                     if (GameLoop.beenHere[13][1] == false){
                     //this checks to see if we have already been here
@@ -1249,6 +1473,12 @@ public class Map {
                 }
         } else if (GameLoop.xPosition == 14){
             switch (GameLoop.yPosition){
+                case 0 : 
+                    if (GameLoop.beenHere[14][0] == false){
+                        GameLoop.beenHere[14][0] = true;
+                    } else {
+                        RepeatedArea();
+                    };
                 case 1 :  
                     if (GameLoop.beenHere[14][1] == false){
                     //this checks to see if we have already been here
@@ -1341,6 +1571,58 @@ public class Map {
                 
             }
         }
+    }
+
+    public static void Level1Area(){
+
+    }
+
+    public static void Level2Area(){
+        
+    }
+
+    public static void Level3Area(){
+        
+    }
+
+    public static void Level4Area(){
+        
+    }
+
+    public static void Level5Area(){
+        
+    }
+
+    public static void Level6Area(){
+        
+    }
+
+    public static void Level7Area(){
+        
+    }
+
+    public static void Level8Area(){
+        
+    }
+
+    public static void Level9Area(){
+        
+    }
+
+    public static void Level10Area(){
+        
+    }
+
+    public static void Level11Area(){
+        
+    }
+
+    public static void Level12Area(){
+        
+    }
+
+    public static void Level13Area(){
+        
     }
 
     public static void RepeatedArea(){
