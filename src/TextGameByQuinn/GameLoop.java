@@ -37,7 +37,7 @@ public class GameLoop{
             // in this case we would call the 12 4 coordinate by saying beenHere[12][4]
         
         //these set up booleans for each position so we can tell later whether or not we have been there
-        public static int gold = 10000; //TODO: this amount should be 0, I am only setting it this high for testing purposes
+        public static int gold = 0; 
         //this will be the amount of gold our character has
         public static int dagger = 1;
         public static int sword = 0;
@@ -104,8 +104,10 @@ public class GameLoop{
         //System.out.println("The game has begun. ");
         //System.out.println("Choose Name. ");
         //String stringyBoi1 = scannyBoi.nextLine();
-        System.out.println("Our tale begins one morning as you wake up alone in a large, foggy feild. You have a dagger in your hand and the only concrete memory you have is that you must find and rescue your father. ");
-
+        System.out.println("Thank you for helping me bug test this game. As you are playing, take not of anything and everything that doesn't work, seems unbalanced, or you don't like. Don't pull your punches, I need actual feeback if I am going to fix things. Thanks -Quinn");
+        System.out.println("You wake up in an empty field. You begin to guage your surroundings but you hear a booming disembodied voice. ");
+        System.out.println("Congratulations, you have been selected to compete in the most pretigious of challenges. This field is surrounded on all sides by a wall and you must venture to the corners, defeating enemies along the way, to defeat the four elemental guardians of this plane. Once you have proven your worth by doing that, you will face me in a fight to the death to determine who is the ultimate competitor. You may return here at any time to restore your strength. Participation is mandatory. Begin. ");
+        
         MapMovement();
         //this will run the method MapMovement()
 

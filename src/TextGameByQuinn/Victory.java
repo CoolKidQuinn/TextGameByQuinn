@@ -2,7 +2,11 @@ package textgamebyquinn;
 
 public class Victory {
     public static void Success(){
-        System.out.println("You win. ");
+        if (GameLoop.continues > 0){
+            System.out.println("You won, but you cheating, so is it really a true victory. ");
+        } else{
+            System.out.println("You won without dying. Congratulations. ");
+        }
         System.out.println("Credits: ");
         System.out.println("Coding: Quinn Reynolds. ");
     }

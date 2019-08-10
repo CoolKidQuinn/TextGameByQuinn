@@ -1,7 +1,7 @@
 package textgamebyquinn;
 
 import textgamebyquinn.GameLoop;
-import java.util.*;
+//import java.util.*;
 
 public class Shop4{
     public static void Shop() {
