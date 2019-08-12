@@ -97,6 +97,16 @@ public class AirElemental{
             case "run" :
                 System.out.println("You try to run away, but a pillar of air shoots up and blocks your path. ");
                 AirElementalAttacks();
+            case "help" :
+                System.out.println("Recognized commands: ");
+                System.out.println("use sword");
+                System.out.println("use dagger");
+                System.out.println("use bow");
+                System.out.println("use potion");
+                System.out.println("use shield");
+                System.out.println("punch");
+                System.out.println("run");
+                AttackAirElemental();
             default :
                 System.out.println("That is not a recognized command. ");
                 AttackAirElemental();
@@ -157,7 +167,17 @@ public class AirElemental{
                 AirElementalAttacks();
             case "run" :
                 System.out.println("You try to run away, but a pillar of air shoots up and knocks you back. ");
-                AirElementalAttacks();
+                AirElementalAttacks();            
+            case "help" :
+                System.out.println("Recognized commands: ");
+                System.out.println("use sword");
+                System.out.println("use dagger");
+                System.out.println("use bow");
+                System.out.println("use potion");
+                System.out.println("use shield");
+                System.out.println("punch");
+                System.out.println("run");
+                CritAttackAirElemental();
             default :
                 System.out.println("That is not a recognized command. ");
                 CritAttackAirElemental();

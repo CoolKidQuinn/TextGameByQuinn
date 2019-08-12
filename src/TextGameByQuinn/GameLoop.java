@@ -107,7 +107,8 @@ public class GameLoop{
         System.out.println("Thank you for helping me bug test this game. As you are playing, take not of anything and everything that doesn't work, seems unbalanced, or you don't like. Don't pull your punches, I need actual feeback if I am going to fix things. Thanks -Quinn");
         System.out.println("You wake up in an empty field. You begin to guage your surroundings but you hear a booming disembodied voice. ");
         System.out.println("Congratulations, you have been selected to compete in the most pretigious of challenges. This field is surrounded on all sides by a wall and you must venture to the corners, defeating enemies along the way, to defeat the four elemental guardians of this plane. Once you have proven your worth by doing that, you will face me in a fight to the death to determine who is the ultimate competitor. You may return here at any time to restore your strength. Participation is mandatory. Begin. ");
-        
+        System.out.println("If you don't know what to type, type help. ");
+
         MapMovement();
         //this will run the method MapMovement()
 
@@ -139,6 +140,13 @@ public class GameLoop{
         } else if (stringyBoi2.equals("move left")){
             xPosition = xPosition - 1;
             Map.CheckPosition();
+        } else if (stringyBoi2.equals("help")) {
+            System.out.println("Recognized commands: ");
+            System.out.println("move forwards");
+            System.out.println("move backwards");
+            System.out.println("move right");
+            System.out.println("move left");
+            MapMovement();
         } else {
             System.out.println("That is not a recognized command. ");
             MapMovement();
@@ -148,7 +156,6 @@ public class GameLoop{
     public static void Sudoku(){
         System.out.println("You stab yourself ");
         GameOver();
-        //this sends us to the game over screen
     }
 
     public static void GameOver(){
@@ -158,10 +165,18 @@ public class GameLoop{
             continues = continues + 1;
             System.out.println("You have cheated " + continues + "times. ");
             health = 100;
-        } else {
+        } else if (stringyBoi.equals("help")) {
+            System.out.println("Recognized commands: ");
+            System.out.println("yes");
+            System.out.println("no");
+            GameOver();
+        } else if (stringyBoi.equals("no")) {
             System.out.println("The game is over. ");
             System.out.println("You Lose");
             System.exit(0);
+        } else {
+            System.out.println("That is not a recognized command. ");
+            GameOver();
         }
     }
 }

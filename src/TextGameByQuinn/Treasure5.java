@@ -17,6 +17,11 @@ public class Treasure5{
             case "ignore chest" :
             System.out.println("You decide to ignore the chest and continue searching. ");
             break;
+            case "help" :
+                System.out.println("Recognized commands: ");
+                System.out.println("open chest");
+                System.out.println("ignore chest");
+                Treasure();
             default :
             System.out.println("That is not a recognized command. ");
             Treasure();

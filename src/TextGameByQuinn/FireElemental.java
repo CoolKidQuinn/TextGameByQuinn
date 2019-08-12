@@ -116,6 +116,16 @@ public class FireElemental{
             case "run" :
                 System.out.println("You try to run away, but a wall of fire shoots up and blocks your path. ");
                 FireElementalAttacks();
+            case "help" :
+                System.out.println("Recognized commands: ");
+                System.out.println("use sword");
+                System.out.println("use dagger");
+                System.out.println("use bow");
+                System.out.println("use potion");
+                System.out.println("use shield");
+                System.out.println("punch");
+                System.out.println("run");
+                AttackFireElemental();
             default :
                 System.out.println("That is not a recognized command. ");
                 AttackFireElemental();
@@ -177,6 +187,16 @@ public class FireElemental{
             case "run" :
                 System.out.println("You try to run away, but a wall of fire shoots up and blocks your path. ");
                 FireElementalAttacks();
+            case "help" :
+                System.out.println("Recognized commands: ");
+                System.out.println("use sword");
+                System.out.println("use dagger");
+                System.out.println("use bow");
+                System.out.println("use potion");
+                System.out.println("use shield");
+                System.out.println("punch");
+                System.out.println("run");
+                CritAttackFireElemental();
             default :
                 System.out.println("That is not a recognized command. ");
                 CritAttackFireElemental();

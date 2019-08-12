@@ -99,6 +99,16 @@ public class Troll3{
         case "run" :
             System.out.println("You try to run away from the troll, but it is too fast and catches you. ");
             Troll3Attacks();
+        case "help" :
+            System.out.println("Recognized commands: ");
+            System.out.println("use sword");
+            System.out.println("use dagger");
+            System.out.println("use bow");
+            System.out.println("use potion");
+            System.out.println("use shield");
+            System.out.println("punch");
+            System.out.println("run");   
+            AttackTroll3(); 
         default :
             System.out.println("That is not a recognized command. ");
             AttackTroll3();
@@ -160,6 +170,16 @@ public class Troll3{
         case "run" :
             System.out.println("Even when the troll is off guard, it is still able to chase you down when you try to run. ");
             Troll3Attacks();
+        case "help" :
+            System.out.println("Recognized commands: ");
+            System.out.println("use sword");
+            System.out.println("use dagger");
+            System.out.println("use bow");
+            System.out.println("use potion");
+            System.out.println("use shield");
+            System.out.println("punch");
+            System.out.println("run");  
+            CritAttackTroll3();  
         default :
             System.out.println("That is not a recognized command. ");
             CritAttackTroll3();

@@ -79,6 +79,16 @@ public class MediumSlime{
         case "run" :
             System.out.println("You try to run away from the slime, but it is able to leap at you and prevent your escape. ");
             MediumSlimeAttack();
+        case "help" :
+            System.out.println("Recognized commands: ");
+            System.out.println("use sword");
+            System.out.println("use dagger");
+            System.out.println("use bow");
+            System.out.println("use potion");
+            System.out.println("use shield");
+            System.out.println("punch");
+            System.out.println("run");
+            AttackMediumSlime();
         default :
             System.out.println("That is not a recognized command. ");
             AttackMediumSlime();
@@ -140,6 +150,16 @@ public class MediumSlime{
         case "run" :
             System.out.println("You are able to succesfully escape the slime. ");
             GameLoop.MapMovement();
+        case "help" :
+            System.out.println("Recognized commands: ");
+            System.out.println("use sword");
+            System.out.println("use dagger");
+            System.out.println("use bow");
+            System.out.println("use potion");
+            System.out.println("use shield");
+            System.out.println("punch");
+            System.out.println("run");
+            CritAttackMediumSlime();
         default :
             System.out.println("That is not a recognized command. ");
             CritAttackMediumSlime();
@@ -289,6 +309,16 @@ public class MediumSlime{
         case "run" :
             System.out.println("You try to run away from the slimes, but they are able to leap at you and prevent your escape. ");
             DoubleSmallSlimeAttack();
+        case "help" :
+            System.out.println("Recognized commands: ");
+            System.out.println("use sword");
+            System.out.println("use dagger");
+            System.out.println("use bow");
+            System.out.println("use potion");
+            System.out.println("use shield");
+            System.out.println("punch");
+            System.out.println("run");
+            AttackDoubleSmallSlime();    
         default :
             System.out.println("That is not a recognized command. ");
             AttackDoubleSmallSlime();
@@ -398,6 +428,16 @@ public class MediumSlime{
         case "run" :
             System.out.println("You try to run away from the slimes, but they are able to leap at you and prevent your escape. ");
             DoubleSmallSlimeAttack();
+        case "help" :
+            System.out.println("Recognized commands: ");
+            System.out.println("use sword");
+            System.out.println("use dagger");
+            System.out.println("use bow");
+            System.out.println("use potion");
+            System.out.println("use shield");
+            System.out.println("punch");
+            System.out.println("run");   
+            CritAttackDoubleSmallSlime(); 
         default :
             System.out.println("That is not a recognized command. ");
             CritAttackDoubleSmallSlime();

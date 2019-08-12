@@ -100,6 +100,16 @@ public class WaterElemental{
             case "run" :
                 System.out.println("You try to run away, but a pillar of water shoots up and blocks your path. ");
                 WaterElementalAttacks();
+            case "help" :
+                System.out.println("Recognized commands: ");
+                System.out.println("use sword");
+                System.out.println("use dagger");
+                System.out.println("use bow");
+                System.out.println("use potion");
+                System.out.println("use shield");
+                System.out.println("punch");
+                System.out.println("run");
+                AttackWaterElemental();
             default :
                 System.out.println("That is not a recognized command. ");
                 AttackWaterElemental();
@@ -159,6 +169,16 @@ public class WaterElemental{
             case "run" :
                 System.out.println("You try to run away, but a pillar of water shoots up and blocks your path. ");
                 WaterElementalAttacks();
+            case "help" :
+                System.out.println("Recognized commands: ");
+                System.out.println("use sword");
+                System.out.println("use dagger");
+                System.out.println("use bow");
+                System.out.println("use potion");
+                System.out.println("use shield");
+                System.out.println("punch");
+                System.out.println("run");
+                CritAttackWaterElemental();
             default :
                 System.out.println("That is not a recognized command. ");
                 CritAttackWaterElemental();

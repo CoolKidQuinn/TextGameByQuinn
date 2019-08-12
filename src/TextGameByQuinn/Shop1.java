@@ -10,7 +10,7 @@ public class Shop1{
     //it will be an encounter you can have multiple times
     //the items here will be cheap
     public static void Shop() {
-        System.out.println("You see a rickety building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be in relatively good condition, although they aren't very high quality. There is a sword with a price tag of 100 gold, a shield with a price tag of 100, a bow with a price tag of 75 gold, arrows with a price tag of 5 gold each, armor with a price tag of 100 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
+        System.out.println("You see a rickety building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be in relatively good condition, although they aren't very high quality. There is a sword with a price tag of 100 gold, a shield with a price tag of 100, a bow with a price tag of 75 gold, arrows with a price tag of 5 gold each, armor with a price tag of 100 gold, and mysterious potions with a price tag of 25 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
         MainShop1();
     }
 
@@ -125,6 +125,17 @@ public class Shop1{
             break;
         case "leave shop" :
             GameLoop.MapMovement();
+        case "help" :
+            System.out.println("Recognized commands: ");
+            System.out.println("Recognized commands: ");
+            System.out.println("buy sword");
+            System.out.println("buy shield");
+            System.out.println("buy bow");
+            System.out.println("buy arrows");
+            System.out.println("buy armor");
+            System.out.println("buy potions");
+            System.out.println("leave shop");  
+            MainShop1();  
         default :
             System.out.println("This is not a recognized command");
             MainShop1();

@@ -885,7 +885,7 @@ public class Map {
                         if (GameLoop.numberOfBossesDefeated == 4) {
                             System.out.println("You notice that where there was nothing but grass before, there are now four pedestals. You hear a booming voice echo across the area. ");
                             System.out.println("You have defeated all of the elemental guardians of this plane. You have proven yourself worthy and now I will give you a chance to face me in a fight to the death to earn your freedom. ");
-                            Dragon.DragonEncounter();
+                            FinalBoss.FinalBossEncounter();
                         }
                     } else {
                        RepeatedArea();
@@ -1866,5 +1866,4 @@ public class Map {
         System.out.println("You recognize this area. There isn't anything left to do here. ");
         GameLoop.MapMovement();
     }
-
 }

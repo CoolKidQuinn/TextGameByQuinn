@@ -78,6 +78,16 @@ public class SmallSlime{
         case "run" :
             System.out.println("You try to run away from the slime, but it is able to leap at you and prevent your escape. ");
             SmallSlimeAttack();
+        case "help" :
+            System.out.println("Recognized commands: ");
+            System.out.println("use sword");
+            System.out.println("use dagger");
+            System.out.println("use bow");
+            System.out.println("use potion");
+            System.out.println("use shield");
+            System.out.println("punch");
+            System.out.println("run");   
+            AttackSmallSlime(); 
         default :
             System.out.println("That is not a recognized command. ");
             AttackSmallSlime();
@@ -139,6 +149,9 @@ public class SmallSlime{
         case "run" :
             System.out.println("You are able to succesfully escape the slime. ");
             GameLoop.MapMovement();
+        case "help" :
+            System.out.println("Recognized commands: ");
+            CritAttackSmallSlime();
         default :
             System.out.println("That is not a recognized command. ");
             CritAttackSmallSlime();

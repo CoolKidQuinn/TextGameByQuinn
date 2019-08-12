@@ -100,6 +100,16 @@ public class Goblin3 {
             case "run" :
                 System.out.println("You try to run away, but the goblin is way faster than you and catches you. ");
                 Goblin3Attacks();
+            case "help" :
+                System.out.println("Recognized commands: ");
+                System.out.println("use sword");
+                System.out.println("use dagger");
+                System.out.println("use bow");
+                System.out.println("use potion");
+                System.out.println("use shield");
+                System.out.println("punch");
+                System.out.println("run");
+                AttackGoblin3();
             default :
                 System.out.println("That is not a recognized command. ");
                 AttackGoblin3();
@@ -160,6 +170,16 @@ public class Goblin3 {
             case "run" :
                 System.out.println("You try to run away, but the goblin gets up and is able to chase you down. ");
                 Goblin3Attacks();
+            case "help" :
+                System.out.println("Recognized commands: ");
+                System.out.println("use sword");
+                System.out.println("use dagger");
+                System.out.println("use bow");
+                System.out.println("use potion");
+                System.out.println("use shield");
+                System.out.println("punch");
+                System.out.println("run");
+                CritAttackGoblin3();
             default :
                 System.out.println("That is not a recognized command. ");
                 CritAttackGoblin3();

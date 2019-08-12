@@ -5,7 +5,7 @@ import textgamebyquinn.GameLoop;
 
 public class Shop5{
     public static void Shop() {
-        System.out.println("You see a magnificent building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items are the best quality you have ever seen. You can practically feel the power radiating off of them. There is a sword with a price tag of 1800 gold, a shield with a price tag of 1800, a bow with a price tag of 1200 gold, arrows with a price tag of 5 gold each, armor with a price tag of 1800 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
+        System.out.println("You see a magnificent building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the shop being vacant, all the items are the best quality you have ever seen. You can practically feel the power radiating off of them. There is a sword with a price tag of 1800 gold, a shield with a price tag of 1800, a bow with a price tag of 1200 gold, arrows with a price tag of 5 gold each, armor with a price tag of 1800 gold, and mysterious potions with a price tag of 25 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
         MainShop5();
     }
 
@@ -80,7 +80,7 @@ public class Shop5{
         case "buy potions" :
             System.out.println("How many would you like to buy?");
             int potionsPurchased = GameLoop.scannyBoi.nextInt();
-            int goldSpentOnPotions = potionsPurchased * 10;
+            int goldSpentOnPotions = potionsPurchased * 25;
             if (GameLoop.gold >= goldSpentOnPotions){
                 GameLoop.gold = GameLoop.gold - goldSpentOnPotions;
                 System.out.println("You have " + GameLoop.gold + " gold left. ");
@@ -108,6 +108,16 @@ public class Shop5{
             GameLoop.GameOver();
         case "leave shop" :
             GameLoop.MapMovement();
+        case "help" :
+            System.out.println("Recognized commands: ");
+            System.out.println("buy sword");
+            System.out.println("buy shield");
+            System.out.println("buy bow");
+            System.out.println("buy arrows");
+            System.out.println("buy armor");
+            System.out.println("buy potions");
+            System.out.println("leave shop");
+            MainShop5();
         default :
             System.out.println("This is not a recognized command");
             MainShop5();

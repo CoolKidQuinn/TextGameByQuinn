@@ -5,7 +5,7 @@ import textgamebyquinn.GameLoop;
 
 public class Shop2{
     public static void Shop() {
-        System.out.println("You see an old building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be brand new and of decent quality. There is a sword with a price tag of 200 gold, a shield with a price tag of 200, a bow with a price tag of 150 gold, arrows with a price tag of 5 gold each, armor with a price tag of 200 gold, and mysterious potions with a price tag of 10 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
+        System.out.println("You see an old building. Upon closer inspection, it appears to be some sort of abandoned shop. Despite the appearance of the shop, all the items seem to be brand new and of decent quality. There is a sword with a price tag of 200 gold, a shield with a price tag of 200, a bow with a price tag of 150 gold, arrows with a price tag of 5 gold each, armor with a price tag of 200 gold, and mysterious potions with a price tag of 25 gold each. There is sign telling you to leave the money on the counter and a sign saying no stealing. ");
         MainShop2();
     }
 
@@ -108,6 +108,17 @@ public class Shop2{
             GameLoop.GameOver();
         case "leave shop" :
             GameLoop.MapMovement();
+        case "help" :
+            System.out.println("Recognized commands: ");
+            System.out.println("Recognized commands: ");
+            System.out.println("buy sword");
+            System.out.println("buy shield");
+            System.out.println("buy bow");
+            System.out.println("buy arrows");
+            System.out.println("buy armor");
+            System.out.println("buy potions");
+            System.out.println("leave shop");   
+            MainShop2(); 
         default :
             System.out.println("This is not a recognized command");
             MainShop2();
