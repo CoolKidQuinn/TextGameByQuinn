@@ -13,10 +13,8 @@ public class Treasure5{
             System.out.println("You open up the treasure chest and find 100 gold ");
             GameLoop.experience = GameLoop.experience + 25;
             GameLoop.gold = GameLoop.gold + 100;
-            break;
             case "ignore chest" :
             System.out.println("You decide to ignore the chest and continue searching. ");
-            break;
             case "help" :
                 System.out.println("Recognized commands: ");
                 System.out.println("open chest");
@@ -25,7 +23,6 @@ public class Treasure5{
             default :
             System.out.println("That is not a recognized command. ");
             Treasure();
-            break;
         }
         GameLoop.MapMovement();
     }

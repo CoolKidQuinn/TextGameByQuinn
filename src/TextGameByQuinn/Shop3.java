@@ -53,12 +53,12 @@ public class Shop3{
             MainShop3();
         case "buy arrows" :
             System.out.println("How many would you like to buy?");
-            int arrowsPurchased = GameLoop.scannyBoi.nextInt();
+            int arrowsPurchased = GameLoop.intyBoi.nextInt();
             int goldSpentOnArrows = arrowsPurchased * 5;
             if (GameLoop.gold >= goldSpentOnArrows){
                 GameLoop.gold = GameLoop.gold - goldSpentOnArrows;
                 GameLoop.numberOfArrows = GameLoop.numberOfArrows + arrowsPurchased;
-                System.out.println("You now have " + GameLoop.numberOfArrows + " arrows. You have " + GameLoop.gold + " gold left. ");
+                System.out.println("You now have " + GameLoop.numberOfArrows + " arrows.");
             } else {
                 System.out.println("You do not have enough gold to buy this. ");
             }
@@ -78,11 +78,12 @@ public class Shop3{
             MainShop3();
         case "buy potions" :
             System.out.println("How many would you like to buy?");
-            int potionsPurchased = GameLoop.scannyBoi.nextInt();
+            int potionsPurchased = GameLoop.intyBoi.nextInt();
             int goldSpentOnPotions = potionsPurchased * 25;
             if (GameLoop.gold >= goldSpentOnPotions){
                 GameLoop.gold = GameLoop.gold - goldSpentOnPotions;
-                System.out.println("You have " + GameLoop.gold + " gold left. ");
+                GameLoop.numberOfPotions = GameLoop.numberOfPotions + potionsPurchased;
+                System.out.println("You now have " + GameLoop.numberOfPotions + " potions. ");
             } else {
                 System.out.println("You do not have enough gold to buy this. ");
             }

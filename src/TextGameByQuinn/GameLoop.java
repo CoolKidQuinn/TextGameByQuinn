@@ -37,7 +37,7 @@ public class GameLoop{
             // in this case we would call the 12 4 coordinate by saying beenHere[12][4]
         
         //these set up booleans for each position so we can tell later whether or not we have been there
-        public static int gold = 0; 
+        public static int gold = 1000; 
         //this will be the amount of gold our character has
         public static int dagger = 1;
         public static int sword = 0;
@@ -74,6 +74,7 @@ public class GameLoop{
 
         public static int numberOfBossesDefeated;
         public static Scanner scannyBoi = new Scanner(System.in);
+        public static Scanner intyBoi = new Scanner(System.in);
         //"Scanner scannyBoi" brings a scanner into existence and names it scannyBoi
             //scanners can take input from the keyboard (or other places, but for our purposes keyboards)
         //"= new Scanner(System.in)" tells that scanner to get input from the place inside the parenthesis

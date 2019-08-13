@@ -839,8 +839,7 @@ public class Map {
                     } else {
                        RepeatedArea();
                     };
-                case 7 : 
-                    if (GameLoop.beenHere[7][7] == false){
+                case 7 :
                         System.out.println("You recognize this as the place your journey began. You feel revitilized by returning here. ");
                         GameLoop.health = 100;
                         if (GameLoop.numberOfBossesDefeated == 1) {
@@ -860,9 +859,7 @@ public class Map {
                             System.out.println("You have defeated all of the elemental guardians of this plane. You have proven yourself worthy and now I will give you a chance to face me in a fight to the death to earn your freedom. ");
                             FinalBoss.FinalBossEncounter();
                         }
-                    } else {
                         GameLoop.MapMovement();
-                    };
                 case 8 : 
                     if (GameLoop.beenHere[7][8] == false){
                         GameLoop.beenHere[7][8] = true;

@@ -31,7 +31,6 @@ public class Shop1{
                 System.out.println("You do not have enough gold to buy this. ");
             }
             MainShop1();
-            break;
         case "buy shield" :
             if (GameLoop.gold >= 100){
                 if (GameLoop.shield < 1){
@@ -45,7 +44,6 @@ public class Shop1{
                 System.out.println("You do not have enough gold to buy this. ");
             }
             MainShop1();
-            break;
         case "buy bow" :
             if (GameLoop.gold >= 75){
                 if (GameLoop.bow < 1){
@@ -59,10 +57,9 @@ public class Shop1{
                 System.out.println("You do not have enough gold to buy this. ");
             }
             MainShop1();
-            break;
         case "buy arrows" :
             System.out.println("How many would you like to buy?");
-            int arrowsPurchased = GameLoop.scannyBoi.nextInt();
+            int arrowsPurchased = GameLoop.intyBoi.nextInt();
             int goldSpentOnArrows = arrowsPurchased * 5;
             if (GameLoop.gold >= goldSpentOnArrows){
                 GameLoop.gold = GameLoop.gold - goldSpentOnArrows;
@@ -72,7 +69,6 @@ public class Shop1{
                 System.out.println("You do not have enough gold to buy this. ");
             }
             MainShop1();
-            break;
         case "buy armor" :
             if(GameLoop.gold >= 100){
                 if (GameLoop.armor < 1){
@@ -86,42 +82,36 @@ public class Shop1{
                 System.out.println("You do not have enough gold to buy this. ");
             }
             MainShop1();
-            break;
         case "buy potions" :
             System.out.println("How many would you like to buy?");
-            int potionsPurchased = GameLoop.scannyBoi.nextInt();
-            int goldSpentOnPotions = potionsPurchased * 10;
+            int potionsPurchased = GameLoop.intyBoi.nextInt();
+            int goldSpentOnPotions = potionsPurchased * 25;
             if (GameLoop.gold >= goldSpentOnPotions){
                 GameLoop.gold = GameLoop.gold - goldSpentOnPotions;
-                System.out.println("You have " + GameLoop.gold + " gold left. ");
+                GameLoop.numberOfPotions = GameLoop.numberOfPotions + potionsPurchased;
+                System.out.println("You now have " + GameLoop.numberOfPotions + " potions. ");
             } else {
                 System.out.println("You do not have enough gold to buy this. ");
             }
-            break;
+            MainShop1();
         case "steal sword" :
             System.out.println("As you grab the sword you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
-            break;
         case "steal shield" :
             System.out.println("As you grab the shield you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
-            break;
         case "steal bow" :
             System.out.println("As you grab the bow you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
-            break;
             case "steal arrows" :
             System.out.println("As you grab the arrows you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
-            break;
         case "steal armor" :
             System.out.println("As you grab the armor you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
-            break;
         case "steal potions" :
             System.out.println("As you grab the potions you feel a searing pain where you touch it. The pain shoots from your hand throughout your entire body. You collapse in pain. ");
             GameLoop.GameOver();
-            break;
         case "leave shop" :
             GameLoop.MapMovement();
         case "help" :
