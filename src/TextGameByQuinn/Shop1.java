@@ -15,7 +15,6 @@ public class Shop1{
     }
 
     public static void MainShop1(){
-        System.out.println("test");
         System.out.println("You have " + GameLoop.gold + " gold. ");
         String shoppyBoi1 = GameLoop.scannyBoi.nextLine();
         switch (shoppyBoi1) {

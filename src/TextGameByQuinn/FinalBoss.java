@@ -1,5 +1,6 @@
 package textgamebyquinn;
 
+import textgamebyquinn.Victory;
 //import textgamebyquinn.GameLoop;
 //import java.util.*;
 

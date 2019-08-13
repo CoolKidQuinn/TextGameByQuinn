@@ -10,9 +10,9 @@ public class Treasure1{
         String stringyBoi3 = GameLoop.scannyBoi.nextLine();
         switch (stringyBoi3){
             case "open chest" : 
-            System.out.println("You open up the treasure chest and find 20 gold ");
+            System.out.println("You open up the treasure chest and find 25 gold ");
             GameLoop.experience = GameLoop.experience + 5;
-            GameLoop.gold = GameLoop.gold + 20;
+            GameLoop.gold = GameLoop.gold + 25;
             break;
             case "ignore chest" :
             System.out.println("You decide to ignore the chest and continue searching. ");

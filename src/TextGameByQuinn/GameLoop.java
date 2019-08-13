@@ -140,12 +140,16 @@ public class GameLoop{
         } else if (stringyBoi2.equals("move left")){
             xPosition = xPosition - 1;
             Map.CheckPosition();
+        } else if (stringyBoi2.equals("check position")){
+            System.out.println(xPosition + ", " + yPosition);
+            MapMovement();
         } else if (stringyBoi2.equals("help")) {
             System.out.println("Recognized commands: ");
             System.out.println("move forwards");
             System.out.println("move backwards");
             System.out.println("move right");
             System.out.println("move left");
+            System.out.println("check position");
             MapMovement();
         } else {
             System.out.println("That is not a recognized command. ");
@@ -163,7 +167,7 @@ public class GameLoop{
         String stringyBoi = scannyBoi.nextLine();
         if (stringyBoi.equals("yes")){
             continues = continues + 1;
-            System.out.println("You have cheated " + continues + "times. ");
+            System.out.println("You have cheated " + continues + " times. ");
             health = 100;
         } else if (stringyBoi.equals("help")) {
             System.out.println("Recognized commands: ");

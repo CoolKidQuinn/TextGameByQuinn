@@ -39,7 +39,7 @@ public class Goblin1 {
                     System.out.println("You attempt to stab the goblin but it leaps out of the way. ");
                 } else {
                     int damage = GameLoop.level;
-                    GameLoop.trollHealth = GameLoop.trollHealth - damage;
+                    GameLoop.goblinHealth= GameLoop.goblinHealth - damage;
                     System.out.println("You stab the goblin with your dagger. ");
                 }
                 Goblin1Attacks();

@@ -5,7 +5,7 @@ import java.util.*;
 
 public class SmallSlime{
     public static void SmallSlimeEncounter(){
-        GameLoop.smallSlimeHealth = 10;
+        GameLoop.smallSlimeHealth = 5;
         System.out.println("A small slime appears. ");
         AttackSmallSlime();
     }
@@ -180,7 +180,7 @@ public class SmallSlime{
         System.out.println("And with that, the slime bursts open and its remains dissolved into the earth. ");
         GameLoop.experience = GameLoop.experience + 20;
         GameLoop.gold = GameLoop.gold + 30;
-        System.out.println("You have gotten some gold and experience. You now have " + GameLoop.gold + " gold and " + GameLoop.experience + "experience ");
+        System.out.println("You have gotten some gold and experience. You now have " + GameLoop.gold + " gold and " + GameLoop.experience + " experience ");
         GameLoop.MapMovement();
     }
 }

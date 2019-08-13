@@ -1,34 +1,7 @@
 package textgamebyquinn;
 
 import java.util.*;
-import textgamebyquinn.AirElemental;
-import textgamebyquinn.EarthElemental;
-import textgamebyquinn.FireElemental;
-import textgamebyquinn.WaterElemental;
-import textgamebyquinn.Troll1;
-import textgamebyquinn.Troll2;
-import textgamebyquinn.Troll3;
-import textgamebyquinn.Troll4;
-import textgamebyquinn.Troll5;
-import textgamebyquinn.MediumSlime;
-import textgamebyquinn.SmallSlime;
-import textgamebyquinn.TrappedTreasure;
-import textgamebyquinn.Treasure1;
-import textgamebyquinn.Treasure2;
-import textgamebyquinn.Treasure3;
-import textgamebyquinn.Treasure4;
-import textgamebyquinn.Treasure5;
-import textgamebyquinn.Shop1;
-import textgamebyquinn.Shop2;
-import textgamebyquinn.Shop3;
-import textgamebyquinn.Shop4;
-import textgamebyquinn.Shop5;
-import textgamebyquinn.Goblin1;
-import textgamebyquinn.Goblin2;
-import textgamebyquinn.Goblin3;
-import textgamebyquinn.Goblin4;
-import textgamebyquinn.Goblin5;
-import textgamebyquinn.GameLoop;
+import textgamebyquinn.*;
 
 public class Map {
     static Random rand = new Random();
@@ -888,7 +861,7 @@ public class Map {
                             FinalBoss.FinalBossEncounter();
                         }
                     } else {
-                       RepeatedArea();
+                        GameLoop.MapMovement();
                     };
                 case 8 : 
                     if (GameLoop.beenHere[7][8] == false){
@@ -1713,10 +1686,8 @@ public class Map {
         int encounterNumber = rand.nextInt(100);
         if (encounterNumber < 60) {
             SmallSlime.SmallSlimeEncounter();
-        } else if (encounterNumber < 90) {
-            Treasure1.Treasure();
         } else {
-            Goblin1.Goblin1Encounter();
+            Treasure1.Treasure();
         }
     }
 

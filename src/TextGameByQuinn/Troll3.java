@@ -208,7 +208,7 @@ public class Troll3{
         System.out.println("And with that, the troll fell over with a resounding thud. ");
         GameLoop.experience = GameLoop.experience + 100;
         GameLoop.gold = GameLoop.gold + 200;
-        System.out.println("You have gotten some gold and experience. You now have " + GameLoop.gold + " gold and " + GameLoop.experience + "experience ");
+        System.out.println("You have gotten some gold and experience. You now have " + GameLoop.gold + " gold and " + GameLoop.experience + " experience ");
         GameLoop.MapMovement();
     }
 }
