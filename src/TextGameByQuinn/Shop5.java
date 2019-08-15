@@ -18,7 +18,7 @@ public class Shop5{
                 if (GameLoop.sword < 5){
                     GameLoop.gold = GameLoop.gold - 1800;
                     GameLoop.sword = 5;
-                    System.out.println("You now have a good sword. You have " + GameLoop.gold + " gold left. ");
+                    System.out.println("You now have the best sword. You have " + GameLoop.gold + " gold left. ");
                 } else {
                     System.out.println("Your current sword is already better than this. There is no need to buy it. ");
                 }
@@ -31,7 +31,7 @@ public class Shop5{
                 if (GameLoop.shield < 5){
                     GameLoop.gold = GameLoop.gold - 1800;
                     GameLoop.shield = 5;
-                    System.out.println("You now have a good shield. You have " + GameLoop.gold + " gold left. ");
+                    System.out.println("You now have the best shield. You have " + GameLoop.gold + " gold left. ");
                 } else {
                     System.out.println("Your current shield is already better than this. There is no need to buy it. ");
                 }
@@ -44,7 +44,7 @@ public class Shop5{
                 if (GameLoop.bow < 5){
                     GameLoop.gold = GameLoop.gold - 1200;
                     GameLoop.bow = 5;
-                    System.out.println("You now have a good bow. You have " + GameLoop.gold + " gold left. ");
+                    System.out.println("You now have the best bow. You have " + GameLoop.gold + " gold left. ");
                 } else {
                     System.out.println("Your current bow is already better than this. There is no need to buy it. ");
                 }
@@ -69,7 +69,7 @@ public class Shop5{
                 if (GameLoop.armor < 5){
                     GameLoop.gold = GameLoop.gold - 1800;
                     GameLoop.armor = 5;
-                    System.out.println("You now have good armor. You have " + GameLoop.gold + " gold left. ");
+                    System.out.println("You now have the best armor. You have " + GameLoop.gold + " gold left. ");
                 } else {
                     System.out.println("Your current armor is already better than this. There is no need to buy it. ");
                 }

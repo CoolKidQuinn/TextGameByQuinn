@@ -13,10 +13,10 @@ public class Treasure3{
             System.out.println("You open up the treasure chest and find 60 gold ");
             GameLoop.experience = GameLoop.experience + 15;
             GameLoop.gold = GameLoop.gold + 60;
-            Treasure();
+            GameLoop.MapMovement();
             case "ignore chest" :
             System.out.println("You decide to ignore the chest and continue searching. ");
-            Treasure();
+            GameLoop.MapMovement();
             case "help" :
                 System.out.println("Recognized commands: ");
                 System.out.println("open chest");
