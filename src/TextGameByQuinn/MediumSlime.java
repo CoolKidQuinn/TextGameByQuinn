@@ -55,6 +55,7 @@ public class MediumSlime{
                 GameLoop.health = GameLoop.health + 25;
                 System.out.println("You drink the potion and feel reinvigorated. ");
             }
+            System.out.println("You have " + GameLoop.health + " health.");
             AttackMediumSlime();
         case "use shield" :
             if (GameLoop.shield == 0){
@@ -139,6 +140,7 @@ public class MediumSlime{
                 GameLoop.health = GameLoop.health + 25;
                 System.out.println("You drink the potion and feel reinvigorated. ");
             }
+            System.out.println("You have " + GameLoop.health + " health.");
             CritAttackMediumSlime();
         case "use shield" :
             System.out.println("The slime is already lying helpless on the ground. ");
@@ -179,8 +181,11 @@ public class MediumSlime{
             }
             if (GameLoop.health <= 0){
                 GameLoop.GameOver();
+            } else {
+                System.out.println("The slime has " + GameLoop.mediumSlimeHealth + " health.");
+                System.out.println("You have " + GameLoop.health + " health.");
+                AttackMediumSlime();
             }
-            AttackMediumSlime();
         }
     }
 
@@ -274,6 +279,7 @@ public class MediumSlime{
                 GameLoop.health = GameLoop.health + 25;
                 System.out.println("You drink the potion and feel reinvigorated. ");
             }
+            System.out.println("You have " + GameLoop.health + " health.");
             AttackDoubleSmallSlime();
         case "use shield" :
             if (GameLoop.shield == 0){
@@ -406,6 +412,7 @@ public class MediumSlime{
                 GameLoop.health = GameLoop.health + 25;
                 System.out.println("You drink the potion and feel reinvigorated. ");
             }
+            System.out.println("You have " + GameLoop.health + " health.");
             CritAttackDoubleSmallSlime();
         case "use shield" :
             System.out.println("The slimes are already lying helpless");
@@ -457,8 +464,12 @@ public class MediumSlime{
             }
             if (GameLoop.health <= 0){
                 GameLoop.GameOver();
+            } else {
+                System.out.println("Slime 1 has " + GameLoop.doubleSmallSlime1Health + " health.");
+                System.out.println("Slime 2 has " + GameLoop.doubleSmallSlime2Health + " health.");
+                System.out.println("You have " + GameLoop.health + " health.");
+                AttackDoubleSmallSlime();
             }
-            AttackDoubleSmallSlime();
         }
     }
 

@@ -13,9 +13,13 @@ public class TrappedTreasure{
             GameLoop.health = GameLoop.health - 10;
             if (GameLoop.health <= 0){
                 GameLoop.GameOver();
+            } else {
+                System.out.println("You have " + GameLoop.health + " health.");
             }
+            GameLoop.MapMovement();
             case "ignore chest" :
             System.out.println("You decide to ignore the chest and continue searching. ");
+            GameLoop.MapMovement();
             case "help" :
                 System.out.println("Recognized commands: ");
                 System.out.println("open chest");
@@ -25,6 +29,5 @@ public class TrappedTreasure{
             System.out.println("That is not a recognized command. ");
             Treasure();
         }
-        GameLoop.MapMovement();
     }
 }

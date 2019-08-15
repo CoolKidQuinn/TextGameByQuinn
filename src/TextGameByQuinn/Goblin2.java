@@ -76,6 +76,7 @@ public class Goblin2 {
                     GameLoop.health = GameLoop.health + 25;
                     System.out.println("You drink the potion and feel reinvigorated. ");
                 }
+                System.out.println("You have " + GameLoop.health + " health.");
                 AttackGoblin2();
             case "use shield" :
                 if (GameLoop.shield == 0) {
@@ -160,6 +161,7 @@ public class Goblin2 {
                     GameLoop.health = GameLoop.health + 25;
                     System.out.println("You drink the potion and feel reinvigorated. ");
                 }
+                System.out.println("You have " + GameLoop.health + " health.");
                 CritAttackGoblin2();
             case "use shield" :
                 System.out.println("The goblin is already defenseless. ");
@@ -199,8 +201,11 @@ public class Goblin2 {
             }
             if (GameLoop.health <= 0) {
                 GameLoop.GameOver();
+            } else {
+                System.out.println("The goblin has " + GameLoop.goblinHealth + " health.");
+                System.out.println("You have " + GameLoop.health + " health.");
+                AttackGoblin2();
             }
-            AttackGoblin2();
         }
     }
 

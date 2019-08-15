@@ -76,6 +76,7 @@ public class EarthElemental{
                     GameLoop.health = GameLoop.health + 25;
                     System.out.println("You drink the potion and feel reinvigorated. ");
                 }
+                System.out.println("You have " + GameLoop.health + " health.");
                 AttackEarthElemental();
             case "use shield" :
                 if (GameLoop.shield == 0) {
@@ -157,6 +158,7 @@ public class EarthElemental{
                     GameLoop.health = GameLoop.health + 25;
                     System.out.println("You drink the potion and feel reinvigorated. ");
                 }
+                System.out.println("You have " + GameLoop.health + " health.");
                 CritAttackEarthElemental();
             case "use shield" :
                 System.out.println("The elemental is already off guard. ");
@@ -201,8 +203,11 @@ public class EarthElemental{
             if (stunChance >= 9) {
                 System.out.println("You are knocked down and while you are getting back up the elemental attacks again. ");
                 EarthElementalAttacks();
+            } else {
+                System.out.println("The elemental has " + GameLoop.elementalHealth + " health.");
+                System.out.println("You have " + GameLoop.health + " health.");
+                AttackEarthElemental();
             }
-            AttackEarthElemental();
         }
     }
 

@@ -75,6 +75,7 @@ public class Troll5{
                 GameLoop.health = GameLoop.health + 25;
                 System.out.println("You drink the potion and feel reinvigorated. ");
             }
+            System.out.println("You have " + GameLoop.health + " health.");
             AttackTroll5();
         case "use shield" :
             if (GameLoop.shield == 0){
@@ -159,6 +160,7 @@ public class Troll5{
                 GameLoop.health = GameLoop.health + 25;
                 System.out.println("You drink the potion and feel reinvigorated. ");
             }
+            System.out.println("You have " + GameLoop.health + " health.");
             CritAttackTroll5();
         case "use shield" :
             System.out.println("There is no point in blocking. The troll is already off guard. ");
@@ -199,8 +201,11 @@ public class Troll5{
             }
             if (GameLoop.health <= 0){
                 GameLoop.GameOver();
+            } else {
+                System.out.println("The troll has " + GameLoop.trollHealth + " health.");
+                System.out.println("You have " + GameLoop.health + " health.");
+                AttackTroll5();
             }
-            AttackTroll5();
         }
     }
 

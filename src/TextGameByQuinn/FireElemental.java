@@ -85,6 +85,7 @@ public class FireElemental{
                     GameLoop.health = GameLoop.health + 25;
                     System.out.println("You drink the potion and feel reinvigorated. ");
                 }
+                System.out.println("You have " + GameLoop.health + " health.");
                 AttackFireElemental();
             case "use shield" :
                 if (GameLoop.shield == 0) {
@@ -112,6 +113,7 @@ public class FireElemental{
             case "punch" :
                 System.out.println("You punch the fire elemental. The elemental doesn't even notice the attack and you burn your fist. ");
                 GameLoop.health = GameLoop.health - 5;
+                System.out.println("You have " + GameLoop.health + " health.");
                 FireElementalAttacks();
             case "run" :
                 System.out.println("You try to run away, but a wall of fire shoots up and blocks your path. ");
@@ -176,6 +178,7 @@ public class FireElemental{
                     GameLoop.health = GameLoop.health + 25;
                     System.out.println("You drink the potion and feel reinvigorated. ");
                 }
+                System.out.println("You have " + GameLoop.health + " health.");
                 CritAttackFireElemental();
             case "use shield" :
                 System.out.println("The elemental is already vulnerable. ");
@@ -183,6 +186,7 @@ public class FireElemental{
             case "punch" :
                 System.out.println("You punch the fire elemental. The elemental doesn't even notice the attack and you burn your fist. ");
                 GameLoop.health = GameLoop.health - 2.5;
+                System.out.println("You have " + GameLoop.health + " health.");
                 FireElementalAttacks();
             case "run" :
                 System.out.println("You try to run away, but a wall of fire shoots up and blocks your path. ");
@@ -221,8 +225,11 @@ public class FireElemental{
             }
             if (GameLoop.health <= 0){
                 GameLoop.GameOver();
+            } else {
+                System.out.println("The elemental has " + GameLoop.elementalHealth + " health.");
+                System.out.println("You have " + GameLoop.health + " health.");
+                AttackFireElemental();
             }
-            AttackFireElemental();
         }
     }
 

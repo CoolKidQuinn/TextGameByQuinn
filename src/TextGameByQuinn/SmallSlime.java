@@ -54,6 +54,7 @@ public class SmallSlime{
                 GameLoop.health = GameLoop.health + 25;
                 System.out.println("You drink the potion and feel reinvigorated. ");
             }
+            System.out.println("You have " + GameLoop.health + " health.");
             AttackSmallSlime();
         case "use shield" :
             if (GameLoop.shield == 0){
@@ -138,6 +139,7 @@ public class SmallSlime{
                 GameLoop.health = GameLoop.health + 25;
                 System.out.println("You drink the potion and feel reinvigorated. ");
             }
+            System.out.println("You have " + GameLoop.health + " health.");
             CritAttackSmallSlime();
         case "use shield" :
             System.out.println("The slime is already lying helpless on the ground. ");
@@ -171,8 +173,11 @@ public class SmallSlime{
             }
             if (GameLoop.health <= 0){
                 GameLoop.GameOver();
+            } else {
+                System.out.println("The slime has " + GameLoop.smallSlimeHealth + " health.");
+                System.out.println("You have " + GameLoop.health + " health.");
+                AttackSmallSlime();
             }
-            AttackSmallSlime();
         }
     }
 

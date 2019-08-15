@@ -76,6 +76,7 @@ public class WaterElemental{
                     GameLoop.health = GameLoop.health + 25;
                     System.out.println("You drink the potion and feel reinvigorated. ");
                 }
+                System.out.println("You have " + GameLoop.health + " health.");
                 AttackWaterElemental();
             case "use shield" :
                 if (GameLoop.shield == 0) {
@@ -160,6 +161,7 @@ public class WaterElemental{
                     GameLoop.health = GameLoop.health + 25;
                     System.out.println("You drink the potion and feel reinvigorated. ");
                 }
+                System.out.println("You have " + GameLoop.health + " health.");
                 CritAttackWaterElemental();
             case "use shield" :
                 System.out.println("The elemental is already off guard. ");
@@ -204,8 +206,11 @@ public class WaterElemental{
             }
             if (GameLoop.health <= 0){
                 GameLoop.GameOver();
+            } else {
+                System.out.println("The elemental has " + GameLoop.elementalHealth + " health.");
+                System.out.println("You have " + GameLoop.health + " health.");
+                AttackWaterElemental();
             }
-            AttackWaterElemental();
         }
     }
 
