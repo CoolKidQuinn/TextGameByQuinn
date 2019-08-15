@@ -8,6 +8,7 @@ public class MediumSlime{
     public static void MediumSlimeEncounter(){
         GameLoop.mediumSlimeHealth = 25;
         System.out.println("A medium slime appears. ");
+        System.out.println("You have " + GameLoop.health + " health.");
         AttackMediumSlime();
     }
     

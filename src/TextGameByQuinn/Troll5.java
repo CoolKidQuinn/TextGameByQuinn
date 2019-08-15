@@ -7,6 +7,7 @@ public class Troll5{
     public static void Troll5Encounter(){
         GameLoop.trollHealth = 200;
         System.out.println("You come across a truly gargantuan troll. Each of his legs individually are bigger than you. He is armed with a massive spiked club and a metal shield nearly as big as you. ");
+        System.out.println("You have " + GameLoop.health + " health.");
         AttackTroll5();
     }
 

@@ -9,6 +9,7 @@ public class Goblin4 {
         GameLoop.goblinHealth1 = 20;
         GameLoop.goblinHealth2 = 20;
         System.out.println("You see two goblins a bit more than half your size. They are each armed with a dagger. ");
+        System.out.println("You have " + GameLoop.health + " health.");
         AttackGoblin4();
     }
 

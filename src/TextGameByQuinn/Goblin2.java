@@ -8,6 +8,7 @@ public class Goblin2 {
     public static void Goblin2Encounter() {
         GameLoop.goblinHealth = 20;
         System.out.println("You see a goblin a bit more than half your size. He is armed with a dagger. ");
+        System.out.println("You have " + GameLoop.health + " health.");
         AttackGoblin2();
     }
 

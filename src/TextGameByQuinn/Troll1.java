@@ -7,6 +7,7 @@ public class Troll1{
     public static void Troll1Encounter(){
         GameLoop.trollHealth = 25;
         System.out.println("You come across a troll about your size. He is armed with a club. ");
+        System.out.println("You have " + GameLoop.health + " health.");
         AttackTroll1();
     }
 

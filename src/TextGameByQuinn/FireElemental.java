@@ -32,6 +32,7 @@ public class FireElemental{
                             GameLoop.sword = GameLoop.sword - 1;
                             if (GameLoop.sword == 0) {
                                 System.out.println("The flames light your sword ablaze and it burns up completely, leaving nothing but ash in it's place. ");
+                                System.out.println("You have " + GameLoop.health + " health.");
                             } else {
                                 System.out.println("The flames burn your sword and damage it. ");
                             }
